@@ -1,0 +1,2359 @@
+
+\documentclass[fleqn,a4paper, twoside]{article} 
+
+%% for print
+\usepackage[
+	top = 1.15 in, 
+	bottom = 1.25 in,
+	left = 1.15 in, 
+	right = 1.15 in,
+	includehead]{geometry}
+% font sizes
+\usepackage{scrextend}
+\changefontsizes{12pt}
+% for online reading
+%\usepackage[
+%	top = 1.15 cm, 
+%	bottom = 2.25 cm,
+%	left = 1.15 cm, 
+%	right =1.15 cm,
+%	includehead]{geometry}
+% font sizes
+%\usepackage{scrextend}
+%\changefontsizes{14pt}
+
+\usepackage[all]{nowidow}
+
+\usepackage{changepage}
+
+\usepackage[utf8x]{inputenc}
+
+\usepackage{amscd,amssymb,amsmath}
+\usepackage{amsrefs}
+
+%nimbus roman
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{amsfonts,amssymb,amsmath,amsrefs}
+\usepackage{graphicx}
+\usepackage[british]{babel}
+\usepackage{caption}
+\usepackage{mathdots}
+\usepackage{mathtools} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage[pdf,all]{xy}
+\xyoption{line}
+\CompileMatrices
+
+\usepackage{xcolor}
+% Link colors and styles, change accordingly, these are the official colours of Trinity 
+\definecolor{trinityblue}{rgb}{0.05, 0.45,0.75}
+\definecolor{trinitygray}{rgb}{0.33, 0.34,0.35}
+
+
+%% Side captions %%
+\usepackage{sidecap}
+
+%% Exercises %%
+\usepackage{exsheets} %Para guias de ej.
+\SetupExSheets{headings = runin}
+
+\usepackage{wrapfig} %%https://es.sharelatex.com/learn/latex/Wrapping_text_around_figures
+
+\usepackage{lipsum}
+%% SMALL HYPHEN %%
+\mathchardef\hy="2D % Define a "math hyphen"
+
+ %% TAMAÑO C\eLDAS %%     
+\usepackage{pgf,tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+\usetikzlibrary{matrix,arrows}
+\usepackage{stackrel}
+\usepackage[shortlabels]{enumitem} %Para listas estilo Weibel
+\usepackage{stmaryrd} %Para double brackets
+\usepackage{setspace} %Para espaciado de renglones
+\spacing{1.15}
+%\onehalfspacing %Mejor lectura
+\usepackage{etoolbox}
+\usetikzlibrary{trees}
+
+
+\patchcmd{\section}{\normalfont}{\normalfont\large}{}{}
+
+\usepackage[bb=ams, cal=euler, scr=rsfso , frak=euler]{mathalpha}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RE]{\small\it Algebraic operads}
+\fancyhead[LO]{\small\it Winter Lecture Series 2021/2022}
+\fancyhead[RO,LE]{\small\textbf\thepage}
+\renewcommand{\headrulewidth}{0 pt}
+\cfoot{}
+\newcommand{\0}{\langle 0\rangle}
+
+\fancypagestyle{references}
+{\fancyhead[RE]{\small\it References}
+\fancyhead[LO]{\small\it References}
+\fancyhead[RO,LE]{\small\bf\thepage}
+\fancyfoot[L,R,C]{}
+\renewcommand{\headrulewidth}{0 pt}}
+
+ %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\XX}{\mathcal{X}}
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\FF}{\mathcal{F}}
+
+\newcommand{\ari}{\operatorname{ar}}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\hem}{\hspace{0.5 em}} 
+%\input{treesp.tex} For trees, maybe add again later
+
+ \newcommand{\stt}{\mathbin{\text{\tikz 
+[x=1ex,y=1ex,line width=.1ex,line 
+join=round] \draw (0,0) rectangle (1,1) 
+(1,1) -- (0,0)  (1,0) -- (0,1);}}}
+
+%%%%%% ENUMERATE STUFF %%%%%%
+\usepackage{enumitem}
+\listfiles
+\setlist[enumerate]{label= (\arabic*)}
+
+
+\newenvironment{tenumerate}{
+ \begin{enumerate}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{titemize}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}{\end{itemize}}
+
+\definecolor{newcol}{rgb}{0,0,0}
+\definecolor{deepblue}{rgb}{0.0, 0.28, 0.67}
+%{0.5, 0.0, 0.13}
+\DeclareTextFontCommand{\new}{\color{black}\em}
+%\DeclareTextFontCommand{\new}{\color{black}\em}
+
+\usepackage[pdftex, colorlinks,bookmarks 
+= true,bookmarksnumbered = true]{hyperref}
+
+% url colors
+\hypersetup{colorlinks,
+	linkcolor={trinityblue},
+		citecolor={trinityblue},
+			urlcolor={trinityblue}} 
+			
+\usepackage{sectsty}
+\chapterfont{\color{newcol}}  % sets colour of chapters
+\sectionfont{\color{newcol}}  % sets colour of sections
+\subsectionfont{\color{newcol}}  % sets colour of sections
+
+% let \[ and \] be the same as \begin{equation} and \end{equation}
+\makeatletter
+\AtBeginDocument{%
+  \let\[\@undefined
+  
+\DeclareRobustCommand{\[}{\begin{equation}}%
+  \let\]\@undefined
+  
+\DeclareRobustCommand{\]}{\end{equation}}%
+}
+\makeatother 
+% but only print equation numbers if needed
+\mathtoolsset{showonlyrefs,showmanualtags}
+
+\usepackage{amsthm}
+\usepackage{thmtools}
+\newtheoremstyle{mytheorem}
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {\itshape}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries\color{newcol}} % HEADFONT
+  {\color{newcol}}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+  
+\theoremstyle{mytheorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{conj*}{Conjecture}
+%\newtheorem{question}[theorem]{Question}
+
+ \newtheoremstyle{introthm}
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {\itshape}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries\color{newcol}} % HEADFONT
+  {\color{newcol}{.}}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+ 
+  
+\theoremstyle{introthm}
+\newtheorem{introthm}{Theorem}
+\newtheorem*{introcor}{Corollary}
+\renewcommand{\theintrothm}{\Alph{introthm}}
+ % Para teoremas en la introducción
+
+%%%%%%%% TODO NOTES %%%
+
+
+%% TODO NOTES! %%
+\usepackage{xargs}                      
+% Use more than one optional parameter in a new commands
+%\usepackage[pdftex,dvipsnames]{xcolor}  
+% Coloured text etc.
+\usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25!white,bordercolor=blue,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+\definecolor{col1}{rgb}{0.8, 0.8, 1.0}
+\definecolor{col2}{rgb}{0.9, 0.9, 0.98}
+\definecolor{col3}{rgb}{0.71, 0.49, 0.86}
+
+  
+\newcommand{\ind}{\operatorname{Ind}_\PP}
+
+\newcommand{\cof}{\rightarrowtail}
+\newcommand{\foc}{\leftarrowtail}
+\newcommand{\weq}{\overset{\sim}{\longrightarrow}}
+\newcommand{\tcf}{\overset{\sim}{\cof}}
+
+\newtheoremstyle{mydefinition}
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries\color{newcol}} % HEADFONT
+  {\color{newcol}}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+  
+\theoremstyle{mydefinition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{obs}[theorem]{Observation}
+\newtheorem{rmk}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{variante}[theorem]{Variant}
+
+
+\newtheoremstyle{mydefinition2}
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries\color{newcol}} % HEADFONT
+  {\color{newcol}{.}}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+  
+\theoremstyle{mydefinition2}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{obs*}{Observation}
+\newtheorem*{example*}{Example}
+
+% named theorem %
+
+% for specifying a name
+\theoremstyle{plain} % just in case the style had changed
+\newcommand{\thistheoremname}{}
+\newtheorem{genericthm}[theorem]{\thistheoremname}
+\newenvironment{namedthm}[1]
+  {\renewcommand{\thistheoremname}{#1}%
+   \begin{genericthm}}
+  {\end{genericthm}}
+
+\newcommand{\imor}{\interleave\kern-.45em\longrightarrow}
+\renewcommand{\qedsymbol}{$\blacktriangleleft$}
+\newcommand\place{\mathord-}
+\newcommand{\ps}{\mathbin\parallel}
+\newcommand{\GSet}{\mathsf{Fin}^\times}
+\newcommand{\FSet}{\mathsf{Fin}}
+\newcommand{\Fun}{\mathsf{Fun}}
+\newcommand{\Set}{\mathsf{Set}}
+\newcommand{\DCSH}{\mathsf{DCSH}}
+\newcommand{\kMod}{{}_\kk\mathsf{Mod}}
+\newcommand{\kmod}{{}_\kk\mathsf{mod}}
+\newcommand{\kCh}{{}_\kk\mathsf{Ch}}
+\newcommand{\Sp}{\mathsf{Sp}}
+\newcommand{\kSp}{{}_\kk\mathsf{Sp}}
+\newcommand{\GVec}{\mathsf{Vec}_q^\times}
+\newcommand{\Opr}{\mathsf{Opr}}
+\newcommand{\NS}{\mathsf{NS}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\vv}{\vert}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\HH}{\mathrm{HH}}
+\newcommand{\As}{\mathsf{As}}
+\newcommand{\Com}{\mathsf{Com}}
+\newcommand{\Lie}{\mathsf{Lie}}
+
+\newcommand{\aut}{\operatorname{aut}}
+\definecolor{sqsqsq}{rgb}{0.13,0.13,0.13}
+\definecolor{aqaqaq}{rgb}{0.63,0.63,0.63}
+
+\newcommand{\SC}{SC}
+\newcommand\id{\mathrm{id}}
+\newcommand\category[1]{\mathsf{#1}}
+\newcommand{\Mod}{\mathsf{Mod}}
+\newcommand{\Gmod}{\mathsf{GMod}}
+\newcommand{\SMod}{{}_\Sigma\mathsf{dgMod}}
+\newcommand{\gSMod}{{}_\Sigma\mathsf{gMod}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\Ho}{\operatorname{Ho}}
+\newcommand\spe[1]{\mathcal{#1}}
+\renewcommand{\tt}{\otimes}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DC}{\mathsf{DC}}
+\newcommand{\DA}{\mathsf{DA}}
+\newcommand{\dd}{\partial}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\?}{\,?\,}
+\newcommand{\n}{[n]}
+\newcommand\cls[1]{\llbracket#1\rrbracket}
+\newcommand{\NN}{\mathbb N}
+\renewcommand{\k}{[k]}
+\newcommand{\bt}{\bullet}
+\newcommand{\kk}{\Bbbk}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\PAlg}{\mathsf{Alg}_{\geqslant 0}}
+\newcommand{\Cog}{\mathsf{Cog}}
+\newcommand{\Alg}{\mathsf{Alg}}
+\newcommand{\Cxs}{\mathsf{Ch}_\kk}
+\newcommand\inter[1]{\llbracket#1\rrbracket}
+\newcommand{\Cell}{\operatorname{Cell}}
+\newcommand{\Sing}{\operatorname{Sing}}
+\newcommand{\Sull}{A_{\mathrm{PL}}}
+
+\newcommand\lab{\mathsf{lab}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\hoq}{\!\sslash\!\!}
+\newcommand{\PP}{{\mathcal{P}}}
+
+\definecolor{newterm-color}{RGB}{0, 0, 0}
+\newcommand\newterm[1]{%
+  \textcolor{newterm-color}{\itshape #1}%
+}
+
+\theoremstyle{mytheorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{question*}{Question}
+
+% named theorem %
+
+% for specifying a name
+\theoremstyle{plain} % just in case the style had changed
+% front matter stlye 
+\renewenvironment{abstract}{%
+\small\begin{center}
+\begin{minipage}{.9\textwidth}
+%\textbf{\textcolor{newcol}{Abstract.}}
+}
+{\par\noindent\end{minipage}\end{center}\vspace{3 em}}
+%
+\makeatletter
+\renewcommand\@maketitle{%
+\hfill
+\begin{center}\begin{minipage}{0.9 	\textwidth}
+\centering
+\vskip 6em
+\let\footnote\thanks 
+{\LARGE \@title \par }
+\vspace{1 em}
+%\hrulefill
+\vskip 1 em
+{\large \@author \par}
+\vspace{3.5 em}
+
+\end{minipage}\end{center}
+\par
+}
+\makeatother
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\DeclareMathOperator\sgn{sgn}
+\DeclareMathOperator\fsch{\mathfrak{sch}}
+
+%\definecolor{newterm-color}{RGB}{0, 51, 153}
+%\newcommand\newterm[1]{%
+%\textcolor{newterm-color}{\bfseries\itshape #1}%
+%}
+
+% textual claims in equations
+\newcommand\claim[2][.8]{%
+  \begin{minipage}{#1\displaywidth}%
+  \itshape
+  #2
+  \end{minipage}%
+}
+
+\usepackage{float}
+
+\tikzcdset{arrow style=tikz, diagrams={>=stealth}}
+
+%%Addresses
+
+\newcommand{\Addresses}{{% additional braces for segregating \footnotesize
+  \bigskip
+  \footnotesize
+  \textsc{Office F310, Non-linear Algebra Group}, MPIMiS, Leipzig, Germany \par\nopagebreak
+  \textit{Addresses:} tamaroff@mis.mpg.de}
+}
+  
+
+\usepackage{titletoc}
+
+\titlecontents{chapter}
+[0.2em] %
+{\bigskip}
+%{\contentslabel[\thecontentslabel.]{2em}\hspace{0.667em}}%\thecontentslabel
+{\makebox[2em][r]{\thecontentslabel.}\hspace{0.333em}}%\thecontentslabel
+{\hspace*{-2em}}
+{\hfill\contentspage}[\smallskip]
+
+\titlecontents{section}% <section>
+[0.2em]% <left>
+{\small}% <above-code>
+{\thecontentslabel.\hspace{3pt}}%<numbered-entry-format>; you could also 
+%use  {\thecontentslabel. } to show the numbers
+{}% <numberless-entry-format>
+{\enspace\titlerule*[0.5pc]{.}\contentspage}%<filler-page-format>
+\titlecontents*{subsection}% <section>
+[1em]% <left>
+{\footnotesize}% <above-code>
+{\thecontentslabel. \hspace{3pt}}% <numbered-entry-format>; you could also 
+%use {\thecontentslabel. } to show the numbers
+{}% <numberless-entry-format>
+{}% <filler-page-format>
+[ --- \ ]% <separator>
+[]% <end>
+\setcounter{tocdepth}{2}% Display up to \subsection in ToC
+
+\setlength\parskip{3 pt}
+\setlength\parindent{0 em}
+
+\raggedbottom 
+\makeindex
+
+\title{\vspace{-5 em}\setstretch{0.85}{\textbf{Algebraic operads, Koszul duality and Gr\"obner bases: an introduction}}}
+\author{P. Tamaroff}
+\date{August 22 and 24}
+%\address{}
+%\email{ptamarov@gmail.com}
+\begin{document}
+\maketitle
+
+
+%\tableofcontents
+%\section{Introduction}\label{sec:intro}
+%\addcontentsline{toc}{section}{\nameref{sec:intro}}
+\thispagestyle{empty}
+
+\begin{abstract}
+This lecture series aim to offer a gentle introduction
+to the theory of algebraic operads, starting with the
+elements of the theory, and progressing slowly towards
+more advanced themes, including (inhomogeneous)
+Koszul duality theory, Gr\"obner bases and higher
+structures. The course  will consists of approximately
+\textcolor{gray}{12} lectures, along with extra talks by
+willing participants, with the goal of introducing extra
+material to the course, and making them more
+familiar with the theory.
+%We will survey the Koszul duality theory introduced by Ginzburg--Kapranov and, more particularly, it's extension to inhomogenous 
+%(quadratic-linear) operads, appearing originally in the work of 
+%G\'alvez-Carrillo--Tonks--Vallette. We'll do this with a view 
+%towards its application to the computation of the homotopy 
+%quotient of the BV operad by the circle action
+%(Khoroshkin--Markarian--Shadrin, etc) and the corresponding 
+%geometrical statement (Drummond-Cole). If time permits, I'll 
+%mention some other interesting (old and new) related results 
+%related to non-commutative analogues, among others. 
+\end{abstract}
+
+\tableofcontents
+
+\vfill
+\hfill \emph{Draft, \today}
+
+\pagebreak
+\section{Motivation and history}
+
+\textbf{Goals.} The goals of this lecture is to
+give a broad picture of the history and 
+pre-history of operads, and some current trends,
+and give a road-map for the course.  
+
+\subsection{Introduction and motivation}
+
+Operads originally appeared as tools in homotopy theory, 
+specifically in the study of iterated loop 
+spaces (May, 1972 and Boardman and Vogt before).
+They appeared as \emph{comp algebras} in Gerstenhaber's 
+work on Hochschild cohomology and topologically as 
+Stasheff's `associahedra' for his homotopy
+characterization of loop spaces (both in 1963).
+The theory of operads 
+received new inspiration from homological algebra,
+category theory, algebraic geometry and mathematical
+physics:
+
+\begin{tenumerate}
+\item (Stasheff, Sugawara) Study homotopy associative 
+$H$-spaces, Stasheff implicitly discovers a topological
+ns operad $K$ with $C_*(K) = \mathsf{As}_\infty$ and a
+recognition principle for $A_\infty$-spaces.
+
+\item (Boardmann--Vogt) Study infinite loop spaces,
+build a PROP (a version of an $E_\infty$-operad) 
+and obtain a recognition principle for infinite
+loop spaces.
+
+\item (Kontsevich) Uses $L_\infty$-algebras and
+configuration spaces to prove his deformation
+quantization theorem that every Poisson manifold
+admits a deformation quantization.
+
+\item (Kontsevich) The above is
+implied by the formality theorem: the
+Lie algebra of polyvector fields is 
+$L_\infty$-quasi-isomorphic to the Hochschild
+complex, and $f_1 = \mathsf{HKR}$. 
+
+\item (Tamarkin) Approaches this result through 
+the formality of the little disks operad $D_2$.
+Proves that the Hochschild complex of a polynomial
+algebra is \emph{intrinsically formal} as a 
+Gerstenhaber algebra.
+
+\item (Manifold calculus) Describes the
+homotopy type of embedding spaces as certain 
+derived operadic module maps and to
+produces their explicit deloopings
+using little disk operads, due to 
+Goodwillie--Weiss, Boavida de Brito–-Weiss,
+Turchin, Arone--Turchin, Dwyer–-Hess,
+Ducoulombier–-Turchin. 
+
+\item (Ginzburg--Kapranov, Fresse,
+Vallette, Hinich) Koszul duality for algebraic 
+operads and cousins allows to develop a robust 
+homotopy theory of homotopy algebras, cohomology
+theory, deformation theory, Quillen homology, etc. 
+
+\item (Deligne conjecture and variants) The study
+of natural operations on the Hochschild complex
+of an associative algebra lead to a manifold of 
+results beginning with the proof that there is
+an action of the little disks operad $D_2$ on
+it, and the ultimate version by Markl--Voronov,
+who proved that the operad of natural operations
+on it has the homotopy type of $C_*(D_2)$.  
+\end{tenumerate}
+
+Algebraic operads are modeled by trees (planar or
+non-planar, rooted or not), and relaxing these
+graphs allows us to produce other type of 
+algebraic structures:
+\begin{center}
+\begin{tabular}{@{}llcc@{}} \toprule
+Type & Graph & Compositions & Due to \\ \midrule
+PROPs & Any graph & Any  & Adams--MacLane \\
+Modular & Any graph & $\xi_{i,j}$, $\circ_{i,j}$  & Getzler--Kapranov\\ 
+Properads & Connected graphs & Any & B. Vallette \\
+Dioperads & Trees & ${}_i\circ_j$ (no genus) & W. L. Gan \\
+Half-PROPs & Trees & $\circ_j$ , ${}_i\circ$ & 
+ Markl--Voronov \\ 
+Cyclic operads & Trees &  $\circ_{i,j}$ & Getzler--Kapranov\\ 
+Symmetric operads & Rooted trees & $\circ_i$  & J. P. May \\ 
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Exercises}
+
+\textcolor{trinityblue}{Complete. Ideal: add many
+exercises on preliminaries: homological algebra,
+tensor products, symmetric group actions, 
+planar trees, non-planar trees, categories, 
+functors, monads.}
+
+%\begin{adjustwidth}{1 cm}{1 cm}
+\textbf{A. Symmetric groups.} Operads are meant to encode
+operations on objects \emph{along with their symmetries},
+which is done through the representation theory of the
+symmetric groups. The following exercises will remind
+you of some basic facts about them.
+
+
+\begin{question} Let $I = [n]$ so that $\Aut(I) = S_n$ is 
+the symmetric group on $n$ letters. For each ordered 
+partition $\pi = (\pi_1,\ldots,\pi_k)$, let $\lambda$
+be the ordered partition of $n$ with $\lambda_i = \# \pi_i$
+for $i\in [k]$. Show that the permutations of
+$[n]$ that preserve $\pi$ determine a subgroup of $S_n$
+isomorphic to $S_\lambda := S_{\lambda_1}\times
+\cdots \times S_{\lambda_k}$. 
+\end{question}
+
+
+\begin{question} Consider the subgroup of $S_n$ corresponding
+to the ordered partition of $[n]$ given by $([1,k],[k+1,n])$, along with the 
+inclusion $S_k\times S_{n-k} \hookrightarrow S_n$. Show that
+a set of representatives for the cosets of this inclusion
+in $S_n$ is given by the \emph{$(k,n-k)$-shuffles}, those
+permutations $\sigma\in S_n$ that preserve the linear order in
+$[1,k]$ and $[k+1,n]$. Conclude that there are exactly
+$\binom nk$ shuffles of type $(k,n-k)$ on $[n]$. Define
+shuffles associated to other partitions of $n$.
+\end{question}
+
+
+\begin{question} For a finite group $G$, a $G$-set is a finite
+set $X$ along with a group morphism $G\to \Aut(X)$, and
+a $\kk$-linear $G$-representation is a vector space $V$
+along with a group morphism $G\longrightarrow \Aut(V)$.
+\textcolor{trinityblue}{Complete. What do you want to remind
+them of?}
+\end{question}
+
+\begin{question} Induction, restriction.
+\end{question}
+
+\medskip
+\textbf{B. Categories.} The language of categories and
+functors permeates most of modern algebra and geometry,
+and in particular is useful to work with operads and
+other combinatorial structures defines by graphs. The
+following will remind you of some important notions
+we will use during the course.
+
+\begin{question} A category $\mathcal C$ is the datum of
+a set of objects $\operatorname{Ob}(\mathcal{C})$, and
+for each $x,y\in \operatorname{Ob}(\mathcal{C})$ a
+set $\mathcal C(x,y)$ of morphisms from $x$ to $y$.
+Moreover, we require the existence of an associative
+and unital composition law
+\[-\circ -: \mathcal C(y,z) \times  \mathcal C(x,y) 
+	\longrightarrow \mathcal C(x,z). \] 
+	The latter means there are distinguished elements
+	$1_x\in \mathcal{C}(x,x)$ for each object of $\mathcal{C}$
+	that induce the identity $-\circ 1_x$ an $1_x\circ -$
+	of any $\mathcal{C}(-,x)$ and $\mathcal{C}(x,-)$.
+	Find examples of categories: sets, finite sets,
+	rings, vector spaces, open subsets, posets, and 
+	others.
+\end{question}
+
+\begin{question} A functor $F: \mathcal{C}_1\longrightarrow 
+\mathcal{C}_2$ is a datum that assigns to each object
+$x$ of the domain an object $F(x)$ of the codomain,
+and to each morphism $f:x\to y$ a morphism $F(f)$ such
+that $F(f\circ g) = F(f) \circ F(g)$ and $F(1_x) = 1_{Fx}$
+for each pair of composable arrows $f$ and $g$ and each
+object $x$ of $\mathcal C_1$. Find examples of functors
+between the examples of categories you found above.
+
+\end{question}
+\begin{question} A monoidal category is a category $\mathcal C$ along with the datum of a bifunctor $\otimes :
+\mathcal{C}\times \mathcal{C}\longrightarrow \mathcal{C}$
+along with an associator and left and right units. Expand
+on the details of this definition and exhibit monoidal
+structures the following categories: sets, vector spaces,
+linear representations of a group $G$, topological spaces,
+associative algebras, Lie algebras, and others.
+\end{question}
+
+\begin{question}
+If $(\mathcal{V},\otimes)$ is a monoidal category, we say $\mathcal{C}$ 
+is a $\mathcal V$-enriched category if each hom-set 
+$\mathcal{C}(x,y)$ is an object of $\mathcal{V}$ and
+there is a composition law 
+\[-\circ -: \mathcal C(y,z) \otimes  \mathcal C(x,y) 
+	\longrightarrow \mathcal C(x,z). \] 
+which consists of morphisms in $\mathcal{V}$, and which is 
+associative and unital. Note that an ordinary category is
+just a category enriched over the category of sets.
+A linear category is a category enriched over the
+category of vector spaces, an additive category is a
+category enriched over Abelian groups.
+Expand on what this means. Find about Abelian
+categories, and ponder over the difference: an additive
+category is a category with structure, while an
+Abelian category is a category with additional properties.
+\end{question}
+
+\begin{question}\label{ex:skeleton}
+A category $\mathcal D$ is skeletal if no two distinct
+objects in it are isomorphic. We say that $\mathcal{D}$ is
+the skeleton of $\mathcal{C}$ if:
+\begin{tenumerate}
+\item It is a full subcategory of $\mathcal{C}$: for each
+pair of objects $x,y\in\mathcal{D}$, we have that $\mathcal{D}(x,y) = \mathcal{C}(x,y)$.
+\item The inclusion of $\mathcal{D}$ in $\mathcal{C}$ is
+essentially surjective: every object of $\mathcal{C}$ is
+isomorphic to an object of $\mathcal{D}$.
+\item $\mathcal{D}$ is skeletal.
+\end{tenumerate}
+Show that every small category admits a skeleton, and
+compute the skeleton of the following categories: sets,
+finite sets, finite dimensional vector spaces over
+a field.
+\end{question}
+\medskip
+
+\textbf{C. Graded spaces and complexes.} When studying
+algebraic structures like operads, it will be necessary
+to use some tools from homological algebra: graded spaces,
+chain complexes, differentials, their homology, among
+others. The following exercise are intended to familiarize
+you with the elements of homological algebra, but we will
+look at them in more detail during the course.
+
+\begin{question} A $\mathbb Z$-graded vector space (usually 
+just called a graded vector space) is a vector
+space $V$ with a direct sum decomposition
+\[ V  = \bigoplus_{n\in\mathbb Z} V_n.\]
+If $v\in V_n$ we say that $v$ is homogeneous of
+degree $n$. Find out about the category of
+graded vector spaces, specifically:
+\begin{titemize}
+\item What are its (degree zero) morphisms?
+\item What are its (homogeneous) morphisms?
+\item What is the tensor product of two graded spaces?
+\item What is the natural isomorphism $V\otimes W\longrightarrow W\otimes V$?
+\item How does the last item relate to the `Koszul sign
+rule'?
+\end{titemize}
+\end{question}
+
+\begin{question} A differential graded (dg) vector space,
+usually called a complex, is a pair $(V,d)$ where $V$ is 
+a graded vector space $V$ and $d: V \to V$ is a homogeneous
+map of degree $-1$ such that $d^2=0$. Repeat the previous
+exercise replacing $\mathsf{gVect}$ with $\mathsf{Ch}$,
+the category of complexes of vector spaces.
+\end{question}
+
+\begin{question} If $(V,d)$ is a complex, then $Z(V) = \ker d$ is called its space of cycles, and $B(V) = \operatorname{im} d$ is called
+its space of boundaries. The quotient $Z(V)/B(V)$ is called
+the homology of $V$, and is written $H(V)$. Show that a map of complexes $f:V\to W$ induces a map $Z(V) \to Z(W)$ and in turn a map $H(f) : H(V) \to H(W)$. 
+\end{question}
+
+
+%\end{adjustwidth}
+
+\pagebreak
+
+\section{Symmetric sequences, composition products, unbiased approach}
+
+\textbf{Goals.}
+We will define
+some related gadgets (symmetric collections,
+algebras, modules, endomorphism operads)
+necessary to introduce operads. 
+Then, we define what an operad is (topological,
+algebraic, symmetric, non-symmetric). 
+We will then give some
+(not so) well known examples of topological
+and algebraic operads.
+
+\subsection{Basic definitions}
+\emph{What is an operad?} A group is a model of
+$\operatorname{Aut}(X)$ for $X$ a set, an algebra
+is a model of $\End(V)$ for $V$
+a vector space. Equivalently, groups are the
+gadgets that act on objects by automorphisms,
+and algebras are the gadgets that act
+on objects by their (linear) endomorphisms. 
+Operads are the gadgets that act on
+objects through operations with many 
+inputs (and one output), and at the same
+time keep track of symmetries when
+the inputs are permuted.
+
+The underlying objects to operads are known as
+\emph{symmetric sequences}: a symmetric sequence
+(also known as an $\Sigma$-module or symmetric 
+module) is a sequence of vector spaces
+$\XX = (\XX(n))_{n\geqslant 0}$ such that for
+each $n\in\NN_0$ there is a right action of
+$S_n$ on $\XX(n)$. We usually consider \emph{reduced}
+$\Sigma$-modules, those for which $\XX(0)=0$.
+
+A map of $\Sigma$-modules is a collection of maps
+$(f_n : \XX_1(n) \longrightarrow \XX_2(n)\}_{n\geqslant 0}$,
+each equivariant for the corresponding group action. 
+This defines the category $\SMod$ of symmetric
+sequences, and whenever we think of symmetric sequences
+using this definition, we will say we are considering a 
+a biased or skeletal approach to them.
+
+In parallel, it is convenient to consider the 
+category $\GSet$ of finite sets and bijections.
+An object in this category is a finite set $I$,
+and a morphism $\sigma : I\longrightarrow J$ is a
+bijection. Since every finite set $I$ with $n$
+elements is (non-canonically) isomorphic to 
+$[n] =\{1,\ldots,n\}$, the following holds:
+
+\begin{lemma} The skeleton of $\GSet$ is
+equal to the category with objects the finite sets
+$[n]$ for $n\geqslant 0$ and with morphisms the
+bijections $[n]\longrightarrow [n]$ (and no morphism
+between $[n]$ and $[m]$ if $m\neq n$).
+\end{lemma}
+
+\begin{proof}
+This is Exercise~\ref{ex:skeleton}.
+\end{proof}
+
+We set ${}_\Sigma\Mod  = 
+\Fun(\GSet,\mathsf{Vect}^{\mathrm{op}})$,
+so that a $\Sigma$-module is a pre-sheaf of vector
+spaces $I\longmapsto \XX(I)$ assigning to each
+isomorphism $\tau : I\longrightarrow J$ an isomorphism
+$\XX(\tau): \XX(J)\longrightarrow \XX(I)$. When we
+think of $\Sigma$-modules as pre-sheaves, we will say we 
+are taking an unbiased approach, will if we specify only
+its values on natural numbers, we will say we are taking the
+biased or skeletal approach; we will come back to this later.
+
+With this at hand, 
+we can in turn define the \emph{Cauchy product}
+of two $\Sigma$-modules $\XX$ and $\YY$
+\[ (\XX\otimes_\Sigma \YY)(I) = 
+ 	\bigoplus_{S\sqcup T= I}
+ 		 \XX(S)\otimes \YY(T)\] 
+where the right-hand is the usual tensor product of
+vector spaces
+and the sum runs through partitions of $I$ into
+two disjoint sets. The symmetric product is then
+defined by 
+\[ (\XX\circ_\Sigma \YY)(I) 
+ 	= \bigoplus_{\pi \vdash I} \XX(\pi) 
+ 		\otimes \YY^{\otimes k}(\pi)\] 
+as the sum runs through (ordered) partitions of $I$.
+These two products will be central in what follows.
+
+\begin{lemma}
+The category ${}_\Sigma\Mod$ with $\circ_\Sigma$ is
+monoidal with unit the species taking the value $\kk e_x$ at 
+the singleton sets $\{x\}$ and zero everywhere else. The same
+category is monoidal for $\otimes_\Sigma$ with unit
+the species taking the value $\kk$ at $\varnothing$
+and zero everywhere else.
+\end{lemma}
+
+We will use the notation $\kk$ for the base field but
+also for the unit for the composition product $\circ_\Sigma$,
+hoping it will not cause much confusion. It will be useful 
+later to think of $\kk$ as a twig or ``stick''.
+
+Observe that the associator for $\circ_\Sigma$ is
+not too simple and involves reordering certain
+factors of tensor products in $\mathsf{Vect}$. In
+particular, replacing vector spaces by graded vector
+spaces or complexes will create signs in the
+associator.
+
+\begin{question}
+Describe the associator for $\circ_\Sigma$ in the
+category of differential graded operads. In particular,
+write down the signs explicitly. 
+\end{question}
+
+\begin{note}
+ One can define ${}_\Sigma\Mod(C)$
+for any symmetric monoidal category $(C,\otimes,1)$,
+such as the category of sets, or topological spaces,
+or chain complexes, among others. As before, the category
+ ${}_\Sigma\Mod(C)$ is monoidal (but not braided)
+ through the \emph{symmetric composition product}
+ $-\circ_\Sigma - $, with unit 
+ $1=(0,1,0,\ldots)$ as before.
+ \end{note}
+ 
+ We are now ready to define the prototypical symmetric
+ sequence that carries the structure of an algebraic 
+ operad. 
+ 
+\begin{definition}
+The \emph{endomorphism operad} of a space $V$ is the symmetric sequence $\End_V$
+where for each $n\in\NN$ we set $\End_V(n) = \End(V^\otimes, V)$. 
+The symmetric group $S_n$ acts on the right
+on $\End_V(n)$ 
+so that $(f\sigma)(v) = f(\sigma v)$ for
+$v\in V^{\otimes n}$, where $S_n$ acts on
+the left on $V^{\otimes n}$ by $(\sigma v)_i
+= v_{\sigma i}$. The composition maps are defined
+by $\gamma(f;g_1,\ldots,g_n) = f\circ (g_1\otimes\cdots \otimes g_n)$. 
+\end{definition}
+
+The following two operations on permutations 
+will streamline our definition of (algebraic)
+operads.
+
+\medskip
+
+\textbf{Two useful maps.} For each $k\geqslant 1$
+and each tuple $\lambda = (n_1,\ldots,n_k)$ 
+with sum $n$
+there is a map
+\[ S_k \longrightarrow S_{n_1+\cdots+n_k} \]
+that sends $\sigma\in S_k$ to the permutation
+$\lambda(\sigma)$ of $[n]$ that permutes the blocks 
+$\pi_i = \{n_1+\cdots+n_{i-1}+1,\ldots
+			n_1+\cdots+n_{i-1}+n_i\}$
+			according to $\sigma$.
+There is also a map
+\[S_{n_1}\times \cdots \times  S_{n_k} 
+	\longrightarrow S_{n_1+\cdots+n_k}  \] 
+	that sends a tuple of permutations 
+	$(\sigma_1,\ldots,\sigma_k)$ to the
+	permutation $\sigma_1\#\cdots \# \sigma_k$
+	that acts like $\sigma_i$ on the block $\pi_i$
+	as above. These operations are illustrated
+	in Figure~\ref{fig:1}. With these at hand, 
+one can check that these composition maps
+satisfy the following axioms:
+
+\begin{figure}
+$$\lambda = (2,1,2), \quad \sigma = 312
+	\quad \leadsto \quad \lambda(\sigma) =  34512 \in S_5
+	$$
+	$$
+	(213,213,132)\in S_3\times S_3\times S_3 \quad \leadsto \quad 213546798\in S_9 $$
+\caption{The useful operations}
+\label{fig:1}
+\end{figure}
+
+\begin{tenumerate}
+\item \emph{Associativity}: let $f\in \End_V(n)$,
+and consider $g_1,\ldots,g_n \in \End_V$ and
+for each $i\in [n]$ a tuple $h_i= (h_{i1},\ldots,h_{i n_i})$
+were $n_i= \mathrm{ar}(g_i)$. Then for
+$f_i = \gamma(g_i; h_{i1},\ldots,h_{in_i})$ 
+and $g= \gamma(f; g_1,\ldots,g_n)$ we have
+that
+\[ \gamma(f;f_1,\ldots,f_n) = 
+	\gamma(g; h_1,\ldots,h_n).\]
+\item \emph{Intrinsic equivariance}: for
+each $\sigma\in S_k$ and $\lambda = (\ari(g_1),\ldots,\ari(g_k))$ we have that
+\[ \gamma(f\sigma; g_1,\ldots,g_k) = 	
+	\gamma(f; g_{\sigma 1} ,\ldots, 
+		g_{\sigma k})\lambda(\sigma),\]
+	
+\item \emph{Extrinsic equivariance}: for each
+tuple of permutations $(\sigma_1,\ldots,\sigma_k) \in S_{n_1} \times
+\cdots \times S_{n_k}$, if $\sigma = \sigma_1\#\cdots\#\sigma_k$, we have that
+\[\gamma(f,g_1\sigma_1,\ldots,g_k\sigma_k) = 
+	\gamma(f; g_1,\ldots,g_k)\sigma.\]
+\item \emph{Unitality:} the identity $1\in\End_V(1)$
+satisfies $\gamma(1;g) = g$ and $\gamma(g;1,\ldots,1) = g$ for every $g\in\End_V$.
+\end{tenumerate}
+
+\begin{definition} 
+A symmetric operad (in vector spaces) is an
+$\Sigma$-module $\PP$ along with a composition
+map $\gamma : \PP\circ \PP \longrightarrow \PP$
+of signature
+\[\gamma : \PP(k)\otimes 
+	\PP(n_1) \otimes \cdots \otimes \PP(n_k)
+	 	\longrightarrow \PP(n_1+\cdots+n_k)\]
+along with a unit $1\in \PP(1)$, that satisfy
+the axioms above. 
+\end{definition} 
+
+\begin{variante} A non-symmetric operad is
+an operad whose underlying object is a collection
+(with no symmetric group actions). Operads in
+topological spaces or chain complexes require
+the composition maps to be morphisms (that is,
+continuous maps or maps of chain complexes,
+respectively) and, more generally, operads 
+defined on a symmetric monoidal category
+require, naturally, that the composition
+maps be morphisms in that category. 
+\end{variante}
+
+\textbf{Pseudo-operads.}
+One can define operads through \emph{partial 
+composition maps}, modeling the honest partial
+composition map
+\[ f\circ_i g = f(1,\ldots,1,g,1,\ldots,1)\] 
+in $\End_V$. These composition maps satisfy the
+following properties:
+
+\begin{tenumerate}
+\item \emph{Associativity}: for
+each $f,g,h\in\End_V$, and $\delta = i-j+1$,
+we have
+\[ 
+(f \circ_j g) \circ_i h  = 
+ 	\begin{cases} 
+ 		 (f \circ_i h) \circ_{\ari(f)+j-1} g
+ 		  	& \delta \leqslant 0  \\
+ 		  	f\circ_j (g \circ_\delta h) &
+ 		  	\delta\in [1,\ari(g)] \\
+ 		  	(f \circ_\delta h) \circ_j g & \delta > \ari(g)
+ 		   \end{cases}
+ 		 \]
+\item \emph{Intrinsic equivariance}: for
+each $\sigma\in S_k$, we have that
+\[  (f\sigma) \circ_i g  = (f\circ_{\sigma i} g)\sigma'\]
+where $\sigma'$ is the same permutation as $\sigma$
+that treats the block $\{i,i+1,\ldots,i+\ari(g)-1\}$
+as a single element. 
+\item \emph{Extrinsic equivariance}: 
+ for each $\sigma\in S_k$, we have that
+\[  f \circ_i (g\sigma)  = (f\circ_i g)\sigma''\]
+where $\sigma''$ acts by only permuting the
+block $\{i,\ldots,i+\ari(g)-1\}$ according
+to $\sigma$.
+\item \emph{Unitality:} the identity $1\in\End_V(1)$
+satisfies $1 \circ_1 g = g$ and $g\circ_i 1 = g$ for every $g\in\End_V$ and $1\leqslant i\leqslant \ari(g)$.
+\end{tenumerate}
+
+\begin{definition}
+A symmetric operad (in vector spaces) is an
+$\Sigma$-module $\PP$ along with partial composition
+map of signature
+\[ -\circ_i -  : \PP(m)\otimes \PP(n) 
+	\longrightarrow \PP(m+n-1) \]
+and a unit $1\in\PP(1)$ satisfying the axioms above.
+\end{definition}
+
+It is not hard to see (but must be checked at least once)
+that an operad with $\PP(n) = 0$ for $n\neq 1$ is
+exactly the same as an associative algebra. 
+
+\textbf{Warning!} If one does not require
+the existence of a unit, the notion of a
+\emph{pseudo-operad} by Markl (defined by partial
+compositions) does not coincide with the
+notion of an operad as defined by May.
+
+\begin{question} Prove the claim above.
+To do this, consider the non-unital ns operad
+$\PP$ such that $\PP(2)$ and $\PP(4)$
+are its only non-zero components, and are
+both one dimensional, and define
+\[ \gamma : \PP(2)\otimes \PP(2)\otimes \PP(2)
+ 	\longrightarrow \PP(4) \]
+to be an isomorphism, and all other maps zero. 
+Check that $\PP$ is a May operad, and
+show that $\PP$ is not a Markl
+operad by exploring the consequences
+of the equality
+\[ \mu(\mu,\mu) = (\mu \circ_2\mu)\circ_1 \mu \]
+in any Markl operad.
+\end{question}
+
+\subsection{Constructing operads by hand}
+
+One can define operads in various ways. For example,
+one can define the underlying collection explicitly,
+and give the composition maps directly:
+\begin{tenumerate}
+\item The reduced symmetric topological (or set)
+operad with $\mathsf{Com}(n)$ a single point for each
+$n\in \NN$, and composition maps the unique
+map from a point to a point.
+\item The reduced set operad with
+$\mathsf{As}(n) = S_n$
+the regular representation and composition maps
+\[ S_k \times S_{n_1} \times
+\cdots \times S_{n_k} \longrightarrow S_{n_1+\cdots n_k} \]
+the unique equivariant map that sends the tuple
+of identities to the identity.
+\item The reduced topological operad with
+$K(n) = K_n$ the Stasheff associahedron
+and partial composition maps
+\[ K_{r+1} \times K_{s+1} \longrightarrow
+ 	K_{r+s+1} \] 
+ the inclusion of the domain as a face of the
+ codomain.
+
+\item If $M$ is a monoid, there is an
+operad $\mathbb W_M$ with $\mathbb{W}_M(n) =
+M^n$ such that 
+\[(m_1,\ldots,m_s) \circ_i (m_1',\ldots,m_t') = 
+ 	(m_1,\ldots,m_{i-1}, m_im_1',\ldots,m_im_t',m_{i+1},\ldots, m_s).\] We call it the
+ \emph{word operad of $M$}. Its underlying
+ symmetric collection is $\mathsf{As}\circ M$. 
+ 
+ \item Write $\operatorname{Aff}(\mathbb C) = \mathbb{C}\times \mathbb{C}^\times$ for the group of affine transformations of
+$\mathbb C$ with group law $(z,\lambda)(w,\mu) = (z+\lambda w,\lambda\mu)$. In turn, define for each finite set $I$ the topological space
+\[ \mathcal{C}(I) = \{ (z_i,\lambda_i)\in \operatorname{Aff}(\mathbb C)^I  : |z_i-z_j|>|\lambda_i|+|\lambda_j| \}.\] 
+The group law of $\operatorname{Aff}(\mathbb C)$ allows us to
+define an operad structure on $\mathcal{C}(I)$ using the
+exact same definition as in the word operad of a monoid. 
+The subspaces $\mathcal{D}_2^{\mathrm{fr}}(I)
+	\subseteq \mathcal{C}(I)$
+where $|z_i|+|\lambda_i|\leqslant 1$ for all $i\in I$, and 
+where the inequality is strict unless $z_i=0$ is called
+the \emph{framed little disks operad}. The little disks operad
+is the suboperad where $\lambda_i = 1$ for all $i\in I$, and 
+we write it $\mathcal{D}_2(I)$.
+
+ \item The operad of rooted trees $\mathsf{RT}$ has
+ $\mathsf{RT}(n)$ the collection of rooted threes with $n$
+ vertices labeled by $[n]$, and the composition $T \circ_j T'$
+  is obtained by inserting $T'$ at the $j$th vertex of $T$
+  and reattaching the children of that vertex to $T'$ in
+  all possible ways. For example, if
+  \[ T=\vcenter{\xymatrix{*++[o][F-]{1} \ar@{-}[d] & 
+*++[o][F-]{3} \ar@{-}[dl]\\
+*++[o][F-]{2}}}
+\ {\hbox{\rm and}}\ \  S=\vcenter{
+\xymatrix{*++[o][F-]{2} \ar@{-}[d] \\
+*++[o][F-]{1}}}\]
+then we have that  
+  \[ T\circ_2 S=\quad
+ \vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+*++[o][F-]{1}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl]\\
+*++[o][F-]{3}\ar@{-}[d]\\
+*++[o][F-]{2}}} +\quad
+\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+*++[o][F-]{1}\ar@{-}[d]\\
+*++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl]\\
+*++[o][F-]{2}}}\quad +\quad
+\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+*++[o][F-]{4}\ar@{-}[d]\\
+*++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{1}\ar@{-}[dl]\\
+*++[o][F-]{2}}} \quad + \quad
+\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+*++[o][F-]{1}\ar@{-}[dr] & *++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl] \\
+&*++[o][F-]{2}}}. \]
+\end{tenumerate}
+\subsection{Exercises}
+
+\textcolor{trinityblue}{Complete.}
+\begin{question}
+ Check that examples (1), (2), (4), (5) and (6) are
+indeed al operads.
+\end{question}
+
+\begin{question}
+ Describe the operation $T\star T' = S(T,T')$ where
+$S$ is the rooted tree of example (6) in terms of 
+insertions of $T'$ in $T$ and regrafting of incoming 
+edges. Show that it satisfies the following \emph{pre-Lie
+identity}:
+\[
+  (T\star T')\star T'' -  T \star (T' \star T'' ) =
+    (T\star T'')\star T' -  T \star (T'' \star T' ) 
+ 	\]
+ 	by explicitly interpreting the left hand side in
+ 	terms of certain insertions of $T'$ and $T''$ in $T$,
+ 	and showing the resulting sum of trees is symmetric
+ 	in $T'$ and $T''$.
+
+\end{question}
+
+\pagebreak
+
+\section{Free operads and presentations}
+
+\textbf{Goals.} We will define algebraic operads
+by generators and relations, and with this at
+hand define quadratic and quadratic-linear
+presentations of operads.
+
+\subsection{Planar and non-planar trees}
+
+Operads and their kin are gadgets modeled after
+combinatorial graph-like objects. Operads themselves are modeled after
+rooted trees, so it is a good idea to have a concrete definition of 
+what a rooted tree is. We will also consider planar rooted trees,
+and trees with certain decorations, so it is a good idea to digest
+the definitions carefully to later embellish them.
+
+A rooted tree $\tau$ is the datum of a finite set $V(\tau)$
+of vertices along with a partition $V(\tau) = 
+\mathrm{Int}(\tau)\sqcup L(\tau) \cup R(\tau)$,
+where the first are the \emph{interior} vertices, $L$ are the leaves, and $R(\tau)$ is
+a singleton, called the root of $\tau$. We also require there is 
+a function $p :V(\tau)\smallsetminus R(\tau) \longrightarrow V(\tau)$,
+describing the edges of $\tau$, 
+with the following properties: call a vertex $v\in V(\tau)$ a child 
+of $w\in V(\tau)$ if $v\in p^{-1}(w)$. Then:
+\begin{tenumerate}
+\item The root $r\in R(\tau)$ has exactly one child.
+\item The leaves of $\tau$ have no children.
+\item For each non-root vertex $v$ there exist a unique sequence
+$(v_0,v_1,\ldots,v_k)$ such that $p(v_{i-1}) = v_{i}$ for $i\in [k]$
+with $v_0 = v$ and $v_k = r$.
+\end{tenumerate}
+We will call a non-leaf vertex that has no children a \emph{stump}
+(or an endpoint, or a cherry-top).
+A tree is reduced if has no stumps and all of its non-root and
+non-leaf vertices have at least two children. We will also call
+the root the (unique) output vertex $\tau$, and the leaves
+the input vertices of $\tau$. 
+
+A planar rooted tree is a rooted tree $\tau$
+along with a linear order in each of the fibers
+of the parent function $p$ of $\tau$. In short,
+the children of each vertex are linearly ordered,
+so we are effectively considering a drawing of
+$\tau$ in the plane, where the clockwise
+orientation gives us the order at each
+vertex. 
+
+Two rooted trees $\tau$ and $\tau'$ are isomorphic
+if there exists a bijection $f : V(\tau) \longrightarrow 
+V(\tau')$ that preserves the root, the input vertices and the
+interior vertices, so that $p'\circ f = p$ where we
+also write $f$ for the induced bijection $f : V(\tau)\smallsetminus r \longrightarrow 
+V(\tau')\smallsetminus r'$. Two planar rooted trees
+are isomorphic if in addition $f$ respects the linear order
+at each vertex.
+
+For example, consider the rooted tree $\tau$ with
+$V = \{1,2,3\}\cup \{4,5\}\cup \{0\}$, that is,
+three leaves, two interior vertices and the root.
+Then the choice of $p : [5] \to \llbracket 5 \rrbracket$ 
+with $p(\{1,2\}) = 4$, $p(\{3,4\}) = 5$, $p(5) = 0$
+gives a tree isomorphic to the one with 
+with $p(\{1,2\}) = 3$, $p(\{3,4\}) = 5$, $p(5) = 0$.
+On the other hand, if we consider the vertices linearly
+ordered by their natural order, these two planar rooted trees 
+are no longer isomorphic. 
+
+\begin{definition}
+For a finite set $I$, an $I$-labeled tree $T$
+is a pair $(\tau,f)$ where $\tau$ is a 
+reduced rooted tree, along with
+a bijection $f : I \longrightarrow L(\tau)$.
+Two $I$-labeled trees $T$ an $T'$ are isomorphic
+if there exists a pair $(g,\sigma)$ where
+$g$ is an isomorphism between $\tau$ and $\tau'$
+and $\sigma$ is an automorphism of $I$ such that
+$g\mid_{L(\tau)}\circ f = \sigma\circ f'$. 
+\end{definition}
+
+Suppose that $(\tau,f)$ is an $I$-tree and that
+$(\tau',f')$ is a $J$-tree, and that $i\in I$. We define
+$K=I\cup_i J = I\sqcup J \smallsetminus i$ and the
+$K$-tree $\tau\circ_i \tau'$ as follows:
+\begin{tenumerate}
+\item Its leaves are $L(\tau\circ_i \tau') = L(\tau)\sqcup L(\tau')\smallsetminus f^{-1}(i)$.
+\item Its internal vertices are $V(\tau)\sqcup V(\tau')$, with
+root $r$. 
+\item The parent function $q$ is defined by declaring that:
+	\begin{titemize} 
+	\item $q$ coincides with $p$ on $V(\tau)$, 
+	\item $q(w) = p(f^{-1}(i))$ if
+$w$ is the unique children of the root of $\tau'$, 
+	\item  $q$
+coincides with $p'$ on $V(\tau')\smallsetminus \{r',w\}$.
+\end{titemize}
+\item The leaf labeling is the unique bijection $L(\tau\circ_i \tau') \longrightarrow I\circ_i J$ extending $f$ and $f'$.
+\end{tenumerate} 
+Let us now consider an 
+(unbiased) reduced symmetric sequence $\XX$ which
+we will think of as an \emph{alphabet}. An tree monomial in the
+alphabet $\XX$ 
+is a pair $(\tau,x)$ where $\tau$ is a reduced rooted
+tree and $x : \mathrm{Int}(\tau) \longrightarrow \XX$ is a map
+with the property that $x(v) \in \XX(p^{-1}(v))$. Observe that
+reduced sequences and reduced trees correspond to each other, in the
+sense that with this definition we can only decorate a stump
+of $\tau$ with an element of $\XX(\varnothing)$. 
+
+An $I$-labeled
+$\XX$-tree $T$ is a triple $(\tau,x,f)$ where $(\tau,f)$ is $I$-labeled
+and $(\tau,x)$ is an $\XX$-tree. We will say that $(\tau,x,f)$
+is a (symmetric) tree monomial if $\XX$ is symmetric. If it
+is just a collection, we will say that $(\tau,x,f)$ is a
+ns tree monomial. In particular, if $T$ is an $I$-labeled
+tree, and if $\sigma \in \Aut(I)$, there is another 
+$I$-labeled tree $\sigma(T)=(\tau,f\sigma^{-1})$. 
+
+
+Suppose that $T = (\tau,x,f)$ is a tree monomial on an
+alphabet $\XX$, and let us pick a vertex $v$ of $\tau$
+and a permutation $\sigma$ of the set $C = p^{-1}(v)$ of
+children of $v$. We define the tree $\tau^\sigma$ as
+follows: the datum defining $\tau$ remains unchanged
+except $p$ is modified to $p^\sigma$ so that 
+
+\[ p^\sigma(w) = 
+\begin{cases}
+ p(w) & \text{if $p^2(w)\neq v$} \\
+ p(\sigma^{-1}(w')) & \text{if $p(w)=w'\in C$}.
+\end{cases}
+\]
+Briefly, we just relabel the vertices of $\tau$
+using $\sigma$. With this at hand, we define
+$T^\sigma$ to be the tree monomial with underlying 
+tree $\tau^\sigma$ and with $x$ modified to $x^\sigma$ so that
+\[ x^\sigma(w) = 
+\begin{cases}
+ \sigma x(v) & \text{if $v=w$,} \\
+ x(\sigma^{-1}(w')) & \text{if $p(w)=w'\in C$}.
+\end{cases}
+\]
+Note that it is possible some children of $v$ are
+leaves, in which case the definitions make sense if
+we think of leaves as decorated by the unit of
+$\kk$. 
+
+\textcolor{trinityblue}{Give example of $T^\sigma$ with
+and without leaves involved.}
+
+Let us now define for each $n\geqslant 1$ the
+space $\FF_\XX(I)$ as the span of all tree monomials
+$T = (\tau,f,x)$ on $\XX$ with leaves labeled by $I$,
+modulo the subspace generated by all elements of the form
+\[ R(T,v,\sigma) = T - T^\sigma \]
+where $\sigma$ ranges through $\Aut(p^{-1}(v))$ as
+$v$ ranges through the vertices of $\tau$. In case
+all children of $v$ are leaves, this is saying that
+the tree where $x_v$ is replace by $\sigma(x_v)$
+is equal to the tree where the leaves of $T$ that are
+children of $v$ are relabeled according to $\sigma$.
+
+\begin{definition}
+The \emph{free symmetric operad} on $\XX$ is the
+symmetric sequence $\FF_\XX$ along with the composition
+law obtained by grafting of trees. More precisely,
+suppose that $T\in \FF_\XX(I)$ and that $T'\in\FF_\XX(J)$,
+and that $i\in I$. We define $T'' =T\circ_i T' \in 
+\FF_\XX(I\cup_I J)$ by taking its underlying labeled
+tree to be $\tau\circ_i \tau'$, and by decorating it
+in the unique way which extends the decorations of 
+$T$ and $T'$.
+\end{definition}
+
+\begin{question}
+Show that tree grafting respects the relations above,
+and hence is well defined on $\FF_\XX$. We will later
+interpret $\XX\longmapsto \FF_\XX$ as a \emph{monad},
+thus giving another definition of operads. The
+advantage of this monadic approach is its 
+flexibility, which allow us to define other
+operad like structures, like the ones 
+mentioned in the introduction.
+\end{question}
+
+\begin{question} 
+\end{question}
+\textcolor{blue}{Complete.}
+
+
+\subsection{The free operad}
+An algebraically inclined way to construct
+(algebraic) operads is through generators and
+relations. There is a forgetful functor
+from the category of operads to the category
+of collections. In general, it admits a left
+adjoint, which is the free operad functor.
+
+\begin{definition}
+The free operad generated by a symmetric
+collection $X$ is defined inductively by
+letting  $\FF_{0,X}=\kk$ be spanned
+by the `twig' (tree with no vertices and one edge)
+in arity zero and
+\[ \FF_{n+1,\XX} = \kk\oplus (\XX\circ  \FF_{n,\XX} ), \]
+and finally by setting
+$\FF_\XX = \varinjlim_n \FF_{n+1,\XX}$.
+The composition maps are defined by induction,
+and the axioms are also checked by induction.
+\end{definition}
+
+\textcolor{blue}{Expand on definition of free
+operad. Give explicit definition using trees 
+decorated by $\XX$.}
+
+Intuitively, the definition says that an element of
+$\FF_\XX$ is either the twig, or corolla
+with $n$ vertices decorated by $\XX$, whose leaves
+have on them an element of $\FF_\XX$. The
+final shape of $\FF_\XX$ will however
+depend on the symmetric structure of $ \XX$. For
+example, if $ \XX = \XX(2) =S_2$ is the regular
+representation, then $\FF_\XX(k)$ consists
+of planar binary rooted trees with $k$ leaves
+decorated by a permutation of $[k]$. If,
+however, $ \XX=  \XX(2)$ is the trivial (or sign)
+representation of $S_2$, then $\FF_X(k)$ 
+will consist of shuffle binary trees.
+
+\begin{note}
+The free conilpotent cooperad $\FF^c_\XX$ can be defined
+in a completely analogous fashion: it has the same 
+underlying symmetric sequence as $\FF_\XX$ (much like
+$TV$ and $T^cV$ have the same underlying vector space)
+and it has decomposition maps obtained by `degrafting'
+trees.
+\end{note}
+
+The free operad $\FF_\XX$ is weight graded by the number
+of internal vertices of a trees (that is, we put $\XX$ in
+weight one, and extend the weight to trees by counting 
+occurrences of elements of $\XX$. More generally, if
+$\XX$ admits a weight grading, then $\FF_\XX$ inherits
+this weight grading, and we write $\FF_\XX^{(n)}$ for the
+homogeneous component of weight $n\in\NN_0$. If we do
+not specify a weight grading on $\FF_\XX$, we will 
+always assume we are taking the canonical weight grading above.
+ 
+\begin{definition} An ideal in an operad $\PP$
+is a subcollection $\mathcal{I}$ for which
+$\gamma(\mathcal{I}\circ \PP)
+	+\gamma(\PP\circ_{(1)} \mathcal{I})\subseteq 
+		\mathcal{I}$.
+The quotient of $\PP/\mathcal{I}$ is again an
+operad, called the quotient of $\PP$ 
+by $\mathcal{I}$. Every subcollection $\RR$
+of $\PP$ is contained in a smallest
+ideal, called the \emph{ideal generated by $\RR$}.
+\end{definition}
+
+The notion of ideals and of free operads allow us
+to define operads by generators and relations.
+
+\begin{definition}
+We write $\FF(\XX,\RR)$ for the quotient of 
+$\FF_\XX$
+by the ideal generated by a subcollection $\RR$
+of $\FF_\XX$. 
+ We say $\PP$ is presented by generators
+$\XX$ and relations $\RR$ if there is an
+isomorphism $\FF(\XX,\RR) \longrightarrow
+\PP$.
+\end{definition}
+
+Note that if $\PP$ is symmetric, the definition
+requires that $\mathcal{I}$ be stable under
+the symmetric group actions, so we may 
+sometimes specify $\RR$ by a generating set 
+as a symmetric sequence only, and understand
+that $(\RR)$ is generated by the $\Sigma$-orbit
+of $\RR$.
+
+\medskip
+
+\textbf{The classics.}
+The associative operad is generated by a 
+binary operation $\mu$ generating the regular
+representation of $S_2$ subject to the only relation
+\[ \mu\circ_1 \mu = \mu \circ_2 \mu. \] 
+Similarly, the commutative operad is generated by a 
+binary operation which instead generates the
+trivial representation of $S_2$. Both of these
+examples arise as the linearization of a set operad.
+
+The Lie operad is generated by a single binary 
+operation $\beta$ that generates the sign 
+representation of $S_2$ subject to the only
+relation
+\[ (\beta \circ_1 \beta)(1+\tau+\tau^2) = 0 \] 
+where $\tau = (123)\in S_3$ is the $3$-cycle. 
+We write these operads $\mathsf{As},\mathsf{Com}$
+and $\mathsf{Lie}$ and, following J.-L. Loday,
+call them the \emph{three graces}. We have that
+\[ \As(n) = \kk S_n,\quad
+ 	\Com(n) = \kk, \quad
+ 	 \Lie(n) = \operatorname{Ind}_{\mathbb Z/n}^{S_n} \kk_\zeta \] 
+ where $\kk_\zeta$ is a character of $\mathbb Z/n$
+ for a primitive $n$th root of the unit. 
+ 
+ 
+\begin{note} It is not always advantageous
+to define an operad by generators and relations:
+the operad pre-Lie can be defined explicitly
+in terms of labeled rooted trees and a grafting
+operation, as done by Chapoton--Livernet, and
+this `presentation' is very useful in practice,
+for example, to show that the pre-Lie operad
+is Koszul.
+\end{note}
+\subsection{Quadratic operads}
+
+An operad $\PP$ is \emph{quadratic} if it admits a presentation
+$\FF(\XX,\RR)$ where $\RR \subseteq \FF(\XX)^{(2)}$. 
+That is, $\PP$ is generated by some collection of
+operations $\XX$ and all its defining relations are of the form
+\[ \sum \lambda_{\mu,\nu}^i \mu \circ_i \nu = 0  \] 
+where $\ari(\mu)+\ari(\nu)$ is constant. An operad is
+\emph{binary quadratic} if moreover $\XX = \XX(2)$ or,
+what is the same, all the generating operations of $\PP$
+are of arity two (binary). 
+ A \emph{quadratic-linear presentation} of an operad $\PP$
+is a presentation $\FF(\XX,\RR)$ of $\PP$ where $\RR 
+\subseteq \XX \oplus \FF(\XX)^{(2)}$. That is, it is
+a presentation of the form
+\[ \sum \lambda_{\mu,\nu}^i \mu \circ_i \nu 
+ + \sum \lambda_\rho \rho = 0   \] 
+ where $\ari(\mu)+\ari(\nu) = \ari(\rho)+1$ is constant.
+
+\medskip
+
+\textbf{Some examples.} The presentations of the 
+associative, commutative and Lie operad above are
+quadratic. The following are also quadratic operads:
+\begin{tenumerate}
+\item The Gerstenhaber operad $\mathsf{Ger}$ (and its cousin,
+the Poisson operad $\mathsf{Poiss}$).
+\item The pre-Lie operad $\mathsf{PreLie}$ and its
+quotient, the Novikov operad $\mathsf{Nov}$.
+\item The operad of totally associative $k$-ary algebras 
+$\mathsf{tAs}_k$ (and its Lie counterpart).
+\item The operad of partially associative $k$-ary algebras
+$\mathsf{pAs}_k$ (and its commutative counterpart).
+\item The operad of anti-associative algebras $\mathsf{As}^-$.
+\item The operad controlling Lie algebras with two compatible
+brackets.
+\end{tenumerate}
+
+\textcolor{trinityblue}{Expand on the definition of 
+these operads.}
+
+On other other hand, every operad admits a quadratic-linear
+presentation, and in this case the condition for a 
+quadratic-linear presentation to be `good enough' is more
+subtle. We will postpone the discussion of such presentations
+to Section~\ref{sec:inhom}.
+ 
+ 
+\subsection{Algebras over operads}
+Operads are important not in and of themselves 
+but through their representations, more commonly
+called \emph{algebras over operads}. In fact,
+one can usually `create' an operad by declaring
+what kind of algebras it governs. If the
+algebra has certain operations of certain
+arities, these define the generators of the operad,
+and the relations these operators must satisfy 
+give us the relations presenting our operad. 
+
+\begin{definition}
+A $\PP$-algebra structure on a vector
+space $V$ is the datum of a map of operads 
+$\PP \longrightarrow \End_V$.
+\end{definition}
+
+Alternatively, one can consider the situation
+when $\otimes$ is closed and has a right
+adjoint $\hom$ (the internal hom) so that
+what we want are maps
+\[\label{eq:Palgebramap}
+\gamma_{V,n} : 
+\PP(n)\otimes_{S_n} V^{\otimes n} \longrightarrow V \]
+declaring how each $\mu \in\PP(n)$ acts as an operation
+$\mu : V^{\otimes n} \longrightarrow V$. 
+It follows that a
+ $\PP$-algebra structure on $V$ is the same as the datum
+of maps as in \ref{eq:Palgebramap} that satisfy the following
+conditions:
+
+\begin{tenumerate}
+\item \emph{Associativity:} let $\nu\in \PP(n)$ and
+$\nu_i \in \PP(k_i)$ for $i\in [n]$, and pick
+$w_i \in V^{\otimes k_i}$. Set $v_i = \gamma_{V,k_i}(\nu_i,w_i) \in V$
+and $\mu = \gamma_\PP(\nu;\nu_1,\ldots,\nu_n)$. Then 
+\[ \gamma_{V,k_1+\cdots+k_n}(\mu; w_1,\ldots,w_n) = 
+	\gamma_{V,n}(\nu ;v_1,\ldots, v_n).\]
+\item \emph{Equivariance:} for $\nu\in\PP(n)$, $v_1\otimes\cdots \otimes v_n \in V^{\otimes n}$
+and $\sigma\in S_n$, we have that
+\[ \gamma_{V,n}(\nu \sigma, v_{\sigma 1} \otimes \cdots \otimes v_{\sigma n}) = \gamma_{V,n}(\nu; v_1\otimes\cdots \otimes v_n). \]
+\item \emph{Unitality:} if $1\in\PP(1)$ is the unit, then
+$\gamma_{V,1}(1,v) = v$.  
+\end{tenumerate}
+
+
+
+\textcolor{trinityblue}{Complete. Recognition
+principle. Gerstenhaber algebras and Hochschild
+complex.}
+ \subsection{Exercises}
+
+\pagebreak
+
+\section{Some homological algebra}
+
+\subsection{Twisting cochains}
+
+\subsection{(Co)bar construction}
+  
+Let $\PP$ be a non-unital operad, and define a chain complex in
+symmetric sequences as follows: its underlying collection
+is $\FF^c_{s\PP}$ (the $c$ stands for conilpotent cooperad)
+and $s$ is a suspension sign, so that trees with $n$
+vertices live in homological degree $n$. There is a differential
+in $\FF^c_{s\PP}$ which is the unique coderivation
+extending the map
+\[ \FF^c_{s\PP} \longrightarrow s\PP \]
+that vanishes everywhere on the domain except on $\FF^{c,(2)}_{s\PP} = (s\PP)\circ_{(1)} (s\PP)$ where it 
+equals
+\[ \partial(s\nu_1 \circ_i s\nu_2) = (-1)^{|\nu_1|-1}
+	s (\nu_1\circ_i \nu_2).\]
+	 
+\begin{definition}
+We call $(\FF(s\PP), \partial,\Delta)$ the \emph{bar construction} of $\PP$, and write it $\mathsf{B}(\PP)$. 
+\end{definition}
+
+Thus,
+elements of $B(\PP)$ are just rooted trees $T$ for which
+each vertex $v\in T$ is decorated by an element $\PP(I_v)$
+where $I_v$ is the set of incoming edges of $v$.
+The differential $\partial$ acts by contracting one
+edge at a time and composing along this edge 
+(a kind of graph complex differential). 
+
+This interpretation allows us to give a `hands on'
+definition of the bar construction. Concretely, 
+for each tree $T$ define 
+\[ \PP(T)^- = \bigotimes_{v\in T} \PP(I_v) \otimes \det(T).\]
+Then the degree $n$ component of $\mathsf{B}(\PP)$
+is the direct sum of all $\PP(T)^-$ as $T$ runs through
+isomorphism classes of rooted trees with $n$ internal
+vertices. Suppose that $e$ is an edge in $T$ directed
+from vertex $v$ to vertex $w$ in $T$. There is a
+composition map
+\[ 
+\PP(I_v)\otimes \PP(I_w) \longrightarrow 
+\PP(I_v \cup I_w \smallsetminus e) 
+\subseteq \PP(T/e)
+\] 
+and the the differential is induced by the resulting maps
+\[ d_e : \PP(T)^- \longrightarrow \PP(T/e)^- \quad
+ 	e\in E(T). \]
+
+\begin{definition}
+The bar complex $\mathsf{B}(\PP)$ inherits a weight
+grading from $\PP$ (if it admits any). In this case,
+the syzygy grading on $\mathsf{B}(\PP)$ is a \emph{cohomological}
+grading defined by
+\[ \mathsf{B}^s(\PP) = \bigoplus_{s+d = w} \mathsf{B}_d(\PP)_{(w)}.\]
+That is, an element of homological degree $d$ and weight
+$w$ is in syzygy degree $w-d$.
+\end{definition}
+
+When $\PP$ is quadratic, it is automatically graded by
+placing its generators in weight $1$, and thus $\mathsf{B}(\PP)$
+has its syzygy grading. By construction an element of homological
+degree $d$ in $\mathsf{B}(\PP)$ has weight at least $d$ (unless
+$\PP$ is dg, but that is another story), so that $\mathsf{B}_d(\PP))_{(w)}$ can only be non-zero for $w\geqslant d$.
+
+\begin{lemma}  Let $\PP$ be a weight graded operad. Then:
+\begin{tenumerate}
+\item It is generated
+in weight one if and only if $H_1(\mathsf{B}(\PP))_{(w)}=0$
+unless $w=1$.
+\item It is one generated and quadratic if and
+only if  $H_2(\mathsf{B}(\PP))_{(w)}=0$ unless $w=2$.
+\end{tenumerate}
+\end{lemma}
+ 
+In other words, $\PP$ is one generated if and only if
+in weight $1$, the syzygy cohomology $H^*(\mathsf{B}(\PP))$
+is concentrated in degree zero, and it is quadratic (and in
+particular $1$-generated) if and only if in weights $1$ and
+$2$, the syzygy cohomology $H^*(\mathsf{B}(\PP))$
+is concentrated in degree zero.
+
+\begin{proof}
+We have that $\mathsf{B}_1(\PP)_{(w)}=
+s \PP_{(w)}$ and that the bar differential 
+$\mathsf{B}_1(\PP)_{(w)} \longrightarrow 	
+				\mathsf{B}_0(\PP)_{(w)}$
+is zero, while $\mathsf{B}_2(\PP)_{(w)} = 
+(s\PP\circ_{(1)} s\PP)_{(w)}$ and the differential
+$\mathsf{B}_2(\PP)_{(w)} \longrightarrow 	
+				\mathsf{B}_1(\PP)_{(w)}$
+is just a modification of the composition map of $\PP$.
+It follows that $H_1(\mathsf{B}(\PP))_{(w)} = 
+	s\PP_{(w)}/ \gamma(\PP \circ_{(1)} \PP)_{(w)}$ consists 
+	of those elements in weight $w$ that are not
+	expressible as a composition of two elements in lower
+	weights or, what is the same,
+	\[ H_1(\mathsf{B}(\PP))_{(w)} = s\XX_{(w)}.\] 
+	Thus $H_1(\mathsf{B}(\PP))_{(w)}=0$ unless $w=1$
+	 if and only if
+	very element in weight $w$ can be written as a composition
+	of elements in lower weights, if and only if $\XX$ is 
+	concentrated in weight $1$. This proves the first claim.
+	
+	For the second one, assume that $\XX = \XX_{(1)}$, and
+	let $\RR$ be the homogeneous ideal of relations defining
+	$\PP$. Since $\PP$ is one generated, $\RR$ must be 
+	a direct sum of homogeneous components $\RR_{(w)}$.
+	One can show that for each $w\geqslant 2$ we have 
+	\[ H_2(\mathsf{B}(\PP))_{(w)} = s^2\RR_{(w)},\]
+	which proves the claim. To do it, we prove that
+	there exists a dg resolution $(\FF_{\XX'},\delta)$ of
+	$\PP$ with $\XX'_0=\XX$ and $\XX'_1 = \RR$, and
+	that $\Omega\mathsf{B}(\PP)$ affords another resolution
+	of $\PP$. Then, one shows that these two dg resolutions
+	give the same derived functor of indecomposables, 
+	and that this computes $H_*(\mathsf{B}(\PP))$.  
+\end{proof}
+
+\subsection{Universal twisting cochains}
+
+Let $\CC$ be a conilpotent non-unital dg-cooperad. The 
+\emph{cobar construction} of $\CC$, which we write
+$\Omega\CC$, is defined as follows. Its underlying
+sequence is the free operad $\FF_{s^{-1}\CC}$ on
+the desuspension of $\CC$, which inherits a differential
+$d_1$ from the decomposition maps of $\CC$, and another
+differential $d_2$ from the differential of $\CC$. The
+differential of $\Omega \CC$ is then $d_1+d_2$.
+
+ \pagebreak
+ \section{Koszul duality I}
+\textbf{Goals.}
+We introduce the notion of a Koszul operad. We will
+then give the Rosetta stone of Koszul
+duality, and look into the ns associative
+operad in detail from the lens of Koszul
+duality theory.
+
+
+\subsection{Koszul duality}
+\newcommand{\antishriek}{\text{\raisebox{\depth}{\textexclamdown}}}
+\begin{definition}
+A quadratic operad is Koszul if one (and hence all)
+of the following equivalent conditions are
+satisfied:
+\begin{tenumerate}
+\item The cohomology group $H^s(\mathsf{B}(\PP))$ is zero for $s>0$.
+\item We have $\mathrm{rate}(\PP)=1$.
+\item The inclusion
+$H^0(\mathsf{B}(\PP)) \longrightarrow \mathsf{B}^*(\PP)$
+is a quasi-isomorphism. 
+\end{tenumerate}
+We call $H^0(\mathsf{B}(\PP))$ the
+\emph{Koszul dual cooperad to $\PP$} and 
+write it $\PP^\antishriek$.
+\end{definition}
+
+\textcolor{trinityblue}{Add equivalence with simpler
+definition using twisting cochains.}
+%\item The Koszul complex $\PP\circ_\tau \PP^\antishriek$ is acyclic.
+%\item The Koszul complex $\PP^\antishriek\circ_\tau \PP$ is acyclic.
+%\item The canonical map $\Omega \PP^\antishriek \longrightarrow \PP$
+%is a quasi-isomorphism.
+
+\newcommand{\sus}{\mathscr{S}}
+\textbf{Suspensions.} Let $s\kk$ be the graded $\Sigma$-module
+concentrated in arity $1$ and degree $1$, where it is one
+dimensional. We call $\End_{s\kk}$ the suspension operad
+and write it $\sus$. Note that $\End_{s\kk}(n)$ is
+the sign representation of $\Sigma_n$ put in degree $1-n$,
+and if we write $\nu_n$ for the map that sends $s^n$ to $s$,
+then we have the following composition rule:
+\[ \nu_n \circ_i \nu_m = (-1)^{(i-1)(m-1)} \nu_{m+n-1}. \]
+If $\PP$ is an operad, then the arity-wise tensor product
+$\sus\otimes \PP$ is called the suspension of $\PP$
+and we write it $\sus\PP$ or $\PP\{1\}$. Dually, we
+write $\sus^{-1}$ for the desuspension operad.
+
+\begin{note} The operad  $\sus\PP$ has the property that
+$\sus\PP(sV) = s\PP(V)$, so that algebras over $\sus\PP$
+are exactly those vector spaces $V$ such that $s^{-1}V$ is a
+$\PP$-algebra. Equivalently, $sV$ is a $\sus\PP$-algebra
+if and only if $V$ is a $\PP$-algebra. 
+\end{note}
+
+\textbf{Pairings.} We define a pairing between $\FF_\XX$ and
+$\FF_{s^{-1}\sus^{-1}\XX^*}$ as follows (the appearance of
+the suspensions will be evident later):
+\[ \langle \Sigma\nu^* \circ_j \Sigma\mu*, 
+	\rho \circ_i \tau  \rangle
+   = \delta_{ij} (-1)^{(\ari(\nu)-1)(|\mu|+i-1)+|\nu||\mu|}
+   	\nu^*(\rho)\mu^*(\tau). \] 
+If $\XX = \XX(2)$ is binary and has no homological degrees, 
+this simplifies to
+\[ \langle \Sigma\nu^* \circ_i \Sigma\mu*, 
+	\rho \circ_i \tau  \rangle
+   =  \begin{cases}
+    	\phantom{-}\nu^*(\rho)\mu^*(\tau) & i=1 \\
+    	-	\nu^*(\rho)\mu^*(\tau) & i = 2.
+    	\end{cases} \] 
+\begin{definition}
+The Koszul dual operad of a quadratic operad $\PP$ is
+defined by $\sus^{-1}(\PP^\antishriek)^*$ and we write
+it $\PP^!$. If $\PP$ is 
+generated by $\XX$ subject to relations $\RR$, then
+$\PP^!$ is generated by $s^{-1}\sus^{-1}\XX^*$ 
+subject to the orthogonal space of relations
+$\RR^\perp$ according to the pairing above.
+\end{definition} 
+
+\begin{note}
+Let $\PP$ be an operad. Then $\PP$ is quadratic if and
+only if $\sus\PP$ is quadratic, and it is Koszul if and
+only if $\sus\PP$ is Koszul. In this case
+\[ (\sus\PP)^\antishriek \cong \sus\PP^{\antishriek}, \]
+For example, if 
+$\mathsf{Poiss}(a,b)$ is the operad controlling
+Poisson algebra with a product of degree $a$ and a
+bracket of degree $b$, then $\mathsf{Poiss}(a,b)^! 
+= \mathsf{Poiss}(-b,-a)$. In particular, 
+\[\mathsf{Ger}^!
+= \mathsf{Poiss}(0,1)^! = \mathsf{Poiss}(-1,0)=
+\sus^{-1} \mathsf{Ger}.\] 
+We will see later all the operads $\mathsf{Poiss}(a,b)$ are
+Koszul. Note also that $\mathsf{Ger}^! \cong
+\sus^2\mathsf{Ger}$. More generally,
+also note that $\mathsf{e}_n = \mathsf{Poiss}(0,n-1)$ is the
+homology operad $H_*(D_n)$ of little disks, which satisfies
+\[ \mathsf{e}_n^! = \mathsf{Poiss}(1-n,0) = \sus^{n-1}\mathsf{e}_n.\]
+\end{note}
+\subsection{The associative operad}
+
+
+
+\subsection{Pathological examples}
+
+Let $\mathsf{As}^-$ be the ns-quadratic operad generated
+by an anti-associative binary operation $\mu$, that is
+\[ \mu\circ_1\mu + \mu \circ_2 \mu = 0.\]
+Let $\mathcal{O}_3$ be the ns-quadratic operad generated
+by an binary operation $\mu$ that is nilpotent of 
+order three, in the sense that any binary tree with
+three (or more) occurrences of $\mu$ is zero:
+\[ (\mu\circ_i \mu)\circ_j \mu = 0 \]
+for all possible choices of $i$ and $j$. 
+
+\begin{lemma}
+The operad $\mathsf{As}^-$ is three dimensional 
+with basis $\{1,\mu,\mu\circ_1\mu\}$, and $\mathcal{O}_3$
+is four dimensional with basis $\{1,\mu,\mu\circ_1\mu,\mu \circ_2\mu\}.$
+\end{lemma}
+
+\begin{proof}
+The second claim is immediate. For the first, one has
+to show that anti-associativity implies any binary tree
+of weight three vanishes. This is a simple computation:
+\[ ((x_1x_2)x_3)x_4 = 
+ -(x_1(x_2x_3))x_4 =
+  x_1((x_2x_3)x_4) =
+   -x_1(x_2(x_3x_4)) \] 
+but also $((x_1x_2)x_3)x_4 = 
+-(x_1x_2)(x_3x_4) =
+  x_1(x_2(x_3x_4))$, 
+  so that  $  x_1(x_2(x_3x_4))=- x_1(x_2(x_3x_4))$.
+  Since all weight three trees in $\mathsf{As}^-$ are
+  equal up to a sign, they must all be zero. 
+\end{proof}
+
+It follows that the bar construction 
+$\mathsf{B}(\mathsf{As}^{-})$
+is the free operad on a binary operation $\mu$ and a ternary
+operation $\mu_3$, 
+and that the bar construction $\mathsf{B}(\mathcal{O}_3)$
+is the free operad on a binary operation $\mu$
+and two ternary operations $\nu_3$ and $\tau_3$.
+The differential of the first bar construction
+is non-zero only on trees that contain a subtree
+of the form $\mu\circ_1\mu$ or $\mu \circ_2 \mu$,
+and 
+ \[ d(\mu\circ_1\mu) = \mu_3, \quad
+  d(\mu \circ_2 \mu) = -\mu_3, \]
+  while the same is true for the second bar construction
+  with the exception that
+   \[ d(\mu\circ_1\mu) = \nu_3, \quad
+  d(\mu \circ_2 \mu) = \tau_3.\]
+  The computation of $H^*(\mathsf{As}^-)$ can
+  be done, and one can show that
+  \[ H_d(B(\mathsf{As}^-))_{(w)} \neq 0\] 
+  only for $(d,w) \in \{ (2k+n,3k+n) : k,n\in\NN\}$. 
+   It  follows that if we define 
+  \[ \mathrm{rate}(\PP) = \sup \left\{ \frac{w-1}{d-1} : 
+  	H_d(\mathsf{B}(\PP))_{(w)} \neq 0\right\},  \]
+  	then $\mathrm{rate}(\mathsf{As}^-) = 3/2$.
+Thus, $\mathsf{As}^-$ is not Koszul (as per the definition
+below, which requires this `slope' to be $1$) but is quite
+close to having slope $1$. In this sense, the rate of 
+$\PP$ is a measure of how `dispersed' the bar homology
+is with respect to the syzygy grading. 
+  \begin{problem}
+  Compute the bar cohomology $H^*(\mathcal{O}_3)$. 
+  More generally, compute the bar cohomology of
+  any monomial operad.
+  \end{problem}
+
+\section{Methods to prove Koszulness I}
+
+\subsection{Distributive law methods}
+
+\subsection{Koszul (co)homology}
+
+\subsection{Exercises}
+
+\section{Pre-Lie algebras and algebraic operads}
+
+\subsection{Pre-Lie algebras associated to operads}
+
+\subsection{The rooted trees operad}
+
+\subsection{Exercises}
+
+
+\section{Gr\"obner bases for algebraic operads I}
+
+\subsection{Shuffle sequences}
+\subsection{Shuffle operads}
+\subsection{Exercises}
+
+\section{Gr\"obner bases for algebraic operads II}
+
+\subsection{Tree monomials}
+\subsection{Admissible orders}
+\subsection{Exercises}
+
+\section{Methods to prove Koszulness II}
+
+\subsection{Gr\"obner basis arguments}
+\subsection{Filtration arguments}
+\subsection{Exercises}
+
+\section{Operads in algebraic topology 1}
+
+\subsection{The little disks operad}
+\subsection{Stasheff's operad}
+\subsection{Recognition principles}
+
+
+\section{Koszul duality II}
+
+\subsection{Inhomogeneous duality}\label{sec:inhom}
+
+Suppose that $\PP$ admits a quadratic linear presentation
+defined by $\XX$ and $\RR\subseteq \XX\oplus \FF_\XX^{(2)}$.
+There is a projection $q : \FF_\XX \longrightarrow \FF_\XX^{(2)}$
+and we define $q\PP = \FF_{\XX}/(q\RR)$, and call it 
+the \emph{quadratic operad associated to $\PP$}. We say
+a quadratic-linear presentation is admissible if it
+satisfies the following conditions:
+\begin{tenumerate}
+\item There are no superfluous generators in $\XX$,
+that is, have that $\RR\cap \XX = 0$.
+\item No new quadratic relations can be deduced from the
+quadratic-linear relations, that is
+\[ (\RR\circ_{(1)} \XX + \XX\circ_{(1)} \RR) \cap \FF_\XX^{(2)}
+\subseteq \RR\cap \FF_\XX^{(2)}.\]
+\end{tenumerate}
+When condition (1) is satisfied, there is a map 
+$f: q\RR \longrightarrow \XX$ such that $\RR = \{
+r - f(r) : r\in q\RR \}$ is the graph of $f$. The operad
+$\PP$ is filtered by weight, and we write $\mathrm{gr}(\PP)$
+for the resulting operad. There is a surjection
+$ q\PP \longrightarrow \mathrm{gr}(\PP)$
+that is an isomorphism in weights $0$ and $1$, but
+not necessarily in weight $2$.
+
+The map $f: q\RR \longrightarrow \XX$ induces a map
+$d_f : q\PP^\antishriek \longrightarrow \FF_{s\XX}^c$
+which is the unique coderivation that correstricts on
+$s\XX$ to the composition
+\[ \PP^\antishriek  \xrightarrow{\pi} 
+ s^2 q\RR \xrightarrow{s^{-1}f} s\XX.\] 
+ Moreover, the following holds:
+ \begin{tenumerate}
+ \item The coderivation $d_f$ maps into $q\PP^\antishriek$
+ if and only if 
+ $(\RR\circ_{(1)} \XX + \XX\circ_{(1)} \RR) \cap \FF_\XX^{(2)} \subseteq q\RR$.
+ \item If condition (2) above is satisfied, then the previous
+ condition holds, as $\RR\cap \FF_\XX^{(2)}\subseteq q\RR$,
+ and $d_f^2=0$.
+ \end{tenumerate}
+ 
+\begin{definition}
+A quadratic-linear presentation of $\PP$ is inhomogeneous
+Koszul if and only if it satisfies conditions (1) and (2)
+and if the quadratic operad $q\PP$ is Koszul. In this case,
+we call $(q\PP^\antishriek,d_f)$ the Koszul dual conilpotent
+dg-cooperad
+of $\PP$ and write it $\PP^\antishriek$.
+\end{definition}
+
+ \textbf{Warning!} Although not every operad 
+is quadratic, every operad admits
+a inhomogeneous Koszul presentation (Exercise 3.8.10
+in \cite{LodVal}).  The problem is finding `economical
+and useful' one.
+Concretely, if we choose $\XX = \#\PP$ (the symmetric 
+sequence underlying $\#\PP$) and 
+quadratic-linear relations $\# \mu \circ_i \#\nu = \#(\mu\circ_i \nu)$ for every $\mu,\nu\in\PP$ and $i\in [1,\ari(\mu)]$,
+then $\PP^\antishriek = \mathsf{B}(\PP)$ is the
+bar construction of $\PP$ with its usual differential.
+
+The main
+theorem about inhomogeneous Koszul operads is the
+following:
+
+\begin{theorem}
+If $\PP$ admits an inhomogenous Koszul presentation then
+the canonical morphism
+ $\Omega \PP^\antishriek \longrightarrow \PP$
+determined by $s^{-1}\PP^\antishriek \twoheadrightarrow
+\XX \hookrightarrow \PP$ is a quasi-isomorphism of
+operads.
+\end{theorem}
+
+In general, one can show that the map $\Omega\mathsf{B}(\PP)
+\longrightarrow \PP$ is a quasi-isomorphism: this is the
+original approach of Ginzburg--Kapranov) who instead
+define a duality functor $\mathsf{D}(\PP)$ along with a
+quasi-isomorphism
+$\mathsf{D}\mathsf{D}(\PP) \longrightarrow \PP$,
+and define the Koszul dual operad to $\PP$ as
+$H_\Delta(\mathsf{D}(\PP))$. The
+theorem above gives us a more economical resolution of
+$\PP$ in case it is quadratic-linear Koszul. Note that
+the bar-cobar construction is, more or less, obtained
+as the `least economical' resolution arising from the
+corresponding `least economical' quadratic-linear 
+presentation of an operad $\PP$. 
+
+\section{Prototype of inhomogeneous duality}
+\textbf{Goals.}
+We will define the operad governing BV algebras 
+and show it admits a small inhomogeneous Koszul 
+presentation. We will compute the homology of the 
+corresponding dg-cooperad, and
+explain how it gives rise to the Gravity operad
+of E. Getzler. At the same time, we will explain
+how the homotopy quotient of $\mathsf{BV}$ by
+the circle action is the hypercommutative
+operad of Yu. I. Manin.
+\subsection{Definition and computations}
+\newcommand{\BV}{\mathsf{BV}}
+The BV operad is an algebraic symmetric operad, which we
+write $\BV$, generated by a binary commutative associative
+operation $\mu$ that we will write $x_1x_2$ 
+of degree zero and a unary square-zero operation
+$\Delta$ of degree $-1$ that satisfy the following 
+homogeneous $7$-term
+relation:
+\[ 
+ \Delta(x_1x_2x_3) = x_1\Delta(x_2x_3)+
+ x_2\Delta(x_1x_3) + x_3\Delta(x_1x_2)
+  - x_1x_2\Delta(x_3) - x_1x_3\Delta(x_2)
+   	- x_2x_3\Delta(x_1).\]
+Batalin--Vilkovisky algebras appear in several
+areas of mathematics:
+\begin{tenumerate}
+\item (Algebra) Vertex operator algebras, cohomology of Lie algebras,
+bar construction of $A_\infty$-algebras.
+\item (Algebraic geometry) Gromov--Witten invariants and moduli spaces of curves (quantum cohomology, Frobenius manifolds), chiral algebras (geometric Langlands program),
+\item (Differential geometry) The sheaf of 
+polyvector fields of an orientable (resp. Poisson or
+Calabi--Yau) manifold, the differential 
+forms of a manifold (Hodge decomposition 
+in the Riemannian case), Lie algebroids,
+Lagrangian (resp. coisotropic) intersections.
+\item (Noncommutative geometry) 
+The Hoschchild cohomology of a symmetric 
+algebra  and the cyclic Deligne conjecture,
+non-commutative differential operators.
+\item (Algebraic topology)
+2-fold loop spaces on topological spaces 
+carrying an action of the circle,
+topological conformal field theories, 
+Riemann surfaces, string topology. 
+\item  (Mathematical physics)
+BV quantization (gauge theory), BRST
+cohomology, string theory, topological field theory, Renormalization theory.
+
+\end{tenumerate}
+
+ One can express the seven term relation by saying
+ that $[\Delta,\mu] = \beta$ is a derivation
+ for $\mu$, where $[f,g]$
+ is the operadic commutator (\`a la Gerstenhaber)
+ defined by
+ \[ [f,g] = \sum_{i=1}^{\ari(f)} f\circ_i g 
+ 	  -(-1)^{|f||g|} \sum_{j=1}^{\ari(g)} g\circ_j f. \]
+ This suggests defining $\beta = [\Delta,m]$, and presenting
+ the BV-operad by quadratic-linear relations:
+ \[ [\mu,\mu] = 0 ,\quad \Delta^2 =0 , \quad
+  	[\Delta,\mu] = \beta, \quad
+  	\beta\circ_1 \mu = \mu \circ_2 \beta +
+  	 	\mu\circ_1 \beta (23).\]
+  This presentation satisfies condition (1), but it
+  \emph{does not} satisfy condition (2): one can
+  deduce that $\beta$ is a Lie bracket of degree $-1$
+ and that $\Delta$ is a derivation for $\beta$
+  from the first three equations. In other words, one
+  can deduce that $(\Delta,\beta)$ defines the
+  datum of a dg Lie algebra purely from the
+  fact that $\Delta^2=0$ and that $\mu$ is associative. 
+  
+  \begin{lemma}
+  The BV-operad admits a quadratic-linear presentation
+  satisfying conditions (1) and (2) 
+  given by generators $\mu,\beta,\Delta$ of arities
+  $2$, $2$ and $1$ and degrees $0$, $-1$ and $-1$,
+  respectively. The operation $\mu$ is associative 
+  commutative, $\beta$ is a Lie bracket, $\Delta$
+  squares to zero, and 
+ \[	\mathsf{Leib}(\Delta,\mu) = \beta, \quad
+  	\mathsf{Leib}(\beta,\mu)=0, \quad
+  	\mathsf{Leib}(\Delta,\beta) = 0.\]
+  	  \end{lemma}
+  	  
+  	  \begin{theorem}
+  	  The quadratic operad $q\BV$ is Koszul.
+  	  \end{theorem}
+  	  
+  	  \begin{proof}
+  	  We will use the distributive law criterion of
+  	  Markl, adapted to the case the operads in his
+  	  result have unary operators. One can first
+  	  show that $\BV(n)$ and its
+  	  quadratic counterpart both have dimension $2^n n!$
+  	  by a Gr\"obner basis argument,
+  	  and then that $q\BV$ is obtained from
+  	  a distributive law between the quadratic 
+  	  operads $\mathsf{Ger}$ and 
+  	  $\mathsf{D} = \kk[\Delta]/(\Delta^2)$, in light of the
+  	  relations
+  	  \[\Delta(x_1x_2) = x_1\Delta(x_2) + \Delta(x_1)x_2, 
+  	  \quad 
+  	   \Delta[x_1,x_2] = [x_1,\Delta x_2] + [\Delta x_1,x_2]. \]
+  	  One can prove this again by a dimension counting argument
+  	  using the result above. With this at hand, we
+  	  observe that $\mathsf{Ger}$ is Koszul, as it is
+  	  in turn obtained from a distributive law between
+  	  $\mathsf{Com}$ and $\sus\mathsf{Lie}$, which are
+  	  both Koszul, and that $\mathsf{D}$ is
+  	  Koszul (as any algebra with trivial multiplications
+  	  is). We conclude that $q\BV$ is Koszul, and that we
+  	  have isomorphisms of symmetric sequences
+  	  \[ q\BV \cong \Com \circ \sus\Lie\circ \mathsf{D},
+  	    	  \quad q\BV^\antishriek \cong
+  	    	  T^c(\delta) \circ \Com^c \circ \sus^{-1}\Lie^c,\]
+  	  which will be useful to describe the dg-cooperad
+  	  $\BV^{\antishriek}$.
+  	  \end{proof}
+
+\subsection{The differential}  	  
+  	 Let us note that a generic element
+  	 of $\Com^c \circ \sus^{-1}\Lie^c$ consists of a
+  	 corolla decorated by Lie words on a Lie bracket
+  	 of degree $1$. Any Lie word can always be
+  	 written uniquely as a linear combination of
+  	 words in the form
+  	 $\ell = [x_1, x_{\sigma 2} , \ldots , x_{\sigma n} ]
+     $
+     where $\sigma\in S_n$ fixes $1$, and we adopt the
+     right bracketing convention:
+     \[ [y_1,y_2,\ldots,y_n ] = [y_1,[y_2,\ldots,y_n]].\]
+     We call $x_1$ the `head' of $\ell$. 
+     We will then write an element of $\Com^c \circ \sus^{-1}\Lie^c$ generically by
+  	 \[ \ell_1\odot \cdots  \odot \ell_n \]
+	 where $\ell_i$ is a Lie word supported on $\pi_i$,
+	 with `head' $x_j$ with $j_i = \min\pi_i$ and such that
+	 $\min \pi_1 < \cdots < \min \pi_n$. 
+	 	 
+	 \begin{theorem}
+	 A generic element of $q\BV^\antishriek$ is of the form
+	     \[x =\delta^k\otimes \ell_1\odot \cdots  \odot \ell_n \]
+	  and the differential $d$ of $q\BV^\antishriek$ is
+	  \[ dx = \sum_{i=1}^n(-1)^{\varepsilon_i} \delta^{k-1} \otimes \ell_1\odot
+	   \cdots \odot \ell_i^{(1)} \odot \ell_i^{(2)}
+	    \odot \cdots \odot \ell_n,
+	  	 \]	  	 
+	  	 where $\ell \longmapsto 
+	  	 	\sum \ell^{(1)}\otimes \ell^{(2)}$
+	  	 is the binary component of the decomposition map in
+	  	 $\sus^{-1}\Lie^c$.	  	 
+	  	 \end{theorem}
+  	  
+%The operad Gerstenhaber, Gravity, Hypercomm, PreLie,
+%Perm, Zinbiel, Dias, Leib, NAP (Livernet) and the 
+%Connes--Kreimer Hopf algebra of
+%renormalization. 
+\subsection{Exercises}
+
+%\section{Further contents}
+
+%\subsection{Iterated integrals}
+%$C^*_{\mathrm{dR}}(\Omega X)$, Chen iterated integrals,
+%work of Getzler--Jones for $\Omega^2 X$. 
+
+\bibliographystyle{alpha}
+\bibliography{biblio}
+
+
+\Addresses
+
+\end{document}
+
+	  	 
+	  	
+\subsection{The gravity operad and the hypercommutative operad}
+  	  
+  	 There is a unique square zero derivation $\Delta$ 
+	 of $\mathsf{Ger}$
+	 of degree $-1$ that sends the commutative
+	 product $x_1x_2$ to the Lie bracket $[x_1,x_2]$,
+	 which arises from the action of $S^1$ on $D_2$
+	 by turning the whole configuration.
+	 This derivation is acyclic, and $\mathsf{Grav}$
+	 is, by definition, $\ker\Delta   =
+	 \operatorname{im}\Delta  $.	 
+	 	 
+	 \begin{lemma}
+	 Let $M$ be an $S^1$-space with a free action, and
+	 let $\Delta : H_*(M) \longrightarrow H_{*+1}(M)$
+	 be the square zero operator arising from the
+	 fundamental class of $S^1$. Then
+	 \[ \ker\Delta \cong \Sigma H_*(M/S^1) . \]
+	 \end{lemma} 
+
+	 The action of $S^1$ on little disks is free
+	 (except in arity one) 
+	 with quotient homotopy equivalent to the moduli
+	 space of marked curves of genus zero, so 
+	 	 	  \[ \ker\Delta =  
+	 	 	  \Sigma H_*(D_2/S^1) = \Sigma H_*(\mathcal{M}_{0,\bullet+1}). \]
+	 
+	 \begin{theorem}
+	 One can realize $\mathsf{Grav}$ as the suboperad
+	 of $\mathsf{Ger}$ generated by
+	 \[ \{x_1,\ldots,x_n\} =  
+	 \sum_{i<j} \{x_i,x_j\}
+	  x_1\cdots \widehat{x_i}\cdots \widehat{x_j} \cdots x_n, 
+	  	\quad n\geqslant 2.\]
+	 Similarly, one can realize it as the suboperad of	 
+	 $\mathsf{BV}$ generated by 
+	 \[ \{x_1,\ldots,x_n\} = 
+	  \Delta(x_1\cdots x_n) - \sum_{i=1}^n x_1\cdots \Delta x_i
+	   	\cdots x_n, \quad n\geqslant 2.\]
+	   	We have that $\Sigma H_*(\mathcal{M}_{0,n+1}) \cong
+	   	\mathsf{Grav}(n)$ for $n\geqslant 2$ where the
+	   	operation $\{x_1,\ldots,x_n\}$ corresponds to the
+	   	suspension of the generator of 
+	   	$H_0(\mathcal{M}_{0,n+1})$.
+	  \end{theorem}
+	  
+	 \begin{theorem}
+	 The homology of the dg-cooperad 
+	 $\mathsf{BV}^\antishriek$ (and hence
+	 the bar homology of $\mathsf{BV}$) is
+	 isomorphic to
+	 \[ T(\delta) \oplus \sus^{-1}\mathsf{Grav}^*,\]
+	 and the  
+	 homotopy quotient of $\mathsf{BV}$ by
+	 $\Delta$ is quasi-isomorphic to $\mathsf{Hycomm}$,
+	 the Koszul dual of $\mathsf{Grav}$. These
+	 two last operads are Koszul.
+	 \end{theorem}
+
+
+
+\subsection{The homotopy quotient}
+
+\begin{definition} 
+Let $f:\PP\to \mathcal Q$ be a morphism of operads, 
+and factor $f$ into a cofibration
+$i: \PP\longrightarrow \FF$ followed
+by a trivial fibration $j:\FF\longrightarrow \QQ$.
+We define the homotopy cofibre $C_f$ of $f$
+as the quotient of $\FF$ by the ideal generated
+by $\PP$. We write $\PP\sslash \QQ$ for
+the homology of $C_f$.
+\end{definition}
+
+Note that $\PP\sslash \mathcal Q$ is independent 
+of the choice of factorization of $f$.
+Usually we can take $\FF$ of the form 
+$(\PP \star \FF_\XX,d)$ where $\star$ is the
+coproduct in the category of operads, 
+so $C_f$ is
+isomorphic to $(\FF_\XX,\bar{d})$. 
+If $\alpha\in\PP$, we define the homotopy
+quotient of $\PP$ as the homotopy cofibre of
+the inclusion
+$i : \PP_\alpha \longrightarrow \PP$
+where $\PP_\alpha$ is the suboperad of $\PP$ 
+generated by $\alpha$, and write it more
+simply by $\PP\sslash \alpha$.  
+In this case, to compute $\PP\sslash\alpha$, it suffices we compute a quasi-free
+model $\FF = (\FF_\XX,d)$ of $\PP$ ---which in
+particular we can assume contains an 
+isomorphic copy of $\FF_\alpha$, and compute
+the homology of the quotient $\FF/ (\FF_\alpha).$
+
+This algebraic homotopy quotient is related
+to the more geometrical homotopy quotient
+with respect to the action of a topological
+group $G$. Concretely, the exact functor 
+$ t:\mathsf{Top} \longrightarrow \mathsf{Top}_G$
+from the category of topological spaces to 
+the category of topological spaces with a 
+$G$-action, that sends a space $X$ to the
+same space $tX$ with the trivial action, admits
+a (non-Quillen-exact) left adjoint $F$ and
+the homotopy quotient is obtained
+as the left derived functor $\mathbb LF$ of
+$F$, which we usually write $X\longmapsto X_{hG}$. At the level of homotopy categories, it
+follows that we have an adjunction isomorphism
+$[X_{hG},Y] \longrightarrow [X,tY]$.
+
+Naturally, we may pass from the geometric to
+the algebraic setting through the cohomology
+functor, by considering the sphere $S^1$ whose
+cohomology algebra coincides with 
+$\Bbbk[\Delta]$. In this way, we can consider
+the category $\mathsf{Op}_\Delta$ of dg-operads
+under $\Bbbk[\Delta]$, and the exact functor
+$t:\mathsf{Op} \longrightarrow \mathsf{Op}_\Delta$
+that assigns an operad $\PP$ to the trivial
+map $\Bbbk[\Delta]\to \PP$ sending $\Delta$ to $0$. The homotopy quotient functor $\PP\longmapsto \PP\sslash \Delta$ is the left adjoint, at the level of homotopy categories,
+to $t$: we have an adjunction isomorphism
+$[ \PP\sslash \Delta, \mathcal Q]
+ 	\longrightarrow [ \PP,t\mathcal Q]$. 
+ 	  

@@ -1,0 +1,53 @@
+\babel@toc {british}{}
+\contentsline {section}{\numberline {1}Motivation and history}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introduction and motivation}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Exercises}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Symmetric sequences, composition products, unbiased approach}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Basic definitions}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Constructing operads by hand}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Exercises}{13}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Free operads and presentations}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Planar and non-planar trees}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The free operad}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Quadratic operads}{18}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Algebras over operads}{19}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Exercises}{20}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Some homological algebra}{21}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Twisting cochains}{21}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}(Co)bar construction}{21}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Universal twisting cochains}{23}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Koszul duality I}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Koszul duality}{24}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}The associative operad}{25}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Pathological examples}{25}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Methods to prove Koszulness I}{26}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Distributive law methods}{26}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Koszul (co)homology}{27}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Exercises}{27}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Pre-Lie algebras and algebraic operads}{27}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Pre-Lie algebras associated to operads}{27}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}The rooted trees operad}{27}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Exercises}{27}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Gr\"obner bases for algebraic operads I}{27}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Shuffle sequences}{27}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Shuffle operads}{27}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Exercises}{27}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Gr\"obner bases for algebraic operads II}{27}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Tree monomials}{27}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Admissible orders}{27}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Exercises}{27}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Methods to prove Koszulness II}{27}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Gr\"obner basis arguments}{27}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Filtration arguments}{27}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Exercises}{27}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Operads in algebraic topology 1}{27}{section.11}%
+\contentsline {subsection}{\numberline {11.1}The little disks operad}{28}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Stasheff's operad}{28}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Recognition principles}{28}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Koszul duality II}{28}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Inhomogeneous duality}{28}{subsection.12.1}%
+\contentsline {section}{\numberline {13}Prototype of inhomogeneous duality}{29}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Definition and computations}{29}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}The differential}{31}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Exercises}{32}{subsection.13.3}%
+\contentsfinish 
