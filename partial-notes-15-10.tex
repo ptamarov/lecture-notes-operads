@@ -65,7 +65,57 @@
 \definecolor{trinityblue}{rgb}{0.05, 0.45,0.75}
 \definecolor{trinitygray}{rgb}{0.33, 0.34,0.35}
 
+%% Tree macros %%
 
+\newcommand{\leftc}[5]{
+	\begin{tikzpicture}
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (-1, 1) {$#1$};
+		\node[style = inner] (1) at (0, 0) {$#2$};
+		\node[style = leaf] (2) at (1, 1) {$#5$};
+		\node[style = leaf] (3) at (0, 2) {$#4$};
+		\node[style = leaf] (4) at (-2, 2) {$#3$};
+		\node (5) at (0, -1) {};
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (5.center) to (1);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+\newcommand{\rightc}[5]{
+\begin{tikzpicture}
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = leaf] (0) at (-1, 1) {$#3$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = inner] (2) at (1, 1) {$#2$};
+		\node[style = leaf] (3) at (0, 2) {$#4$};
+		\node[style = leaf] (4) at (2, 2) {$#5$};
+		\node (5) at (0, -1) {};
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (2);
+		\draw (4.center) to (2);
+		\draw (5.center) to (1);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+\newcommand{\mathsymbol}[2]{
+	\begin{tikzpicture}
+        \node at(0,0){};
+        \node at(0,#1){$#2$};
+    \end{tikzpicture}
+}
 %% Side captions %%
 \usepackage{sidecap}
 
@@ -81,6 +131,11 @@
 
  %% TAMAÑO C\eLDAS %%     
 \usepackage{pgf,tikz}
+
+\pgfdeclarelayer{bg}    % declare background layer
+\pgfsetlayers{bg,main}  % set the order of the layers (main is the standard layer)
+
+
 \usepackage{tikz-cd}
 \usetikzlibrary{calc}
 \usetikzlibrary{matrix,arrows}
@@ -114,8 +169,9 @@
 \fancyfoot[L,R,C]{}
 \renewcommand{\headrulewidth}{0 pt}}
 
- %%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%TikZ Styles%%%%%%%%%%%
 
+%%%%%%%%%%%%%%
 \newcommand{\XX}{\mathcal{X}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\YY}{\mathcal{Y}}
@@ -497,7 +553,7 @@ elements of the theory, and progressing slowly towards
 more advanced themes, including (inhomogeneous)
 Koszul duality theory, Gr\"obner bases and higher
 structures. The course  will consists of approximately
-\textcolor{gray}{12} lectures, along with extra talks by
+twelve lectures, along with extra talks by
 willing participants, with the goal of introducing extra
 material to the course, and making them more
 familiar with the theory.
@@ -677,7 +733,7 @@ between $[n]$ and $[m]$ if $m\neq n$).
 \end{lemma}
 
 \begin{proof}
-This is in Exercise Sheet \#1. 
+This is in Exercise Sheet \#0. 
 \end{proof}
 
 We set ${}_\Sigma\Mod  = 
@@ -961,45 +1017,43 @@ we write it $\mathcal{D}_2(I)$.
   is obtained by inserting $T'$ at the $j$th vertex of $T$
   and reattaching the children of that vertex to $T'$ in
   all possible ways. For example, if
-  \[ T=\vcenter{\xymatrix{*++[o][F-]{1} \ar@{-}[d] & 
-*++[o][F-]{3} \ar@{-}[dl]\\
-*++[o][F-]{2}}}
-\ {\hbox{\rm and}}\ \  S=\vcenter{
-\xymatrix{*++[o][F-]{2} \ar@{-}[d] \\
-*++[o][F-]{1}}}\]
+%  \[ T=\vcenter{\xymatrix{*++[o][F-]{1} \ar@{-}[d] & 
+%*++[o][F-]{3} \ar@{-}[dl]\\
+%*++[o][F-]{2}}}
+%\ {\hbox{\rm and}}\ \  S=\vcenter{
+%\xymatrix{*++[o][F-]{2} \ar@{-}[d] \\
+%*++[o][F-]{1}}}\]
 then we have that  
-  \[ T\circ_2 S=\quad
- \vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
-*++[o][F-]{1}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl]\\
-*++[o][F-]{3}\ar@{-}[d]\\
-*++[o][F-]{2}}} +\quad
-\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
-*++[o][F-]{1}\ar@{-}[d]\\
-*++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl]\\
-*++[o][F-]{2}}}\quad +\quad
-\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
-*++[o][F-]{4}\ar@{-}[d]\\
-*++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{1}\ar@{-}[dl]\\
-*++[o][F-]{2}}} \quad + \quad
-\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
-*++[o][F-]{1}\ar@{-}[dr] & *++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl] \\
-&*++[o][F-]{2}}}. \]
+%  \[ T\circ_2 S=\quad
+% \vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+%*++[o][F-]{1}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl]\\
+%*++[o][F-]{3}\ar@{-}[d]\\
+%*++[o][F-]{2}}} +\quad
+%\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+%*++[o][F-]{1}\ar@{-}[d]\\
+%*++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl]\\
+%*++[o][F-]{2}}}\quad +\quad
+%\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+%*++[o][F-]{4}\ar@{-}[d]\\
+%*++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{1}\ar@{-}[dl]\\
+%*++[o][F-]{2}}} \quad + \quad
+%\vcenter{\SelectTips{cm}{}\xymatrix@-1pc{
+%*++[o][F-]{1}\ar@{-}[dr] & *++[o][F-]{3}\ar@{-}[d]&*++[o][F-]{4}\ar@{-}[dl] \\
+%&*++[o][F-]{2}}}. \]
 \end{tenumerate}
 \subsection{Exercises}
 
-The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#1}.
+The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#1}. During the exercise sessions, we will review pseudo-operads
+and their partial insertions, and the category of operads. 
  
-
-
 \pagebreak
-
 
 \section{Free operads and presentations}
 
 \textbf{Goals.} We will define algebraic operads
 by generators and relations, and with this at
 hand define quadratic and quadratic-linear
-presentations of operads.
+presentations of operads. 
 
 \subsection{Planar and non-planar trees}
 
@@ -1141,8 +1195,21 @@ leaves, in which case the definitions make sense if
 we think of leaves as decorated by the unit of
 $\kk$. 
 
-\textcolor{trinityblue}{Give example of $T^\sigma$ with
-and without leaves involved.}
+\begin{example}
+Let us consider the alphabet 
+$\XX = \XX(2) = \{\beta \}$ where
+the unique operation is antisymmetric.
+Then we have the following equalities
+of symmetric tree monomials:
+\[ 
+	\leftc{\beta}{\beta}{2}{1}{3}  \mathsymbol{1.5}{=}
+\rightc{\beta}{\beta}{3}{1}{2}  
+   \mathsymbol{1.5}{=-}
+ {\leftc{\beta}{\beta}{1}{2}{3}}
+  \mathsymbol{1.5}{.}\]
+ 
+\end{example}
+
 
 Let us now define for each $n\geqslant 1$ the
 space $\FF_\XX(I)$ as the span of all tree monomials
@@ -1155,6 +1222,21 @@ all children of $v$ are leaves, this is saying that
 the tree where $x_v$ is replace by $\sigma(x_v)$
 is equal to the tree where the leaves of $T$ that are
 children of $v$ are relabeled according to $\sigma$.
+We also require that tree decorations behave like
+tensors, so that $T = T_1+T_2$ if the decoration
+of $T$ at a vertex $v$ is of the form $x_1 + x_2$
+and for $i\in [2]$ the tree $T_i$ coincides with
+$T$ except that it is decorated by $x_i$ at $v$.
+
+
+
+\subsection{The free operad}
+An algebraically inclined way to construct
+(algebraic) operads is through generators and
+relations. There is a forgetful functor
+from the category of operads to the category
+of collections. In general, it admits a left
+adjoint, which is the free operad functor.
 
 \begin{definition}
 The \emph{free symmetric operad} on $\XX$ is the
@@ -1168,29 +1250,28 @@ in the unique way which extends the decorations of
 $T$ and $T'$.
 \end{definition}
 
-\begin{question}
-Show that tree grafting respects the relations above,
-and hence is well defined on $\FF_\XX$. We will later
+The following lemma shows that this indeed defines an operad.
+
+\begin{lemma}
+Tree grafting respects both $I$-tree 
+isomorphisms and the relations $T\sim T^\sigma$
+above, and hence is well defined on $\FF_\XX$.
+\end{lemma}
+
+\begin{proof}
+This is in \textbf{Exercise Sheet \#2}. 
+\end{proof}
+
+ We will later
 interpret $\XX\longmapsto \FF_\XX$ as a \emph{monad},
 thus giving another definition of operads. The
-advantage of this monadic approach is its 
+advantage of this `monadic approach' is its 
 flexibility, which allow us to define other
 operad like structures, like the ones 
 mentioned in the introduction.
-\end{question}
-
-\begin{question} 
-\end{question}
-\textcolor{blue}{Complete.}
-
-
-\subsection{The free operad}
-An algebraically inclined way to construct
-(algebraic) operads is through generators and
-relations. There is a forgetful functor
-from the category of operads to the category
-of collections. In general, it admits a left
-adjoint, which is the free operad functor.
+In this direction, a curious reader 
+can consider the following 
+equivalent definition:
 
 \begin{definition}
 The free operad generated by a symmetric
@@ -1205,35 +1286,30 @@ The composition maps are defined by induction,
 and the axioms are also checked by induction.
 \end{definition}
 
-\textcolor{blue}{Expand on definition of free
-operad. Give explicit definition using trees 
-decorated by $\XX$.}
-
-Intuitively, the definition says that an element of
+Intuitively, the previous definition says that an element of
 $\FF_\XX$ is either the twig, or corolla
 with $n$ vertices decorated by $\XX$, whose leaves
 have on them an element of $\FF_\XX$. The
 final shape of $\FF_\XX$ will however
-depend on the symmetric structure of $ \XX$. For
-example, if $ \XX = \XX(2) =S_2$ is the regular
-representation, then $\FF_\XX(k)$ consists
-of planar binary rooted trees with $k$ leaves
-decorated by a permutation of $[k]$. If,
-however, $ \XX=  \XX(2)$ is the trivial (or sign)
-representation of $S_2$, then $\FF_X(k)$ 
-will consist of shuffle binary trees.
+depend on the symmetric structure of $ \XX$. 
 
-\begin{note}
-The free conilpotent cooperad $\FF^c_\XX$ can be defined
-in a completely analogous fashion: it has the same 
-underlying symmetric sequence as $\FF_\XX$ (much like
-$TV$ and $T^cV$ have the same underlying vector space)
-and it has decomposition maps obtained by `degrafting'
-trees.
-\end{note}
+ \subsection{Exercises}
+
+The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#2}.
+%\begin{note}
+%The free conilpotent cooperad $\FF^c_\XX$ can be defined
+%in a completely analogous fashion: it has the same 
+%underlying symmetric sequence as $\FF_\XX$ (much like
+%$TV$ and $T^cV$ have the same underlying vector space)
+%and it has decomposition maps obtained by `degrafting'
+%trees.
+%\end{note}
+\end{document}
+\subsection{Quadratic operads}
+
 
 The free operad $\FF_\XX$ is weight graded by the number
-of internal vertices of a trees (that is, we put $\XX$ in
+of internal vertices of a tree (that is, we put $\XX$ in
 weight one, and extend the weight to trees by counting 
 occurrences of elements of $\XX$. More generally, if
 $\XX$ admits a weight grading, then $\FF_\XX$ inherits
@@ -1244,9 +1320,9 @@ always assume we are taking the canonical weight grading above.
  
 \begin{definition} An ideal in an operad $\PP$
 is a subcollection $\mathcal{I}$ for which
-$\gamma(\mathcal{I}\circ \PP)
-	+\gamma(\PP\circ_{(1)} \mathcal{I})\subseteq 
-		\mathcal{I}$.
+both $\gamma(\mathcal{I}\circ \PP)$ and
+$\gamma(\PP\circ_{(1)} \mathcal{I})$ are contained in
+$\mathcal{I}$.
 The quotient of $\PP/\mathcal{I}$ is again an
 operad, called the quotient of $\PP$ 
 by $\mathcal{I}$. Every subcollection $\RR$
@@ -1313,7 +1389,6 @@ this `presentation' is very useful in practice,
 for example, to show that the pre-Lie operad
 is Koszul.
 \end{note}
-\subsection{Quadratic operads}
 
 An operad $\PP$ is \emph{quadratic} if it admits a presentation
 $\FF(\XX,\RR)$ where $\RR \subseteq \FF(\XX)^{(2)}$. 
@@ -1411,7 +1486,7 @@ $\gamma_{V,1}(1,v) = v$.
 \textcolor{trinityblue}{Complete. Recognition
 principle. Gerstenhaber algebras and Hochschild
 complex.}
- \subsection{Exercises}
+
 
 \pagebreak
 
