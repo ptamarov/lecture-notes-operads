@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  24 OCT 2021 17:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  24 OCT 2021 17:54
 entering extended mode
 **./partial-notes-15-10.tex
 (partial-notes-15-10.tex
@@ -1831,7 +1831,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[13] (partial-notes-15-10.aux)
+[13]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[14] (partial-notes-15-10.aux)
 
  *File List*
  article.cls    2020/04/10 v1.4m Standard LaTeX document class
@@ -2038,8 +2047,8 @@ Package rerunfilecheck Info: File `partial-notes-15-10.out' has not changed.
 ### semi simple group (level 1) entered at line 146 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36744 strings out of 479076
- 681881 string characters out of 2860427
+ 36747 strings out of 479076
+ 681924 string characters out of 2860427
  1181631 words of memory out of 3000000
  53533 multiletter control sequences out of 15000+600000
  479603 words of font info for 159 fonts, out of 8000000 for 9000
@@ -2059,9 +2068,9 @@ rogram Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on partial-notes-15-10.pdf (13 pages, 186319 bytes).
+Output written on partial-notes-15-10.pdf (14 pages, 189206 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

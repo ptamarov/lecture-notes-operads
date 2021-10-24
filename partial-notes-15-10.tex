@@ -1293,6 +1293,38 @@ have on them an element of $\FF_\XX$. The
 final shape of $\FF_\XX$ will however
 depend on the symmetric structure of $ \XX$. 
 
+\begin{definition}
+A symmetric sequence $\XX$ is weight graded if for
+each finite set the component $\XX(I)$ admits a 
+decomposition $\XX(I) = \bigoplus_{j\geqslant 0}
+\XX^{(j)}(I)$. A symmetric operad $\PP$ is weight
+graded if its underlying symmetric sequence
+is weight graded and its composition maps
+preserve the weight grading.
+\end{definition}
+
+Thus, a weight graded operad must have composition maps 
+of the form
+\[ \PP^{(a)}(k) \otimes 
+	\PP^{(b_1)}(n_1) \otimes \cdots \otimes \PP^{(b_k)}(n_k)
+	 	\longrightarrow \PP^{(b)}(n) \]
+where $b=b_1+\cdots+b_k$ and $n = n_1+\cdots+n_k$. In the
+case we consider partial composition maps, observe we have
+instead maps of the form
+\[\circ_i :  \PP^{(a)}(m)\otimes  \PP^{(b)}(n)
+	\longrightarrow  \PP^{(a+b)}(m+n-1). \] 
+The free operad $\FF_\XX$ is weight graded by the number
+of internal vertices of a tree (that is, we put $\XX$ in
+weight one, and extend the weight to trees by counting 
+occurrences of elements of $\XX$. More generally, if
+$\XX$ admits a weight grading, then $\FF_\XX$ inherits
+this weight grading: the weight of a tree monomial is the
+sum of the weight of the decorations of its vertices,
+ and we write $\FF_\XX^{(n)}$ for the
+homogeneous component of weight $n\in\NN_0$. If we do
+not specify a weight grading on $\FF_\XX$, we will 
+always assume we are taking the canonical weight grading above.
+
  \subsection{Exercises}
 
 The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#2}.
@@ -1307,16 +1339,6 @@ The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#2
 \end{document}
 \subsection{Quadratic operads}
 
-
-The free operad $\FF_\XX$ is weight graded by the number
-of internal vertices of a tree (that is, we put $\XX$ in
-weight one, and extend the weight to trees by counting 
-occurrences of elements of $\XX$. More generally, if
-$\XX$ admits a weight grading, then $\FF_\XX$ inherits
-this weight grading, and we write $\FF_\XX^{(n)}$ for the
-homogeneous component of weight $n\in\NN_0$. If we do
-not specify a weight grading on $\FF_\XX$, we will 
-always assume we are taking the canonical weight grading above.
  
 \begin{definition} An ideal in an operad $\PP$
 is a subcollection $\mathcal{I}$ for which
