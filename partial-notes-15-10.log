@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  9 NOV 2021 08:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  11 NOV 2021 17:00
 entering extended mode
 **./partial-notes-15-10.tex
 (partial-notes-15-10.tex
@@ -1870,7 +1870,55 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[17] (partial-notes-15-10.aux)
+[17]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[18]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[19]
+Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
+ine 1724.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[20]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[22] (partial-notes-15-10.aux)
 
  *File List*
  article.cls    2020/04/10 v1.4m Standard LaTeX document class
@@ -2070,18 +2118,18 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.4299pt have occurred.
 
 Package rerunfilecheck Info: File `partial-notes-15-10.out' has not changed.
-(rerunfilecheck)             Checksum: 5C6C72BDB3136400B02F8AADB23127A1;2856.
+(rerunfilecheck)             Checksum: 0EC882F36F0A7AD1EEEC4C3BA910416F;3496.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 146 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36765 strings out of 479076
- 682170 string characters out of 2860427
+ 36803 strings out of 479076
+ 682635 string characters out of 2860427
  1181631 words of memory out of 3000000
- 53538 multiletter control sequences out of 15000+600000
- 479603 words of font info for 159 fonts, out of 8000000 for 9000
+ 53547 multiletter control sequences out of 15000+600000
+ 480733 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,15n,108p,3245b,10615s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Pr
@@ -2092,15 +2140,15 @@ nts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/euler/eusm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/hoekwater/
-stmary10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on partial-notes-15-10.pdf (17 pages, 206674 bytes).
+s/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/hoekwater/stmary10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr
+8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on partial-notes-15-10.pdf (22 pages, 233534 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
