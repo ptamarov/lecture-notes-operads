@@ -1755,16 +1755,23 @@ $\FF_{s^{-1}\sus^{-1}\XX^*}$ as follows (the appearance of
 the suspensions will be evident later):
 \[ \langle \Sigma\nu^* \circ_j \Sigma\mu*, 
 	\rho \circ_i \tau  \rangle
-   = \delta_{ij} (-1)^{(\ari(\nu)-1)(|\mu|+i-1)+|\nu||\mu|}
-   	\nu^*(\rho)\mu^*(\tau). \] 
+   = \delta_{ij} (-1)^{\varepsilon}
+   	\nu^*(\rho)\mu^*(\tau). \]
+where $\varepsilon_1 = (\ari(\nu)-1)(|\mu|+i-1)+|\nu||\mu|$ and $\varepsilon_2$ counts the total
+number of inversions in the shuffle permutations
+appearing in the two tree monomials.
 If $\XX = \XX(2)$ is binary and has no homological degrees, 
 this simplifies to
 \[ \langle \Sigma\nu^* \circ_i \Sigma\mu*, 
 	\rho \circ_i \tau  \rangle
    =  \begin{cases}
-    	\phantom{-}\nu^*(\rho)\mu^*(\tau) & i=1 \\
+    	(-1)^\varepsilon \nu^*(\rho)\mu^*(\tau) & i=1 \\
     	-	\nu^*(\rho)\mu^*(\tau) & i = 2.
     	\end{cases} \] 
+where $\varepsilon$ depends on the decoration
+of the leaves (it is $1$ if both decorations
+are equal, and is $-1$ if exactly one is the
+shuffle $132$. 
 
 \begin{definition}
 The Koszul dual operad of a quadratic operad $\PP$ 
@@ -1874,20 +1881,61 @@ in the \emph{first two} variables (left-symmetric) and
 whose pre-Lie operation is \emph{right} permutative.
 \subsection{Exercises}
 The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#4}.
-\end{document}
+
 
 \pagebreak
 
-\section{Koszul duality II}
+\section{Gr\"obner bases for algebraic operads I}
+
+\subsection{Shuffle operads}
+
+Part 1. \begin{enumerate}
+\item Reminder of shuffles.
+\item Shuffle partitions. 
+\item Shuffle surjections.
+\item Shuffle composition.
+\end{enumerate}
+
+
+Part 2.
+\begin{enumerate}
+\item Definitions of shuffle operad. 
+\item Shuffle compositions.
+\item Shuffle ideals.
+\item Free shuffle operad.
+\end{enumerate}
+
+Part 3.
+\begin{enumerate}
+\item Shuffle trees. 
+\item Explicit free shuffle operad.
+\item The forgetful functor.
+\item Basis of the free operad.
+\end{enumerate}
+
+Part 4.
+\begin{enumerate}
+\item Monomial orders. 
+\item Words operads and path sequences.
+\item Path-permutation extension.
+\item Examples. 
+\end{enumerate}
+\subsection{Exercises}
+
+\end{document}
+
+\subsection{Koszul duality II}
+
+
+
 \subsection{Operadic homological algebra}
+
 
 \subsection{Twisting cochains}
 
 \subsection{The Koszul complexes}
 
 \subsection{Exercises}
-
-\subsection{Koszul duality II}
 \newcommand{\antishriek}{\text{\raisebox{\depth}{\textexclamdown}}}
 \begin{definition}
 A quadratic operad is Koszul if one (and hence all)
@@ -1911,79 +1959,7 @@ definition using twisting cochains.}
 %\item The Koszul complex $\PP^\antishriek\circ_\tau \PP$ is acyclic.
 %\item The canonical map $\Omega \PP^\antishriek \longrightarrow \PP$
 %is a quasi-isomorphism.
-\subsection{The associative operad}
 
-
-
-\subsection{Pathological examples}
-
-Let $\mathsf{As}^-$ be the ns-quadratic operad generated
-by an anti-associative binary operation $\mu$, that is
-\[ \mu\circ_1\mu + \mu \circ_2 \mu = 0.\]
-Let $\mathcal{O}_3$ be the ns-quadratic operad generated
-by an binary operation $\mu$ that is nilpotent of 
-order three, in the sense that any binary tree with
-three (or more) occurrences of $\mu$ is zero:
-\[ (\mu\circ_i \mu)\circ_j \mu = 0 \]
-for all possible choices of $i$ and $j$. 
-
-\begin{lemma}
-The operad $\mathsf{As}^-$ is three dimensional 
-with basis $\{1,\mu,\mu\circ_1\mu\}$, and $\mathcal{O}_3$
-is four dimensional with basis $\{1,\mu,\mu\circ_1\mu,\mu \circ_2\mu\}.$
-\end{lemma}
-
-\begin{proof}
-The second claim is immediate. For the first, one has
-to show that anti-associativity implies any binary tree
-of weight three vanishes. This is a simple computation:
-\[ ((x_1x_2)x_3)x_4 = 
- -(x_1(x_2x_3))x_4 =
-  x_1((x_2x_3)x_4) =
-   -x_1(x_2(x_3x_4)) \] 
-but also $((x_1x_2)x_3)x_4 = 
--(x_1x_2)(x_3x_4) =
-  x_1(x_2(x_3x_4))$, 
-  so that  $  x_1(x_2(x_3x_4))=- x_1(x_2(x_3x_4))$.
-  Since all weight three trees in $\mathsf{As}^-$ are
-  equal up to a sign, they must all be zero. 
-\end{proof}
-
-It follows that the bar construction 
-$\mathsf{B}(\mathsf{As}^{-})$
-is the free operad on a binary operation $\mu$ and a ternary
-operation $\mu_3$, 
-and that the bar construction $\mathsf{B}(\mathcal{O}_3)$
-is the free operad on a binary operation $\mu$
-and two ternary operations $\nu_3$ and $\tau_3$.
-The differential of the first bar construction
-is non-zero only on trees that contain a subtree
-of the form $\mu\circ_1\mu$ or $\mu \circ_2 \mu$,
-and 
- \[ d(\mu\circ_1\mu) = \mu_3, \quad
-  d(\mu \circ_2 \mu) = -\mu_3, \]
-  while the same is true for the second bar construction
-  with the exception that
-   \[ d(\mu\circ_1\mu) = \nu_3, \quad
-  d(\mu \circ_2 \mu) = \tau_3.\]
-  The computation of $H^*(\mathsf{As}^-)$ can
-  be done, and one can show that
-  \[ H_d(B(\mathsf{As}^-))_{(w)} \neq 0\] 
-  only for $(d,w) \in \{ (2k+n,3k+n) : k,n\in\NN\}$. 
-   It  follows that if we define 
-  \[ \mathrm{rate}(\PP) = \sup \left\{ \frac{w-1}{d-1} : 
-  	H_d(\mathsf{B}(\PP))_{(w)} \neq 0\right\},  \]
-  	then $\mathrm{rate}(\mathsf{As}^-) = 3/2$.
-Thus, $\mathsf{As}^-$ is not Koszul (as per the definition
-below, which requires this `slope' to be $1$) but is quite
-close to having slope $1$. In this sense, the rate of 
-$\PP$ is a measure of how `dispersed' the bar homology
-is with respect to the syzygy grading. 
-  \begin{problem}
-  Compute the bar cohomology $H^*(\mathcal{O}_3)$. 
-  More generally, compute the bar cohomology of
-  any monomial operad.
-  \end{problem}
 
 \section{Methods to prove Koszulness I}
 
@@ -2002,11 +1978,7 @@ is with respect to the syzygy grading.
 \subsection{Exercises}
 
 
-\section{Gr\"obner bases for algebraic operads I}
 
-\subsection{Shuffle sequences}
-\subsection{Shuffle operads}
-\subsection{Exercises}
 
 \section{Gr\"obner bases for algebraic operads II}
 
