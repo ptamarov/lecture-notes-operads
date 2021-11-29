@@ -18,7 +18,14 @@
 \contentsline {subsection}{\numberline {5.1}Differential graded sequences}{18}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}The Koszul dual}{20}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Exercises}{23}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Gr\"obner bases for algebraic operads I}{24}{section.6}%
+\contentsline {section}{\numberline {6}Shuffle operads}{24}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Shuffle operads}{24}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Exercises}{24}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Free shuffle operad}{26}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Forgetful functor}{28}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Exercises}{29}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Monomial orders}{30}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Some reminders}{30}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Path sequences and leaf permutations}{31}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Exercises}{31}{subsection.7.3}%
+\contentsline {section}{\numberline {A}Algebras over operads}{31}{appendix.A}%
 \contentsfinish 

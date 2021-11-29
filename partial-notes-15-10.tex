@@ -1,5 +1,5 @@
 
-\documentclass[fleqn,a4paper, twoside]{article} 
+\documentclass[fleqn, a4paper, twoside]{article} 
 
 %% for print
 \usepackage[
@@ -23,7 +23,7 @@
 %\changefontsizes{14pt}
 
 \usepackage[all]{nowidow}
-
+\usepackage{microtype}
 \usepackage{changepage}
 
 \usepackage[utf8x]{inputenc}
@@ -153,6 +153,14 @@
 
 \usepackage[bb=ams, cal=euler, scr=rsfso , frak=euler]{mathalpha}
 
+%%%Sha
+  \DeclareFontFamily{U}{wncy}{}
+    \DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+    \DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+    \DeclareMathSymbol{\Sha}{\mathord}{mcy}{"58} 
+ 
+ 
+ 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[RE]{\small\it Algebraic operads}
@@ -180,7 +188,7 @@
 \newcommand{\II}{\mathcal{I}}
 \newcommand{\QQ}{\mathcal{Q}}
 \newcommand{\FF}{\mathcal{F}}
-
+\newcommand{\f}{\mathsf{f}}
 \newcommand{\ari}{\operatorname{ar}}
 \newcommand{\cone}{\operatorname{cone}}
 \newcommand{\hem}{\hspace{0.5 em}} 
@@ -257,8 +265,8 @@ join=round] \draw (0,0) rectangle (1,1)
   
 \theoremstyle{mytheorem}
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{prop}[theorem]{Proposition}
-\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem*{conj*}{Conjecture}
 %\newtheorem{question}[theorem]{Question}
@@ -355,7 +363,7 @@ join=round] \draw (0,0) rectangle (1,1)
   {\end{genericthm}}
 
 \newcommand{\imor}{\interleave\kern-.45em\longrightarrow}
-\renewcommand{\qedsymbol}{$\blacktriangleleft$}
+%\renewcommand{\qedsymbol}{$\blacktriangleleft$}
 \newcommand\place{\mathord-}
 \newcommand{\ps}{\mathbin\parallel}
 \newcommand{\GSet}{\mathsf{Fin}^\times}
@@ -388,7 +396,10 @@ join=round] \draw (0,0) rectangle (1,1)
 \newcommand\category[1]{\mathsf{#1}}
 \newcommand{\Mod}{\mathsf{Mod}}
 \newcommand{\Gmod}{\mathsf{GMod}}
-\newcommand{\SMod}{{}_\Sigma\mathsf{dgMod}}
+\newcommand{\nsMod}{{}_{\mathrm{ns}}\mathsf{Mod}}
+
+\newcommand{\SMod}{{}_\Sigma\mathsf{Mod}}
+\newcommand{\dgSMod}{{}_\Sigma\mathsf{dgMod}}
 \newcommand{\gSMod}{{}_\Sigma\mathsf{gMod}}
 \newcommand{\coker}{\operatorname{coker}}
 \newcommand{\Ho}{\operatorname{Ho}}
@@ -1689,7 +1700,8 @@ homogeneous $v\in V$. Similarly, we define the
 \emph{desuspension} $s^{-1}V$.
 
 \begin{note}
-The differential of $sV$ is given by $d(sv) = -s dv$.
+The differential of $sV$ is given by $d(sv) = -s dv$. Can you explain why this is so using
+the Koszul sign rule?
 \end{note}
  
 The following lemma shows that $V\mapsto \End_V$ is 
@@ -1721,7 +1733,7 @@ We call $\End_{s}$ the suspension operad
 and write it $\sus$. Note that $\End_{s}(n)$ is
 the sign representation of $\Sigma_n$ put in degree $1-n$.
 
-\begin{prop} For each $n\geqslant 1$ let us
+\begin{proposition} For each $n\geqslant 1$ let us
 we write $\nu_n$ for the unique map in $\End_s(n)$ 
 that sends $s^n$ to $s$. Then for every $m\geqslant 1$
 we have that
@@ -1731,7 +1743,7 @@ $-1$ generates $\End_s$,
 and presents it as a quadratic operad subject to the 
 anti-associativity relation
 \[ \nu \circ_1\nu + \nu\circ_2 \nu = 0.\]
-\end{prop}
+\end{proposition}
 \begin{proof}
  This is in Exercise Sheet \#4.
 \end{proof}
@@ -1885,51 +1897,578 @@ The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#4
 
 \pagebreak
 
-\section{Gr\"obner bases for algebraic operads I}
+\section{Shuffle operads}
+
+\textbf{Goal.} Introduce shuffle operads
+and prove that the free symmetric operad
+on a reduced symmetric collection is
+isomorphic, as a shuffle operad,
+to the free shuffle operad on the
+corresponding shuffle collection. 
 
 \subsection{Shuffle operads}
 
-Part 1. \begin{enumerate}
-\item Reminder of shuffles.
-\item Shuffle partitions. 
-\item Shuffle surjections.
-\item Shuffle composition.
+Recall that the category of ns collections
+on some category $\mathsf{C}$ 
+consists of those pre-sheaves on
+the category of finite ordered sets
+and order preserving bijections with
+values in $\mathsf{C}$: a ns collection
+on $\mathsf{C}$ is simply a list of
+objects of $\mathsf{C}$ indexed by
+the non-negative integers (considered
+as totally ordered sets of finite 
+cardinality). 
+
+\begin{definition}
+An ordered partition $\pi$ of length $n$
+of a finite totally order set
+set is called \emph{shuffling} if
+$\min \pi_i < \min \pi_{i+1}$ for
+each $i\in [n-1]$. Equivalently, 
+a surjection $f:I\longrightarrow [n]$
+with $I$ a totally ordered set
+is called \emph{shuffling} if
+$\min f^{-1}(i) < \min f^{-1}(i+1)$
+for each $i\in [n-1]$.
+\end{definition}
+
+Although totally ordered
+sets along with bijections form a rather
+dull category, this category
+admits a composition product, which we call
+the \emph{shuffle composition product},
+defined as follows, and which will turn
+out to be crucial for our purposes.
+
+\begin{definition}
+For each pair of ns collections $\XX$
+and $\YY$, we define the ns collection
+$\XX\circ_{\Sha} \YY$ so that on each
+totally order finite set we have that 
+\[
+(\XX\circ_{\Sha} \YY)(I)
+	=
+	 \bigoplus_{\substack{r\geqslant 1
+	 	\\ f: I \longrightarrow [r]}}
+	 \XX([r])\otimes 
+	 \YY(f^{-1}(1))
+	 	\otimes
+	 		\cdots
+	 			\otimes
+	 				\YY(f^{-1}(r))
+\]
+where the sum runs through all $r\geqslant 1$
+and all possible 
+shuffling surjections 
+$f : I \longrightarrow [r]$.
+\end{definition}
+
+One can prove that this product is
+associative, in the same way that one
+proves $\circ_\Sigma$ and $\circ_\mathrm{ns}$
+are. In some way, the shuffle composition
+product interpolates between the symmetric
+composition product, which contains ``too
+many'' summands, and the ns composition
+product, which contains too few. We
+leave the following proposition as an exercise.
+
+\begin{proposition}
+The category of ns collections along with
+the shuffle composition product is 
+monoidal with the same unit as that of the
+ns composition product. \qed
+\end{proposition}
+
+Note that we can also define a shuffle
+Cauchy product, by looking at shuffling
+partitions of a finite order set that
+have length two. Although we will not study
+the resulting monoidal category here,
+we remark it gives rise to interesting
+monoids, usually known as shuffle algebras.
+
+\begin{definition}
+A shuffle operad is a monoid in the category of 
+ns collections with the shuffle composition 
+product. 
+\end{definition}
+
+Thus, a shuffle operad consists of the
+datum of a ns sequence $\PP$ along with
+shuffle composition maps, one for each
+shuffle partition $\pi$ of a finite ordered
+set $I$ of the form
+\[
+\gamma_\pi : \PP(r)\otimes
+		\PP(\pi_1)\otimes\cdots\otimes\PP(\pi_r)
+		 	\longrightarrow \PP(I)
+\]
+that satisfy suitable associativity and
+unitality axioms. Precisely, let us pick
+a finite totally ordered set $I$,
+a shuffling partition $\pi$ of $I$,
+and let us assume that we pick a shuffling
+partition $\pi^{(i)}$ of each block of $\pi$.
+There is a unique way to order the collection
+of blocks of these to obtain a shuffling
+partition $\pi'$ of $I$.
+For each part $\pi_i$ of $\pi$
+and each $(g_i;\vec{h}_i) \in \PP(\pi_i)\otimes
+\PP[\pi^{(i)}]$, let us write
+$f_i = \gamma_{\pi^{(i)}}(g_i;\vec{h}_i)$,
+and let $\vec{h}$ be obtained for the
+tuple $(\vec{h}_1,\ldots,\vec{h}_r)$
+by reordering the entries according to $\pi'$.
+Then
+\[ 
+\gamma_\pi(f ; f_1,\ldots,f_r) =
+ \gamma_{\pi'}(\gamma_\pi(f;g_1,
+ \ldots,g_r); \vec{h} ).
+	\]
+Moreover, for each finite set $I$,
+if $\{I\}$ and $I$ denote the corresponding
+partitions into one block and into singletons,
+we a fixed $1\in \PP(1)$ such that for
+every $\nu\in\PP(I)$ we have
+\[ \gamma_{\{I\}}(1;\nu) = \nu , 
+\quad  \gamma_I(\nu ; 1,\ldots,1 ) = 
+\nu.\]
+Naturally, one can consider partial compositions
+on a shuffle operad, but carefully noting that
+for each $i$, there exist many different
+shuffling partitions $\pi$ of the form
+\[
+ (1,\ldots,i-1,A,j_1,\ldots,j_s)
+ 	\]
+ where $\min(A) = i$. Namely, for each
+ $[n]$ we need simply choose a subset 
+ $A$ of $[n]\smallsetminus [i-1]$ that contains
+ $i$, and this can be done by choosing a subset
+ of $[n]\smallsetminus [i]$ and appending 
+ $i$. 
+\begin{definition}
+An ideal of a shuffle operad $\PP$ is a
+ns subcollection $\mathcal{I}$ such that
+\[ \gamma_\pi(\nu_0;\nu_1,\ldots,\nu_r)\in 
+\mathcal{I}\] if at least one of $\nu_i$
+is in $\mathcal{I}$ for some $i\in [0,r]$.
+\end{definition}
+
+As we will see later, ideals of shuffle operads
+are slightly more refined than those in
+symmetric operads. For example, the ideal 
+generated by the left comb $(x_1x_2)x_3$
+in a symmetric operad
+automatically contains its two translates,
+while in a shuffle operad, the three ideals
+corresponding to these three possible shuffle
+tree monomials are different. 
+
+\subsection{Free shuffle operad}
+
+Let us now give an explicit description
+of the free shuffle operad on a ns
+collection. Since we have already defined
+the free symmetric and non-symmetric operad on
+a collection (of the appropriate kind), we
+already have almost all the language necessary to 
+define it.
+
+\begin{definition}
+Let $\tau$ be a planar tree, which
+we draw on the plane with the counter-clockwise
+orientation. Begin
+at the left side of root edge, and transverse the 
+``boundary'' of the tree in the counter-clockwise
+direction. This path will meet the vertices
+of $\tau$ in some order, and we call this
+total order the \emph{canonical planar order}
+of its vertices.
+\end{definition}
+
+Observe that this
+also orders the edges of $\tau$, and
+the leaves (which are given the usual
+left-to-right planar order). 
+
+Now let $\XX$ be a ns collection and let
+$T$ be a planar tree monomial with variables
+in $\XX$, and let us pick a bijective labelling
+$\mathsf{n} : L(\tau) 
+\longrightarrow [n]$ of the leaves of
+$\tau$. This induces a
+labelling of the vertices of $\tau$
+inductively by inductively labelling
+$v$ with the minimum label appearing 
+among its set of children. 
+
+\begin{definition}
+We say a leaf labelling of a planar tree 
+monomial $T$
+is shuffling if the induced order on the
+children of each of its vertices coincides with
+the canonical planar order. A pair
+$(T,\mathsf{n})$ where $\mathsf{n}$
+is a shuffling leaf labelling is called
+a shuffle tree monomial.
+\end{definition}
+
+We now define the ns collection 
+$\mathrm{Tree}^\Sha_\XX$ so that for each
+finite totally ordered set $I$ the set
+$\mathrm{Tree}^\Sha_\XX(I)$ consists of those
+shuffle tree monomials on $\XX$ with shuffling
+labellings by $I$. We write $\FF^\Sha_\XX$
+for the corresponding linear ns collection.
+
+\begin{figure}[h]
+\[ 
+	\leftc{}{}{1}{2}{3}
+ \quad
+		\leftc{}{}{1}{3}{2} 
+		\qquad
+		\rightc{}{}{1}{2}{3}
+		\]
+		\caption{The three
+		shuffle trees with three
+		leaves on a binary generator.}\end{figure}
+
+Suppose that $T$ and $T'$ are shuffle tree
+monomials on $[n]$ and $[m]$, that $i\in [n]$
+and that we pick a shuffling partition $\pi$ of
+$[m+n-1]$ whose only non-singleton part
+is of the form 
+\[ \{i=j_1,j_2,\dots,j_m\}.\]
+We define the tree monomial $T\circ_\pi T'$
+by grating the tree $T'$ at the leaf of $T$
+labelled by $i$, with its leaf labels
+renumbered through the unique order
+preserving bijection $j_i \longmapsto
+i$, and we renumber the leaf labels
+of $T$ distinct from $1,\ldots,i-1$ using
+the remaining blocks of $\pi$. This
+defines the ``partial shuffle composition''
+of shuffle tree monomials.
+
+\begin{figure}
+\begin{tikzpicture}
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=7.5 pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {};
+		\node [style=leaf] (1) at (-4, 2) {$1$};
+		\node 				(2a) at (-3, 2) {$\cdots$};
+		\node [style=leaf] (2) at (-2, 2) {$i-1$};
+		\node [style=inner] (3) at (-0.5, 2) {};
+		\node [style=leaf] (4) at (-2.25, 4) {$i$};
+		\node [style=leaf] (4a) at (-1.25, 4) {$\cdots$};
+		\node [style=leaf] (5) at (1, 4) {$j_m$};
+		\node [style=leaf] (6) at (0, 4) {$j_{m-1}$};
+		\node [style=leaf] (7) at (1, 2) {$k_1$};
+		\node [style=leaf] (8) at (2, 2) {$k_2$};
+		\node 				(8a) at (3, 2) {$\cdots$};
+		\node [style=leaf] (9) at (4, 2) {$k_n$};
+		\node [style=leaf] (10) at (0, -2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (0.center) to (1.center);
+		\draw (2.center) to (0.center);
+		\draw (0.center) to (3.center);
+		\draw (3.center) to (4.center);
+		\draw (3.center) to (6.center);
+		\draw (3.center) to (5.center);
+		\draw (7.center) to (0.center);
+		\draw (0.center) to (8.center);
+		\draw (0.center) to (9.center);
+		\draw (0.center) to (10.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+
+\caption{The two-level trees corresponding
+ to partial compositions of shuffle operads}
+\end{figure}
+We may as well define the ``total shuffle
+composition'' of a tree $T_0$ with trees
+$T_1,\ldots,T_n$ along a shuffling partition
+$\pi = (\pi_1,\ldots,\pi_n)$ with $T_i$ having
+as many leafs as $\pi_i$ for each $i\in [n]$
+Concretely, we consider for each such $i$
+the unique order preserving bijection
+between $\pi_i$ and the labels of $T_i$,
+and graft $T_i$ at the input of $T_0$
+labelled by $\min \pi_i$. 
+
+\begin{proposition}
+The shuffle composition of shuffle tree
+monomials is again a shuffle tree
+monomial.
+\end{proposition} 
+
+\begin{proof}
+This is in \textbf{Exercise Sheet \#5}. The
+idea is to note that the local increasing
+condition is not broken, and this is clear
+on each $T_i$ since we simply relabelled their
+leafs with an isomorphic totally order
+set, 
+while it is not broken on
+$T_0$ since we grafted the $T_i$s using
+a shuffling partition.
+\end{proof}
+
+With this at hand, we can state and prove the
+main result in this section. 
+
+\begin{proposition}
+The ns collection
+$\FF_\XX^\Sha$ with its corresponding
+shuffle composition is the \emph{free shuffle
+operad} generated by $\XX$, where the
+inclusion $\XX\longrightarrow \FF_\XX^\Sha$
+sends an element in $\XX$ to the corresponding
+corolla with its unique shuffling leaf
+labelling. \qed
+\end{proposition}
+
+\subsection{Forgetful functor}
+
+Since every finite totally order 
+set $I$ is in particular a finite set
+$I^{\f}$
+after forgetting the order,
+we have a functor
+$\XX \longmapsto \XX^{\f}$ that assigns
+a symmetric collection $\XX$ to the ns
+collection $\XX^{\f}$ such that
+\[ \XX^{\f}(I) = \XX(I^{\f}) \]
+for each finite order set $I$. 
+We call this the \emph{forgetful functor}
+from symmetric to ns collections. 
+The following will be central in what
+follows.
+
+\begin{proposition}
+The forgetful functor $\SMod \longrightarrow 
+\nsMod$ is strong monoidal for the corresponding 
+symmetric and shuffle composition products
+when restricted
+to \emph{reduced} collections, in the sense
+that for each pair $\XX$ and $\YY$ with
+$\YY$ reduced there is a natural isomorphism
+\[
+(\XX\circ_\Sigma \YY)^{\f} \longrightarrow
+ \XX^{\f}\circ_\Sha \YY^{\f}.
+\]
+\end{proposition}
+
+\begin{proof}
+Let us begin by proving that if $\YY$ is a
+reduced symmetric sequence then $\YY^{\otimes n}$
+is a free $S_n$-module for every $n\geqslant 1$.
+This is of course true for $n=1$. For $n>1$,
+it suffices to exhibit an $S_n$-basis. 
+For each finite totally ordered set $I$, let
+us consider the components of $\YY^{\otimes n}(I^{\f})$,
+and note that since $\YY$ is reduced they are of the form
+\[
+\YY(\pi_1)\otimes \YY(\pi_n)
+\]
+where $\pi$ is a partition of $I$ into $n$ blocks with
+at least one element. For each such partition $\pi$
+of $I$, there exists a unique permutation $\sigma\in S_n$
+such that $(\sigma\pi)_i = \pi_{\sigma^{-1}(i)}$ is
+shuffling, and this proves that $\YY^{\otimes n}(I^{\f})$ is
+isomorphic to the free $S_n$-module generated
+by $(\YY^{\f})^{\otimes_\Sha n}(I)$.
+It follows that for each $n\geqslant 1$ we have a
+natural isomorphism
+\[ 
+\XX(n)\otimes_{S_n}\YY^{\otimes n}(I^{\f})
+ \longrightarrow 
+  \XX^{\f}(n)\otimes (\YY^{\f})^{\otimes_\Sha n}(I)
+\] 
+which gives us the desired isomorphism
+$
+(\XX\circ_\Sigma \YY)^{\f} \longrightarrow
+ \XX^{\f}\circ_\Sha \YY^{\f}.
+$
+\end{proof}
+
+\begin{corollary}
+For each reduced symmetric collection $\XX$, 
+there is a natural isomorphism of shuffle operads
+\[
+(\FF_\XX^\Sigma)^{\f}
+ \longrightarrow \FF_{\XX^{\f}}^\Sha.
+\]
+Moreover, if $I$ is an ideal in $\FF_\XX^\Sigma$
+then $I^\f$ is an ideal in $\FF_{\XX^\f}^\Sha$ and the
+resulting quotient shuffle operads are naturally
+isomorphic via the induced map
+\[
+(\FF_\XX^\Sigma/ I )^{\f}
+ \longrightarrow \FF_{\XX^{\f}}^\Sha/ I^\f.
+\]
+\end{corollary}
+
+In particular, shuffle tree monomials on $\XX^{\f}$, when
+considered with their non-planar tree structure,
+give us a basis of the free symmetric operad on 
+$\XX$, and we can study any presentation of a symmetric
+operad through the resulting presentation of the
+corresponding shuffle operad. 
+
+\subsection{Exercises}
+\pagebreak
+
+\section{Monomial orders}
+
+
+\subsection{Some reminders}
+
+In the following, we will anchor ourselves in the 
+rewriting theory that exists for associative monoids
+in sets and the corresponding theory for
+associative algebras. Since we are not assuming
+the reader is familiar with this, let us give
+a brief recollection of the basics.
+
+\begin{definition}
+An associative monoid is a set $M$ along with
+an associative multiplication $\mu : M\times M
+\longrightarrow M$. Given a set $X$, we write
+$\langle X\rangle$ for the free monoid on 
+$X$, which is given by the set
+$
+ \bigsqcup_{n\geqslant 1} X^{n}
+ $
+of all \emph{words the alphabet $X$} with
+product the isomorphism
+$ X^n\times X^m \cong X^{m+n}$
+for each $m,n\geqslant 1$.
+\end{definition}
+
+We are interested in finding bases of 
+free objects by ideals and, to do this,
+we will resort to ordering our free objects.
+This will allow us to give a (terminating)
+algorithm whose input will be a set of 
+relations and an ordering, and whose
+output (among other things) will 
+be a basis of our quotient object.
+
+\begin{definition}
+
+An ordered monoid is a pair $(M,\prec)$ where $M$ is a monoid
+and $\prec$ is a total order on $M$ that satisfies the
+following three conditions:
+\begin{tenumerate}
+\item It is a well-order: every non-empty subset of $M$
+has a minimum. 
+\item The product map of $M$ is increasing in both of its
+arguments for $\prec$. 
+\end{tenumerate}
+A \emph{monomial order} on the alphabet $X$ is, by definition,
+the structure of an ordered monoid on $\langle X\rangle$.
+\end{definition}
+
+Explicitly, the last condition requires that if $m_1,m_2,m_3\in M$
+and if $m_1\prec m_2$ then it follows that $m_3m_1\prec m_3m_2$ 
+and $m_1m_3\prec m_2m_3$. If the alphabet $X$ is given a total order, 
+then we can produce a monomial order on it as follows:
+
+\begin{definition}
+Let $\prec$ be a total order on $X$. 
+The graded lexicographic order on $\langle X\rangle$
+induced by $\prec$, which we write $\prec_\ell$,
+is such that $w\prec_\ell w'$ if and only if
+\begin{tenumerate}
+\item The word $w$ is shorter than $w'$, or else
+\item We have
+$w = w_1 xw_2$ and $w' = w_1 y w_2'$ with
+$x\prec y$ in $X$.
+\end{tenumerate}
+\end{definition}
+
+It is important to note that the lexicographic order defined only
+by the second condition is \emph{not} a well-order, and it is 
+not increasing for the concatenation product: for example,
+if $x\prec y$ then $x \prec x^2$ but $x^2y \prec xy$. 
+
+\begin{lemma}
+The graded lexicographic order is a monomial order on $X$
+for any choice total order $\prec$.
+\end{lemma}
+
+\begin{proof}
+It is clear that the resulting order is total, for either
+two words are of distinct length, or they are of the same length
+and differ at and entry, or else they are equal. To see the
+order behaves well with respect to the concatenation product,
+we observe that the function $w\longmapsto \mathrm{Length}(m)$
+is additive for the concatenation product, so if $w$ is longer
+than $w'$, then $ww''$ will be longer than $w'w''$ and,
+similarly, $w''w$ will be longer than $w''w'$. If $w$ and 
+$w'$ have the same length, then it is clear that
+$w''w'\prec w''w$ if and only if $w'w''\prec ww''$ if
+and only if $w' \prec w$. To see that the order is a well
+order, let us consider a collection $W$ of words. Then,
+in particular, there exists a least natural number $n$
+such that $W$ contains words of length $n$ but not of $n-1$. 
+In this case, it follows that the minimum of $W$, if it
+exists, must be contained in the set $X^n$, and this
+set is well ordered by the lexicographical order if
+$X$ it itself well ordered: we can find the minimum 
+by induction on $n$.
+\end{proof}
+
+We now recall from \textbf{Lecture 1} the definition
+of the \emph{word operad of a monoid $M$}.
+
+\begin{definition}
+Let $M$ be an associative monoid. The symmetric
+operad $\mathbb W_M$ is defined by $\mathbb{W}_M(n) =
+M^n$ for each $n\geqslant 1$, and its partial composition
+product is defined for each $s,t\geqslant 1$ and each
+$i\in [s]$ by the rule
+\[(m_1,\ldots,m_s) \circ_i (m_1',\ldots,m_t') = 
+ 	(m_1,\ldots,m_{i-1}, m_im_1',\ldots,m_im_t',m_{i+1},\ldots, m_s).\] 
+\end{definition}
+
+It is useful to observe that if we take $M = \{\star \}$ the trivial
+monoid, the resulting 
+\begin{enumerate}
+
+\item Words operads.
+\item Associative operad.
 \end{enumerate}
 
+\subsection{Path sequences and leaf permutations}
 
 Part 2.
 \begin{enumerate}
-\item Definitions of shuffle operad. 
-\item Shuffle compositions.
-\item Shuffle ideals.
-\item Free shuffle operad.
-\end{enumerate}
-
-Part 3.
-\begin{enumerate}
-\item Shuffle trees. 
-\item Explicit free shuffle operad.
-\item The forgetful functor.
-\item Basis of the free operad.
-\end{enumerate}
-
-Part 4.
-\begin{enumerate}
-\item Monomial orders. 
-\item Words operads and path sequences.
+\item Monomial orders on shuffle operads.
 \item Path-permutation extension.
+\item Graded path-permutation 
+	lexicographic order.
 \item Examples. 
 \end{enumerate}
+
 \subsection{Exercises}
 
+\appendix
+
+\section{Algebras over operads}
 \end{document}
 
-\subsection{Koszul duality II}
+\section{Gr\"obner bases}
 
+\section{Koszul duality II}
 
-
-\subsection{Operadic homological algebra}
-
+\subsection{Bar construction}
 
 \subsection{Twisting cochains}
 

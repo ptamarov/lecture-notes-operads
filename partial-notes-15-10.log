@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  18 NOV 2021 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  29 NOV 2021 11:04
 entering extended mode
 **./partial-notes-15-10.tex
 (partial-notes-15-10.tex
@@ -134,17 +134,49 @@ Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )))
+(/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/microty
+pe.sty
+Package: microtype 2021/10/31 v3.0 Micro-typographical refinements (RS)
+
+(/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/et
+oolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count194
+)
+\MT@toks=\toks18
+\MT@count=\count195
+\MT@tempbox=\box50
+\MT@leftmarginkern=\dimen147
+\MT@rightmarginkern=\dimen148
+LaTeX Info: Redefining \textls on input line 1114.
+\MT@outer@kern=\dimen149
+LaTeX Info: Redefining \textmicrotypecontext on input line 1700.
+\MT@listname@count=\count196
+
+(/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/microty
+pe-pdftex.def
+File: microtype-pdftex.def 2021/10/31 v3.0 Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
+\MT@outer@space=\skip50
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/microty
+pe.cfg
+File: microtype.cfg 2021/10/31 v3.0 microtype main configuration file (RS)
+))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ch
 angepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count194
-\cp@tempcnt=\count195
+\c@cp@cntr=\count197
+\cp@tempcnt=\count198
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ba
 se/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/uc
 s/utf8x.def
@@ -158,10 +190,10 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 s/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count196
-\uc@combtoks=\toks20
-\uc@combtoksb=\toks21
-\uc@temptokena=\toks22
+\uc@secondtry=\count199
+\uc@combtoks=\toks21
+\uc@combtoksb=\toks22
+\uc@temptokena=\toks23
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 smath/amscd.sty
@@ -170,13 +202,13 @@ Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 smath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks23
-\ex@=\dimen147
+\@emptytoks=\toks24
+\ex@=\dimen150
 )
-\athelp@=\toks24
-\minaw@=\dimen148
-\bigaw@=\dimen149
-\minCDarrowwidth=\dimen150
+\athelp@=\toks25
+\minaw@=\dimen151
+\bigaw@=\dimen152
+\minCDarrowwidth=\dimen153
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 sfonts/amssymb.sty
@@ -194,7 +226,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 smath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
-\@mathmargin=\skip50
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 
@@ -205,47 +237,47 @@ Package: amstext 2021/08/26 v2.01 AMS text
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 smath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen151
+\pmbraise@=\dimen154
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 smath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count197
+\inf@bad=\count266
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count198
-\leftroot@=\count199
+\uproot@=\count267
+\leftroot@=\count268
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count266
-\DOTSCASE@=\count267
+\classnum@=\count269
+\DOTSCASE@=\count270
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box50
-\strutbox@=\box51
-\big@size=\dimen152
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count268
-\c@MaxMatrixCols=\count269
+\macc@depth=\count271
+\c@MaxMatrixCols=\count272
 \dotsspace@=\muskip16
-\c@parentequation=\count270
-\dspbrk@lvl=\count271
-\tag@help=\toks25
-\row@=\count272
-\column@=\count273
-\maxfields@=\count274
-\andhelp@=\toks26
-\eqnshift@=\dimen153
-\alignsep@=\dimen154
-\tagshift@=\dimen155
-\tagwidth@=\dimen156
-\totwidth@=\dimen157
-\lineht@=\dimen158
-\@envbody=\toks27
-\multlinegap=\skip51
-\multlinetaggap=\skip52
-\mathdisplay@stack=\toks28
+\c@parentequation=\count273
+\dspbrk@lvl=\count274
+\tag@help=\toks26
+\row@=\count275
+\column@=\count276
+\maxfields@=\count277
+\andhelp@=\toks27
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks28
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 )
@@ -269,8 +301,8 @@ Package: ifoption 2002/03/04 v1.02
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 srefs/rkeyval.sty
 Package: rkeyval 2004/05/05 v1.08
-\@temptokenb=\toks29
-\rsk@toks=\toks30
+\@temptokenb=\toks30
+\rsk@toks=\toks31
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 srefs/textcmds.sty
@@ -280,12 +312,12 @@ Package: textcmds 2012/08/02 v2.00
 srefs/mathscinet.sty
 Package: mathscinet 2002/04/17 v1.05
 )
-\c@bib=\count275
-\@maxlabelwidth=\dimen159
-\c@bib@env=\count276
+\c@bib=\count278
+\@maxlabelwidth=\dimen162
+\c@bib@env=\count279
 \bib@dbfile=\read2
-\alpha@suffix=\count277
-\series@index=\count278
+\alpha@suffix=\count280
+\series@index=\count281
 )
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/mathptmx.s
 ty
@@ -336,23 +368,23 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/booktabs/booktabs
 .sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen160
-\lightrulewidth=\dimen161
-\cmidrulewidth=\dimen162
-\belowrulesep=\dimen163
-\belowbottomsep=\dimen164
-\aboverulesep=\dimen165
-\abovetopsep=\dimen166
-\cmidrulesep=\dimen167
-\cmidrulekern=\dimen168
-\defaultaddspace=\dimen169
-\@cmidla=\count279
-\@cmidlb=\count280
-\@aboverulesep=\dimen170
-\@belowrulesep=\dimen171
-\@thisruleclass=\count281
-\@lastruleclass=\count282
-\@thisrulewidth=\dimen172
+\heavyrulewidth=\dimen163
+\lightrulewidth=\dimen164
+\cmidrulewidth=\dimen165
+\belowrulesep=\dimen166
+\belowbottomsep=\dimen167
+\aboverulesep=\dimen168
+\abovetopsep=\dimen169
+\cmidrulesep=\dimen170
+\cmidrulekern=\dimen171
+\defaultaddspace=\dimen172
+\@cmidla=\count282
+\@cmidlb=\count283
+\@aboverulesep=\dimen173
+\@belowrulesep=\dimen174
+\@thisruleclass=\count284
+\@lastruleclass=\count285
+\@thisrulewidth=\dimen175
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/gr
 aphics/graphicx.sty
@@ -376,20 +408,20 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 aphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen173
-\Gin@req@width=\dimen174
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 babel/babel.sty
 Package: babel 2021/11/08 3.66 The Babel package
-\babel@savecnt=\count283
-\U@D=\dimen175
+\babel@savecnt=\count286
+\U@D=\dimen178
 \l@unhyphenated=\language1
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 babel/txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count284
+\bbl@dirlevel=\count287
 
 *************************************
 * Local config file bblopts.cfg used
@@ -415,27 +447,27 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ca
 ption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen176
-\captionmargin@=\dimen177
-\captionwidth=\dimen178
-\caption@tempdima=\dimen179
-\caption@indent=\dimen180
-\caption@parindent=\dimen181
-\caption@hangindent=\dimen182
+\captionmargin=\dimen179
+\captionmargin@=\dimen180
+\captionwidth=\dimen181
+\caption@tempdima=\dimen182
+\caption@indent=\dimen183
+\caption@parindent=\dimen184
+\caption@hangindent=\dimen185
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count285
-\c@continuedfloat=\count286
+\c@caption@flags=\count288
+\c@continuedfloat=\count289
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen183
-\caption@adjustwidth@linewidth=\dimen184
+\caption@adjustwidth@hsize=\dimen186
+\caption@adjustwidth@linewidth=\dimen187
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 mathdots/mathdots.sty
 Package: mathdots 2014/06/11 v0.9 Improve and add various macros for dots in ma
 th.
-\MDo@unit=\dimen185
-\MDo@dotsbox=\box52
+\MDo@unit=\dimen188
+\MDo@dotsbox=\box53
 \MDoprekern=\muskip18
 \MDopostkern=\muskip19
 \MDodotkern=\muskip20
@@ -447,16 +479,16 @@ Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/to
 ols/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count287
-\calc@Bcount=\count288
-\calc@Adimen=\dimen186
-\calc@Bdimen=\dimen187
-\calc@Askip=\skip53
-\calc@Bskip=\skip54
+\calc@Acount=\count290
+\calc@Bcount=\count291
+\calc@Adimen=\dimen189
+\calc@Bdimen=\dimen190
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count289
-\calc@Cskip=\skip55
+\calc@Ccount=\count292
+\calc@Cskip=\skip56
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ma
 thtools/mhsetup.sty
@@ -466,31 +498,31 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count290
-\l_MT_multwidth_dim=\dimen188
-\origjot=\skip56
-\l_MT_shortvdotswithinadjustabove_dim=\dimen189
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen190
-\l_MT_above_intertext_sep=\dimen191
-\l_MT_below_intertext_sep=\dimen192
-\l_MT_above_shortintertext_sep=\dimen193
-\l_MT_below_shortintertext_sep=\dimen194
-\xmathstrut@box=\box53
-\xmathstrut@dim=\dimen195
+\g_MT_multlinerow_int=\count293
+\l_MT_multwidth_dim=\dimen191
+\origjot=\skip57
+\l_MT_shortvdotswithinadjustabove_dim=\dimen192
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen193
+\l_MT_above_intertext_sep=\dimen194
+\l_MT_below_intertext_sep=\dimen195
+\l_MT_above_shortintertext_sep=\dimen196
+\l_MT_below_shortintertext_sep=\dimen197
+\xmathstrut@box=\box54
+\xmathstrut@dim=\dimen198
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/su
 bfigure/subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip57
-\subfigcapskip=\skip58
-\subfigcaptopadj=\dimen196
-\subfigbottomskip=\skip59
-\subfigcapmargin=\dimen197
-\subfiglabelskip=\skip60
-\c@subfigure=\count291
-\c@lofdepth=\count292
-\c@subtable=\count293
-\c@lotdepth=\count294
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen199
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen256
+\subfiglabelskip=\skip61
+\c@subfigure=\count294
+\c@lofdepth=\count295
+\c@subtable=\count296
+\c@lotdepth=\count297
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -498,8 +530,8 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/su
 bfigure/subfigure.cfg)
-\subfig@top=\skip61
-\subfig@bottom=\skip62
+\subfig@top=\skip62
+\subfig@bottom=\skip63
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ba
 se/makeidx.sty
@@ -508,28 +540,27 @@ Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/to
 ols/multicol.sty
 Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count295
-\mult@box=\box54
-\multicol@leftmargin=\dimen198
-\c@unbalance=\count296
-\c@collectmore=\count297
-\doublecol@number=\count298
-\multicoltolerance=\count299
-\multicolpretolerance=\count300
-\full@width=\dimen199
-\page@free=\dimen256
-\premulticols=\dimen257
-\postmulticols=\dimen258
-\multicolsep=\skip63
-\multicolbaselineskip=\skip64
-\partial@page=\box55
-\last@line=\box56
-\maxbalancingoverflow=\dimen259
-\mult@rightbox=\box57
-\mult@grightbox=\box58
-\mult@firstbox=\box59
-\mult@gfirstbox=\box60
-\@tempa=\box61
+\c@tracingmulticols=\count298
+\mult@box=\box55
+\multicol@leftmargin=\dimen257
+\c@unbalance=\count299
+\c@collectmore=\count300
+\doublecol@number=\count301
+\multicoltolerance=\count302
+\multicolpretolerance=\count303
+\full@width=\dimen258
+\page@free=\dimen259
+\premulticols=\dimen260
+\postmulticols=\dimen261
+\multicolsep=\skip64
+\multicolbaselineskip=\skip65
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen262
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@firstbox=\box60
+\mult@gfirstbox=\box61
 \@tempa=\box62
 \@tempa=\box63
 \@tempa=\box64
@@ -565,26 +596,27 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box94
 \@tempa=\box95
 \@tempa=\box96
-\c@minrows=\count301
-\c@columnbadness=\count302
-\c@finalcolumnbadness=\count303
-\last@try=\dimen260
-\multicolovershoot=\dimen261
-\multicolundershoot=\dimen262
-\mult@nat@firstbox=\box97
-\colbreak@box=\box98
-\mc@col@check@num=\count304
+\@tempa=\box97
+\c@minrows=\count304
+\c@columnbadness=\count305
+\c@finalcolumnbadness=\count306
+\last@try=\dimen263
+\multicolovershoot=\dimen264
+\multicolundershoot=\dimen265
+\mult@nat@firstbox=\box98
+\colbreak@box=\box99
+\mc@col@check@num=\count307
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/to
 ols/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen263
-\ar@mcellbox=\box99
-\extrarowheight=\dimen264
-\NC@list=\toks31
-\extratabsurround=\skip65
-\backup@length=\skip66
-\ar@cellbox=\box100
+\col@sep=\dimen266
+\ar@mcellbox=\box100
+\extrarowheight=\dimen267
+\NC@list=\toks32
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box101
 )
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
@@ -592,7 +624,7 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/po
 lynom/polynom.sty
 Package: polynom 2017/07/17 0.19 (CH,HA)
-\pld@currstage=\count305
+\pld@currstage=\count308
 )
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xy.sty
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xy.tex
@@ -607,51 +639,51 @@ tex)
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen265
-\Y@c=\dimen266
-\U@c=\dimen267
-\D@c=\dimen268
-\L@c=\dimen269
-\R@c=\dimen270
-\Edge@c=\toks32
-\X@p=\dimen271
-\Y@p=\dimen272
-\U@p=\dimen273
-\D@p=\dimen274
-\L@p=\dimen275
-\R@p=\dimen276
-\Edge@p=\toks33
-\X@origin=\dimen277
-\Y@origin=\dimen278
-\X@xbase=\dimen279
-\Y@xbase=\dimen280
-\X@ybase=\dimen281
-\Y@ybase=\dimen282
-\X@min=\dimen283
-\Y@min=\dimen284
-\X@max=\dimen285
-\Y@max=\dimen286
-\lastobjectbox@=\box101
-\zerodotbox@=\box102
-\almostz@=\dimen287
+\X@c=\dimen268
+\Y@c=\dimen269
+\U@c=\dimen270
+\D@c=\dimen271
+\L@c=\dimen272
+\R@c=\dimen273
+\Edge@c=\toks33
+\X@p=\dimen274
+\Y@p=\dimen275
+\U@p=\dimen276
+\D@p=\dimen277
+\L@p=\dimen278
+\R@p=\dimen279
+\Edge@p=\toks34
+\X@origin=\dimen280
+\Y@origin=\dimen281
+\X@xbase=\dimen282
+\Y@xbase=\dimen283
+\X@ybase=\dimen284
+\Y@ybase=\dimen285
+\X@min=\dimen286
+\Y@min=\dimen287
+\X@max=\dimen288
+\Y@max=\dimen289
+\lastobjectbox@=\box102
+\zerodotbox@=\box103
+\almostz@=\dimen290
  direction,
-\d@X=\dimen288
-\d@Y=\dimen289
-\K@=\count306
-\KK@=\count307
-\Direction=\count308
-\K@dXdY=\dimen290
-\K@dYdX=\dimen291
+\d@X=\dimen291
+\d@Y=\dimen292
+\K@=\count309
+\KK@=\count310
+\Direction=\count311
+\K@dXdY=\dimen293
+\K@dYdX=\dimen294
 \xyread@=\read4
 \xywrite@=\write3
-\csp@=\count309
-\quotPTK@=\dimen292
+\csp@=\count312
+\quotPTK@=\dimen295
 
 utility macros; pictures: \xy, positions,
-\swaptoks@@=\toks34
-\connectobjectbox@@=\box103
+\swaptoks@@=\toks35
+\connectobjectbox@@=\box104
  objects,
-\styletoks@=\toks35
+\styletoks@=\toks36
  decorations;
 kernel objects: directionals, circles,
 
@@ -670,15 +702,15 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: All features v.3.8
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xycurve.t
 ex  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count310
-\crvpts@=\toks36
-\splinebox@=\box104
-\splineval@=\dimen293
-\splinedepth@=\dimen294
-\splinetol@=\dimen295
-\splinelength@=\dimen296
+\crv@cnt@=\count313
+\crvpts@=\toks37
+\splinebox@=\box105
+\splineval@=\dimen296
+\splinedepth@=\dimen297
+\splinetol@=\dimen298
+\splinelength@=\dimen299
  circles,
-\L@=\dimen297
+\L@=\dimen300
  loaded)
 Xy-pic pdf driver: `curve' extension support
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xypdf-cu.
@@ -694,7 +726,7 @@ ex  Xy-pic option: Computer Modern tip extension v.3.7
 x  Xy-pic option: More Tips extension v.3.11 loaded) loaded)
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xyline.te
 x  Xy-pic option: Line styles extension v.3.10
-\xylinethick@=\dimen298
+\xylinethick@=\dimen301
  loaded)
 Xy-pic pdf driver: `line' extension support
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xypdf-li.
@@ -711,13 +743,13 @@ Xy-pic pdf driver: `color' extension support
 tex loaded)
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xymatrix.
 tex  Xy-pic option: Matrix feature v.3.14
-\Row=\count311
-\Col=\count312
-\queue@=\toks37
-\queue@@=\toks38
-\qcount@=\count313
-\qcount@@=\count314
-\matrixsize@=\count315
+\Row=\count314
+\Col=\count315
+\queue@=\toks38
+\queue@@=\toks39
+\qcount@=\count316
+\qcount@@=\count317
+\matrixsize@=\count318
  loaded)
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xypic/xyarrow.t
 ex  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -753,12 +785,12 @@ Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
 se/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\SC@BOXWD=\dimen299
-\SC@CAPWD=\dimen300
-\SC@tempdima=\dimen301
-\SC@tempdimb=\dimen302
-\c@SC@C=\count316
-\SC@BOX=\box105
+\SC@BOXWD=\dimen302
+\SC@CAPWD=\dimen303
+\SC@tempdima=\dimen304
+\SC@tempdimb=\dimen305
+\c@SC@C=\count319
+\SC@BOX=\box106
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ex
 sheets/exsheets.sty
@@ -769,8 +801,8 @@ Package: expl3 2021-11-12 L3 programming layer (loader)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3
 backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count317
-\l__pdf_internal_box=\box106
+\l__color_backend_stack_int=\count320
+\l__pdf_internal_box=\box107
 ))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3
 packages/xparse/xparse.sty
@@ -778,31 +810,26 @@ Package: xparse 2021-11-12 L3 Experimental document command parser
 )
 Package: exsheets 2019/09/30 v0.21k Yet another package for the creation of exe
 rcise sheets and exams.
-\l__exsheets_tmpa_int=\count318
-\l__exsheets_tmpb_int=\count319
-\l__exsheets_tmpc_int=\count320
-\l__exsheets_tmpd_int=\count321
-\l__exsheets_tmpe_int=\count322
-\g__exsheets_tmpa_int=\count323
-\l__exsheets_tmpa_dim=\dimen303
-\l__exsheets_tmpb_dim=\dimen304
+\l__exsheets_tmpa_int=\count321
+\l__exsheets_tmpb_int=\count322
+\l__exsheets_tmpc_int=\count323
+\l__exsheets_tmpd_int=\count324
+\l__exsheets_tmpe_int=\count325
+\g__exsheets_tmpa_int=\count326
+\l__exsheets_tmpa_dim=\dimen306
+\l__exsheets_tmpb_dim=\dimen307
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3
 packages/xtemplate/xtemplate.sty
 Package: xtemplate 2021-11-12 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen305
-\l__xtemplate_tmp_int=\count324
+\l__xtemplate_tmp_dim=\dimen308
+\l__xtemplate_tmp_int=\count327
 \l__xtemplate_tmp_muskip=\muskip21
-\l__xtemplate_tmp_skip=\skip67
+\l__xtemplate_tmp_skip=\skip68
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3
 packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2021-11-12 LaTeX2e option processing using LaTeX3 keys
-)
-(/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/et
-oolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count325
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/en
 viron/environ.sty
@@ -820,15 +847,15 @@ f/systemlayer/pgfsys.sty
 f/utilities/pgfrcs.sty
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks39
-\pgfutil@tempdima=\dimen306
-\pgfutil@tempdimb=\dimen307
+\pgfutil@everybye=\toks40
+\pgfutil@tempdima=\dimen309
+\pgfutil@tempdimb=\dimen310
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/utilities/pgfutil-common-lists.tex))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box107
+\pgfutil@abb=\box108
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/utilities/pgfrcs.code.tex
@@ -842,33 +869,33 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks40
-\pgfkeys@temptoks=\toks41
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks42
+\pgfkeys@tmptoks=\toks43
 ))
-\pgf@x=\dimen308
-\pgf@y=\dimen309
-\pgf@xa=\dimen310
-\pgf@ya=\dimen311
-\pgf@xb=\dimen312
-\pgf@yb=\dimen313
-\pgf@xc=\dimen314
-\pgf@yc=\dimen315
-\pgf@xd=\dimen316
-\pgf@yd=\dimen317
+\pgf@x=\dimen311
+\pgf@y=\dimen312
+\pgf@xa=\dimen313
+\pgf@ya=\dimen314
+\pgf@xb=\dimen315
+\pgf@yb=\dimen316
+\pgf@xc=\dimen317
+\pgf@yc=\dimen318
+\pgf@xd=\dimen319
+\pgf@yd=\dimen320
 \w@pgf@writea=\write4
 \r@pgf@reada=\read5
-\c@pgf@counta=\count326
-\c@pgf@countb=\count327
-\c@pgf@countc=\count328
-\c@pgf@countd=\count329
-\t@pgf@toka=\toks43
-\t@pgf@tokb=\toks44
-\t@pgf@tokc=\toks45
-\pgf@sys@id@count=\count330
+\c@pgf@counta=\count328
+\c@pgf@countb=\count329
+\c@pgf@countc=\count330
+\c@pgf@countd=\count331
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count332
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/systemlayer/pgf.cfg
@@ -887,8 +914,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count331
-\pgfsyssoftpath@bigbuffer@items=\count332
+\pgfsyssoftpath@smallbuffer@items=\count333
+\pgfsyssoftpath@bigbuffer@items=\count334
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/systemlayer/pgfsysprotocol.code.tex
@@ -906,12 +933,12 @@ pgf/math/pgfmathcalc.code.tex
 pgf/math/pgfmathutil.code.tex)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen318
-\pgfmath@count=\count333
-\pgfmath@box=\box108
-\pgfmath@toks=\toks46
-\pgfmath@stack@operand=\toks47
-\pgfmath@stack@operation=\toks48
+\pgfmath@dimen=\dimen321
+\pgfmath@count=\count335
+\pgfmath@box=\box109
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/math/pgfmathfunctions.code.tex
@@ -933,59 +960,59 @@ pgf/math/pgfmathfunctions.misc.code.tex)
 pgf/math/pgfmathfunctions.integerarithmetics.code.tex)))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count334
+\c@pgfmathroundto@lastzeros=\count336
 ))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/math/pgfint.code.tex)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen319
-\pgf@picmaxx=\dimen320
-\pgf@picminy=\dimen321
-\pgf@picmaxy=\dimen322
-\pgf@pathminx=\dimen323
-\pgf@pathmaxx=\dimen324
-\pgf@pathminy=\dimen325
-\pgf@pathmaxy=\dimen326
-\pgf@xx=\dimen327
-\pgf@xy=\dimen328
-\pgf@yx=\dimen329
-\pgf@yy=\dimen330
-\pgf@zx=\dimen331
-\pgf@zy=\dimen332
+\pgf@picminx=\dimen322
+\pgf@picmaxx=\dimen323
+\pgf@picminy=\dimen324
+\pgf@picmaxy=\dimen325
+\pgf@pathminx=\dimen326
+\pgf@pathmaxx=\dimen327
+\pgf@pathminy=\dimen328
+\pgf@pathmaxy=\dimen329
+\pgf@xx=\dimen330
+\pgf@xy=\dimen331
+\pgf@yx=\dimen332
+\pgf@yy=\dimen333
+\pgf@zx=\dimen334
+\pgf@zy=\dimen335
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen333
-\pgf@path@lasty=\dimen334
+\pgf@path@lastx=\dimen336
+\pgf@path@lasty=\dimen337
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen335
-\pgf@shorten@start@additional=\dimen336
+\pgf@shorten@end@additional=\dimen338
+\pgf@shorten@start@additional=\dimen339
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box109
-\pgf@hbox=\box110
-\pgf@layerbox@main=\box111
-\pgf@picture@serial@count=\count335
+\pgfpic=\box110
+\pgf@hbox=\box111
+\pgf@layerbox@main=\box112
+\pgf@picture@serial@count=\count337
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen337
+\pgflinewidth=\dimen340
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen338
-\pgf@pt@y=\dimen339
-\pgf@pt@temp=\dimen340
+\pgf@pt@x=\dimen341
+\pgf@pt@y=\dimen342
+\pgf@pt@temp=\dimen343
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcorequick.code.tex
@@ -1002,14 +1029,14 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen341
+\pgfarrowsep=\dimen344
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen342
-\pgf@sys@shading@range@num=\count336
-\pgf@shadingcount=\count337
+\pgf@max=\dimen345
+\pgf@sys@shading@range@num=\count338
+\pgf@shadingcount=\count339
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcoreimage.code.tex
@@ -1018,7 +1045,7 @@ File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box112
+\pgfexternal@startupbox=\box113
 ))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/basiclayer/pgfcorelayers.code.tex
@@ -1036,24 +1063,24 @@ File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-\l__exsheets_variations_int=\count338
-\g__exsheets_questions_id_int=\count339
-\g__exsheets_questions_used_int=\count340
-\l__exsheets_include_random_int=\count341
-\l__exsheets_questions_set_int=\count342
-\g__exsheets_select_random_int=\count343
-\g__exsheets_selection_number_int=\count344
-\l__exsheets_counter_ch_int=\count345
-\l__exsheets_current_ch_int=\count346
-\l__exsheets_counter_sec_int=\count347
-\l__exsheets_current_sec_int=\count348
-\l_exsheets_counter_qu_int=\count349
-\l__exsheets_questions_skip_below_dim=\dimen343
-\l__exsheets_solutions_skip_below_dim=\dimen344
-\l__exsheets_blank_dim=\dimen345
-\l__exsheets_blank_line_increment_dim=\dimen346
-\l__exsheets_blank_line_minimum_length_dim=\dimen347
-\l__exsheets_blank_box=\box113
+\l__exsheets_variations_int=\count340
+\g__exsheets_questions_id_int=\count341
+\g__exsheets_questions_used_int=\count342
+\l__exsheets_include_random_int=\count343
+\l__exsheets_questions_set_int=\count344
+\g__exsheets_select_random_int=\count345
+\g__exsheets_selection_number_int=\count346
+\l__exsheets_counter_ch_int=\count347
+\l__exsheets_current_ch_int=\count348
+\l__exsheets_counter_sec_int=\count349
+\l__exsheets_current_sec_int=\count350
+\l_exsheets_counter_qu_int=\count351
+\l__exsheets_questions_skip_below_dim=\dimen346
+\l__exsheets_solutions_skip_below_dim=\dimen347
+\l__exsheets_blank_dim=\dimen348
+\l__exsheets_blank_line_increment_dim=\dimen349
+\l__exsheets_blank_line_minimum_length_dim=\dimen350
+\l__exsheets_blank_box=\box114
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/cn
 tformats/cntformats.sty
@@ -1072,8 +1099,8 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 f/utilities/pgfkeys.sty
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/utilities/pgfkeys.code.tex))
-\pgfopts@list@add@a@toks=\toks49
-\pgfopts@list@add@b@toks=\toks50
+\pgfopts@list@add@a@toks=\toks50
+\pgfopts@list@add@b@toks=\toks51
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pdftexcmds/pdftexcmds.sty
@@ -1088,27 +1115,27 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-\c@cnltx@tmpa=\count350
-\c@cnltx@tmpb=\count351
-\c@cnltx@tmpc=\count352
-\cnltx@tmpa@length=\skip68
-\cnltx@tmpb@length=\skip69
-\cnltx@tmpc@length=\skip70
+\c@cnltx@tmpa=\count352
+\c@cnltx@tmpb=\count353
+\c@cnltx@tmpc=\count354
+\cnltx@tmpa@length=\skip69
+\cnltx@tmpb@length=\skip70
+\cnltx@tmpc@length=\skip71
 ))
-\c@question=\count353
+\c@question=\count355
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ex
 sheets/exsheets_headings.def
 File: exsheets_headings.def  2019/09/30 v0.21k ExSheets headings object
-\l__exsheets_heading_above_dim=\dimen348
-\l__exsheets_heading_below_dim=\dimen349
-\l__exsheets_heading_main_coffin=\box114
-\l__exsheets_heading_pre_coffin=\box115
-\l__exsheets_heading_post_coffin=\box116
-\l__exsheets_heading_title_coffin=\box117
-\l__exsheets_heading_number_coffin=\box118
-\l__exsheets_heading_points_coffin=\box119
-\l__exsheets_heading_subtitle_coffin=\box120
+\l__exsheets_heading_above_dim=\dimen351
+\l__exsheets_heading_below_dim=\dimen352
+\l__exsheets_heading_main_coffin=\box115
+\l__exsheets_heading_pre_coffin=\box116
+\l__exsheets_heading_post_coffin=\box117
+\l__exsheets_heading_title_coffin=\box118
+\l__exsheets_heading_number_coffin=\box119
+\l__exsheets_heading_points_coffin=\box120
+\l__exsheets_heading_subtitle_coffin=\box121
 
 Package xtemplate Info: Declaring object type 'exsheets-heading' taking 5
 (xtemplate)             argument(s) on line 184.
@@ -1121,35 +1148,35 @@ File: exsheets_headings.cfg  2019/09/30 v0.21k ExSheets headings instances
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ta
 sks/tasks.sty
 Package: tasks 2021/02/20 v1.3a lists with columns filled horizontally
-\g__tasks_total_items_int=\count354
-\l__tasks_columns_int=\count355
-\g__tasks_rows_int=\count356
-\g__tasks_current_col_num_int=\count357
-\g__tasks_current_row_num_int=\count358
-\l__tasks_item_columns_int=\count359
-\g__tasks_env_int=\count360
-\l__tasks_start_int=\count361
-\l__tasks_item_indent_dim=\dimen350
-\l__tasks_item_default_indent_dim=\dimen351
-\l__tasks_item_width_dim=\dimen352
-\l__tasks_label_width_dim=\dimen353
-\l__tasks_label_default_width_dim=\dimen354
-\l__tasks_label_offset_dim=\dimen355
-\l__tasks_label_default_offset_dim=\dimen356
-\l__tasks_column_sep_dim=\dimen357
-\l__tasks_correction_dim=\dimen358
-\l__tasks_full_width_dim=\dimen359
-\l__tasks_after_item_skip=\skip71
-\l__tasks_custom_after_item_skip=\skip72
-\l__tasks_before_list_skip=\skip73
-\l__tasks_after_list_skip=\skip74
-\l__tasks_item_coffin=\box121
-\l__tasks_label_coffin=\box122
-\c@task=\count362
-\l__tasks_tmpa_int=\count363
-\l__tasks_tmpb_int=\count364
-\l__tasks_tmpa_coffin=\box123
-\l__tasks_tmpa_box=\box124
+\g__tasks_total_items_int=\count356
+\l__tasks_columns_int=\count357
+\g__tasks_rows_int=\count358
+\g__tasks_current_col_num_int=\count359
+\g__tasks_current_row_num_int=\count360
+\l__tasks_item_columns_int=\count361
+\g__tasks_env_int=\count362
+\l__tasks_start_int=\count363
+\l__tasks_item_indent_dim=\dimen353
+\l__tasks_item_default_indent_dim=\dimen354
+\l__tasks_item_width_dim=\dimen355
+\l__tasks_label_width_dim=\dimen356
+\l__tasks_label_default_width_dim=\dimen357
+\l__tasks_label_offset_dim=\dimen358
+\l__tasks_label_default_offset_dim=\dimen359
+\l__tasks_column_sep_dim=\dimen360
+\l__tasks_correction_dim=\dimen361
+\l__tasks_full_width_dim=\dimen362
+\l__tasks_after_item_skip=\skip72
+\l__tasks_custom_after_item_skip=\skip73
+\l__tasks_before_list_skip=\skip74
+\l__tasks_after_list_skip=\skip75
+\l__tasks_item_coffin=\box122
+\l__tasks_label_coffin=\box123
+\c@task=\count364
+\l__tasks_tmpa_int=\count365
+\l__tasks_tmpb_int=\count366
+\l__tasks_tmpa_coffin=\box124
+\l__tasks_tmpa_box=\box125
 
 Package xtemplate Info: Declaring object type 'tasks' taking 3 argument(s) on
 (xtemplate)             line 450.
@@ -1159,16 +1186,16 @@ Package xtemplate Info: Declaring object type 'tasks' taking 3 argument(s) on
 sks/tasks.cfg))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ul
 em/ulem.sty
-\UL@box=\box125
-\UL@hyphenbox=\box126
-\UL@skip=\skip75
-\UL@hook=\toks51
-\UL@height=\dimen360
-\UL@pe=\count365
-\UL@pixel=\dimen361
-\ULC@box=\box127
+\UL@box=\box126
+\UL@hyphenbox=\box127
+\UL@skip=\skip76
+\UL@hook=\toks52
+\UL@height=\dimen363
+\UL@pe=\count367
+\UL@pixel=\dimen364
+\ULC@box=\box128
 Package: ulem 2019/11/18
-\ULdepth=\dimen362
+\ULdepth=\dimen365
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tr
 anslations/translations.sty
@@ -1177,19 +1204,19 @@ s (CN)
 ))
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/wrapfig/wrapfig.s
 ty
-\wrapoverhang=\dimen363
-\WF@size=\dimen364
-\c@WF@wrappedlines=\count366
-\WF@box=\box128
-\WF@everypar=\toks52
+\wrapoverhang=\dimen366
+\WF@size=\dimen367
+\c@WF@wrappedlines=\count368
+\WF@box=\box129
+\WF@everypar=\toks53
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/li
 psum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count367
-\l__lipsum_a_int=\count368
-\l__lipsum_b_int=\count369
+\g__lipsum_par_int=\count369
+\l__lipsum_a_int=\count370
+\l__lipsum_b_int=\count371
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/li
 psum/lipsum.ltd.tex))
@@ -1200,7 +1227,7 @@ Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box129
+\pgfnodeparttextbox=\box130
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/modules/pgfmoduleplot.code.tex
@@ -1209,8 +1236,8 @@ File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pg
 f/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen365
-\pgf@nodesepend=\dimen366
+\pgf@nodesepstart=\dimen368
+\pgf@nodesepend=\dimen369
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pg
 f/compatibility/pgfcomp-version-1-18.sty
@@ -1230,10 +1257,10 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen367
-\pgffor@skip=\dimen368
-\pgffor@stack=\toks53
-\pgffor@toks=\toks54
+\pgffor@iter=\dimen370
+\pgffor@skip=\dimen371
+\pgffor@stack=\toks54
+\pgffor@toks=\toks55
 ))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/frontendlayer/tikz/tikz.code.tex
@@ -1242,41 +1269,41 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count370
-\pgfplotmarksize=\dimen369
+\pgf@plot@mark@count=\count372
+\pgfplotmarksize=\dimen372
 )
-\tikz@lastx=\dimen370
-\tikz@lasty=\dimen371
-\tikz@lastxsaved=\dimen372
-\tikz@lastysaved=\dimen373
-\tikz@lastmovetox=\dimen374
-\tikz@lastmovetoy=\dimen375
-\tikzleveldistance=\dimen376
-\tikzsiblingdistance=\dimen377
-\tikz@figbox=\box130
-\tikz@figbox@bg=\box131
-\tikz@tempbox=\box132
-\tikz@tempbox@bg=\box133
-\tikztreelevel=\count371
-\tikznumberofchildren=\count372
-\tikznumberofcurrentchild=\count373
-\tikz@fig@count=\count374
+\tikz@lastx=\dimen373
+\tikz@lasty=\dimen374
+\tikz@lastxsaved=\dimen375
+\tikz@lastysaved=\dimen376
+\tikz@lastmovetox=\dimen377
+\tikz@lastmovetoy=\dimen378
+\tikzleveldistance=\dimen379
+\tikzsiblingdistance=\dimen380
+\tikz@figbox=\box131
+\tikz@figbox@bg=\box132
+\tikz@tempbox=\box133
+\tikz@tempbox@bg=\box134
+\tikztreelevel=\count373
+\tikznumberofchildren=\count374
+\tikznumberofcurrentchild=\count375
+\tikz@fig@count=\count376
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count375
-\pgfmatrixcurrentcolumn=\count376
-\pgf@matrix@numberofcolumns=\count377
+\pgfmatrixcurrentrow=\count377
+\pgfmatrixcurrentcolumn=\count378
+\pgf@matrix@numberofcolumns=\count379
 )
-\tikz@expandcount=\count378
+\tikz@expandcount=\count380
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-\pgf@layerbox@bg=\box134
-\pgf@layerboxsaved@bg=\box135
+\pgf@layerbox@bg=\box135
+\pgf@layerboxsaved@bg=\box136
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ti
 kz-cd/tikz-cd.sty
@@ -1295,10 +1322,10 @@ File: tikzlibraryquotes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowinset=\dimen378
-\pgfarrowlength=\dimen379
-\pgfarrowwidth=\dimen380
-\pgfarrowlinewidth=\dimen381
+\pgfarrowinset=\dimen381
+\pgfarrowlength=\dimen382
+\pgfarrowwidth=\dimen383
+\pgfarrowlinewidth=\dimen384
 )))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
@@ -1311,7 +1338,7 @@ File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen382
+\arrowsize=\dimen385
 ))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ob
 erdiek/stackrel.sty
@@ -1324,12 +1351,12 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/en
 umitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip76
-\enit@outerparindent=\dimen383
-\enit@toks=\toks55
-\enit@inbox=\box136
-\enit@count@id=\count379
-\enitdp@description=\count380
+\labelindent=\skip77
+\enit@outerparindent=\dimen386
+\enit@toks=\toks56
+\enit@inbox=\box137
+\enit@count@id=\count381
+\enitdp@description=\count382
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/st
 maryrd/stmaryrd.sty
@@ -1358,10 +1385,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 .tex
 (/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xkeyval/xkvutil
 s.tex
-\XKV@toks=\toks56
-\XKV@tempa@toks=\toks57
+\XKV@toks=\toks57
+\XKV@tempa@toks=\toks58
 )
-\XKV@depth=\count381
+\XKV@depth=\count383
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 448.
@@ -1372,19 +1399,21 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 712.
 )
+\symmcy=\mathgroup9
+
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/fa
 ncyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip77
-\f@nch@O@elh=\skip78
-\f@nch@O@erh=\skip79
-\f@nch@O@olh=\skip80
-\f@nch@O@orh=\skip81
-\f@nch@O@elf=\skip82
-\f@nch@O@erf=\skip83
-\f@nch@O@olf=\skip84
-\f@nch@O@orf=\skip85
+\f@nch@headwidth=\skip78
+\f@nch@O@elh=\skip79
+\f@nch@O@erh=\skip80
+\f@nch@O@olh=\skip81
+\f@nch@O@orh=\skip82
+\f@nch@O@elf=\skip83
+\f@nch@O@erf=\skip84
+\f@nch@O@olf=\skip85
+\f@nch@O@orf=\skip86
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hy
 perref/hyperref.sty
@@ -1410,9 +1439,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 xhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen384
-\Hy@linkcounter=\count382
-\Hy@pagecounter=\count383
+\@linkdim=\dimen387
+\Hy@linkcounter=\count384
+\Hy@pagecounter=\count385
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hy
 perref/pd1enc.def
@@ -1427,7 +1456,7 @@ nguages
 intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count384
+\Hy@SavedSpaceFactor=\count386
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hy
 perref/puenc.def
@@ -1444,9 +1473,9 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count385
+\c@Hy@tempcnt=\count387
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen385
+\XeTeXLinkMargin=\dimen388
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/generic/
 bitset/bitset.sty
@@ -1457,9 +1486,9 @@ bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count386
-\Field@Width=\dimen386
-\Fld@charsize=\dimen387
+\Fld@menulength=\count388
+\Field@Width=\dimen389
+\Fld@charsize=\dimen390
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -1475,9 +1504,9 @@ se/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count387
-\c@Item=\count388
-\c@Hfootnote=\count389
+\Hy@abspage=\count389
+\c@Item=\count390
+\c@Hfootnote=\count391
 )
 Package hyperref Info: Driver: hpdftex.
 
@@ -1491,8 +1520,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count390
-\c@bookmark@seq@number=\count391
+\Fld@listcount=\count392
+\c@bookmark@seq@number=\count393
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/re
 runfilecheck/rerunfilecheck.sty
@@ -1505,9 +1534,9 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip86
+\Hy@SectionHShift=\skip87
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 225.
+Package hyperref Info: Option `colorlinks' set `true' on input line 233.
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/se
 ctsty/sectsty.sty
@@ -1526,21 +1555,21 @@ LaTeX Warning: Command \underline  has changed.
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/am
 scls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks58
-\thm@bodyfont=\toks59
-\thm@headfont=\toks60
-\thm@notefont=\toks61
-\thm@headpunct=\toks62
-\thm@preskip=\skip87
-\thm@postskip=\skip88
-\thm@headsep=\skip89
-\dth@everypar=\toks63
+\thm@style=\toks59
+\thm@bodyfont=\toks60
+\thm@headfont=\toks61
+\thm@notefont=\toks62
+\thm@headpunct=\toks63
+\thm@preskip=\skip88
+\thm@postskip=\skip89
+\thm@headsep=\skip90
+\dth@everypar=\toks64
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/th
 mtools/thmtools.sty
 Package: thmtools 2020/08/01 v0.72
-\thmt@toks=\toks64
-\c@thmt@dummyctr=\count392
+\thmt@toks=\toks65
+\c@thmt@dummyctr=\count394
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/th
 mtools/thm-patch.sty
@@ -1549,7 +1578,7 @@ Package: thm-patch 2020/08/01 v0.72
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/th
 mtools/parseargs.sty
 Package: parseargs 2020/08/01 v0.72
-\@parsespec=\toks65
+\@parsespec=\toks66
 ))
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/th
 mtools/thm-kv.sty
@@ -1576,17 +1605,17 @@ Package: thm-restate 2020/08/01 v0.72
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/th
 mtools/thm-amsthm.sty
 Package: thm-amsthm 2020/08/01 v0.72
-\thmt@style@headstyle=\toks66
+\thmt@style@headstyle=\toks67
 ))
-\c@theorem=\count393
-\c@introthm=\count394
+\c@theorem=\count395
+\c@introthm=\count396
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xa
 rgs/xargs.sty
 Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
-\xargs@max=\count395
-\xargs@toksa=\toks67
-\xargs@toksb=\toks68
+\xargs@max=\count397
+\xargs@toksa=\toks68
+\xargs@toksb=\toks69
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/to
 donotes/todonotes.sty
@@ -1597,21 +1626,21 @@ Package: todonotes 2021/06/04
 pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-\c@@todonotes@numberoftodonotes=\count396
+\c@@todonotes@numberoftodonotes=\count398
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/fl
 oat/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count397
-\float@exts=\toks69
-\float@box=\box137
-\@float@everytoks=\toks70
-\@floatcapt=\box138
+\c@float@type=\count399
+\float@exts=\toks70
+\float@box=\box138
+\@float@everytoks=\toks71
+\@floatcapt=\box139
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ti
 tlesec/titletoc.sty
 Package: titletoc 2021/07/05 v2.14 TOC entries
-\ttl@leftsep=\dimen388
+\ttl@leftsep=\dimen391
 )
 \@indexfile=\write5
 \openout5 = `partial-notes-15-10.idx'.
@@ -1621,24 +1650,24 @@ Writing index file partial-notes-15-10.idx
 (partial-notes-15-10.aux)
 \openout1 = `partial-notes-15-10.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 540.
-LaTeX Font Info:    ... okay on input line 540.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 551.
+LaTeX Font Info:    ... okay on input line 551.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1674,7 +1703,28 @@ LaTeX Font Info:    ... okay on input line 540.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \microtypecontext on input line 551.
+Package microtype Info: Applying patch `item' on input line 551.
+Package microtype Info: Applying patch `toc' on input line 551.
 
+Package microtype Warning: Unable to apply patch `eqnum' on input line 551.
+
+Package microtype Info: Applying patch `footnote' on input line 551.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 551.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/mt-ptm.
+cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/uc
 s/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -1682,17 +1732,17 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/context/
 base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count398
-\scratchdimen=\dimen389
-\scratchbox=\box139
-\nofMPsegments=\count399
-\nofMParguments=\count400
-\everyMPshowfont=\toks71
-\MPscratchCnt=\count401
-\MPscratchDim=\dimen390
-\MPnumerator=\count402
-\makeMPintoPDFobject=\count403
-\everyMPtoPDFconversion=\toks72
+\scratchcounter=\count400
+\scratchdimen=\dimen392
+\scratchbox=\box140
+\nofMPsegments=\count401
+\nofMParguments=\count402
+\everyMPshowfont=\toks72
+\MPscratchCnt=\count403
+\MPscratchDim=\dimen393
+\MPnumerator=\count404
+\makeMPintoPDFobject=\count405
+\everyMPtoPDFconversion=\toks73
 )
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ep
 stopdf-pkg/epstopdf-base.sty
@@ -1712,69 +1762,81 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 540.
+ 551.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ot1ztmcm.f
 d
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `ztmcm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 540.
+ 551.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/omlztmcm.f
 d
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 540.
+ 551.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/omsztmcm.f
 d
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 540.
+ 551.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/omxztmcm.f
 d
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
+(/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/mt-msa.
+cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/mt-msb.
+cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
-40.
+51.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 540.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 551.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 540.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 551.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 540.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 551.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 5
-40.
+51.
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/st
 maryrd/Ustmry.fd)
-Package xypdf Info: Line width: 0.47987pt on input line 540.
+Package xypdf Info: Line width: 0.47987pt on input line 551.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ragged2e/ragged2e
 .sty
 Package: ragged2e 2021/02/05 v3.0 ragged2e Package
-\CenteringLeftskip=\skip90
-\RaggedLeftLeftskip=\skip91
-\RaggedRightLeftskip=\skip92
-\CenteringRightskip=\skip93
-\RaggedLeftRightskip=\skip94
-\RaggedRightRightskip=\skip95
-\CenteringParfillskip=\skip96
-\RaggedLeftParfillskip=\skip97
-\RaggedRightParfillskip=\skip98
-\JustifyingParfillskip=\skip99
-\CenteringParindent=\skip100
-\RaggedLeftParindent=\skip101
-\RaggedRightParindent=\skip102
-\JustifyingParindent=\skip103
+\CenteringLeftskip=\skip91
+\RaggedLeftLeftskip=\skip92
+\RaggedRightLeftskip=\skip93
+\CenteringRightskip=\skip94
+\RaggedLeftRightskip=\skip95
+\RaggedRightRightskip=\skip96
+\CenteringParfillskip=\skip97
+\RaggedLeftParfillskip=\skip98
+\RaggedRightParfillskip=\skip99
+\JustifyingParfillskip=\skip100
+\CenteringParindent=\skip101
+\RaggedLeftParindent=\skip102
+\RaggedRightParindent=\skip103
+\JustifyingParindent=\skip104
 )
 
 Package exsheets Info: Loading custom configurations file
@@ -1799,7 +1861,7 @@ anslations/dicts/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
-Package hyperref Info: Link coloring ON on input line 540.
+Package hyperref Info: Link coloring ON on input line 551.
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hy
 perref/nameref.sty
@@ -1813,28 +1875,28 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count404
+\c@section@level=\count406
 )
-LaTeX Info: Redefining \ref on input line 540.
-LaTeX Info: Redefining \pageref on input line 540.
-LaTeX Info: Redefining \nameref on input line 540.
+LaTeX Info: Redefining \ref on input line 551.
+LaTeX Info: Redefining \pageref on input line 551.
+LaTeX Info: Redefining \nameref on input line 551.
  (partial-notes-15-10.out)
 (partial-notes-15-10.out)
 \@outlinefile=\write6
 \openout6 = `partial-notes-15-10.out'.
 
-LaTeX Font Info:    Calculating math sizes for size <10.95007> on input line 56
-9.
+LaTeX Font Info:    Calculating math sizes for size <10.95007> on input line 58
+0.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 569.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 580.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.1031> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 569.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 580.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.5701> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 569.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 580.
 
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <6.5701> not available
-(Font)              size <7> substituted on input line 569.
+(Font)              size <7> substituted on input line 580.
 
 (partial-notes-15-10.toc)
 \tf@toc=\write7
@@ -1844,9 +1906,14 @@ LaTeX Font Warning: Font shape `U/stmry/m/n' in size <6.5701> not available
 
 {/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/data/pdftex/config/p
 dftex.map}]
-Overfull \hbox (16.43195pt too wide) in paragraph at lines 599--603
-[]\T1/ptm/m/n/12 (Stasheff, Sugawara) Study homotopy associative $\OML/ztmcm/m/
-it/12 H$\T1/ptm/m/n/12 -spaces, Stasheff implicitly discovers
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (8.1161pt too wide) in paragraph at lines 610--614
+[]\T1/ptm/m/n/12 (-20) (Stasheff, Sugawara) Study homotopy associative $\OML/zt
+mcm/m/it/12 H$\T1/ptm/m/n/12 (-20) -spaces, Stasheff implicitly discovers
  []
 
 
@@ -1854,11 +1921,6 @@ it/12 H$\T1/ptm/m/n/12 -spaces, Stasheff implicitly discovers
 s/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Overfull \hbox (28.25343pt too wide) in paragraph at lines 635--640
-\T1/ptm/m/n/12 and cousins allows to develop a robust homotopy theory of homoto
-py algebras, cohomology
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -1877,25 +1939,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [3]
-Overfull \hbox (25.69173pt too wide) in paragraph at lines 690--702
-\T1/ptm/m/n/12 automorphisms, and algebras are the gadgets that act on objects 
-by their (linear) endomorphisms.
- []
-
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 12.0pt on input line 707.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 9.0pt on input line 707.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 7.0pt on input line 707.
+(Font)              scaled to size 12.0pt on input line 718.
 
-Overfull \hbox (6.74393pt too wide) in paragraph at lines 703--711
-[]\T1/ptm/m/n/12 The underlying objects to operads are known as \T1/ptm/m/it/12
- symmetric sequences\T1/ptm/m/n/12 : a symmetric sequence
- []
-
+(/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/mt-eus.
+cfg
+File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
+)
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 9.0pt on input line 718.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 7.0pt on input line 718.
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 728.
+line 739.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -1906,7 +1963,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 793.
+nput line 804.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1918,7 +1975,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 Package hyperref Info: bookmark level for unknown variante defaults to 0 on inp
-ut line 879.
+ut line 890.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1938,19 +1995,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [7]
-Overfull \hbox (3.11804pt too wide) in paragraph at lines 955--959
-[]\T1/ptm/m/it/12 Commutative operad. \T1/ptm/m/n/12 The reduced symmetric topo
-logical (or set) operad with $[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztm
-cm/m/n/12 )$
- []
-
-
-Overfull \hbox (1.49652pt too wide) in paragraph at lines 959--963
-[]\T1/ptm/m/it/12 Associative operad. \T1/ptm/m/n/12 The reduced set operad wit
-h $[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) = \OML/ztmcm/m/
-it/12 S[]$ \T1/ptm/m/n/12 the regular representation
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -1978,16 +2022,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [10]
-Overfull \hbox (2.56602pt too wide) in paragraph at lines 1120--1129
-\T1/ptm/m/n/12 rooted tree, along with a bijection $\OML/ztmcm/m/it/12 f \OT1/z
-tmcm/m/n/12 : \OML/ztmcm/m/it/12 I [][]\OMS/ztmcm/m/n/12 ! \OML/ztmcm/m/it/12 L
-\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 \OT1/ztmcm/m/n/12 )$\T1/ptm/m/n/12 . Two
- $\OML/ztmcm/m/it/12 I$\T1/ptm/m/n/12 -labeled trees $\OML/ztmcm/m/it/12 T$ \T1
-/ptm/m/n/12 an $\OML/ztmcm/m/it/12 T[]$ \T1/ptm/m/n/12 are isomorphic
- []
-
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-141.
+152.
+
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -2001,7 +2038,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 1199.
+t line 1210.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2012,12 +2049,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [12]
-Overfull \hbox (2.98026pt too wide) in paragraph at lines 1277--1282
-[][][]\T1/ptm/b/n/12 Definition 3.5[] [][][]\T1/ptm/m/n/12 The free operad gene
-rated by a symmetric collection $\OML/ztmcm/m/it/12 X$ \T1/ptm/m/n/12 is define
-d inductively
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2027,12 +2058,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [13]
-Overfull \hbox (4.83693pt too wide) in paragraph at lines 1325--1332
-[][][]\T1/ptm/b/n/12 Definition 4.1[] [][][]\T1/ptm/m/n/12 A symmetric sequence
- $\U/eus/m/n/12 X$ \T1/ptm/m/n/12 is weight graded if for each finite set the c
-omponent
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2042,19 +2067,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [14]
-Overfull \hbox (9.20395pt too wide) in paragraph at lines 1397--1402
-\T1/ptm/m/n/12 Similarly, the commutative operad is generated by a binary opera
-tion which instead generates
- []
-
-
-Overfull \hbox (20.868pt too wide) in paragraph at lines 1403--1407
-[]\T1/ptm/m/n/12 The Lie operad is generated by a single binary operation $\OML
-/ztmcm/m/it/12 $ \T1/ptm/m/n/12 that generates the sign representation
+Overfull \hbox (12.29854pt too wide) in paragraph at lines 1414--1418
+[]\T1/ptm/m/n/12 (-20) The Lie operad is generated by a single binary operation
+ $\OML/ztmcm/m/it/12 $ \T1/ptm/m/n/12 (-20) that generates the sign representa
+tion
  []
 
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
-ine 1419.
+ine 1430.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2101,13 +2121,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 12.0pt on input line 1721.
+(Font)              scaled to size 12.0pt on input line 1733.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1721.
+(Font)              scaled to size 9.0pt on input line 1733.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.0pt on input line 1721.
-Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 1724.
+(Font)              scaled to size 7.0pt on input line 1733.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
+input line 1736.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2118,16 +2138,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [20]
-Overfull \hbox (2.18428pt too wide) in paragraph at lines 1818--1823
-\T1/ptm/m/n/12 the Koszul sign we have introduced, guaranteeing that this pairi
-ng in equivariant, introduces
- []
-
-
-Overfull \hbox (9.48962pt too wide) in paragraph at lines 1826--1832
-[]\T1/ptm/m/it/12 The commutative and Lie operads. \T1/ptm/m/n/12 We have compu
-ted that if $\U/eus/m/n/12 X\OT1/ztmcm/m/n/12 (2)$ \T1/ptm/m/n/12 is the trivia
-l representation
+Overfull \hbox (1.10588pt too wide) in paragraph at lines 1838--1844
+[]\T1/ptm/m/it/12 (-20) The commutative and Lie operads. \T1/ptm/m/n/12 (-20) W
+e have computed that if $\U/eus/m/n/12 X\OT1/ztmcm/m/n/12 (2)$ \T1/ptm/m/n/12 (
+-20) is the trivial representation
  []
 
 
@@ -2165,7 +2179,73 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[24] (partial-notes-15-10.aux)
+[24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[26]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[27]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 2301.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[29]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[30]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[31] (partial-notes-15-10.aux)
 
  *File List*
  article.cls    2021/10/04 v1.4n Standard LaTeX document class
@@ -2189,6 +2269,10 @@ scrlfile-hook.sty    2021/06/25 v3.34 KOMA-Script package (using LaTeX hooks)
 kvoptions.sty    2020-10-07 v3.14 Key value format for package options (HO)
  ltxcmds.sty    2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 kvsetkeys.sty    2019/12/15 v1.18 Key value parser (HO)
+microtype.sty    2021/10/31 v3.0 Micro-typographical refinements (RS)
+etoolbox.sty    2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+microtype-pdftex.def    2021/10/31 v3.0 Definitions specific to pdftex (RS)
+microtype.cfg    2021/10/31 v3.0 microtype main configuration file (RS)
 changepage.sty    2009/10/20 v1.0c check page and change page layout
 inputenc.sty    2021/02/14 v1.3d Input encoding file
    utf8x.def    2004/10/17 UCS: Input encoding UTF-8
@@ -2249,7 +2333,6 @@ l3backend-pdftex.def    2021-10-18 L3 backend support: PDF output (pdfTeX)
   xparse.sty    2021-11-12 L3 Experimental document command parser
 xtemplate.sty    2021-11-12 L3 Experimental prototype document functions
 l3keys2e.sty    2021-11-12 LaTeX2e option processing using LaTeX3 keys
-etoolbox.sty    2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
  environ.sty    2014/05/04 v0.3 A new way to define environments
 trimspaces.sty    2009/09/17 v1.1 Trim spaces around a token list
  pgfcore.sty    2021/05/15 v3.1.9a (3.1.9a)
@@ -2334,6 +2417,7 @@ thm-amsthm.sty    2020/08/01 v0.72
 todonotes.sty    2021/06/04
    float.sty    2001/11/08 v1.3d Float enhancements (AL)
 titletoc.sty    2021/07/05 v2.14 TOC entries
+  mt-ptm.cfg    2006/04/20 v1.7 microtype config. file: Times (RS)
  ucsencs.def    2011/01/21 Fixes to fontencodings LGR, T3
 supp-pdf.mkii
 epstopdf-base.sty    2020-01-24 v2.11 Base part for package epstopdf
@@ -2342,6 +2426,8 @@ ot1ztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 omlztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 omsztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 omxztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+  mt-msa.cfg    2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+  mt-msb.cfg    2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
   ot1ptm.fd    2001/06/04 font definitions for OT1/ptm.
   Ustmry.fd
 ragged2e.sty    2021/02/05 v3.0 ragged2e Package
@@ -2354,6 +2440,7 @@ gettitlestring.sty    2019/12/15 v1.6 Cleanup title references (HO)
 partial-notes-15-10.out
 partial-notes-15-10.out
   uni-32.def    2013/05/13 UCS: Unicode data U+2000..U+20FF
+  mt-eus.cfg    2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
   ts1ptm.fd    2001/06/04 font definitions for TS1/ptm.
  ***********
 
@@ -2361,54 +2448,49 @@ partial-notes-15-10.out
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.4299pt have occurred.
 
-
-Package rerunfilecheck Warning: File `partial-notes-15-10.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `partial-notes-15-10.out':
-(rerunfilecheck)             Before: AB453BA717775F54427A9E22973432CA;4220
-(rerunfilecheck)             After:  9F2097168CEFA279673430C137E01273;4041.
+Package rerunfilecheck Info: File `partial-notes-15-10.out' has not changed.
+(rerunfilecheck)             Checksum: 6492D4923B9FF18EE6D9A2F1E30A1C82;5124.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 146 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38638 strings out of 480634
- 763744 string characters out of 2896310
- 1189975 words of memory out of 3000000
- 55517 multiletter control sequences out of 15000+600000
- 480733 words of font info for 166 fonts, out of 8000000 for 9000
+ 40955 strings out of 480634
+ 803296 string characters out of 2896310
+ 1254958 words of memory out of 3000000
+ 57311 multiletter control sequences out of 15000+600000
+ 503722 words of font info for 446 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 108i,15n,106p,3245b,11071s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.6.3} has been referenced
- but does not exist, replaced by a fixed one
-
-{/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dv
-ips/base/8r.enc}</Users/ptamarov/Library/Application Support/MiKTeX/texmfs/inst
-all/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/ptamarov/Library/Applicat
-ion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></U
-sers/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/t
-exmfs/install/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users/ptamarov/Librar
-y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts
-/type1/public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Application Su
-pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></Us
-ers/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/texmfs/inst
-all/fonts/type1/public/rsfs/rsfs10.pfb></Users/ptamarov/Library/Application Sup
-port/MiKTeX/texmfs/install/fonts/type1/public/hoekwater/stmary10.pfb></Library/
+ 108i,15n,106p,3245b,11179s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/inst
+all/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Application Support/Mi
+KTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/ptamarov/
+Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/ptamarov/Library/Application 
+Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users
+/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/
+amsfonts/cm/cmss8.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmf
+s/install/fonts/type1/public/amsfonts/cm/cmss9.pfb></Users/ptamarov/Library/App
+lication Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type
+1/public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Application Support
+/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/p
+tamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/texmfs/install/f
+onts/type1/public/rsfs/rsfs10.pfb></Users/ptamarov/Library/Application Support/
+MiKTeX/texmfs/install/fonts/type1/public/hoekwater/stmary10.pfb></Library/Appli
+cation Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/
 Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Lib
-rary/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb>
-</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8
-a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times
-/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on partial-notes-15-10.pdf (24 pages, 252193 bytes).
+rary/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb
+></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr
+8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/time
+s/utmri8a.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/instal
+l/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb>
+Output written on partial-notes-15-10.pdf (31 pages, 318729 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 135 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 178 named destinations out of 1000 (max. 500000)
+ 98037 words of extra memory for PDF output out of 106986 (max. 10000000)
 
