@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {};
+		\node [style=inner] (2) at (-1, 1) {};
+		\node [style=inner] (9) at (1, 1) {};
+		\node [style=inner] (10) at (0, -1.25) {};
+		\node [style=inner] (11) at (-1.5, 2) {};
+		\node [style=inner] (12) at (-0.5, 2) {};
+		\node [style=inner] (13) at (0.5, 2) {};
+		\node [style=inner] (14) at (1.5, 2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+		\draw (0.center) to (9.center);
+		\draw (0.center) to (10.center);
+		\draw (2.center) to (11.center);
+		\draw (12.center) to (2.center);
+		\draw (13.center) to (9.center);
+		\draw (9.center) to (14.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

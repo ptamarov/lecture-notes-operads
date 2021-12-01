@@ -67,6 +67,31 @@
 
 %% Tree macros %%
 
+\newcommand{\fork}[7]{
+\begin{tikzpicture}
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$#3$};
+		\node [style=inner] (2) at (-1, 1) {$#1$};
+		\node [style=inner] (9) at (1, 1) {$#2$};
+		\node [style=leaf] (10) at (0, -1.25) {};
+		\node [style=leaf] (11) at (-1.5, 2) {$#4$};
+		\node [style=leaf] (12) at (-0.5, 2) {$#5$};
+		\node [style=leaf] (13) at (0.5, 2) {$#6$};
+		\node [style=leaf] (14) at (1.5, 2) {$#7$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+		\draw (0.center) to (9.center);
+		\draw (0.center) to (10.center);
+		\draw (2.center) to (11.center);
+		\draw (12.center) to (2.center);
+		\draw (13.center) to (9.center);
+		\draw (9.center) to (14.center);
+	\end{pgfonlayer}
+\end{tikzpicture}}
+
 \newcommand{\leftc}[5]{
 	\begin{tikzpicture}
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
@@ -297,11 +322,11 @@ join=round] \draw (0,0) rectangle (1,1)
 %\usepackage[pdftex,dvipsnames]{xcolor}  
 % Coloured text etc.
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
+
+\newcommand{\hacer}[1]{\todo[inline,linecolor=blue,backgroundcolor=blue!25!white,bordercolor=blue]{#1}}
 \newcommandx{\unsure}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25!white,bordercolor=blue,#1]{#2}}
 \newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
-\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
-\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
 
 \definecolor{col1}{rgb}{0.8, 0.8, 1.0}
 \definecolor{col2}{rgb}{0.9, 0.9, 0.98}
@@ -678,11 +703,232 @@ Symmetric operads & Rooted trees & $\circ_i$  & J. P. May \\
 \end{tabular}
 \end{center}
 
+\subsection{Koszul duality}
+\hacer{Write introduction to Koszul duality.}
+\subsection{Gr\"obner bases}
+\hacer{Write introduction to Groebner bases.}
 \subsection{Exercises}
 
-The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#0}.
+\textbf{A. Symmetric groups.} Operads are meant to encode
+operations on objects \emph{along with their symmetries},
+which is done through the representation theory of the
+symmetric groups. The following exercises will remind
+you of some basic facts about them.
 
-\pagebreak
+
+\begin{question} Let $I = [n]$ so that $\Aut(I) = S_n$ is 
+the symmetric group on $n$ letters. For each ordered 
+partition $\pi = (\pi_1,\ldots,\pi_k)$, let $\lambda$
+be the ordered partition of $n$ with $\lambda_i = \# \pi_i$
+for $i\in [k]$. Show that the permutations of
+$[n]$ that preserve $\pi$ determine a subgroup of $S_n$
+isomorphic to $S_\lambda := S_{\lambda_1}\times
+\cdots \times S_{\lambda_k}$. 
+\end{question}
+
+
+\begin{question} Consider the subgroup of $S_n$ corresponding
+to the ordered partition of $[n]$ given by $([1,k],[k+1,n])$, along with the 
+inclusion $S_k\times S_{n-k} \hookrightarrow S_n$. Show that
+a set of representatives for the cosets of this inclusion
+in $S_n$ is given by the \emph{$(k,n-k)$-shuffles}, those
+permutations $\sigma\in S_n$ that preserve the linear order in
+$[1,k]$ and $[k+1,n]$. Conclude that there are exactly
+$\binom nk$ shuffles of type $(k,n-k)$ on $[n]$. Define
+shuffles associated to other partitions of $n$.
+\end{question}
+
+\medskip
+\textbf{B. Categories.} The language of categories and
+functors permeates most of modern algebra and geometry,
+and in particular is useful to work with operads and
+other combinatorial structures defines by graphs. The
+following will remind you of some important notions
+we will use during the course.
+
+\begin{question} A category $\mathcal C$ is the datum of
+a set of objects $\operatorname{Ob}(\mathcal{C})$, and
+for each $x,y\in \operatorname{Ob}(\mathcal{C})$ a
+set $\mathcal C(x,y)$ of morphisms from $x$ to $y$.
+Moreover, we require the existence of an associative
+and unital composition law
+\[-\circ -: \mathcal C(y,z) \times  \mathcal C(x,y) 
+	\longrightarrow \mathcal C(x,z). \] 
+	The latter means there are distinguished elements
+	$1_x\in \mathcal{C}(x,x)$ for each object of $\mathcal{C}$
+	that induce the identity $-\circ 1_x$ an $1_x\circ -$
+	of any $\mathcal{C}(-,x)$ and $\mathcal{C}(x,-)$.
+	Find examples of categories: sets, finite sets,
+	rings, vector spaces, open subsets, posets, and 
+	others.
+\end{question}
+
+\begin{question} A functor $F: \mathcal{C}_1\longrightarrow 
+\mathcal{C}_2$ is a datum that assigns to each object
+$x$ of the domain an object $F(x)$ of the codomain,
+and to each morphism $f:x\to y$ a morphism $F(f)$ such
+that $F(f\circ g) = F(f) \circ F(g)$ and $F(1_x) = 1_{Fx}$
+for each pair of composable arrows $f$ and $g$ and each
+object $x$ of $\mathcal C_1$. Find examples of functors
+between the examples of categories you found above.
+
+\end{question}
+\begin{question} A monoidal category is a category $\mathcal C$ 
+along with the datum of a bifunctor $\otimes :
+\mathcal{C}\times \mathcal{C}\longrightarrow \mathcal{C}$
+along with an associator and left and right units. 
+A monoidal category is \emph{strict} if the associator and left
+and right units are identities.
+\begin{enumerate}
+\item Expand on the details of these definitions. Define what
+a braided monoidal category and what a symmetric monoidal category are.
+\item Exhibit monoidal
+structures the following categories: sets, vector spaces,
+linear representations of a group $G$, topological spaces,
+associative algebras, Lie algebras, and others.
+\end{enumerate}
+ \emph{Hint.} In the case of Lie algebras,
+ consider the category of Lie groups with its
+ canonical tensor product (the cartesian product) 
+ and the functor $G\longmapsto T_e(G)$ to decide
+ what the tensor product of two Lie algebras is.
+\end{question}
+
+
+\begin{question}
+If $(\mathcal{V},\otimes)$ is a monoidal category, we say $\mathcal{C}$ 
+is a $\mathcal V$-enriched category if each hom-set 
+$\mathcal{C}(x,y)$ is an object of $\mathcal{V}$ and
+there is a composition law 
+\[-\circ -: \mathcal C(y,z) \otimes  \mathcal C(x,y) 
+	\longrightarrow \mathcal C(x,z). \] 
+which consists of morphisms in $\mathcal{V}$, and which is 
+associative and unital. Note that an ordinary category is
+just a category enriched over the category of sets.
+A linear category is a category enriched over the
+category of vector spaces, an additive category is a
+category enriched over Abelian groups.
+Expand on what this means. Find about Abelian
+categories, and ponder over the difference: an additive
+category is a category with structure, while an
+Abelian category is a category with additional properties.
+\end{question}
+
+\begin{question}\label{ex:skeleton}
+A category $\mathcal D$ is skeletal if no two distinct
+objects in it are isomorphic. We say that $\mathcal{D}$ is
+the skeleton of $\mathcal{C}$ if:
+\begin{tenumerate}
+\item It is a full subcategory of $\mathcal{C}$: for each
+pair of objects $x,y\in\mathcal{D}$, we have that $\mathcal{D}(x,y) = \mathcal{C}(x,y)$.
+\item The inclusion of $\mathcal{D}$ in $\mathcal{C}$ is
+essentially surjective: every object of $\mathcal{C}$ is
+isomorphic to an object of $\mathcal{D}$.
+\item $\mathcal{D}$ is skeletal.
+\end{tenumerate}
+Show that every small category admits a skeleton, and
+compute the skeleton of the following categories: sets,
+finite sets, finite dimensional vector spaces over
+a field.
+\end{question}
+\medskip
+
+\begin{question}
+Suppose that $x$ is an object in a symmetric monoidal
+category $(\mathcal{C},\tau)$. For each $n\in\NN$ and 
+each $i\in [n-1]$ define $\tau_i : x^{\otimes n} 
+\longrightarrow x^{\otimes n}$ by
+\[ \tau_i = 1^{i-1} \otimes \tau \otimes 1^{n-i-1}.\]
+Show that the assignment
+$(i,i+1)\in S_n\longmapsto \tau_i
+	 \in\operatorname{Aut}( x^{\otimes n})$ 
+	 is a group homomorphism. \emph{Note.} This
+	 produces in particular a map $S_2\longrightarrow 
+	 \operatorname{Aut}(x^{\otimes 2})$ that sends
+	 the transposition $(12)\in S_2$ to the
+	 flip $\tau_{x,x}:x\otimes x\longrightarrow 
+	 x\otimes x$.  
+\end{question}
+
+\begin{question} A product and permutation category (abbreviated `PROP')
+is a monoidal category $\mathcal{C}$ whose set of objects is $\mathbb N = 
+\{0,1,2,\ldots\}$ and its tensor product is addition (in particular, it is strict and symmetric). Unravel the definitions:
+\begin{tenumerate}
+\item Use that $n = 1+\cdots + 1$ to show that $\mathcal{C}(m,n)$ is a right $S_n$-module.
+\item Similarly, show that $\mathcal{C}(m,n)$ is also a left $S_m$-module.
+\item Show these two actions are compatible (i.e. they commute).
+\item Show that the product $+$ induces a \emph{horizontal} composition rule 
+\[ \mathcal{C}(m,n) \times \mathcal{C}(m',n') 	\longrightarrow
+ 	\mathcal{C}(m+m',n+n'). \]
+\item Interpret the usual categorical product as a \emph{vertical} composition rule 
+\[ \mathcal{C}(n,k) \times \mathcal{C}(m,n) 	\longrightarrow
+ 	\mathcal{C}(m,k). \]
+\end{tenumerate}
+Consider the definition of a PROP enriched over a symmetric strict 
+monoidal category, like $\mathsf{Vect}$ (these are called $\mathbb{k}$-linear
+PROPs). Define the category of PROPs. 
+\end{question}
+
+\emph{Note.} For 
+each $n\in\mathrm{Ob}(\mathcal C)$ the
+object $\mathcal{C}(n,n)$ is a monoid under composition
+ that receives a map $S_n\longrightarrow \mathcal{C}(n,n)$.
+ Under the interpretation above, the image of $\sigma$
+  is equal to both the left and the right action of $S_n$ 
+  on the identity map $n\to n$. In particular, the twist
+  $\tau$ of $\mathcal{C}$ is equal to $(12)\mathrm{id}_2$,
+  and may (or may not) be trivial.
+  
+  \medskip
+  
+\textbf{C. Graded spaces and complexes.} When studying
+algebraic structures like operads, it will be necessary
+to use some tools from homological algebra: graded spaces,
+chain complexes, differentials, their homology, among
+others. The following exercises are intended to familiarize
+you with the elements of homological algebra, but we will
+look at them in more detail during the course.
+
+\begin{question} A $\mathbb Z$-graded vector space (usually 
+just called a graded vector space) is a vector
+space $V$ with a direct sum decomposition
+\[ V  = \bigoplus_{n\in\mathbb Z} V_n.\]
+If $v\in V_n$ we say that $v$ is homogeneous of
+degree $n$. Find out about the category of
+graded vector spaces, specifically:
+\begin{titemize}
+\item What are its (degree zero) morphisms?
+\item What are its (degree homogeneous) morphisms?
+\item What is the tensor product of two graded spaces?
+\item What is the natural isomorphism $V\otimes W\longrightarrow W\otimes V$?
+\item How does the last item relate to the `Koszul sign
+rule'?
+\end{titemize}
+\end{question}
+
+\begin{question} A differential graded (dg) vector space,
+usually called a complex, is a pair $(V,d)$ where $V$ is 
+a graded vector space $V$ and $d: V \to V$ is a homogeneous
+map of degree $-1$ such that $d^2=0$. Repeat the previous
+exercise replacing $\mathsf{gVect}$ with $\mathsf{Ch}$,
+the category of complexes of vector spaces.
+\end{question}
+
+\begin{question} If $(V,d)$ is a complex, then $Z(V) = \ker d$ 
+is called its space of cycles, and $B(V) = \operatorname{im} d$ 
+is called
+its space of boundaries. The quotient $Z(V)/B(V)$ is called
+the homology of $V$, and is written $H(V)$. Show that a map 
+of complexes $f:V\to W$ induces a map $Z(V) \to Z(W)$ and 
+in turn a map $H(f) : H(V) \to H(W)$. 
+\end{question}
+ 
+\begin{question} (Leisure) Find a book on homological algebra
+and read about the \emph{snake lemma} and the \emph{five lemma}.
+If you are very motivated, read about double complexes and spectral
+sequences.
+\end{question} 
+
 
 \section{Symmetric sequences, composition products, unbiased approach}
 
@@ -1054,10 +1300,340 @@ then we have that
 \end{tenumerate}
 \subsection{Exercises}
 
-The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#1}. During the exercise sessions, we will review pseudo-operads
-and their partial insertions, and the category of operads. 
+ \begin{question}
+ Follow the lecture notes and read about the
+ partial definition of an operad (and what
+ a Markl operad is). Show that a unital
+ pseudo-operad is the same as a unital 
+ May operad. 
+ \end{question}
  
-\pagebreak
+ \begin{question}
+Define the category of collections
+in $\mathsf{Vect}$
+using the biased approach and the 
+unbiased approach (this requires considering
+\emph{totally ordered} sets instead of sets,
+and their order preserving bijections. We will
+write them with calligraphic letters but
+use subscripts, so $\mathcal X$ has ns
+components $\{\mathcal X_n\}_{n\geqslant 1}$.
+
+\begin{enumerate}
+\item Show
+that it supports a non-symmetric Cauchy
+product given by 
+\[ (\mathcal{X}\otimes\mathcal{Y})_n =
+  \bigoplus_{i+j=n} \mathcal{X}_i\otimes
+   	\mathcal{Y}_j.\]
+   	
+   	\item Use this and the unbiased approach to 
+   	argue that the ns counterpart of a
+   	`subset of $I$' is an interval:
+   	a totally ordered subset of $I$ of the
+   	form $[i,j] = \{ x\in I : i\leqslant x \leqslant j\}$.
+ \item Use the previous item to define the
+ non-symmetric composition of ns collections.
+ Define the generating function associated
+ to a collection, and show it behaves
+ well with respect to the products above. 
+\end{enumerate}
+\end{question}
+
+\begin{question}
+Since every finite totally ordered set
+is, in particular, a finite set (and
+every order preserving function is a
+fortiori a function) there is a 
+map of categories 
+$ \mathsf{FinOrd}^\times \longrightarrow
+ 	\mathsf{FinSet}^\times$
+which induces a map that `forgets the
+symmetries' ${}_\Sigma\mathsf{Mod}	\longrightarrow\mathsf{Coll}$. 
+Show that there is a functor that assigns
+a ns sequence $\mathcal{X}$ to the 
+sequence $\mathcal{X}_\Sigma(n) =
+\kk S_n\otimes \mathcal{X}_n$ which is
+left adjoint and monoidal. 
+\end{question}
+ 
+\begin{question}
+Describe the associator for $\circ_\Sigma$ in the
+category of differential graded collections. 
+In particular,
+write down the signs explicitly. Explain
+how this is related to the signs
+in the parallel composition axiom
+for \emph{graded operads} that read as follows:
+for elements $f,g$ and $h$
+in an operad (of homogeneous arities)
+and $\delta = i-j+1$, we have that
+\[ 
+(f \circ_j g) \circ_i h  = 
+ 	\begin{cases} 
+ 		(-1)^{|g||h|}
+ 		 (f \circ_i h) \circ_{\ari(f)+j-1} g
+ 		  	& \delta \leqslant 0  \\
+ 		 \phantom{(-1)^{|g||h|}(} 	f\circ_j (g \circ_\delta h) &
+ 		  	\delta\in [1,\ari(g)] \\
+ 		(-1)^{|g||h|}
+   	(f \circ_\delta h) \circ_j g
+   		 & \delta > \ari(g).
+ 		   \end{cases}
+ 		 \]
+\end{question}
+
+\begin{question}
+A (unital associative) monoid $x$ in a monoidal category 
+$(\mathcal C,\otimes,\alpha,\rho,\lambda,1)$ is an object
+along with maps $\mu: x\otimes x\to x$ and $\eta : 1
+ \longrightarrow x$ such that $\mu$ is associative, 
+ that is $\mu (\mu\otimes 1) = \mu(1\otimes \mu)
+ \alpha_{x,x,x}$, and unital for
+$\eta$, that is $\mu(\eta\otimes 1)=\rho_x$
+and $\mu(1\otimes \eta) = \lambda_x$.
+Show that a $\Sigma$-operad is exactly the
+same as a monoid in $({}_\Sigma\mathsf{Mod},\circ_\Sigma)$.
+\end{question}
+
+\begin{question}
+We write $\mathsf{End}$ for
+ category of endofunctors of $\mathsf{Vect}$. Show
+ that there is a \emph{monoidal}
+ functor $S:{}_\Sigma\mathsf{Mod}
+ \longrightarrow \mathsf{End}$ that assigns
+ $\mathcal{X}$ to $V\longmapsto \bigoplus_{n\geqslant 0} \mathcal{X}(n)\otimes_{\Sigma_n} V^{\otimes n}$.
+ It is called the \emph{Schur functor} associated
+ to $\mathcal{X}$. The endofunctors in the essential
+ image of $S$ are called \emph{analytic}.
+\end{question}
+
+\begin{question}
+	 If $\mathcal{X}$
+	 is a symmetric sequence, describe the $\Sigma_n$
+	 action on $\mathcal{X}^{\otimes n}$ where
+	 $\otimes$ is the Cauchy product. Observe that
+	 it commutes with the $\Aut(I)$ action on 
+	 $\mathcal{X}^{\otimes n}(I)$.
+\end{question}
+	 
+\begin{question}
+Define ${}_\Sigma\mathsf{Mod}(\CC)$
+for any symmetric monoidal category $(\CC,\otimes,1)$
+(such as the category of sets, or topological spaces,
+or chain complexes, among others) along with
+its \emph{symmetric composition product}
+ $-\circ_\Sigma - $.
+ \end{question}
+ 
+\begin{question} Prove that non-unital Markl operads
+and non-unital May operads differ.
+To do this, consider the non-unital ns operad
+$\PP$ such that $\PP(2)$ and $\PP(4)$
+are its only non-zero components, and are
+both one dimensional, and define
+\[ \gamma : \PP(2)\otimes \PP(2)\otimes \PP(2)
+ 	\longrightarrow \PP(4) \]
+to be an isomorphism, and all other maps zero. 
+Check that $\PP$ is a May operad, and
+show that $\PP$ is not a Markl
+operad by exploring the consequences
+of the equality
+\[ \mu(\mu,\mu) = (\mu \circ_2\mu)\circ_1 \mu \]
+in any Markl operad.
+\end{question}
+
+\begin{question}
+ Check that examples (1), (2), (4), (5) in page 10
+ are indeed all operads.
+\end{question}
+%
+%\begin{question}
+%Follow these steps to construct the
+%Stasheff operad as a sequence of 
+%convex polytopes $K_2',K_3',\ldots$
+%for which the boundary of $K_{n+1}'$
+%is a union of products $K_{r+1}'\times
+%K_{s+1}'$ with $r+s=n$ indexes by
+%planar rooted trees with two internal
+%vertices.
+%\end{question}
+%\begin{enumerate}
+%\item Let us write $T_n$ for the collection
+%of planar rooted \emph{binary} 
+%trees with $n+1$ leaves, which we 
+%order from left to right. Explain how
+%this gives a total order on the vertices,
+%which we will thus call $1,\ldots,n$.
+%\item  For
+%each $t\in T_n$ and each vertex $i$ of
+%$t$, let $L(i)$ denote the number of paths
+%from $i$ to a leaf of $t$ going through
+%its left child, and let $R(i)$ denote
+%the the number of paths
+%from $i$ to a leaf of $t$ going through
+%its right child. We define
+%\[ x(t) = (L(1)R(1),\ldots,L(n)R(n))
+%	\in \mathbb N^n. \]
+%Show that $x(t)$ always lies in the
+%hyperplane $x_1+\cdots x_n = \binom{n}{2}$.	
+%We write $K_{n+2}'$ for the convex hull of 
+%the points $\{ x(t) : t\in T_n \}$.
+%\emph{Hint.} Any planar binary rooted tree
+%$t$ decomposes into a left tree $L_t$
+%and a right tree $R_t$ by looking at the
+%children of the unique child of the root.
+%Express $W(t) = \sum_{i=1}^n x(t)$ in terms of $W(R_t)$ and $W(L_t)$.
+%
+%\item 
+%Show that the polytope $K_{n+2}'$ 
+%is of dimension $n$, 
+%and its $k$-cells for $k\in [n]$
+%are in bijection with planar rooted
+%trees with $n-k+1$ internal vertices
+%and $n+2$ leaves. Conclude, in particular,
+%that its codimension one faces are
+%in bijection with planar rooted trees
+%with $2$ internal vertices and $n+2$
+%leaves.
+%
+%\item Suppose that $t$ has $r+1$
+%leaves and that $t'$ has $s+1$ leaves,
+%and consider the grafting $t\circ_i t'$.
+%We define $x(t)\circ_i x(t')$ by
+%$x(t\circ_i t')$. Show that this
+%defines a map
+%\[\circ_i :  K_{r+1}'\times K_{s+1}' 
+%	\longrightarrow K_{r+s+1}'.\]
+%\item Show the maps above give the
+%collection $\{K_{n+2}'\}_{n\geqslant 0}$
+%the structure of a ns operad.
+%\end{enumerate}
+
+\begin{question}
+Suppose that $T\in\mathsf{RT}(n)$ and
+that $T'\in \mathsf{RT}(m)$, where $\mathsf{RT}$
+is the symmetric collection
+ of rooted trees of Lecture 1,
+and let $\mathrm{In}(T,i)$ denote the
+set of incoming edges of $T$ at the
+vertex labeled $i$. For each function
+$f: \mathrm{In}(T,i)\longrightarrow [m]$,
+define the tree $T\circ_i^f T'$ by
+replacing vertex $i$ of $T$ by $T'$ and
+attaching the loose incoming edges of 
+vertex $i$ to the vertices of $T'$
+according to the map $f$: the edge
+$e\in \mathrm{In}(T,i)$ is attached
+to vertex $f(e)\in T'$. Finally,
+define $T\circ_i T'$ by taking the
+sum through all possible functions
+$f$. Show that this gives $\mathsf{RT}$
+the structure of a unital pseudo-operad,
+and thus of a usual operad, with unit
+the tree with no edges and one vertex.
+\end{question}
+
+
+\begin{question}
+ Describe the operation $T\star T' = S(T,T')$ where
+$S$ is the rooted tree above in terms of 
+insertions of $T'$ in $T$ and regrafting of incoming 
+edges. Show that it satisfies the following \emph{pre-Lie
+identity}:
+\[
+  (T\star T')\star T'' -  T \star (T' \star T'' ) =
+    (T\star T'')\star T' -  T \star (T'' \star T' ) 
+ 	\]
+ 	by explicitly interpreting the left hand side in
+ 	terms of certain insertions of $T'$ and $T''$ in $T$,
+ 	and showing the resulting sum of trees is symmetric
+ 	in $T'$ and $T''$.
+
+\end{question}
+
+\begin{question}
+Suppose that $\mathcal P$ is an operad
+and that $\mathcal X\subseteq \mathcal P$
+is a symmetric subsequence. We say
+$\mathcal X$ generates $\mathcal P$
+if every element of $\mathcal P$ is
+an iterated composition of elements of
+$\mathcal X$. 
+Show that the rooted trees operad 
+$\mathrm{RT}$ 
+is generated by the symmetric subsequence
+given by the two labeled rooted trees with
+two vertices:
+\[ 
+S=\vcenter{
+\xymatrix{*++[o][F-]{2} \ar@{-}[d] \\
+*++[o][F-]{1}}},\qquad
+S(12)=\vcenter{
+\xymatrix{*++[o][F-]{1} \ar@{-}[d] \\
+*++[o][F-]{2}}}
+\]
+spanning the regular representation of
+$S_2$. Follow these steps:
+\end{question}
+\begin{enumerate}
+\item Suppose that $T$ is an $n$-rooted tree
+and let $J$ be a subset of $[n]$ corresponding
+to leaves of $T$ that are the children of a
+vertex $i\in T$. Let $T'$ be the
+tree obtained by erasing all these leaves
+and replacing the vertex label by a new
+symbol $\ast$, and let $T''$ be the rooted
+tree with root $i$ and children labeled
+by $J$. Show that $T'\circ_\ast T'' = T$.
+\item Use the above and induction on the
+number of vertices to show it suffices to prove
+the claim for the corollas, that is, trees with
+one internal root vertex.
+\item Let us write $T_n$
+for the operation in $\mathsf{RT}(n)$
+corresponding to a corolla with root $1$,
+so in particular $T_2 = S$.
+Show that 
+\[ 
+T_n = 
+ T_2\circ_1 T_{n-1} - 
+  	\sum_{i=1}^{n-1} (T_{n-1}\circ T_i)\sigma_i
+\]
+where $\sigma_i = (i+1,i+2,\ldots,n)\in S_n$
+is a cycle, and use this to conclude.
+\end{enumerate}
+
+\emph{Note.} The operation $T_n$ is usually
+denoted $\{x_1; x_2,\ldots,x_n\}$ and is called
+a \emph{symmetric brace}, and the equation
+above is usually written in the form
+\[ 
+\{x_1; x_2,\ldots,x_n\} = 
+ \{\{x_1; x_2,\ldots,x_{n-1}\}; x_n\}
+ - \sum_{i=1}^{n-1} \{ x_1; x_2,
+ \ldots, x_{i-1}, \{x_i ; x_n \},
+ x_{i+1},\ldots,x_{n-1}\}.
+ \]
+ 
+ \begin{question}
+ Let $\mathcal X$ be a symmetric sequence,
+ and define the derivative $\partial\mathcal X$ 
+ of $\mathcal X$ to be symmetric sequence
+ with $(\partial\mathcal X)(I) = \mathcal X(I^*)$
+ where $I^* = I \sqcup \{ I \}$. Note that
+ $S_I$ acts on $I^*$ fixing the element $I$.
+ Show that $(\partial \mathcal X)(n)$ 
+ is isomorphic to the restriction of $\mathcal{X}(n+1)$ to $S_n = \mathrm{Fix}(n+1)$, and
+ conclude that 
+ \[ \partial_z f_{\mathcal X}(z) = 
+  			f_{\partial\mathcal X}(z). \]	
+  Let $s$ be the sequence of singletons and
+  define the pointing of operation by
+  $\mathcal X^\bullet = s\otimes_\Sigma \partial   \mathcal{X}$. Determine the representation
+  $\mathcal{X}^\bullet(n)$ in terms of
+  $\mathcal{X}(n)$. 
+ \end{question}
 
 \section{Free operads and presentations}
 
@@ -1184,7 +1760,6 @@ and a permutation $\sigma$ of the set $C = p^{-1}(v)$ of
 children of $v$. We define the tree $\tau^\sigma$ as
 follows: the datum defining $\tau$ remains unchanged
 except $p$ is modified to $p^\sigma$ so that 
-
 \[ p^\sigma(w) = 
 \begin{cases}
  p(w) & \text{if $p^2(w)\neq v$} \\
@@ -1305,9 +1880,79 @@ final shape of $\FF_\XX$ will however
 depend on the symmetric structure of $ \XX$. 
  \subsection{Exercises}
 
-The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#2}.
 
-\pagebreak
+ 
+ \begin{question}
+Let $\XX$ be a collection such that $\underline{\XX} = 
+\XX(2)$. Compute a basis of tree monomials 
+for the free operad over
+$\XX$ in each of the following cases:
+\begin{enumerate}
+\item $\XX(2)=\mathbb C^2$ is 
+	the regular representation of $S_2$.
+\item $\XX(2)=\mathbb C^-$ is the sign representation of $S_2$.
+\item $\XX(2)=\mathbb C$ is the trivial representation of $S_2$. 
+\end{enumerate} 
+In all cases, decompose the $S_3$-module $\mathcal{F}_\XX(3)$
+into irreducible representations.
+\end{question}
+
+
+\begin{question} In the trivial and sign case above,
+compute a monomial tree basis, and thus the dimension, of $\mathcal{F}_\XX(4)$.
+\end{question}
+
+\begin{question}
+Suppose that $\XX$ is an alphabet (in sets) that is
+finite in each arity and such that $\XX(n) = \varnothing$
+for $n=0,1$. Show that $\mathcal{F}_\XX$ is finite
+in each arity. 
+\end{question}
+ 
+\begin{question}
+Define non-symmetric tree monomials over a ns alphabet
+$\XX$ and thus define the free \emph{non-symmetric}
+operad over a collection $\XX$.
+\end{question}
+
+\begin{question}
+Read the statement and proof of \emph{Theorem 5.4.2} in
+`Algebraic Operads' that the colimit construction briefly
+described in the lecture notes does give the free
+operad on a symmetric collection.
+\end{question}
+
+\begin{question}
+Consider the map from ns collections to symmetric sequences
+that assigns $\XX$ to $\Sigma\otimes \XX$ such that
+$(\Sigma\times \XX)(n) = \Sigma_n\times \XX(n)$ with its
+corresponding symmetric group action. What is the relation
+between the free ns operad on $\XX$ and the free symmetric
+operad on $\Sigma\times \XX$?
+\end{question}
+
+\begin{question}
+Let $V$ be an $S_2$-module, and let $\XX$ be the
+symmetric collection with $\XX(2) = V$ and zero
+everywhere else. Show that $\mathcal{F}_\XX(3)$
+consists of three copies of $V^{\otimes 2}$ and
+describe explicitly the action of $S_3$ on it.
+\end{question}
+
+\begin{question}
+Show that the construction of the free operad we carried
+out during \textbf{Lecture 2} indeed defines the free
+operad on $\XX$ where $i:\XX \longrightarrow \mathcal F_\XX$
+sends an element $x\in \XX(I)$ to the corolla whose unique
+internal vertex is labeled by $x$ (and whose
+leaves are labeled by $I$). 
+\end{question}
+
+ \begin{question}
+ Follow the lecture notes and read about 
+ weight gradings and the canonical weight
+ grading on a free operad. 
+ \end{question}
 
 %\begin{note}
 %The free conilpotent cooperad $\FF^c_\XX$ can be defined
@@ -1541,63 +2186,98 @@ satisfying the `anti-associative law'
 
 \subsection{Exercises}
 
-The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#3}.
 
-\pagebreak
+ \begin{question}
+During Lecture 3 we introduced the associative and commutative operads
+through binary quadratic presentations. Show  that 
+for all $n\geqslant 1$ the space $\mathsf{Ass}(n)$ is the
+regular representation of $S_n$, and that for 
+all $n\geqslant 1$ the space $\mathsf{Com}(n)$ is the 
+trivial representation of $S_n$.
+\end{question}
 
-% 
-%\subsection{Algebras over operads}
-%Operads are important not in and of themselves 
-%but through their representations, more commonly
-%called \emph{algebras over operads}. In fact,
-%one can usually `create' an operad by declaring
-%what kind of algebras it governs. If the
-%algebra has certain operations of certain
-%arities, these define the generators of the operad,
-%and the relations these operators must satisfy 
-%give us the relations presenting our operad. 
-%
-%\begin{definition}
-%A $\PP$-algebra structure on a vector
-%space $V$ is the datum of a map of operads 
-%$\PP \longrightarrow \End_V$.
-%\end{definition}
-%
-%Alternatively, one can consider the situation
-%when $\otimes$ is closed and has a right
-%adjoint $\hom$ (the internal hom) so that
-%what we want are maps
-%\[\label{eq:Palgebramap}
-%\gamma_{V,n} : 
-%\PP(n)\otimes_{S_n} V^{\otimes n} \longrightarrow V \]
-%declaring how each $\mu \in\PP(n)$ acts as an operation
-%$\mu : V^{\otimes n} \longrightarrow V$. 
-%It follows that a
-% $\PP$-algebra structure on $V$ is the same as the datum
-%of maps as in \ref{eq:Palgebramap} that satisfy the following
-%conditions:
-%
-%\begin{tenumerate}
-%\item \emph{Associativity:} let $\nu\in \PP(n)$ and
-%$\nu_i \in \PP(k_i)$ for $i\in [n]$, and pick
-%$w_i \in V^{\otimes k_i}$. Set $v_i = \gamma_{V,k_i}(\nu_i,w_i) \in V$
-%and $\mu = \gamma_\PP(\nu;\nu_1,\ldots,\nu_n)$. Then 
-%\[ \gamma_{V,k_1+\cdots+k_n}(\mu; w_1,\ldots,w_n) = 
-%	\gamma_{V,n}(\nu ;v_1,\ldots, v_n).\]
-%\item \emph{Equivariance:} for $\nu\in\PP(n)$, $v_1\otimes\cdots \otimes v_n \in V^{\otimes n}$
-%and $\sigma\in S_n$, we have that
-%\[ \gamma_{V,n}(\nu \sigma, v_{\sigma 1} \otimes \cdots \otimes v_{\sigma n}) = \gamma_{V,n}(\nu; v_1\otimes\cdots \otimes v_n). \]
-%\item \emph{Unitality:} if $1\in\PP(1)$ is the unit, then
-%$\gamma_{V,1}(1,v) = v$.  
-%\end{tenumerate}
-%
-%
-%
-%\textcolor{trinityblue}{Complete. Recognition
-%principle. Gerstenhaber algebras and Hochschild
-%complex.}
-%
-%
+\begin{question} Use the presentation of the Poisson operad given
+during Lecture 3 to show that $\dim\mathsf{Poiss}(n)\leqslant n!$
+for all $n\geqslant 1$\footnote{There are at least three different
+ways to show that equality holds.}. 
+\end{question}
+
+\begin{question} Let $x_1x_2$ be the associative binary generator of
+$\mathsf{Ass}$ and let us consider the operations (which are symmetric
+and antisymmetric, respectively)
+\[x_1\cdot x_2 = \frac{1}{2}(x_1x_2+x_2x_1), \quad 
+	 [x_1,x_2] = \frac{1}{2}(x_1x_2-x_2x_1) 	
+	 \]
+obtained by `polarization'. Show that the second is a Lie bracket,
+and that the first is a commutative (but not associative) product
+that satisfies the Leibniz rule for $[x_1,x_2]$, and whose associator
+is equal to $[x_2,[x_1,x_3]]$. This is called the \emph{Livernet--Loday
+presentation} of the associative operad.
+\end{question}
+
+\begin{question} 
+During Lecture 3, we introduced to operad $\mathsf{tCom}_k$ of totally
+associative commutative $k$-ary algebras. It is generated by a single
+fully symmetric operation $\mu$ or arity $k$ subject to the relations
+$\mu\circ_1\mu = \mu\circ_i\mu$
+for each $i\in [k]$ (and all its symmetric translates).
+Show that $\mathsf{tCom}_k(n)$ is either the one dimensional trivial
+representation or zero depending on $n$. What values must
+$n$ take so that it is non-zero? 
+\end{question}
+
+\begin{question}
+The permutative operad $\mathsf{Perm}$ is generated by a single
+binary operation $x_1x_2$ with no symmetries which is associative,
+and such that
+\[ x_1(x_2x_3) = x_2(x_1x_3). \]
+Show that $\mathsf{Perm}(n)$ is of dimension $n$ and is
+isomorphic as a representation to $\mathrm{Ind}_{S_{n-1}}^{S_n}\mathbb{C}$
+where $\mathbb{C}$ is the trivial representation.
+\end{question}
+
+
+
+We have defined quadratic operads as precisely those
+operads presented by (homogeneous) quadratic relations
+on some set of generators. Let us explore how to create
+maps between them.
+
+
+
+\begin{question}
+Suppose that $(\mathcal{X},\mathcal{R})$ and $(\mathcal{Y},\mathcal Q)$
+are quadratic data. Show that a
+map of sequences $f: \mathcal{X} \longrightarrow \mathcal{Y}$
+induces a map on the corresponding quadratic operads if and only if
+the induced map $F = \mathcal{F}_f$ sends $\mathcal{R}$ to
+$\mathcal{Q}$.
+\end{question}
+
+\begin{question}
+Show that:
+\begin{tenumerate}
+\item The augmentation map
+$\mathbb C S_2\longrightarrow \mathbb C$ (that
+sends $1$ and $(12)$ to $1$) induces a surjective map of
+operads $\mathsf{Ass}
+\longrightarrow \mathsf{Com}$.
+\item The inclusion map
+$\mathbb{C}^- \longrightarrow \mathbb{C}S_2$ that assigns $1$ to 
+$1-(12)$ induces a map of operads $\mathsf{Lie}\longrightarrow 
+\mathsf{Ass}$ and also a map of operads $\mathsf{Lie}\longrightarrow 
+\mathsf{PreLie}$.
+\item The projection $\mathsf{Ass}
+\longrightarrow \mathsf{Com}$ actually factors
+through $\mathsf{Perm}$. 
+\end{tenumerate}
+In each case, what is the interpretation at the level
+of algebras?
+\end{question}
+
+
+
+
 
  \section{Koszul duality I}
 \textbf{Goals.}
@@ -1892,10 +2572,68 @@ operad controls pre-Lie algebras with associator symmetric
 in the \emph{first two} variables (left-symmetric) and 
 whose pre-Lie operation is \emph{right} permutative.
 \subsection{Exercises}
-The corresponding exercises to this lecture appear in \textbf{Exercise Sheet \#4}.
+\begin{question} Show that:
+\begin{tenumerate}
+\item $\mathsf{Ass}$ is Koszul
+self dual.
+\item $\mathsf{Com}$ and $\mathsf{Lie}$
+are Koszul dual to each other.
+\item $\mathsf{PreLie}$
+and $\mathsf{Perm}$ are Koszul dual to each
+other.
+\item the Poisson operad is Koszul self-dual.
+\end{tenumerate}
+\end{question}
 
+\begin{question} 
+The operad $\mathsf{Nov}$ of Novikov algebras
+is the quotient of the (right) pre-Lie operad by the 
+left permutative relation
+\[ x_1(x_2x_3) = x_2(x_1x_3).\]
+Show that $\mathsf{Nov}$ is Koszul dual to its
+``opposite'' operad $\mathsf{Nov}^\mathrm{op}$
+controlling left pre-Lie algebras satisfying the
+right permutative relation. 
+\end{question}
 
-\pagebreak
+\begin{question}
+Show that the Koszul dual of the operad controlling
+totally associative $k$-ary algebras is the
+operad controlling partially associative
+$k$-ary algebras.
+\end{question}
+
+\begin{question}
+Show that the Koszul dual of the operad controlling
+commutative totally associative $k$-ary algebras
+is the operad controlling $k$-ary Lie algebras. 
+\end{question}
+
+\begin{question}
+Suppose that $\mathcal P$ is binary quadratic
+generated by an operation with no symmetries
+subject to the relation
+\[
+  x_1(x_2x_3) = 
+   	\sum_{\sigma \in S_3} 
+   		\lambda_\sigma \sigma(x_1(x_2x_3)).
+ 	\]
+Show that its Koszul dual operad is presented by
+the relation
+\[
+  (x_1x_2)x_3 = 
+   	\sum_{\sigma \in S_3} 
+   		\lambda_\sigma \sigma^{-1}((x_1x_2)x_3).
+ 	\]
+
+\end{question}
+
+\begin{question}
+Show that in the case of binary operads,
+the bilinear form we constructed 
+during the lectures is $S_3$-invariant.
+\end{question}
+
 
 \section{Shuffle operads}
 
@@ -2322,8 +3060,51 @@ operad through the resulting presentation of the
 corresponding shuffle operad. 
 
 \subsection{Exercises}
-\pagebreak
 
+ 
+\begin{question}
+Use the definition of shuffle trees
+to repeat the computation of a basis
+of $\mathrm{Tree}_\XX^\Sha(4)$ in case $\XX$ consists
+of a single symmetric or antisymmetric
+operation. What happens if the operation
+is not symmetric?
+\end{question}
+
+\begin{question} Explain how 
+$\XX^f \circ_\Sha \YY^f$ fails
+ to identify with  $(\XX\circ_\Sigma \YY)^f$ 
+ in case $\YY$ is
+ not reduced. 
+\end{question}
+
+\begin{question}
+Go through the definition of the shuffle
+compositions $\gamma_\pi$ for shuffle
+tree monomials.
+\end{question}
+
+\begin{question} 
+Give an example of a shuffle operad that
+is not obtained from a symmetric operad
+through the forgetful functor.
+\end{question}
+
+\begin{question}
+Write down a presentation of the following as
+shuffle operads: the  
+commutative operad, the
+Lie operad, the
+associative operad, and the
+operad of $3$-ary totally commutative
+associative algebras.
+\end{question}
+
+\begin{question}
+Repeat the theme of the last four exercises
+with any other (quadratic) operad
+of your choice.
+\end{question}
 \section{Monomial orders}
 
 
@@ -2438,33 +3219,335 @@ $i\in [s]$ by the rule
  	(m_1,\ldots,m_{i-1}, m_im_1',\ldots,m_im_t',m_{i+1},\ldots, m_s).\] 
 \end{definition}
 
-It is useful to observe that if we take $M = \{\star \}$ the trivial
-monoid, the resulting 
-\begin{enumerate}
+The reader should verify that $\mathbb W_M$ is isomorphic,
+as a symmetric sequence, to the composition product $\mathrm{Ass}\circ M$,
+where we consider $M$ a symmetric sequence concentrated in arity $1$. 
 
-\item Words operads.
-\item Associative operad.
-\end{enumerate}
+\subsection{Two statistics}
 
-\subsection{Path sequences and leaf permutations}
+Of particular interest to us is the case $\XX$ is
+a reduced symmetric sequence in sets, and we let
+$\underline{\XX} = \bigsqcup_{n\geqslant 1} \XX(n)$
+be the underlying alphabet of $\XX$. We will use
+the notation $\XX^*$ for the free monoid $\langle 
+\underline{\XX}\rangle$. By definition, there
+exists a unique map of shuffle operads
+$
+\pi : \FF_\XX^\Sha \longrightarrow
+						\mathbb W_{\XX^*} 				
+$ 
+extending the map $\XX \longrightarrow \mathbb W_{\XX^*}$
+that assigns $x\in \XX(n)$ to the element
+$(x,\ldots,x)\in \mathbb W_{\XX^*}(n)$.
 
-Part 2.
-\begin{enumerate}
-\item Monomial orders on shuffle operads.
-\item Path-permutation extension.
-\item Graded path-permutation 
-	lexicographic order.
-\item Examples. 
-\end{enumerate}
+\begin{definition}
+For each shuffle tree monomial $T$, we call 
+$\pi(T)$ the \emph{path sequence of $T$.}
+\end{definition}
+
+The path sequence of a shuffle tree monomial $T$ can
+be computed in a straight-forward way, as the following
+lemma shows. The useful observation that the previous
+definition allows us to make is that the path
+sequence statistic is compatible with shuffle 
+compositions of tree monomials, in the sense the
+path sequence of a composition of tree 
+monomials equals the compositions
+of the corresponding path sequences of these
+tree monomials.
+ 
+\begin{figure}[h]
+\[ 
+	\leftc{x}{y}{1}{2}{3}
+ \quad
+		\leftc{x}{y}{1}{3}{2} 
+		\qquad
+		\rightc{y}{x}{1}{2}{3}
+		\]
+		\[ \hspace{0.6 in}(yx,yx,y)
+			\hspace{1 in} (yx,y,yx)
+				\hspace{0.8 in}(y,yx,yx)\]
+		\caption{An example of the computation of path sequences.}
+		\label{fig:paths}
+		\end{figure}
+		
+\begin{lemma}
+Let $\XX$ be reduced. 
+The path sequence of $T$ is the tuple in $\mathbb{W}_{\XX^*}(n)$
+where $n$ is the number of leaves of $T$, obtained by recording at the
+$i$th entry the word in $\XX$ read by travelling from the root of
+$T$ to the leaf labelled by $i$.
+\end{lemma}
+
+More generally, in case $\XX$ has $0$-ary variables, we must look at 
+all \emph{endpoints} of a tree monomial. Since we will not be
+interested in non-reduced alphabets, we let the curious reader
+explore this modification on their own. It is useful to remark
+in situations like this it is crucial to observe
+that $\underline{\XX}$ is obtained through a disjoint of the components
+of $\XX$: the path sequence of $x\circ_1 y$ for $x$ and $y$ unary
+is $(xy)$, and the path sequence of $x\circ_1 y'$ for $x$ unary and
+$y'$ nullary is `also' $(xy')$, but these are \emph{distinct}
+in the free monoid $\XX^*$. 
+
+\begin{proof}
+This is in \textbf{Exercise Sheet \#6}.
+\end{proof}
+
+Let us now consider the unique  map of shuffle operads
+$\sigma : \FF_\XX^\Sha \longrightarrow
+						\mathsf{Ass}$ 
+extending the map $\XX \longrightarrow \mathsf{Ass}$
+that assigns $x\in \XX(n)$ to the identity
+$1\in \mathsf{Ass}(n) = S_n$. 
+
+\begin{definition}
+If $T$ is a shuffle tree monomial. 
+we call $\sigma(T)$ the (leaf) permutation sequence of $T$.
+We call the pair $(\pi(T),\sigma(T))$ the
+path-permutation data of $T$. 
+\end{definition}
+
+As before, this statistic of $T$ has a simpler description,
+that can be read off directly from $T$, and the previous
+definition tells us that the leaf permutation
+sequence of a tree monomial behaves well with
+respect to shuffle compositions.
+
+\begin{figure}
+\[
+\fork{x}{y}{x}{1}{3}{2}{4}
+\qquad
+\fork{x}{y}{x}{1}{4}{2}{3}
+\qquad
+\fork{x}{y}{x}{1}{2}{3}{4}
+\]
+\caption{Three different shuffle three monomials with the same path
+sequence, but different permutation sequence.}
+\end{figure}
+
+\begin{lemma}
+The permutation sequence of $T$
+ is obtained by reading the leaf labelling of $T$ from
+left to right and recording it as a permutation in
+``two line notation''.
+\end{lemma}
+
+The main result of this section tells us that it suffices
+for us to order sequences of words in the alphabet $\XX$
+and permutations in order to order shuffle tree monomials.
+
+\begin{theorem}
+The map $\FF_\XX^\Sha \longrightarrow \mathbb{W}_{\XX^*}\times
+\mathsf{Ass}$ of the free shuffle operad on $\XX$ into the 
+Hadamard product of $\mathbb{W}_{\XX^*}$ and $\mathsf{Ass}$
+induced by $\pi$ and $\sigma$ is injective.
+In other words, the path-permutation datum of a shuffle
+tree monomial determines it uniquely.
+\end{theorem}
+
+Let us call the map in the statement of the theorem the
+\emph{path-permutation inclusion}.
+
+\begin{proof}
+We will sketch a proof, and ask the reader to fill in the
+details as an exercise; we proceed by induction on the
+total length of the path sequence of a tree monomial so that,
+for example, the path sequences appearing in Figure~\ref{fig:paths}
+have all length five. First, let us show that the path sequence
+determines the planar structure of our tree monomial uniquely:
+
+If the length is zero, then the path sequence $\pi$
+is empty, and we are simply considering the trivial tree monomial.
+Let us consider now some positive length $\ell$ and search,
+among all words $w$ appearing in $\pi$, that which has
+the largest possible length and smallest possible coordinate,
+let us say this coordinate is $i$.
+
+If $w$ ends in a $0$-ary variable of $\XX$, this means the
+$i$th leaf of $T$ ends at a stump, and we can remove it, 
+and continue by induction. If not, then $w$ ends with
+some variable $x\in \XX(k)$, and the way we have chosen
+it implies that the $i$th leaf (in the planar order)
+is the first child of $x$, and that all other children
+of $x$ are also leaves. It follows that $w$
+and the next $k-1$ words in $\pi$ all end with $x$,
+and that $\pi$ is obtained as a non-symmetric composition
+with $(x,\ldots,x)$. By pruning $x$ from $\pi$, we
+can proceed by induction. 
+
+Now that we know the path sequence recovers the planar structure
+of $T$ uniquely, let us pick some path-permutation datum
+$(\pi,\sigma)$. Then, reorder the entries of $\pi$ using
+$\sigma^{-1}$ to recover the planar structure of $T$,
+and then label its leafs according to $\sigma$, to 
+recover the whole shuffle structure.
+\end{proof}
+
+
+\subsection{Ordered shuffle operads}
+
+We can now proceed to define ordered shuffle operads. 
+
+\begin{definition}
+A set shuffle operad $\PP$ is order if for each $n\geqslant 0$
+the component $\PP(n)$ is well-ordered and if shuffle compositions
+are increasing in each of its arguments: for each $n\geqslant 1$,
+all elements $(T_0;T_1,\ldots,T_n) \in\PP(k)\times \PP(n_1)
+\times \cdots\times \PP(n_k)$ and all shuffling partitions
+of $[n_1+\cdots +n_k]$, we have that
+\[ 
+\gamma_\pi(T_0;T_1,\ldots,T_i, \ldots, T_n)  \prec
+\gamma_\pi(T_0;T_1,\ldots,T_i,\ldots,T_n)
+\]
+whenever $T_i\prec T_i'$  for some $i\in [0,n]$ as elements
+of $\PP(n_1+\cdots+ n_k)$. 
+\end{definition}
+
+In particular, we can apply this definition in the case $\PP$
+is the free set shuffle operad on some alphabet $\XX$. As
+promised, let use 
+the injection $(\pi,\sigma)$ to endow tree monomials with
+well-orders. 
+
+\begin{proposition}
+Let $(M,\prec)$ be an ordered monoid. The
+word operad on $\mathbb W_M$ is an ordered operad
+through the lexicographical order of words.
+\end{proposition}
+
+\begin{proof}
+\hacer{Write proof, look at Hoffbeck.}
+\end{proof}
+
+In particular, we can consider the case in which $M = \XX^*$
+is endowed with the graded lexicographical order induced by
+a total order on $\underline{\XX}$, which implies the following
+corollary.
+
+\begin{corollary}
+Suppose that $\underline{\XX}$ is given a total order, and that
+we give the free monoid $\XX^*$ the induced graded 
+lexicographical order. Then
+the word operad $\mathbb{W}_{\XX^*}$ is an ordered
+shuffle operad with the lexicographical order.
+\end{corollary}
+
+We leave it as an exercise to the reader to show that the
+associative operad is an ordered shuffle operad if we
+use on it the lexicographic order on permutations
+(seen as strings of numbers, in one line notation).
+All our work is now, done:
+
+\begin{definition}
+Let $\XX$ be an alphabet and suppose that we
+give the monoid $\XX^*$ a monomial order $\prec$.
+The \emph{path-permutation extension} of $\prec$ is the
+unique order on $\FF_{\XX}^\Sha$ induced by
+the path-permutation inclusion, where we use the
+the induced lexicographic
+order on $\mathbb{W}_{\XX^*}$ first, and the
+lexicographic order on $\mathsf{Ass}$ second.
+\end{definition}
+
+Naturally, one can switch the roles of the two
+factors of the path-permutation inclusion to get
+the \emph{permutation-path extension} of a monomial
+order on $\XX^*$. We will explore other variations
+in the exercises.
+
+\begin{definition}
+Let us fix a total order $\prec$ on $\underline{X}$, and let us
+consider the induced graded lexicographic order on 
+$\XX^*$, where we first compare the lenght of a 
+word, and then use the lexicographic order induced
+by the total order. The path-permutation extension 
+on $\FF_\XX^\Sha$ is called the  \emph{graded path-permutation 
+lexicographic order} induced by $\prec$.
+\end{definition}
+
+\hacer{Examples.}
 
 \subsection{Exercises}
+ 
+ \pagebreak
+ 
+\section{Gr\"obner bases}
+\hacer{Write section about Groebner bases.}
+\subsection{Long division}
+
+\subsection{Leading terms and reducibility}
+
+\subsection{Existence and uniqueness}
+
+\pagebreak
 
 \appendix
 
 \section{Algebras over operads}
+
+\hacer{Write an appendix about algebras over operads.}
+
+
+% 
+%\subsection{Algebras over operads}
+%Operads are important not in and of themselves 
+%but through their representations, more commonly
+%called \emph{algebras over operads}. In fact,
+%one can usually `create' an operad by declaring
+%what kind of algebras it governs. If the
+%algebra has certain operations of certain
+%arities, these define the generators of the operad,
+%and the relations these operators must satisfy 
+%give us the relations presenting our operad. 
+%
+%\begin{definition}
+%A $\PP$-algebra structure on a vector
+%space $V$ is the datum of a map of operads 
+%$\PP \longrightarrow \End_V$.
+%\end{definition}
+%
+%Alternatively, one can consider the situation
+%when $\otimes$ is closed and has a right
+%adjoint $\hom$ (the internal hom) so that
+%what we want are maps
+%\[\label{eq:Palgebramap}
+%\gamma_{V,n} : 
+%\PP(n)\otimes_{S_n} V^{\otimes n} \longrightarrow V \]
+%declaring how each $\mu \in\PP(n)$ acts as an operation
+%$\mu : V^{\otimes n} \longrightarrow V$. 
+%It follows that a
+% $\PP$-algebra structure on $V$ is the same as the datum
+%of maps as in \ref{eq:Palgebramap} that satisfy the following
+%conditions:
+%
+%\begin{tenumerate}
+%\item \emph{Associativity:} let $\nu\in \PP(n)$ and
+%$\nu_i \in \PP(k_i)$ for $i\in [n]$, and pick
+%$w_i \in V^{\otimes k_i}$. Set $v_i = \gamma_{V,k_i}(\nu_i,w_i) \in V$
+%and $\mu = \gamma_\PP(\nu;\nu_1,\ldots,\nu_n)$. Then 
+%\[ \gamma_{V,k_1+\cdots+k_n}(\mu; w_1,\ldots,w_n) = 
+%	\gamma_{V,n}(\nu ;v_1,\ldots, v_n).\]
+%\item \emph{Equivariance:} for $\nu\in\PP(n)$, $v_1\otimes\cdots \otimes v_n \in V^{\otimes n}$
+%and $\sigma\in S_n$, we have that
+%\[ \gamma_{V,n}(\nu \sigma, v_{\sigma 1} \otimes \cdots \otimes v_{\sigma n}) = \gamma_{V,n}(\nu; v_1\otimes\cdots \otimes v_n). \]
+%\item \emph{Unitality:} if $1\in\PP(1)$ is the unit, then
+%$\gamma_{V,1}(1,v) = v$.  
+%\end{tenumerate}
+%
+%
+%
+%\textcolor{trinityblue}{Complete. Recognition
+%principle. Gerstenhaber algebras and Hochschild
+%complex.}
+%
+%
+
+\pagebreak
+
+\listoftodos
 \end{document}
 
-\section{Gr\"obner bases}
 
 \section{Koszul duality II}
 
