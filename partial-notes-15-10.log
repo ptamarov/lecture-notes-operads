@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  3 DEC 2021 08:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  3 DEC 2021 11:16
 entering extended mode
 **./partial-notes-15-10.tex
 (partial-notes-15-10.tex
@@ -2400,7 +2400,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [43]
-Overfull \hbox (0.87727pt too wide) in paragraph at lines 3626--3629
+Overfull \hbox (0.87727pt too wide) in paragraph at lines 3627--3630
 \T1/ptm/m/n/12 (-20) coefficient of $\OML/ztmcm/m/it/12 f \OMS/ztmcm/m/n/12   [
 ]\U/msa/m/n/12 []\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 )$\T
 1/ptm/m/n/12 (-20) . But the leading term of the second term is, by Proposition
@@ -2434,6 +2434,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [46]
+(/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/uc
+s/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2661,11 +2665,15 @@ partial-notes-15-10.out
   uni-32.def    2013/05/13 UCS: Unicode data U+2000..U+20FF
   mt-eus.cfg    2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
   ts1ptm.fd    2001/06/04 font definitions for TS1/ptm.
+   uni-0.def    2013/05/13 UCS: Unicode data U+0000..U+00FF
  ***********
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.4299pt have occurred.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `partial-notes-15-10.out' has not changed.
 (rerunfilecheck)             Checksum: A6DF3913F88BB46F23C332DDF86FFE21;6237.
@@ -2675,13 +2683,13 @@ Package rerunfilecheck Info: File `partial-notes-15-10.out' has not changed.
 ### semi simple group (level 1) entered at line 175 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 41482 strings out of 480634
- 811488 string characters out of 2896310
- 1301922 words of memory out of 3000000
- 57564 multiletter control sequences out of 15000+600000
+ 41974 strings out of 480634
+ 816676 string characters out of 2896310
+ 1301971 words of memory out of 3000000
+ 58051 multiletter control sequences out of 15000+600000
  526898 words of font info for 542 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 108i,15n,106p,3245b,11244s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,15n,106p,3245b,11314s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/inst
 all/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Application Support/Mi
 KTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/ptamarov/
@@ -2707,9 +2715,9 @@ rary/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb
 8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/time
 s/utmri8a.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/instal
 l/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb>
-Output written on partial-notes-15-10.pdf (49 pages, 424881 bytes).
+Output written on partial-notes-15-10.pdf (49 pages, 427578 bytes).
 PDF statistics:
- 865 PDF objects out of 1000 (max. 8388607)
- 341 named destinations out of 1000 (max. 500000)
+ 869 PDF objects out of 1000 (max. 8388607)
+ 343 named destinations out of 1000 (max. 500000)
  128301 words of extra memory for PDF output out of 128383 (max. 10000000)
 

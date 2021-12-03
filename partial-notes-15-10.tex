@@ -3599,7 +3599,8 @@ A polynomial is reduced with respect to $\mathscr V$ if it is a linear
 combination of tree monomials that are reduced. We say $\mathscr V$
 is self-reduced if each $v\in \mathscr V$ is reduced with respect to
 $\mathscr V\smallsetminus v$, and that is is linearly self-reduced
-if all its elements have disjoint supports. 
+if no leading term of one element divides the leading term of 
+another. 
 
 \begin{definition}[Reduction]
 Suppose that $f$ and $g$ are polynomials of the same arity, and
@@ -3703,7 +3704,9 @@ have little control over the multitude of leading terms
 that may appear in the elements of $\mathscr I$,
 and Gr\"obner bases are designed to regain this control. 
  
- \textcolor{trinityblue}{Mention the algorithm of self-reduction.}
+ \bigskip
+ 
+ \hacer{Mention the algorithm of self-reduction.}
  
 \subsection{Existence and uniqueness}
 
@@ -3785,7 +3788,14 @@ coset modulo $\mathscr I$. This means there exists a $\mathscr G$-reduced
 polynomial in $\mathscr I$, which means that its leading term is
 $\mathscr G$-reduced, which is impossible.
 
-Conversely, 
+Conversely, Suppose that $\mathscr G$ is not a Gröbner basis. It follows
+that there is an element $f\in\mathscr I$ which is reduced with respect to 
+$\mathscr G$. If we let $\overline{f}$ be the result of the long division of
+$f$ by $\mathscr G$, we see we obtain a non-trivial linear combination of reduced 
+monomials belonging to $\mathscr I$, so that there is not a unique
+reduced representative for the zero coset.
+
+Finally, suppose that for some $f$, two different choices of order of reductions yield two different outputs. Then, then there exist a coset $f + I$ contains two different elements that are reduced with respect to $\mathscr G$, hence reduced monomials are linearly dependent, a contradiction.
 \end{proof}
 
 \begin{theorem}
@@ -3793,7 +3803,7 @@ Every ideal admits a unique reduced Gr\"obner basis.
 \end{theorem}
 
 \begin{proof}
-
+\hacer{Write proof.}
 \end{proof}
 \pagebreak
 
