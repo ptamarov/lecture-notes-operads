@@ -32,7 +32,7 @@
 \contentsline {subsection}{\numberline {7.4}Exercises}{41}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Gr\"obner bases}{42}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Long division}{42}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Leading terms and reducibility}{42}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Existence and uniqueness}{42}{subsection.8.3}%
-\contentsline {section}{\numberline {A}Algebras over operads}{43}{appendix.A}%
+\contentsline {subsection}{\numberline {8.2}Leading terms and reducibility}{43}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Existence and uniqueness}{46}{subsection.8.3}%
+\contentsline {section}{\numberline {A}Algebras over operads}{48}{appendix.A}%
 \contentsfinish 

@@ -19,3 +19,26 @@
 		\draw (9.center) to (14.center);
 	\end{pgfonlayer}
 \end{tikzpicture}
+
+Bokut, L. A., Chen, Y., Zhang, Z.: On free GDN superalgebras and a PBW type theorem. ArXiv preprint
+
+Casas, J. M., Insua, M. A.(E-SACO-AL), Ladra, M.: Poincar ́e–Birkhoff–Witt theo-
+rem for Leibniz n-algebras. J. Symbolic Comput. 42, 10521065 (2007).
+
+Chen, Y., Mo, Q.: Embedding dendriform algebra into its universal enveloping Rota–
+Baxter algebra. Proc. Amer. Math. Soc. 139, 4207–4216 (2011).
+
+Gubarev, V.: Poincar ́e–Birkhoff–Witt theorem for pre-Lie and postLie algebras.
+ArXiv preprint 
+
+Gubarev, V. Yu., Kolesnikov, P. S.: Gr ̈obner-Shirshov basis of the universal envelop- ing Rota-Baxter algebra of a Lie algebra. J. Lie Theory 27, 887–905 (2017).
+
+Gubarev, V. Yu.: Universal enveloping commutative Rota–Baxter algebras of pre- and post-commutative algebras. Axioms 6, article #33, 16 pp. (2017).
+
+Mikhalev, A. A., Shestakov, I. P.: PBW-pairs of varieties of linear algebras. Comm.
+Algebra 42, 667–687 (2014).
+
+Segal, D.: Free left-symmetric algebras and an analogue of Poincar ́e–Birkhoff–Witt
+theorem. J. Algebra 164, 750–772 (1994).
+
+Shepler, A., Witherspoon, S.: Poincar ́e–Birkhoff–Witt theorems. In: “Commutative algebra and noncommutative algebraic geometry”, Math. Sci. Res. Inst. Publ. 67, Vol. I, 259–290. Cambridge Univ. Press, New York, 2015.
