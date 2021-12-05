@@ -524,6 +524,15 @@ join=round] \draw (0,0) rectangle (1,1)
   \end{minipage}%
 }
 
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    %\addtocounter{page}{-1}%
+    \newpage}
+
+
 \usepackage{float}
 
 \tikzcdset{arrow style=tikz, diagrams={>=stealth}}
@@ -608,12 +617,26 @@ familiar with the theory.
 %related to non-commutative analogues, among others. 
 \end{abstract}
 
+
+
+\afterpage{\blankpage}
+
+\pagebreak
+
+\thispagestyle{empty}
+
 \tableofcontents
 
 \vfill
-\hfill \emph{Draft, \today}
+\emph{Draft, \today} 
+
+\afterpage{\blankpage}
 
 \pagebreak
+
+\thispagestyle{empty}
+
+
 \section{Motivation and history}
 
 \textbf{Goals.} The goals of this lecture is to
