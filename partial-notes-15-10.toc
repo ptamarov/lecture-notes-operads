@@ -9,12 +9,13 @@
 \contentsline {subsection}{\numberline {2.2}Constructing operads by hand}{19}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Exercises}{20}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Free operads and presentations}{25}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Planar and non-planar trees}{25}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}The free operad}{27}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Exercises}{28}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.1}Trees}{25}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Tree monomials}{26}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The free operad}{27}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Exercises}{28}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Quadratic operads}{31}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Weight gradings and presentations}{31}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Quadratic operads}{33}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Quadratic operads}{32}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Exercises}{34}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Koszul duality I}{37}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Differential graded sequences}{37}{subsection.5.1}%
@@ -23,7 +24,7 @@
 \contentsline {section}{\numberline {6}Shuffle operads}{45}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Shuffle operads}{45}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Free shuffle operad}{47}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Forgetful functor}{49}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Forgetful functor}{48}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Exercises}{50}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Monomial orders}{51}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Some reminders}{51}{subsection.7.1}%
@@ -31,10 +32,11 @@
 \contentsline {subsection}{\numberline {7.3}Ordered shuffle operads}{54}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Exercises}{56}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Gr\"obner bases}{57}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Long division}{57}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Leading terms and reducibility}{58}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Existence and uniqueness}{62}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Exercises}{63}{subsection.8.4}%
-\contentsline {section}{\numberline {A}Algebras over operads}{64}{appendix.A}%
-\contentsline {section}{\numberline {B}Gaussian Elimination}{64}{appendix.B}%
+\contentsline {subsection}{\numberline {8.1}Tree insertion}{57}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Long division}{59}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Existence and uniqueness}{63}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Exercises}{65}{subsection.8.4}%
+\contentsline {section}{\numberline {A}Algebras over operads}{66}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Algebras over operads}{66}{subsection.A.1}%
+\contentsline {section}{\numberline {B}Gaussian Elimination}{68}{appendix.B}%
 \contentsfinish 

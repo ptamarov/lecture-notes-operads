@@ -72,7 +72,7 @@
 %% Tree macros %%
 
 \newcommand{\fork}[7]{
-\begin{tikzpicture}
+\begin{tikzpicture}[scale = .75]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
 \tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
 	\begin{pgfonlayer}{main}
@@ -97,7 +97,7 @@
 \end{tikzpicture}}
 
 \newcommand{\leftc}[5]{
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale = .75]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
 \tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
 \begin{pgfonlayer}{main}
@@ -118,8 +118,61 @@
 \end{tikzpicture}
 }
 
+\newcommand{\Leftc}[7]{
+	\begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (-1, 1) {$#2$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = leaf] (2) at (1, 1) {$#7$};
+		\node[style = leaf] (3) at (0, 2) {$#6$};
+		\node[style = inner] (4) at (-2, 2) {$#3$};
+		\node[style = leaf] (5) at (-3, 3) {$#4$};
+		\node[style = leaf] (6) at (-1, 3) {$#5$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (7.center) to (1);
+		\draw (4.center) to (6);
+		\draw (4.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+\newcommand{\Leftr}[7]{
+	\begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (-1, 1) {$#2$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = leaf] (2) at (1, 1) {$#7$};
+		\node[style = inner] (3) at (0, 2) {$#3$};
+		\node[style = leaf] (4) at (-2, 2) {$#6$};
+		\node[style = leaf] (5) at (-1, 3) {$#4$};
+		\node[style = leaf] (6) at (1, 3) {$#5$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (7.center) to (1);
+		\draw (3.center) to (6);
+		\draw (3.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+
 \newcommand{\rightc}[5]{
-\begin{tikzpicture}
+\begin{tikzpicture}[scale = .75]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
 \tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
 \begin{pgfonlayer}{main}
@@ -212,6 +265,7 @@
  %%%%%%%%%%%%TikZ Styles%%%%%%%%%%%
 
 %%%%%%%%%%%%%%
+
 \newcommand{\XX}{\mathcal{X}}
 \renewcommand{\AA}{\mathcal{A}}
 \newcommand{\YY}{\mathcal{Y}}
@@ -220,6 +274,8 @@
 \newcommand{\II}{\mathcal{I}}
 \newcommand{\QQ}{\mathcal{Q}}
 \newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal G}
+
 \newcommand{\f}{\mathsf{f}}
 \newcommand{\ari}{\operatorname{ar}}
 \newcommand{\cone}{\operatorname{cone}}
@@ -645,8 +701,7 @@ Series for the academic term 2021-2022 at the \emph{Max
 Planck Institut f\"ur Mathematike in den Naturwissenschaften}.
 We acknowledge the excellent working
 conditions during the time the lecture series took place,
-which made it possible to produce these lectures notes
-during such unprecedented times.
+which made it possible to produce these lectures.
  }
 \vspace*{\fill} 
  \afterpage{\blankpage}
@@ -1786,7 +1841,7 @@ by generators and relations, and with this at
 hand define quadratic and quadratic-linear
 presentations of operads. 
 
-\subsection{Planar and non-planar trees}
+\subsection{Trees}
 
 Operads and their kin are gadgets modeled after
 combinatorial graph-like objects. Operads themselves are modeled after
@@ -1877,9 +1932,11 @@ coincides with $p'$ on $V(\tau')\smallsetminus \{r',w\}$.
 \end{titemize}
 \item The leaf labeling is the unique bijection $L(\tau\circ_i \tau') \longrightarrow I\circ_i J$ extending $f$ and $f'$.
 \end{tenumerate} 
+
+\subsection{Tree monomials}
 Let us now consider an 
 (unbiased) reduced symmetric sequence $\XX$ which
-we will think of as an \emph{alphabet}. An tree monomial in the
+we will think of as an \emph{alphabet}. A tree monomial in the
 alphabet $\XX$ 
 is a pair $(\tau,x)$ where $\tau$ is a reduced rooted
 tree and $x : \mathrm{Int}(\tau) \longrightarrow \XX$ is a map
@@ -1927,15 +1984,15 @@ $\kk$.
 
 \begin{example}
 Let us consider the alphabet 
-$\XX = \XX(2) = \{\beta \}$ where
+$\XX = \XX(2) = \{\ast \}$ where
 the unique operation is antisymmetric.
 Then we have the following equalities
 of symmetric tree monomials:
 \[ 
-	\leftc{\beta}{\beta}{2}{1}{3}  \mathsymbol{1.5}{=}
-\rightc{\beta}{\beta}{3}{1}{2}  
+	\leftc{}{}{2}{1}{3}  \mathsymbol{1.5}{=}
+\rightc{}{}{3}{1}{2}  
    \mathsymbol{1.5}{=-}
- {\leftc{\beta}{\beta}{1}{2}{3}}
+ {\leftc{}{}{1}{2}{3}}
   \mathsymbol{1.5}{.}\]
  
 \end{example}
@@ -2183,24 +2240,32 @@ only, and understand
 that $(\RR)$ is generated by the $\Sigma$-orbit
 of $\RR$.
 
-\medskip
+\bigskip
 
-\textbf{The classics.}
-The associative operad is generated by a 
+\textbf{Some examples.}
+To illustrate the definitions above, let us
+give three examples of algebraic operads whose
+associated algebras are probably well known
+to the reader: 
+\begin{tenumerate}
+\item The associative operad is generated by a 
 binary operation $\mu$ generating the regular
-representation of $S_2$ subject to the only relation
-\[ \mu\circ_1 \mu = \mu \circ_2 \mu. \] 
-Similarly, the commutative operad is generated by a 
+representation of $S_2$ subject to the relation
+$\mu\circ_1 \mu = \mu \circ_2 \mu$. 
+\item The commutative operad is generated by a 
 binary operation which instead generates the
-trivial representation of $S_2$. Both of these
-examples arise as the linearization of a set operad.
-
+trivial representation of $S_2$ and is
+also associative. Both of this 
+and the previous
+example arise as the linearization of a set operad.
+\item 
 The Lie operad is generated by a single binary 
 operation $\beta$ that generates the sign 
 representation of $S_2$ subject to the only
 relation
-\[ (\beta \circ_1 \beta)(1+\tau+\tau^2) = 0 \] 
+$(\beta \circ_1 \beta)(1+\tau+\tau^2) = 0$
 where $\tau = (123)\in S_3$ is the $3$-cycle. 
+\end{tenumerate}
 We write these operads $\mathsf{As},\mathsf{Com}$
 and $\mathsf{Lie}$ and, following J.-L. Loday,
 call them the \emph{three graces}. We have that
@@ -3439,8 +3504,8 @@ tree monomials.
 		\qquad
 		\rightc{y}{x}{1}{2}{3}
 		\]
-		\[ \hspace{0.6 in}(yx,yx,y)
-			\hspace{1 in} (yx,y,yx)
+		\[ \hspace{0.4 in}(yx,yx,y)
+			\hspace{.8 in} (yx,y,yx)
 				\hspace{0.8 in}(y,yx,yx)\]
 		\caption{An example of the computation of path sequences.}
 		\label{fig:paths}
@@ -3643,6 +3708,8 @@ lexicographic order} induced by $\prec$.
 
 \hacer{Examples.}
 
+\newpage
+
 \subsection{Exercises}
  
 \begin{question}\label{ex:pathseq}
@@ -3692,7 +3759,7 @@ on $\FF_\XX^\Sha$.
 tree polynomials. Prove Gr\"obner bases for shuffle operads exist.
 Give Buchberger's algorithm for computing Gr\"obner bases.
 
-\subsection{Long division}
+\subsection{Tree insertion}
 
 \begin{definition}
 Let $T'$ and $T$ be tree monomials over some fixed alphabet $\XX$.\
@@ -3702,7 +3769,53 @@ tree $\tau'$ of $T'$, whose induced shuffling labelling
  and decorations coincide with that of $T'$.
  \end{definition}
 
-\missingfigure[figwidth = 6 cm]{Example of divisors.}
+\begin{figure}[h]
+\[
+\fork{x}{y}{x}{1}{3}{2}{4}
+\qquad
+\begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$x$};
+		\node [style=inner] (2) at (-1, 1) {$x$};
+		\node [style=leaf] (9) at (1, 1) {$2$};
+		\node [style=leaf] (10) at (0, -1.25) {};
+		\node [style=leaf] (11) at (-1.5, 2) {$1$};
+		\node [style=leaf] (12) at (-0.5, 2) {$3$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+		\draw (0.center) to (9.center);
+		\draw (0.center) to (10.center);
+		\draw (2.center) to (11.center);
+		\draw (12.center) to (2.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$x$};
+		\node [style=leaf] (2) at (-1, 1) {$1$};
+		\node [style=inner] (9) at (1, 1) {$y$};
+		\node [style=leaf] (10) at (0, -1.25) {};
+		\node [style=leaf] (13) at (0.5, 2) {$2$};
+		\node [style=leaf] (14) at (1.5, 2) {$3$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+		\draw (0.center) to (9.center);
+		\draw (0.center) to (10.center);
+		\draw (13.center) to (9.center);
+		\draw (9.center) to (14.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+\caption{A ``fork'' and its divisors of weight two. Notice the induced labelling of the right comb, coming from the
+shuffling labelling $1<2<4$.}
+\end{figure}
 
 The following lemma asserts that the combinatorial notion
 of divisibility coincides with the algebraically inclined
@@ -3728,8 +3841,20 @@ the case. One this is done, we see that $T$ is in fact
 obtained by grafting tree monomials at the leaves of $T'$,
 and completes the proof.
 \end{proof}
-\missingfigure[figwidth = 6 cm]{Divisors example}
 
+\begin{figure}[t]
+
+\[
+\Leftc{x}{y}{x}{1}{3}{2}{4}
+\qquad
+\leftc{x}{y}{1}{3}{2}
+\qquad
+\leftc{y}{x}{1}{2}{3}
+\]
+\caption{A right comb with two divisors that have
+the same underlying planar structure but different
+induced labelling.}
+\end{figure}
 \begin{definition}
 Suppose that $T'$ is a divisor of $T$, and let us
 assume that $T'$ has $\ell'$ leaves and $T$
@@ -3744,7 +3869,17 @@ in $T$, and extend it linearly, making sure
 that leaf labels are respected.
 \end{definition}
 
-\missingfigure[figwidth = 6 cm]{Insertion examples}
+\begin{figure}[b]
+\[
+\Leftc{x}{x}{x}{1}{2}{3}{4}
+\qquad
+\leftc{x}{x}{1}{2}{3}
+\]
+\caption{A right comb with two divisors that have the
+same induced shuffle tree structure, but happen
+at different places of the tree.}
+\end{figure}
+
 
 \begin{lemma}
 Let $\mathcal{V}$ be a subset of the free shuffle operad on $\XX$.
@@ -3754,17 +3889,30 @@ as $T,T'$ range through pairs $(T',T)$ with $T'$ a divisor
 of $T$ and $f\in \mathcal V(\ell')$.
 \end{lemma}
 
+\begin{figure}[h]
+\[
+\begin{tikzcd}
+{} & \Leftc{x}{x}{x}{}{}{}{} 
+	\arrow[dr] 
+	\arrow[dl] \\
+\fork{x}{x}{x}{}{}{}{}&  {} & \Leftr{x}{x}{x}{}{}{}{}
+\end{tikzcd}
+\]
+\caption{Two possible results of substituting
+a left comb by a right comb in the leftmost tree.}
+\end{figure}
+
 \begin{proof}
 By construction, $(\mathcal V)$ is the linear span of all possible
 shuffle compositions where at least one summand is contained in
 $\mathcal V$. Since shuffle compositions are multilinear, we can
 assume that all terms appearing in such shuffle compositions (except,
-possibly, for that in $\mathcal V$) are tree monomials, in which case
+possibly, for that in~$\mathcal V$) are tree monomials, in which case
 the resulting shuffle composition coincides with an insertion
 operation.
 \end{proof}
 
-\subsection{Leading terms and reducibility}
+\subsection{Long division}
 
 Suppose that we fix a tree monomial order on the free
 shuffle operad $\FF_\XX^\Sha$ and $f \in \FF_\XX^\Sha(n)$
@@ -3869,20 +4017,25 @@ so let $f'$ be the result of long division of $f-\lead{f}$ by $\mathcal V$, and 
 The following is what this algorithm looks like in pseudo-code:
 \begin{algorithm}
 \caption{Long division algorithm}\label{euclid}
-\begin{adjustwidth}{2 cm}{2 cm}
+\begin{adjustwidth}{1 cm}{1 cm}
 \begin{algorithmic}[1]
-\Procedure{LongDiv}{$f$,$V$}
-\If {$f=0$} \Return $f$
+\Procedure{LongDivision}{\texttt{TreePolynomial},\texttt{TreePolynomials}}
+\If {$\texttt{TreePolynomial}=0$} \Return $0$
 	 \Else
-	\State $V \gets \textsc{LinSelfRed}(V)$
-	\While {$\{ v\in V : \lead{v} \text{ divides } \lead{f}\}\neq \varnothing$}
-	\State $V'\gets \{ v\in V : \lead{v} \text{ divides } \lead{f}\}$
-	\State $s\gets \textsc{Last}(V')$   
-	\State $f'\gets \textsc{Reduce}(f,s)$ 
-	\State $f\gets \textsc{LongDiv}(f',V)$  
-		\EndWhile
-	\State \Return $\lead{f}+ \textsc{LongDiv}(f-\lead{f},V)$
+	 \State $\texttt{Dividend} \gets \texttt{TreePolynomial}$
+	 \State $\texttt{Divisors} \gets 
+	 	\textsc{LinearSelfReduce}(\texttt{TreePolynomials})$
+	 \State $\texttt{Factors} \gets \{ v\in \texttt{Divisors} :\leadm{v} \text{ divides } \lead{g}\}$
+	\If {$\texttt{Factors} \neq \varnothing$}
+	\State $\texttt{LargestFactor}\gets \textsc{Largest}(\texttt{Factors})$   
+	\State $\texttt{Dividend}\gets \textsc{Reduce}(\texttt{Dividend},\texttt{LargestFactor})$ 
+	\State $\texttt{Dividend}\gets \textsc{LongDivision}(\texttt{Dividend},\texttt{Divisors})$  
+		\EndIf
+	\State $\texttt{LeadDividend} \gets \lead{\texttt{Dividend}}$
+	\State $\texttt{Dividend} \gets \texttt{Dividend}-\texttt{LeadDividend}$
+	\State $\texttt{Dividend} \gets \textsc{LongDivison}(\texttt{Dividend},\texttt{Divisors})$
 	\EndIf
+	\State \Return $\texttt{LeadDividend} + \texttt{Dividend}$
 \EndProcedure
 \end{algorithmic}
 \end{adjustwidth}
@@ -3950,20 +4103,28 @@ and Gr\"obner bases are designed to regain this control.
  algorithm takes as input this generating set,
  and outputs a self-reduced subset $\mathcal V'$
  that generates the same ideal as $\mathcal V$. 
- This is what this algorithm looks like in pseudo-code
+ This is what this algorithm looks like in pseudo-code, 
+ though we are being slightly imprecise: $\mathcal V$ is
+ not a matrix, so we cannot feed it to our linear self
+ reduction algorithm as is: we pick a total order on
+ $\mathcal V$, and then use the corresponding matrix
+ written in the shuffle tree monomial basis. 
+ 
  \begin{algorithm}
 \caption{Self-reduction algorithm}\label{algo:self-reduce}
 \begin{adjustwidth}{2 cm}{2 cm}
 \begin{algorithmic}[1]
-\Procedure{SelfRed}{$V$}
-	\State $V \gets \textsc{LinSelfRed}(V)$
-\If {$V$ is self reduced} \Return $V$
+\Procedure{SelfReduce}{$\texttt{Set}$}
+	\State $\texttt{ToReduce} \gets \textsc{LinearSelfReduce}(\texttt{Set})$
+\If {$\texttt{ToReduce}$ is self reduced} \Return $\texttt{ToReduce}$
 \Else 
-\State $v\gets \textsc{Last}(V')$
-\State $V'\gets \textsc{SelfRed}(V\smallsetminus v)$
-\State $v'\gets \textsc{LongDiv}(V',v)$
+\State $\texttt{Largest} 
+	\gets \textsc{Largest}(\texttt{ToReduce})$
+\State $\texttt{ToReduce} \gets \textsc{SelfReduce}(\texttt{ToReduce}\smallsetminus \texttt{Largest} )$
+\State $\texttt{NewElement} \gets \textsc{LongDivision}(\texttt{Largest} ,\texttt{ToReduce})$
+\State $\texttt{ToReduce}\gets \texttt{ToReduce}\cup \texttt{NewElemet}$
 \EndIf
-\State \Return $\textsc{SelfRed}(V'\cup \{v'\})$
+\State \Return $\textsc{SelfReduce}(\texttt{ToReduce})$
 \EndProcedure
 \end{algorithmic}
 \end{adjustwidth}
@@ -4066,143 +4227,203 @@ $f$ by $\mathcal G$, we see we obtain a non-trivial linear combination of reduce
 monomials belonging to $\mathcal I$, so that there is not a unique
 reduced representative for the zero coset.
 
-Finally, suppose that for some $f$, two different choices of order of reductions yield two different outputs. Then, then there exist a coset $f + I$ contains two different elements that are reduced with respect to $\mathcal G$, hence reduced monomials are linearly dependent, a contradiction.
+Finally, suppose that for some $f$, two different choices of order of reductions yield two different outputs. Then, then there exist a coset $f + I$ contains two different elements that are reduced with respect to $\GG$, hence reduced monomials are linearly dependent, a contradiction.
 \end{proof}
 
 \begin{theorem}
 Every ideal admits a unique reduced Gr\"obner basis.
 \end{theorem}
 
-\hacer{Write proof.}
-
 \begin{proof}
+We begin by proving uniqueness, which will in fact tell us
+how to prove these exist. Thus, suppose $\GG$ is a 
+Gr\"obner basis of an idea $\II$, so that
+$\leadm{\GG}$ generates $\leadm{\II}$. If $\GG$ is
+also reduced, then $\leadm{\GG}$ coincides with the set
+\[ 
+ \mathcal M = \{ T\in \leadm{\II} : \text{$T$ is not divisible by any
+ other element of  $\leadm{\II}$}.
+ 	\}
+	\]
+of all minimal elements of $\leadm{\II}$ partially ordered
+with respect to divisibility. To see this, not that if
+$T\in \mathcal M$ then this must be divisible by at least
+one element $g$ of $\GG$, and this can only happen 
+if $\leadm{g} = T$. Conversely, if $T$ is a leading monomial
+in $\leadm{\GG}$ then it is certainly a leading monomial
+of $\leadm{\II}$. If $T'$ is any other
+leading monomial of $\leadm{\II}$ that divides $T$, then there is
+$T''\in \leadm{\GG}$ that divides $T'$, and hence $T$. But
+since $\GG$ is reduced, this happens only if $T''=T$, and
+hence no other leading term divides $T$.
+
+In addition, the fact that $\GG$ is reduced guarantees
+that for each $T\in\leadm{\GG}$ there exists a unique element
+$g\in\GG$ such that $g= T-h$ and $h$ is reduced with
+respect to $\II$. It follows that $h$ must be equal to the
+unique element in the coset $T+\II$ that is reduced
+with respect to $\II$.
+
+To prove existence, we consider the set $\mathcal{M}$ above,
+and let $\GG$ consist of those elements of the form $T-h$
+where $T\in \mathcal{M}$ and $h$ is the unique element in
+the coset $T+\II$ that is reduced with respect to $\II$. 
+By our definition of $\mathcal M$, the set $\GG$ is self-reduced, 
+so it suffices we show that it is a Gr\"obner basis. 
+To do this, notice that every element of $\leadm{\II}$
+is divisible by an element of $\mathcal M$: if not,
+the smallest element which is not divisible by some
+element of $\mathcal M$ is either not divisible by
+any other element of $\leadm{\II}$, which makes it an element
+of $\mathcal M$, or otherwise is divisible by some
+smaller element of $\leadm{\II}$, and hence actually
+does have a divisor from $\mathcal M$. Thus,
+$\leadm{\GG}$ generates $\leadm{\II}$, as we wanted.
 \end{proof}
 
+It is important to point out that our proof above is highly
+non-constructive: we are considering the poset of
+leading terms of $\II$ under divisibility, 
+which we admits a (possibly infinite) set of 
+minimal elements, and arguing these constitute the
+reduced Gr\"obner basis of $\II$. In the next
+lecture, we will learn how to begin with any generating
+set of $\II$, and complete it to a (possibly infinite)
+reduced Gr\"obnber basis.
+ 
 \subsection{Exercises}
 
-\begin{question} 
-Translate the self-reduction algorithm into prose.
+\begin{question}
+Prove the claim made in the last paragraph above:
+the ideal of leading terms of $\II$, partially ordered by
+divisibility, admits a possibly infinite set of
+minimal elements. \emph{Hint:} divisibility
+refines our choice of total order $\prec$: if 
+$T$ divides $T'$, then $T\prec T'$. 
 \end{question}
 
 \begin{question}\label{ex:self-reduction}
-Prove Proposition~\ref{lemma:self-reduction}.
+Translate the self-reduction algorithm into prose.
+and prove Proposition~\ref{lemma:self-reduction}.
 \end{question}
 \newpage
 
+\afterpage{\blankpage}
+
+\newpage
 \appendix
 
 \section{Algebras over operads}
 
 \hacer{Write an appendix about algebras over operads.}
 
-\section{Gaussian Elimination}
+\subsection{Algebras over operads}
+Operads are important not in and of themselves 
+but through their representations, more commonly
+called \emph{algebras over operads}. In fact,
+one can usually `create' an operad by declaring
+what kind of algebras it governs. If the
+algebra has certain operations of certain
+arities, these define the generators of the operad,
+and the relations these operators must satisfy 
+give us the relations presenting our operad. 
 
+\begin{definition}
+A $\PP$-algebra structure on a vector
+space $V$ is the datum of a map of operads 
+$\PP \longrightarrow \End_V$.
+\end{definition}
+
+Alternatively, one can consider the situation
+when $\otimes$ is closed and has a right
+adjoint $\hom$ (the internal hom) so that
+what we want are maps
+\[\label{eq:Palgebramap}
+\gamma_{V,n} : 
+\PP(n)\otimes_{S_n} V^{\otimes n} \longrightarrow V \]
+declaring how each $\mu \in\PP(n)$ acts as an operation
+$\mu : V^{\otimes n} \longrightarrow V$. 
+It follows that a
+ $\PP$-algebra structure on $V$ is the same as the datum
+of maps as in \ref{eq:Palgebramap} that satisfy the following
+conditions:
+
+\begin{tenumerate}
+\item \emph{Associativity:} let $\nu\in \PP(n)$ and
+$\nu_i \in \PP(k_i)$ for $i\in [n]$, and pick
+$w_i \in V^{\otimes k_i}$. Set $v_i = \gamma_{V,k_i}(\nu_i,w_i) \in V$
+and $\mu = \gamma_\PP(\nu;\nu_1,\ldots,\nu_n)$. Then 
+\[ \gamma_{V,k_1+\cdots+k_n}(\mu; w_1,\ldots,w_n) = 
+	\gamma_{V,n}(\nu ;v_1,\ldots, v_n).\]
+\item \emph{Equivariance:} for $\nu\in\PP(n)$, $v_1\otimes\cdots \otimes v_n \in V^{\otimes n}$
+and $\sigma\in S_n$, we have that
+\[ \gamma_{V,n}(\nu \sigma, v_{\sigma 1} \otimes \cdots \otimes v_{\sigma n}) = \gamma_{V,n}(\nu; v_1\otimes\cdots \otimes v_n). \]
+\item \emph{Unitality:} if $1\in\PP(1)$ is the unit, then
+$\gamma_{V,1}(1,v) = v$.  
+\end{tenumerate}
+
+
+
+\textcolor{trinityblue}{Complete. Recognition
+principle. Gerstenhaber algebras and Hochschild
+complex.}
+
+
+
+
+\section{Gaussian Elimination}
+Let $M$ be a matrix with $m$ rows
+and $n$ columns. The following is the
+usual algorithm to put $M$ in row reduced
+echelon form, written as pseudo-code:
 \begin{algorithm}
 \caption{Linear self-reduction algorithm}\label{algo:gauss}
 \begin{adjustwidth}{2 cm}{2 cm}
 \begin{algorithmic}[1]
-\Procedure{LongDiv}{$f$,$V$}
-\If {$f=0$} \Return $f$
-	 \Else
-	\State $V \gets \textsc{LinSelfRed}(V)$
-	\While {$\{ v\in V : \lead{v} \text{ divides } \lead{f}\}\neq \varnothing$}
-	\State $V'\gets \{ v\in V : \lead{v} \text{ divides } \lead{f}\}$
-	\State $s\gets \textsc{Least}(V')$   
-	\State $f'\gets \textsc{Reduce}(f,s)$ 
-	\State $f\gets \textsc{LongDiv}(f',V)$  
-		\EndWhile
-	\State \Return $\lead{f}+ \textsc{LongDiv}(f-\lead{f},V)$
-	\EndIf
+\Procedure{LinearSelfReduce}{$\texttt{Matrix}$} 
+\State $\texttt{lead} \gets 0$
+\State $\texttt{A} \gets \texttt{Matrix}$
+\State $\texttt{rows} \gets \textsc{Width}(\texttt{A})$
+\State $\texttt{cols} \gets \textsc{Height}(\texttt{A})$
+	\For {$r\in [0,\texttt{ rows})$}
+ 			\If {\texttt{cols} $\leqslant$\texttt{ lead}}
+ 			\State \textbf{stop}
+ 			\EndIf
+ 	\State $i\gets r$
+ 	\While {$\texttt{A}[i,\texttt{lead}]=0$}
+ 			\State $i\gets i+1$
+ 			 \If {\texttt{rows} $=i$}
+  					\State $i\gets r$
+  					\State $\texttt{lead} \gets \texttt{lead}+1$
+  					\If {\texttt{cols} $=$\texttt{ lead }}
+   						\State \textbf{stop}
+   					\EndIf
+   			\EndIf
+   	\EndWhile
+   \If {$i\neq r$}
+   		\State \textbf{swap} $\texttt{A}[r,:]$ and $\texttt{A}i,:]$
+   		\State $\texttt{A}[r,:]
+   			\gets \texttt{A}[r,:]/\texttt{A}[r,\texttt{lead}]$
+   		\For {$i \in [0,\texttt{rows})$}
+   			 \If {$i\neq r$}
+   			 \State $\texttt{A}[i,:] \gets 
+   			 	\texttt{A}[i,:] - 
+   			 		\texttt{A}[i, \texttt{lead}]\texttt{A}[r,:] $
+   			\EndIf
+   			\EndFor
+   \State $\texttt{lead} \gets \texttt{lead}+1$
+   \EndIf
+\EndFor
 \EndProcedure
 \end{algorithmic}
 \end{adjustwidth}
 \end{algorithm}
 
 
-%function ToReducedRowEchelonForm(Matrix M) is
-%    lead := 0
-%    rowCount := the number of rows in M
-%    columnCount := the number of columns in M
-%    for 0 ≤ r < rowCount do
-%        if columnCount ≤ lead then
-%            stop function
-%        end if
-%        i = r
-%        while M[i, lead] = 0 do
-%            i = i + 1
-%            if rowCount = i then
-%                i = r
-%                lead = lead + 1
-%                if columnCount = lead then
-%                    stop function
-%                end if
-%            end if
-%        end while
-%        if i ≠ r then Swap rows i and r
-%        Divide row r by M[r, lead]
-%        for 0 ≤ i < rowCount do
-%            if i ≠ r do
-%                Subtract M[i, lead] multiplied by row r from row i
-%            end if
-%        end for
-%        lead = lead + 1
-%    end for
-%end function
-% 
-%\subsection{Algebras over operads}
-%Operads are important not in and of themselves 
-%but through their representations, more commonly
-%called \emph{algebras over operads}. In fact,
-%one can usually `create' an operad by declaring
-%what kind of algebras it governs. If the
-%algebra has certain operations of certain
-%arities, these define the generators of the operad,
-%and the relations these operators must satisfy 
-%give us the relations presenting our operad. 
-%
-%\begin{definition}
-%A $\PP$-algebra structure on a vector
-%space $V$ is the datum of a map of operads 
-%$\PP \longrightarrow \End_V$.
-%\end{definition}
-%
-%Alternatively, one can consider the situation
-%when $\otimes$ is closed and has a right
-%adjoint $\hom$ (the internal hom) so that
-%what we want are maps
-%\[\label{eq:Palgebramap}
-%\gamma_{V,n} : 
-%\PP(n)\otimes_{S_n} V^{\otimes n} \longrightarrow V \]
-%declaring how each $\mu \in\PP(n)$ acts as an operation
-%$\mu : V^{\otimes n} \longrightarrow V$. 
-%It follows that a
-% $\PP$-algebra structure on $V$ is the same as the datum
-%of maps as in \ref{eq:Palgebramap} that satisfy the following
-%conditions:
-%
-%\begin{tenumerate}
-%\item \emph{Associativity:} let $\nu\in \PP(n)$ and
-%$\nu_i \in \PP(k_i)$ for $i\in [n]$, and pick
-%$w_i \in V^{\otimes k_i}$. Set $v_i = \gamma_{V,k_i}(\nu_i,w_i) \in V$
-%and $\mu = \gamma_\PP(\nu;\nu_1,\ldots,\nu_n)$. Then 
-%\[ \gamma_{V,k_1+\cdots+k_n}(\mu; w_1,\ldots,w_n) = 
-%	\gamma_{V,n}(\nu ;v_1,\ldots, v_n).\]
-%\item \emph{Equivariance:} for $\nu\in\PP(n)$, $v_1\otimes\cdots \otimes v_n \in V^{\otimes n}$
-%and $\sigma\in S_n$, we have that
-%\[ \gamma_{V,n}(\nu \sigma, v_{\sigma 1} \otimes \cdots \otimes v_{\sigma n}) = \gamma_{V,n}(\nu; v_1\otimes\cdots \otimes v_n). \]
-%\item \emph{Unitality:} if $1\in\PP(1)$ is the unit, then
-%$\gamma_{V,1}(1,v) = v$.  
-%\end{tenumerate}
-%
-%
-%
-%\textcolor{trinityblue}{Complete. Recognition
-%principle. Gerstenhaber algebras and Hochschild
-%complex.}
-%
-%
 
-\pagebreak
+\afterpage{\blankpage}
+
+\newpage
 
 \listoftodos
 \end{document}
