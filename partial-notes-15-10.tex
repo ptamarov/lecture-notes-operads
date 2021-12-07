@@ -186,8 +186,11 @@
   \DeclareFontFamily{U}{wncy}{}
     \DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
     \DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
-    \DeclareMathSymbol{\Sha}{\mathord}{mcy}{"58} 
- 
+    \DeclareMathSymbol{\ShaL}{\mathord}{mcy}{"58} 
+    
+    \usepackage{scalerel}[2016/12/29]
+
+\newcommand{\Sha}{{\scaleobj{0.75}{\ShaL}}}
  
  
 \usepackage{fancyhdr}
@@ -336,7 +339,15 @@ join=round] \draw (0,0) rectangle (1,1)
 \definecolor{col2}{rgb}{0.9, 0.9, 0.98}
 \definecolor{col3}{rgb}{0.71, 0.49, 0.86}
 
-  
+%%%% Write pseudo-code
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+
 \newcommand{\ind}{\operatorname{Ind}_\PP}
 
 \newcommand{\cof}{\rightarrowtail}
@@ -618,17 +629,37 @@ familiar with the theory.
 \end{abstract}
 
 
+\vfill
+
+
+\hfill	Leipzig, \today
+
 
 \afterpage{\blankpage}
 
-\pagebreak
+\newpage
+
+\vspace*{\fill} 
+\emph{These notes were written during the Winter Lecture
+Series for the academic term 2021-2022 at the \emph{Max
+Planck Institut f\"ur Mathematike in den Naturwissenschaften}.
+We acknowledge the excellent working
+conditions during the time the lecture series took place,
+which made it possible to produce these lectures notes
+during such unprecedented times.
+ }
+\vspace*{\fill} 
+ \afterpage{\blankpage}
+
+\newpage
 
 \thispagestyle{empty}
 
 \tableofcontents
 
 \vfill
-\emph{Draft, \today} 
+
+\hfill \texttt{Draft: \today} 
 
 \afterpage{\blankpage}
 
@@ -646,17 +677,20 @@ and give a road-map for the course.
 
 \subsection{Introduction and motivation}
 
-Operads originally appeared as tools in homotopy theory, 
+Operads (topological operads, more precisely)
+originally appeared as tools in algebraic
+topology and homotopy theory, 
 specifically in the study of iterated loop 
 spaces (May, 1972 and Boardman and Vogt before).
-They appeared as \emph{comp algebras} in Gerstenhaber's 
+They also appeared as \emph{comp algebras} in Gerstenhaber's 
 work on Hochschild cohomology and topologically as 
 Stasheff's `associahedra' for his homotopy
 characterization of loop spaces (both in 1963).
-The theory of operads 
-received new inspiration from homological algebra,
-category theory, algebraic geometry and mathematical
-physics:
+The theory of operads, in particular topological
+and algebraic, saw itself very much influenced by
+homological algebra, category theory, algebraic
+geometry, rational homotopy theory and mathematical
+phyisics. Here we list a few examples:
 
 \begin{tenumerate}
 \item (Stasheff, Sugawara) Study homotopy associative 
@@ -711,10 +745,18 @@ who proved that the operad of natural operations
 on it has the homotopy type of $C_*(D_2)$.  
 \end{tenumerate}
 
-Algebraic operads are modeled by trees (planar or
+Operads are modeled by trees (planar or
 non-planar, rooted or not), and relaxing these
 graphs allows us to produce other type of 
-algebraic structures:
+algebraic structures. The following table
+gives the reader a ``taxonomy cheat sheet''
+for operads and their kin; we will, for better
+or worse, defer from diving into the curious
+world that lies beyond operads, but encourage
+the reader to do this for themselves (and find
+out what ``wheeled structures'' are, and how
+they fit in the table below).
+
 \begin{center}
 \begin{tabular}{@{}llcc@{}} \toprule
 Type & Graph & Compositions & Due to \\ \midrule
@@ -731,9 +773,80 @@ Symmetric operads & Rooted trees & $\circ_i$  & J. P. May \\
 \end{center}
 
 \subsection{Koszul duality}
-\hacer{Write introduction to Koszul duality.}
+Koszul duality was invented by Steward Priddy in
+the seventies, with the objective of streamlining
+computations of certain cohomology theories for
+classes of algebras (notably, Lie and associative 
+algebras). One of the reasons this was, and still is,
+relevant is that such cohomology groups play a central
+role in the computation of other more complicated invariants
+of algebras and topological spaces: in particular,
+the cohomology of the Steenrod algebra famously featured
+in Adam's spectral sequence computing the stable homotopy
+groups of spheres at each prime. In Priddy's own words:
+\[
+\claim{
+The purpose of this paper is to construct resolutions for a 
+large class of algebras which includes the Steenrod algebra
+and the universal enveloping algebras. 
+It is a basic problem of homological algebra to compute the 
+cohomology algebras of various augmented algebras. Unfortunately, 
+the canonical tool for attacking this problem ---the bar resolution--- is often intractable. In some instances,
+however, one is able to find a simpler resolution.
+}
+\]
+Priddy developed his theory for both ``inhomogeneous''
+and ``homogeneous'' quadratic algebras ---those presented
+in coordinates by quadratic equations in their variables---
+and, while in the homogeneous case his formalism gave the
+answer immediately, the inhomogenous case required an
+additional step, which nonetheless simplified the existing
+methods considerably.  
+
+Although Koszul duality nowadays has a much broader meaning
+and casts an immense net in modern day algebra, representation
+theory, combinatorics, topology and geometry, 
+among other areas of mathematics, in this lecture
+series we will follow Priddy's motivation and see it as an
+instance of a phenomenon in which certain algebraic objects
+have very economical ---and thus computationally and theoretically
+useful--- resolutions. 
+
+Naturally, one of the reasons why Koszul duality has cemented
+itself in modern day mathematics is that it appears often:
+algebraic structures of interest have an inclination to be
+quadratic and, when in luck, Koszul. These can be anything
+from Lie, commutative or associative algebras, to Feynmann
+categories, dg categories, operads and their kin. In this
+lecture series, we will focus on algebraic operads: our goal
+is to introduce the reader to algebraic operads in general,
+and to quadratic operads in particular, and define what
+it means for such operads to be Koszul. 
+
+Although, as we
+mentioned, we will take a rather old fashioned point of 
+view and think of Koszul operads as those operads 
+having a ``nice resolution'', we aim to give the reader
+a modern outlook on the current methods available to
+prove that an operad is Koszul, and some relatively 
+new developments in the area from the last two (or
+maybe three) decades:
+the inhomogenous Koszul duality for (pr)operads due
+to Galvez-Carillo--Tonks--Vallette, which
+followed the original theory of Ginzburg--Kapranov,
+the use of filtered distributive laws of Dotsenko
+which followed the methods of Markl, and the general
+theory stating Koszul operads give rise to good
+notions of algebras up to homotopy, due to Vallette.
+Naturally, we will also focus on the classical developments,
+and on the effective methods of Hoffbeck and 
+Dotsenko--Khoroshkin, which we detail in the next
+section.
+
 \subsection{Gr\"obner bases}
 \hacer{Write introduction to Groebner bases.}
+\newpage
+
 \subsection{Exercises}
 
 \textbf{A. Symmetric groups.} Operads are meant to encode
@@ -956,8 +1069,10 @@ If you are very motivated, read about double complexes and spectral
 sequences.
 \end{question} 
 
+\afterpage{\blankpage}
 
-\section{Symmetric sequences, composition products, unbiased approach}
+\newpage
+\section{Symmetric modules and algebraic operads}
 
 \textbf{Goals.}
 We will define
@@ -1017,7 +1132,7 @@ between $[n]$ and $[m]$ if $m\neq n$).
 \end{lemma}
 
 \begin{proof}
-This is in Exercise Sheet \#0. 
+This is Exercise~\ref{ex:skeleton}.
 \end{proof}
 
 We set ${}_\Sigma\Mod  = 
@@ -1662,6 +1777,8 @@ above is usually written in the form
   $\mathcal{X}(n)$. 
  \end{question}
 
+\afterpage{\blankpage}
+\newpage
 \section{Free operads and presentations}
 
 \textbf{Goals.} We will define algebraic operads
@@ -1872,7 +1989,7 @@ above, and hence is well defined on $\FF_\XX$.
 \end{lemma}
 
 \begin{proof}
-This is in \textbf{Exercise Sheet \#2}. 
+This is Exercise~\ref{ex:grafting}.
 \end{proof}
 
  We will later
@@ -1913,20 +2030,21 @@ depend on the symmetric structure of $ \XX$.
 Let $\XX$ be a collection such that $\underline{\XX} = 
 \XX(2)$. Compute a basis of tree monomials 
 for the free operad over
-$\XX$ in each of the following cases:
-\begin{enumerate}
-\item $\XX(2)=\mathbb C^2$ is 
-	the regular representation of $S_2$.
-\item $\XX(2)=\mathbb C^-$ is the sign representation of $S_2$.
-\item $\XX(2)=\mathbb C$ is the trivial representation of $S_2$. 
-\end{enumerate} 
+$\XX$ in case $\XX(2)$ is:
+\begin{tenumerate}
+\item The regular representation of $S_2$.
+\item The sign representation of $S_2$.
+\item The trivial representation of $S_2$. 
+\end{tenumerate} 
 In all cases, decompose the $S_3$-module $\mathcal{F}_\XX(3)$
 into irreducible representations.
 \end{question}
 
 
-\begin{question} In the trivial and sign case above,
-compute a monomial tree basis, and thus the dimension, of $\mathcal{F}_\XX(4)$.
+\begin{question}\label{ex:grafting}
+Show that tree grafting respects both $I$-tree
+isomorphism and the relation $T\sim T^\sigma$,
+and hence descends to $\FF_\XX$.
 \end{question}
 
 \begin{question}
@@ -1968,7 +2086,7 @@ describe explicitly the action of $S_3$ on it.
 
 \begin{question}
 Show that the construction of the free operad we carried
-out during \textbf{Lecture 2} indeed defines the free
+out during \textbf{Lecture~2} indeed defines the free
 operad on $\XX$ where $i:\XX \longrightarrow \mathcal F_\XX$
 sends an element $x\in \XX(I)$ to the corolla whose unique
 internal vertex is labeled by $x$ (and whose
@@ -1981,14 +2099,8 @@ leaves are labeled by $I$).
  grading on a free operad. 
  \end{question}
 
-%\begin{note}
-%The free conilpotent cooperad $\FF^c_\XX$ can be defined
-%in a completely analogous fashion: it has the same 
-%underlying symmetric sequence as $\FF_\XX$ (much like
-%$TV$ and $T^cV$ have the same underlying vector space)
-%and it has decomposition maps obtained by `degrafting'
-%trees.
-%\end{note}
+\afterpage{\blankpage}
+\newpage
 
 \section{Quadratic operads}
 
@@ -2096,8 +2208,13 @@ call them the \emph{three graces}. We have that
  	\Com(n) = \kk, \quad
  	 \Lie(n) = \operatorname{Ind}_{\mathbb Z/n}^{S_n} \kk_\zeta \] 
  where $\kk_\zeta$ is a character of $\mathbb Z/n$
- for a primitive $n$th root of the unit. 
- 
+ for a primitive $n$th root of the unit. Concretely,
+ the last equality is stating that if we fix a primitive
+ $k$th root of unity $\zeta_k$, and if we let $\rho_k$ be
+ the standard $k$-cycle of $S_k$, the free Lie
+ algebra $L(V)\subseteq T(V)$ identifies  
+ in each weight degree $k$ with those $v
+ \in V^{\otimes k}$ such that $\rho_k v = \zeta_k v$. 
  
 \begin{note} It is not always advantageous
 to define an operad by generators and relations:
@@ -2220,7 +2337,7 @@ through binary quadratic presentations. Show  that
 for all $n\geqslant 1$ the space $\mathsf{Ass}(n)$ is the
 regular representation of $S_n$, and that for 
 all $n\geqslant 1$ the space $\mathsf{Com}(n)$ is the 
-trivial representation of $S_n$.
+trivial representation.
 \end{question}
 
 \begin{question} Use the presentation of the Poisson operad given
@@ -2302,7 +2419,8 @@ In each case, what is the interpretation at the level
 of algebras?
 \end{question}
 
-
+\afterpage{\blankpage}
+\newpage
 
 
 
@@ -2414,17 +2532,18 @@ the Koszul sign rule?
 The following lemma shows that $V\mapsto \End_V$ is 
 monoidal for the \emph{Hadamard product} of operads on the
 target (and the usual tensor product on the domain): 
- \begin{lemma}
+ \begin{lemma}\label{lemma:hadamard}
 The map $\Phi : \End_V\otimes \End_W\longrightarrow \End_{V\otimes W}$
 that assigns $\varphi \otimes \psi \in \End_V(n)\otimes \End_W(n)$
 to the map
 \[ \Phi(\varphi,\psi)(v,w) = (-1)^\varepsilon \varphi(v)\otimes\psi(w)\]
 where $\varepsilon = \sum_{i=1}^n (|w_1| +\cdots + |w_{i-1}|+|\psi|)|v_i|$
-is an isomorphism of operads.
+is an isomorphism of operads provided $V$ and $W$
+are locally finite.
  \end{lemma}
  
  \begin{proof}
- This is in Exercise Sheet \#4.
+ This is Exercise~\ref{ex:suspensions}
  \end{proof}
 
 In particular, we see that $\End_{sV}$ is canonically isomorphic
@@ -2445,14 +2564,14 @@ we write $\nu_n$ for the unique map in $\End_s(n)$
 that sends $s^n$ to $s$. Then for every $m\geqslant 1$
 we have that
 \[ \nu_n \circ_i \nu_m = (-1)^{(i-1)(m-1)} \nu_{m+n-1}. \]
-In particular, the binary operation $\nu := nu_2$ of degree
+In particular, the binary operation $\nu := \nu_2$ of degree
 $-1$ generates $\End_s$,
 and presents it as a quadratic operad subject to the 
 anti-associativity relation
 \[ \nu \circ_1\nu + \nu\circ_2 \nu = 0.\]
 \end{proposition}
 \begin{proof}
- This is in Exercise Sheet \#4.
+ This is Exercise~\ref{ex:suspensionoperad}.
 \end{proof}
 
 If $\PP$ is an operad, then the arity-wise tensor product
@@ -2599,6 +2718,19 @@ operad controls pre-Lie algebras with associator symmetric
 in the \emph{first two} variables (left-symmetric) and 
 whose pre-Lie operation is \emph{right} permutative.
 \subsection{Exercises}
+
+\begin{question}\label{ex:suspensions}
+Show the map $\Phi_{V,W}$ of Lemma~\ref{lemma:hadamard}
+is an isomorphism for $V$ and $W$ locally finite dimensional
+dg symmetric sequences.
+\end{question}
+
+\begin{question}\label{ex:suspensionoperad}
+Show that the suspension operad is binary quadratic
+generated by a single operation $\nu$ of degree $-1$
+that is ``anti-associative'', in the sense that
+$\nu\circ_1\nu + \nu\circ_2\nu=0$. 
+\end{question}
 \begin{question} Show that:
 \begin{tenumerate}
 \item $\mathsf{Ass}$ is Koszul
@@ -2661,6 +2793,8 @@ the bilinear form we constructed
 during the lectures is $S_3$-invariant.
 \end{question}
 
+\afterpage{\blankpage}
+\newpage
 
 \section{Shuffle operads}
 
@@ -2973,7 +3107,7 @@ monomial.
 \end{proposition} 
 
 \begin{proof}
-This is in \textbf{Exercise Sheet \#5}. The
+This is Exercise~\ref{ex:shufflecomp}. The
 idea is to note that the local increasing
 condition is not broken, and this is clear
 on each $T_i$ since we simply relabelled their
@@ -3088,10 +3222,15 @@ corresponding shuffle operad.
 
 \subsection{Exercises}
 
+\begin{question}\label{ex:shufflecomp}
+ Show that the shuffle composition of shuffle tree
+monomials is again a shuffle tree
+monomial.
+\end{question}
  
 \begin{question}
 Use the definition of shuffle trees
-to repeat the computation of a basis
+to compute a basis
 of $\mathrm{Tree}_\XX^\Sha(4)$ in case $\XX$ consists
 of a single symmetric or antisymmetric
 operation. What happens if the operation
@@ -3108,13 +3247,19 @@ $\XX^f \circ_\Sha \YY^f$ fails
 \begin{question}
 Go through the definition of the shuffle
 compositions $\gamma_\pi$ for shuffle
-tree monomials.
+tree monomials, and show that it maps
+shuffle tree monomials to shuffle tree
+monomials.
 \end{question}
 
 \begin{question} 
 Give an example of a shuffle operad that
 is not obtained from a symmetric operad
-through the forgetful functor.
+through the forgetful functor. \emph{Suggestion:}
+ideals coming from symmetric operads must be
+stable under the (now non-existent group action).
+Can you find a shuffle ideal that is ``not very
+symmetric''?
 \end{question}
 
 \begin{question}
@@ -3132,6 +3277,8 @@ Repeat the theme of the last four exercises
 with any other (quadratic) operad
 of your choice.
 \end{question}
+
+\newpage
 \section{Monomial orders}
 
 
@@ -3319,7 +3466,7 @@ $y'$ nullary is `also' $(xy')$, but these are \emph{distinct}
 in the free monoid $\XX^*$. 
 
 \begin{proof}
-This is in \textbf{Exercise Sheet \#6}.
+This is Exercise~\ref{ex:pathseq}.
 \end{proof}
 
 Let us now consider the unique  map of shuffle operads
@@ -3445,7 +3592,7 @@ through the lexicographical order of words.
 \end{proposition}
 
 \begin{proof}
-\hacer{Write proof, look at Hoffbeck.}
+This is Exercise~\ref{ex:orderedM}.
 \end{proof}
 
 In particular, we can consider the case in which $M = \XX^*$
@@ -3498,6 +3645,45 @@ lexicographic order} induced by $\prec$.
 
 \subsection{Exercises}
  
+\begin{question}\label{ex:pathseq}
+Show that the path sequence of a tree monomial, as defined
+using the universal property of the free shuffle operad,
+coincides with its combinatorial definition obtained
+by reading the entries of the tree from the
+root to the leaves.
+\end{question}
+ 
+\begin{question}
+Let $X$ be a finite set and let us give 
+$\langle X\rangle$ the graded lexicographical order with
+respect to a fixed total order on $X$. Show this is a
+monomial order.
+\end{question}
+
+\begin{question}\label{ex:orderedM}
+Suppose $(M,\prec)$ is an ordered monoid and
+we let us give the shuffle operad
+$\mathbb{W}_M$ the induced lexicographical 
+order. Show that the resulting order is a monomial
+order.
+\end{question}
+
+\begin{question}
+Consider the ns collection $\XX$ with $\underline{\XX} = \XX(2)$
+a singleton. Show that we can always find a monomial order that
+singles out one of the three shuffle tree monomial basis
+elements of $\FF_\XX^\Sha(3)$ as the largest. 
+\end{question}
+
+\begin{question}
+Consider the ns collection $\XX$ with $\underline{\XX} = \XX(2)
+= \{x,y\}$, and the ``mixed'' shuffle tree monomials in 
+$\FF_\XX^\Sha(3)$ that have $x$ and $y$ (one at the top,
+the other at the bottom). Explore what leading terms
+you can obtain by choosing different induced orders
+on $\FF_\XX^\Sha$.
+\end{question}
+
  \pagebreak
  
 \section{Gr\"obner bases}
@@ -3561,19 +3747,19 @@ that leaf labels are respected.
 \missingfigure[figwidth = 6 cm]{Insertion examples}
 
 \begin{lemma}
-Let $\mathscr{V}$ be a subset of the free shuffle operad on $\XX$.
-Then the ideal generated by $\mathscr{V}$ is explicitly obtained
+Let $\mathcal{V}$ be a subset of the free shuffle operad on $\XX$.
+Then the ideal generated by $\mathcal{V}$ is explicitly obtained
 as the linear span of all insertions $\repl{T'}{T}{f}$
 as $T,T'$ range through pairs $(T',T)$ with $T'$ a divisor
-of $T$ and $f\in \mathscr V(\ell')$.
+of $T$ and $f\in \mathcal V(\ell')$.
 \end{lemma}
 
 \begin{proof}
-By construction, $(\mathscr V)$ is the linear span of all possible
+By construction, $(\mathcal V)$ is the linear span of all possible
 shuffle compositions where at least one summand is contained in
-$\mathscr V$. Since shuffle compositions are multilinear, we can
+$\mathcal V$. Since shuffle compositions are multilinear, we can
 assume that all terms appearing in such shuffle compositions (except,
-possibly, for that in $\mathscr V$) are tree monomials, in which case
+possibly, for that in $\mathcal V$) are tree monomials, in which case
 the resulting shuffle composition coincides with an insertion
 operation.
 \end{proof}
@@ -3615,17 +3801,17 @@ is obtained from $f$ be iterating shuffle compositions, this proves
 the statement of the proposition. 
 \end{proof}
 
-Let $\mathscr{V}$ be a subset of the free shuffle operad on $\XX$. A
-tree monomial $T$ is reduced with respect to $\mathscr{V}$ if it is
+Let $\mathcal{V}$ be a subset of the free shuffle operad on $\XX$. A
+tree monomial $T$ is reduced with respect to $\mathcal{V}$ if it is
 not divisible by any of the leading terms of polynomials appearing in it.
-A polynomial is reduced with respect to $\mathscr V$ if it is a linear
-combination of tree monomials that are reduced. We say $\mathscr V$
-is self-reduced if each $v\in \mathscr V$ is reduced with respect to
-$\mathscr V\smallsetminus v$, and that is is linearly self-reduced
+A polynomial is reduced with respect to $\mathcal V$ if it is a linear
+combination of tree monomials that are reduced. We say $\mathcal V$
+is self-reduced if each $v\in \mathcal V$ is reduced with respect to
+$\mathcal V\smallsetminus v$, and that is is linearly self-reduced
 if no leading term of one element divides the leading term of 
 another. 
 
-\begin{definition}[Reduction]
+\begin{definition}[Reduction]\label{def:reduce}
 Suppose that $f$ and $g$ are polynomials of the same arity, and
 that $f$ is divisible by the leading term of $g$, in other words,
 suppose that $\lead{f} = \repl{T'}{T}{\lead{g}}$ for some
@@ -3658,26 +3844,55 @@ than the leading term of $f$, as we wanted.
 
 \textbf{Long division algorithm.}
 Let us now define the long division algorithm for shuffle operads.
-Its input is a polynomial $f$ and a finite set $\mathscr V$, both
+Its input is a polynomial $f$ and a finite set $\mathcal V$, both
 in $\FF_\XX$, and its
-output is a reduced element $\overline{f}$ with respect to $\mathscr
-V$ such that $f-\overline{f} \in (\mathscr V)$ and $\lead{\overline{f}}
-\preceq \lead{f}$.
-
+output is a reduced element $\overline{f}$ with respect to $\mathcal
+V$ such that $f-\overline{f} \in (\mathcal V)$ and $\lead{\overline{f}}
+\preceq \lead{f}$. We can verbosely describe the algorithm as follows: 
 \begin{tenumerate}
-\item If $f=0$, return $f$.
-\item Replace $\mathscr V$ by its linear self-reduction. 
-\item While $\mathscr V' = \{ v\in \mathscr V : \lead{v} \text{ divides } \lead{f}\}$ is non-empty, pick $s\in \mathscr V'$ with the least
-leading monomial, and return the result of long division of
-$f'  = r_s(f)$ by $\mathscr V$.
-\item Else, $\lead{f}$ is reduced, so let $f'$ be the result of long
-division of $f-\lead{f}$ by $\mathscr V$, and return $\lead{f} + f'$.
+\item If our input polynomial
+$f$ is zero, just return zero. If not, ensure $\mathcal V$
+is linearly self-reduced, using the linear self-reduction
+Algorithm~\ref{algo:gauss}.
+\item If there is an element $v$ in $\mathcal V$ 
+whose leading term divides the
+leading term of $f$, pick that with the largest leading term.\footnote{This
+ can be done since we already ensured $\mathcal V$ is linearly
+self reduced.}
+\item Let $f'$ be the remainder of division of $f$
+by $v$ using the reduction procedure of Definition~\ref{def:reduce}.
+Recursively call the algorithm to compute the result of long
+division of $f'$ by $V$.
+\item If not, then $\lead{f}$ is $\mathcal V$-reduced, 
+so let $f'$ be the result of long division of $f-\lead{f}$ by $\mathcal V$, and return $\lead{f} + f'$.
 \end{tenumerate}
+The following is what this algorithm looks like in pseudo-code:
+\begin{algorithm}
+\caption{Long division algorithm}\label{euclid}
+\begin{adjustwidth}{2 cm}{2 cm}
+\begin{algorithmic}[1]
+\Procedure{LongDiv}{$f$,$V$}
+\If {$f=0$} \Return $f$
+	 \Else
+	\State $V \gets \textsc{LinSelfRed}(V)$
+	\While {$\{ v\in V : \lead{v} \text{ divides } \lead{f}\}\neq \varnothing$}
+	\State $V'\gets \{ v\in V : \lead{v} \text{ divides } \lead{f}\}$
+	\State $s\gets \textsc{Last}(V')$   
+	\State $f'\gets \textsc{Reduce}(f,s)$ 
+	\State $f\gets \textsc{LongDiv}(f',V)$  
+		\EndWhile
+	\State \Return $\lead{f}+ \textsc{LongDiv}(f-\lead{f},V)$
+	\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{adjustwidth}
+\end{algorithm}
+
 
 \begin{lemma}
 The long division algorithm terminates, and its
-output is a reduced element $\overline{f}$ with respect to $\mathscr
-V$ such that $f-\overline{f} \in (\mathscr V)$ and $\lead{\overline{f}}
+output is a reduced element $\overline{f}$ with respect to $\mathcal
+V$ such that $f-\overline{f} \in (\mathcal V)$ and $\lead{\overline{f}}
 \preceq \lead{f}$.
 \end{lemma}
 
@@ -3692,22 +3907,22 @@ always reduced. Among such problematic polynomials $f$,
 let us pick one $f$ with the smallest leading term, which is
 possible since $\prec$ is a well order. If $\lead{f}$ is not
 reduced, then the first step of our algorithm applies long
-division to $r_g(f) = f'$ for some $g\in\mathscr V$, and
+division to $r_g(f) = f'$ for some $g\in\mathcal V$, and
 by Lemma~\ref{lemma:smaller}, this is either zero or has a smaller
 leading term than $f'$, so it must be reduced. If $\lead{f}$
 is reduced, then the second step of the algorithm applies long
 division to $f-\lead{f}$, which has smaller leading term than
 $f$, so the output is again reduced. Finally, note that
 at each step of the algorithm we subtract an element of
-$\mathscr V$, so the coset of $f$ is not modified,
+$\mathcal V$, so the coset of $f$ is not modified,
 which concludes our proof.
 \end{proof}
 
 \begin{proposition}
-Suppose that $\mathscr I$ is an ideal in the free shuffle
+Suppose that $\mathcal I$ is an ideal in the free shuffle
 operad generated by $\XX$. Then those shuffle monomials that
-are reduced with respect to $\mathscr I$ form a basis
-for the quotient operad $\FF_\XX / \mathscr I$.  
+are reduced with respect to $\mathcal I$ form a basis
+for the quotient operad $\FF_\XX / \mathcal I$.  
 \end{proposition}
 
 \begin{proof}
@@ -3716,119 +3931,163 @@ This follows, for the long division algorithm guarantees
 we can always replace a non-reduced polynomial $f$ by a reduced
 one without affecting its coset. To see they are linearly
 independent, suppose that $f$ is a polynomial reduced with
-respect to $I$, and that $f\in \mathscr I$. Then we see that
-$\lead{f} \in \lead{\mathscr I}$. But this can only happen if
+respect to $I$, and that $f\in \mathcal I$. Then we see that
+$\lead{f} \in \lead{\mathcal I}$. But this can only happen if
 $f=0$ (or else $f$ would not even be linearly reduced with respect
-to $\mathscr I$). 
+to $\mathcal I$). 
 \end{proof}
 
 In practice, we
 have little control over the multitude of leading terms
-that may appear in the elements of $\mathscr I$,
+that may appear in the elements of $\mathcal I$,
 and Gr\"obner bases are designed to regain this control. 
  
  \bigskip
  
- \hacer{Mention the algorithm of self-reduction.}
- 
+ \textbf{Self-reduction algorithm.} Suppose that
+ $\mathcal V$ is a finite subset of $\FF_\XX^\Sha$. 
+ The following
+ algorithm takes as input this generating set,
+ and outputs a self-reduced subset $\mathcal V'$
+ that generates the same ideal as $\mathcal V$. 
+ This is what this algorithm looks like in pseudo-code
+ \begin{algorithm}
+\caption{Self-reduction algorithm}\label{algo:self-reduce}
+\begin{adjustwidth}{2 cm}{2 cm}
+\begin{algorithmic}[1]
+\Procedure{SelfRed}{$V$}
+	\State $V \gets \textsc{LinSelfRed}(V)$
+\If {$V$ is self reduced} \Return $V$
+\Else 
+\State $v\gets \textsc{Last}(V')$
+\State $V'\gets \textsc{SelfRed}(V\smallsetminus v)$
+\State $v'\gets \textsc{LongDiv}(V',v)$
+\EndIf
+\State \Return $\textsc{SelfRed}(V'\cup \{v'\})$
+\EndProcedure
+\end{algorithmic}
+\end{adjustwidth}
+
+\end{algorithm}
+
+ \begin{proposition}\label{lemma:self-reduction}
+ The self-reduction algorithm terminates for each
+ finite set $\mathcal V$ and returns a self-reduced
+ set $\mathcal V'$ with $(\mathcal V) = (\mathcal V')$.
+\end{proposition}  
+
+\begin{proof}
+This is Exercise~\ref{ex:self-reduction}.
+\end{proof}
 \subsection{Existence and uniqueness}
 
 \begin{lemma}
-Let $\mathscr I$ be an ideal of $\FF_\XX$. The subspace 
+Let $\mathcal I$ be an ideal of $\FF_\XX$. The subspace 
 \[
-\lead{\mathscr I} = \langle T \in \FF_\XX : \text{ $T = 
-	\lead{f}$ for some  $f\in\mathscr I$} \rangle.
+\lead{\mathcal I} = \langle T \in \FF_\XX : \text{ $T = 
+	\lead{f}$ for some  $f\in\mathcal I$} \rangle.
 \]
-spanned by leading terms of elements of $\mathscr I$ is
+spanned by leading terms of elements of $\mathcal I$ is
 again an ideal of $\FF_\XX$.
 \end{lemma}
 
 \begin{proof}
-By construction $\lead{\mathscr I}$ is a subspace of $\FF_\XX$, so 
+By construction $\lead{\mathcal I}$ is a subspace of $\FF_\XX$, so 
 it suffices we prove it is an ideal. By multilinearity, it suffices
 to show it is stable under compositions with respect to tree
-monomials if at least one term is already in $\lead{\mathscr I}$.
+monomials if at least one term is already in $\lead{\mathcal I}$.
 To do this, note that if
-$T$ is the leading term of some $f\in\mathscr I$, then by
+$T$ is the leading term of some $f\in\mathcal I$, then by
 Proposition~\ref{prop:repllead}, for any tree monomials
 $T_0,\ldots,T_{i-1},T_{i+1},\ldots,T_n$, the leading term
 of the composition 
-\[ \gamma_\pi(T_0;T_1,\ldots,T_{i-1},f,T_{i+1},\ldots,T_n)\in \mathscr I\]
+\[ \gamma_\pi(T_0;T_1,\ldots,T_{i-1},f,T_{i+1},\ldots,T_n)\in \mathcal I\]
 is precisely $\gamma_\pi(T_0;T_1,\ldots,T_{i-1},T,T_{i+1},\ldots,T_n)$,
-which proves this belongs to $\lead{\mathscr I}$.
+which proves this belongs to $\lead{\mathcal I}$.
 \end{proof}
 
 \begin{definition}
-Let $\mathscr I$ be an ideal of $\FF_\XX$. We say that a subset
-$\mathscr G$ of $\mathscr I$ is a \emph{Gr\"obner basis of $\mathscr I$}
+Let $\mathcal I$ be an ideal of $\FF_\XX$. We say that a subset
+$\mathcal G$ of $\mathcal I$ is a \emph{Gr\"obner basis of $\mathcal I$}
 (with respect to our fixed monomial order) if the set of leading monomials
-of $\mathscr G$ generate the ideal of leading terms of $\mathscr I$.
+of $\mathcal G$ generate the ideal of leading terms of $\mathcal I$.
 A Gr\"obner basis which is self-reduced is called reduced.
 \end{definition}
 
 \begin{lemma}
-Let $\mathscr I$ be an ideal and let $\mathscr G$ be a 
-Gr\"obner basis of $\mathscr I$. Then $\mathscr G$ 
-generates $\mathscr I$.  
+Let $\mathcal I$ be an ideal and let $\mathcal G$ be a 
+Gr\"obner basis of $\mathcal I$. Then $\mathcal G$ 
+generates $\mathcal I$.  
 \end{lemma}
 
 \begin{proof}
-Suppose that there is some $f\in \mathscr I$ that is not
-generated by $\mathscr G$, and let us pick one with the least 
-possible leading term. Since $\mathscr G$ generates the
-ideal of leading terms of $\mathscr I$, we can reduce
-the leading term of $f$ with respect to $\mathscr G$
-without modifying its coset in $\mathscr I$,
-and obtain an element that is generated by $\mathscr G$.
-But then $f$ itself is generated by $\mathscr G$,
+Suppose that there is some $f\in \mathcal I$ that is not
+generated by $\mathcal G$, and let us pick one with the least 
+possible leading term. Since $\mathcal G$ generates the
+ideal of leading terms of $\mathcal I$, we can reduce
+the leading term of $f$ with respect to $\mathcal G$
+without modifying its coset in $\mathcal I$,
+and obtain an element that is generated by $\mathcal G$.
+But then $f$ itself is generated by $\mathcal G$,
 which is a contradiction.
 \end{proof}
 
 
 \begin{proposition}
-A set $\mathscr G$ is a Gr\"obner basis if the cosets of monomials
+A set $\mathcal G$ is a Gr\"obner basis if the cosets of monomials
 reduced with respect to it form a basis of the quotient operad. 
 In this case, the result of long division of a polynomial by
-$\mathscr G$ is independent of the choices or the order in
+$\mathcal G$ is independent of the choices or the order in
  which we perform the reductions. 
 \end{proposition}
 
 \begin{proof}
 To begin, observe that 
 the cosets of monomials that are reduced with respect
-to $\mathscr G$ form a basis of the quotient operad precisely
-when every coset of $\mathscr I$ contains a unique element
-that is reduced with respect to $\mathscr G$. 
+to $\mathcal G$ form a basis of the quotient operad precisely
+when every coset of $\mathcal I$ contains a unique element
+that is reduced with respect to $\mathcal G$. 
 
 By the long division algorithm, it follows that every coset
-contains at least one element that is reduced with respect to $\mathscr G$,
+contains at least one element that is reduced with respect to $\mathcal G$,
 so it suffices we prove that this element is unique if and only if
-$\mathscr G$ is a Gr\"obner basis.
+$\mathcal G$ is a Gr\"obner basis.
 
-Thus, first suppose that $\mathscr G$ is a Gr\"obner basis, but that
-there exist two $\mathscr G$-reduced monomials that have the same
-coset modulo $\mathscr I$. This means there exists a $\mathscr G$-reduced 
-polynomial in $\mathscr I$, which means that its leading term is
-$\mathscr G$-reduced, which is impossible.
+Thus, first suppose that $\mathcal G$ is a Gr\"obner basis, but that
+there exist two $\mathcal G$-reduced monomials that have the same
+coset modulo $\mathcal I$. This means there exists a $\mathcal G$-reduced 
+polynomial in $\mathcal I$, which means that its leading term is
+$\mathcal G$-reduced, which is impossible.
 
-Conversely, Suppose that $\mathscr G$ is not a Gröbner basis. It follows
-that there is an element $f\in\mathscr I$ which is reduced with respect to 
-$\mathscr G$. If we let $\overline{f}$ be the result of the long division of
-$f$ by $\mathscr G$, we see we obtain a non-trivial linear combination of reduced 
-monomials belonging to $\mathscr I$, so that there is not a unique
+Conversely, Suppose that $\mathcal G$ is not a Gröbner basis. It follows
+that there is an element $f\in\mathcal I$ which is reduced with respect to 
+$\mathcal G$. If we let $\overline{f}$ be the result of the long division of
+$f$ by $\mathcal G$, we see we obtain a non-trivial linear combination of reduced 
+monomials belonging to $\mathcal I$, so that there is not a unique
 reduced representative for the zero coset.
 
-Finally, suppose that for some $f$, two different choices of order of reductions yield two different outputs. Then, then there exist a coset $f + I$ contains two different elements that are reduced with respect to $\mathscr G$, hence reduced monomials are linearly dependent, a contradiction.
+Finally, suppose that for some $f$, two different choices of order of reductions yield two different outputs. Then, then there exist a coset $f + I$ contains two different elements that are reduced with respect to $\mathcal G$, hence reduced monomials are linearly dependent, a contradiction.
 \end{proof}
 
 \begin{theorem}
 Every ideal admits a unique reduced Gr\"obner basis.
 \end{theorem}
 
-\begin{proof}
 \hacer{Write proof.}
+
+\begin{proof}
 \end{proof}
-\pagebreak
+
+\subsection{Exercises}
+
+\begin{question} 
+Translate the self-reduction algorithm into prose.
+\end{question}
+
+\begin{question}\label{ex:self-reduction}
+Prove Proposition~\ref{lemma:self-reduction}.
+\end{question}
+\newpage
 
 \appendix
 
@@ -3836,7 +4095,59 @@ Every ideal admits a unique reduced Gr\"obner basis.
 
 \hacer{Write an appendix about algebras over operads.}
 
+\section{Gaussian Elimination}
 
+\begin{algorithm}
+\caption{Linear self-reduction algorithm}\label{algo:gauss}
+\begin{adjustwidth}{2 cm}{2 cm}
+\begin{algorithmic}[1]
+\Procedure{LongDiv}{$f$,$V$}
+\If {$f=0$} \Return $f$
+	 \Else
+	\State $V \gets \textsc{LinSelfRed}(V)$
+	\While {$\{ v\in V : \lead{v} \text{ divides } \lead{f}\}\neq \varnothing$}
+	\State $V'\gets \{ v\in V : \lead{v} \text{ divides } \lead{f}\}$
+	\State $s\gets \textsc{Least}(V')$   
+	\State $f'\gets \textsc{Reduce}(f,s)$ 
+	\State $f\gets \textsc{LongDiv}(f',V)$  
+		\EndWhile
+	\State \Return $\lead{f}+ \textsc{LongDiv}(f-\lead{f},V)$
+	\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{adjustwidth}
+\end{algorithm}
+
+
+%function ToReducedRowEchelonForm(Matrix M) is
+%    lead := 0
+%    rowCount := the number of rows in M
+%    columnCount := the number of columns in M
+%    for 0 ≤ r < rowCount do
+%        if columnCount ≤ lead then
+%            stop function
+%        end if
+%        i = r
+%        while M[i, lead] = 0 do
+%            i = i + 1
+%            if rowCount = i then
+%                i = r
+%                lead = lead + 1
+%                if columnCount = lead then
+%                    stop function
+%                end if
+%            end if
+%        end while
+%        if i ≠ r then Swap rows i and r
+%        Divide row r by M[r, lead]
+%        for 0 ≤ i < rowCount do
+%            if i ≠ r do
+%                Subtract M[i, lead] multiplied by row r from row i
+%            end if
+%        end for
+%        lead = lead + 1
+%    end for
+%end function
 % 
 %\subsection{Algebras over operads}
 %Operads are important not in and of themselves 
