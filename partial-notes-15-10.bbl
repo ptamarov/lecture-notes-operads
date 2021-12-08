@@ -1,0 +1,50 @@
+% \bib, bibdiv, biblist are defined by the amsrefs package.
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{holstein2021categorical}{misc}{
+      author={Holstein, Julian},
+      author={Lazarev, Andrey},
+       title={Categorical {K}oszul duality},
+        date={2021},
+}
+
+\bib{KellerKoszul2003}{article}{
+      author={Keller, Bernhard},
+       title={Koszul duality and coderived categories (after {K}.
+  {L}ef\`evre)},
+        date={2003},
+       pages={6},
+      eprint={https://webusers.imj-prg.fr/~bernhard.keller/publ/kdc.pdf},
+}
+
+\bib{MO329}{misc}{
+      author={Nikokoshev, Ilya},
+       title={What is {K}oszul duality?},
+         how={MathOverflow},
+         url={https://mathoverflow.net/q/329},
+        note={https://mathoverflow.net/q/329 (version: 2009-11-27)},
+}
+
+\bib{Positselski2011}{article}{
+      author={Positselski, Leonid},
+       title={Two kinds of derived categories, {K}oszul duality, and
+  comodule-contramodule correspondence},
+        date={2011},
+        ISSN={1947-6221},
+     journal={Memoirs of the American Mathematical Society},
+      volume={212},
+      number={996},
+       pages={0–0},
+         url={http://dx.doi.org/10.1090/S0065-9266-2010-00631-8},
+}
+
+\bib{Sinha2010}{article}{
+      author={Sinha, Dev},
+       title={Koszul duality in algebraic topology: an historical perspective},
+        date={2010},
+      eprint={https://arxiv.org/abs/1001.2032},
+}
+
+\end{biblist}
+\end{bibdiv}
