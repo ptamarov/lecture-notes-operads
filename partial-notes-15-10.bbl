@@ -39,6 +39,17 @@
          url={http://dx.doi.org/10.1090/S0065-9266-2010-00631-8},
 }
 
+\bib{Priddy1970}{article}{
+      author={Priddy, Stewart~B.},
+       title={Koszul resolutions},
+        date={1970},
+     journal={Transactions of the American Mathematical Society},
+      volume={152},
+      number={1},
+       pages={39\ndash 60},
+         url={https://doi.org/10.1090/s0002-9947-1970-0265437-8},
+}
+
 \bib{Sinha2010}{article}{
       author={Sinha, Dev},
        title={Koszul duality in algebraic topology: an historical perspective},
