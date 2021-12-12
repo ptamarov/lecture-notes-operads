@@ -38,12 +38,12 @@
 \contentsline {subsection}{\numberline {8.4}Exercises}{63}{subsection.8.4}%
 \contentsline {section}{\numberline {9}Computing Gr\"obner bases}{65}{section.9}%
 \contentsline {subsection}{\numberline {9.1}$S$-polynomials}{65}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Diamond Lemma}{65}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Buchberger Algorithm}{65}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Exercises}{65}{subsection.9.4}%
-\contentsline {section}{\numberline {A}Algebras over operads}{66}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Algebras over operads}{66}{subsection.A.1}%
-\contentsline {section}{\numberline {B}Classical theory}{67}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{67}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{67}{subsection.B.2}%
+\contentsline {subsection}{\numberline {9.2}Diamond Lemma}{66}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Buchberger Algorithm}{67}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Exercises}{67}{subsection.9.4}%
+\contentsline {section}{\numberline {A}Algebras over operads}{68}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Algebras over operads}{68}{subsection.A.1}%
+\contentsline {section}{\numberline {B}Classical theory}{69}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{69}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{69}{subsection.B.2}%
 \contentsfinish 
