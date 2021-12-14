@@ -96,8 +96,77 @@
 	\end{pgfonlayer}
 \end{tikzpicture}}
 
+\newcommand{\smallfork}[7]{
+\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$#3$};
+		\node [style=inner] (2) at (-1, 1) {$#1$};
+		\node [style=inner] (9) at (1, 1) {$#2$};
+		\node [style=leaf] (10) at (0, -1.25) {};
+		\node [style=leaf,anchor = south east] (11) at (-1.5, 2) {$#4$};
+		\node [style=leaf,anchor = south] (12) at (-0.5, 2) {$#5$};
+		\node [style=leaf, anchor = south] (13) at (0.5, 2) {$#6$};
+		\node [style=leaf, anchor = south west] (14) at (1.5, 2) {$#7$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+		\draw (0.center) to (9.center);
+		\draw (0.center) to (10.center);
+		\draw (2.center) to (11.center);
+		\draw (12.center) to (2.center);
+		\draw (13.center) to (9.center);
+		\draw (9.center) to (14.center);
+	\end{pgfonlayer}
+\end{tikzpicture}}
+
 \newcommand{\leftc}[5]{
 	\begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (-1, 1) {$#1$};
+		\node[style = inner] (1) at (0, 0) {$#2$};
+		\node[style = leaf] (2) at (1, 1) {$#5$};
+		\node[style = leaf] (3) at (0, 2) {$#4$};
+		\node[style = leaf] (4) at (-2, 2) {$#3$};
+		\node (5) at (0, -1) {};
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (5.center) to (1);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+\newcommand{\smallleftc}[5]{
+	\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (-1, 1) {$#1$};
+		\node[style = inner] (1) at (0, 0) {$#2$};
+		\node[style = leaf] (2) at (1, 1) {$#5$};
+		\node[style = leaf] (3) at (0, 2) {$#4$};
+		\node[style = leaf] (4) at (-2, 2) {$#3$};
+		\node (5) at (0, -1) {};
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (5.center) to (1);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+\newcommand{\inlineleftc}[5]{
+	\begin{tikzpicture}[scale = .50, baseline= -10 mm]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
 \tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
 \begin{pgfonlayer}{main}
@@ -144,6 +213,85 @@
 \end{tikzpicture}
 }
 
+\newcommand{\smallLeftc}[7]{
+	\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (-1, 1) {$#2$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = leaf] (2) at (1, 1) {$#7$};
+		\node[style = leaf] (3) at (0, 2) {$#6$};
+		\node[style = inner] (4) at (-2, 2) {$#3$};
+		\node[style = leaf] (5) at (-3, 3) {$#4$};
+		\node[style = leaf] (6) at (-1, 3) {$#5$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (7.center) to (1);
+		\draw (4.center) to (6);
+		\draw (4.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+\newcommand{\Rightc}[7]{
+	\begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (1, 1) {$#2$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = leaf] (2) at (-1, 1) {$#4$};
+		\node[style = leaf] (3) at (0, 2) {$#5$};
+		\node[style = inner] (4) at (2, 2) {$#3$};
+		\node[style = leaf] (5) at (3, 3) {$#7$};
+		\node[style = leaf] (6) at (1, 3) {$#6$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (7.center) to (1);
+		\draw (4.center) to (6);
+		\draw (4.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+
+\newcommand{\smallRightc}[7]{
+	\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (1, 1) {$#2$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = leaf] (2) at (-1, 1) {$#4$};
+		\node[style = leaf] (3) at (0, 2) {$#5$};
+		\node[style = inner] (4) at (2, 2) {$#3$};
+		\node[style = leaf] (5) at (3, 3) {$#7$};
+		\node[style = leaf] (6) at (1, 3) {$#6$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (7.center) to (1);
+		\draw (4.center) to (6);
+		\draw (4.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
 \newcommand{\Leftr}[7]{
 	\begin{tikzpicture}[scale = .75]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
@@ -171,8 +319,107 @@
 }
 
 
+\newcommand{\smallLeftr}[7]{
+	\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = inner] (0) at (-1, 1) {$#2$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = leaf] (2) at (1, 1) {$#7$};
+		\node[style = inner] (3) at (0, 2) {$#3$};
+		\node[style = leaf] (4) at (-2, 2) {$#6$};
+		\node[style = leaf] (5) at (-1, 3) {$#4$};
+		\node[style = leaf] (6) at (1, 3) {$#5$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (0);
+		\draw (4.center) to (0);
+		\draw (7.center) to (1);
+		\draw (3.center) to (6);
+		\draw (3.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+\newcommand{\Rightl}[7]{
+	\begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = leaf] (0) at (-1, 1) {$#4$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = inner] (2) at (1, 1) {$#2$};
+		\node[style = inner] (3) at (0, 2) {$#3$};
+		\node[style = leaf] (4) at (2, 2) {$#7$};
+		\node[style = leaf] (5) at (-1, 3) {$#5$};
+		\node[style = leaf] (6) at (1, 3) {$#6$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (2);
+		\draw (4.center) to (2);
+		\draw (7.center) to (1);
+		\draw (3.center) to (6);
+		\draw (3.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+\newcommand{\smallRightl}[7]{
+	\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = leaf] (0) at (-1, 1) {$#4$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = inner] (2) at (1, 1) {$#2$};
+		\node[style = inner] (3) at (0, 2) {$#3$};
+		\node[style = leaf] (4) at (2, 2) {$#7$};
+		\node[style = leaf] (5) at (-1, 3) {$#5$};
+		\node[style = leaf] (6) at (1, 3) {$#6$};
+		\node (7) at (0, -1) {}; %theRoot
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (2);
+		\draw (4.center) to (2);
+		\draw (7.center) to (1);
+		\draw (3.center) to (6);
+		\draw (3.center) to (5);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
 \newcommand{\rightc}[5]{
 \begin{tikzpicture}[scale = .75]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = leaf] (0) at (-1, 1) {$#3$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = inner] (2) at (1, 1) {$#2$};
+		\node[style = leaf] (3) at (0, 2) {$#4$};
+		\node[style = leaf] (4) at (2, 2) {$#5$};
+		\node (5) at (0, -1) {};
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (3.center) to (2);
+		\draw (4.center) to (2);
+		\draw (5.center) to (1);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+\newcommand{\smallrightc}[5]{
+\begin{tikzpicture}[scale = .5]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
 \tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
 \begin{pgfonlayer}{main}
@@ -4046,6 +4293,11 @@ so let $f'$ be the result of long division of $f-\lead{f}$ by $\mathcal V$, and 
 The following is what this algorithm looks like in pseudo-code:
 \begin{algorithm}
 \caption{Long division algorithm}\label{euclid}
+\textsc{Input:} A polynomial $f$ and a finite set $\mathcal V$
+of tree polynomials.
+
+\textsc{Output:} A $\mathcal V$-reduced polynomial $\overline{f}$ with $f-\overline{f} \in (\mathcal V)$ and $\lead{\overline{f}}
+\preceq \lead{f}$.
 \begin{adjustwidth}{1 cm}{1 cm}
 \begin{algorithmic}[1]
 \Procedure{LongDivision}{\texttt{TreePolynomial},\texttt{TreePolynomials}}
@@ -4141,7 +4393,12 @@ and Gr\"obner bases are designed to regain this control.
  
  \begin{algorithm}
 \caption{Self-reduction algorithm}\label{algo:self-reduce}
-\begin{adjustwidth}{2 cm}{2 cm}
+\textsc{Input:} A finite set of polynomials $\mathcal V$ in a
+free shuffle operad.
+
+\textsc{Output:} A finite self-reduced set of polynomials 
+generating the same ideal as $\mathcal V$.
+\begin{adjustwidth}{1 cm}{2 cm}
 \begin{algorithmic}[1]
 \Procedure{SelfReduce}{$\texttt{Polynomials}$}
 	\State $\texttt{ToReduce} \gets \textsc{LinearSelfReduce}(\texttt{Polynomials})$
@@ -4320,6 +4577,36 @@ lecture, we will learn how to begin with any generating
 set of $\II$, and complete it to a (possibly infinite)
 reduced Gr\"obnber basis.
  
+Let us conclude this lecture with a perhaps technical
+lemma that describes how the insertion operation
+works when it is iterated. It will be useful when we
+give a proof of one of the handful of important results 
+in these lectures.
+
+\begin{lemma}\label{lemma:repl}
+Let us consider the situation where $T,T_1,T_1'$ and $T_2$ 
+are tree monomials, and that $T_1$ divides $T$ and
+$T_2$ divides $T_1'$. Assume that $T_1'$ and $T_1$ have
+the same arity, so that we may put $T_3 = \repl{T_1}{T}{T_1'}$.
+Then $T_2$ divides $T_3$ and, as operations on tree monomials,
+we have that
+\[ 
+\repl{T_1}{T}{\repl{T_2}{T_1'}{-}}= 
+ 	\repl{T_2}{T_3}{-}.
+\]
+In particular, if $T_1=T_1'$ so that $T_3 = T$, this
+simplifies to 
+\[ 
+\repl{T_1}{T}{\repl{T_2}{T_1}{-}}= 
+ 	\repl{T_2}{T}{-}.
+\]
+\end{lemma}
+
+We leave the proof as Exercise~\ref{ex:repl}, and
+strongly suggest the reader to draw a picture, which
+may well be enough to convince themselves of the
+validity of the lemma. 
+
 \subsection{Exercises}
 
 \begin{question}
@@ -4336,11 +4623,14 @@ Translate the self-reduction algorithm into prose.
 and prove Proposition~\ref{lemma:self-reduction}.
 \end{question}
 
+\begin{question}\label{ex:repl}
+Give a proof of Lemma~\ref{lemma:repl}.
+\end{question}
 \vfill
 
 \hacer{More exercises for Section 8} 
 
-\afterpage{\blankpage}
+%\afterpage{\blankpage}
 \newpage
 
 \section{Computing Gr\"obner bases}
@@ -4390,22 +4680,43 @@ S_T(g_1,g_2) =
 is called the $S$-polynomial of this overlapping ambiguity.
 \end{definition}
 
-\hacer{Example of associative operad}
+Revisiting the example above, we notice that the
+polynomial (non-symmetric, in this case), has an overlapping
+ambiguity with \emph{itself} ---a feature that already exists
+in the world of non-commutative associative algebras--- and
+that the resulting polynomial is reduced with respect to
+its leading term. Thus, this overlapping ambiguity is
+detecting a ``hidden'' leading term in the ideal of
+leading terms of this relation. 
+
+As a second example, we could have considered the usual
+associative operad, where the plus sign above becomes a
+minus. In this case, one can check that the resulting 
+$S$-polynomial is zero: the computation ends with two
+right combs cancelling each other. We will see later
+that this has very important implications for the associative
+operad: it shows we obtain a quadratic Gr\"obner basis,
+and hence that this operad is \emph{Koszul}.
+For the moment, let us consider a useful
+definition.
 
 \begin{definition} Let $\II$ be an ideal generated by some
 set $\GG$, and for an element $f\in \II$, let us consider
 a representation as a linear combination of insertions of
 elements of $\GG$, of the form
 \[
-f = \sum_{i\in I} \lambda_i \repl{S_i}{T_i}{g_i}
+f = \sum_{i\in I} \lambda_i \repl{T_i}{S_i}{g_i}
 \]
 where $T_i = \leadm{g_i}$ for all $i\in I$. We call the element
 $S = \max \{ S_i : i \in I\}$ the parameter of this representation.
 \end{definition}
 
 Note that any $S$-polynomial $S_T(g_1,g_2)$ admits a representation
-of parameter $T$ (although this term will cancel!). We say a 
-representation of $S_T(g_1,g_2)$ is non-trivial if its parameter
+of parameter $T$ (although the two obvious terms carrying
+where this tree monomial appears will cancel): the parameter
+of a representation of $f$ need not coincide with the
+leading term of $f$. We say a representation of an
+$S$-polynomial $S_T(g_1,g_2)$ is non-trivial if its parameter
 is smaller than $T$.
 
 \subsection{Diamond Lemma}
@@ -4427,7 +4738,8 @@ parameter $\leadm{f}$.
 \begin{proof}
 The implications $(4)\Longrightarrow (1)\Longrightarrow (2)
 \Longrightarrow (3)$ are straightforward, and we leave them
-as a guided exercise. The hardest part of the proof is
+as a guided Exercise~\ref{ex:DiamondLemma}.
+The hardest part of the proof is
 showing that (3) implies (4), which we go through in
 detail here. To prove it, let us assume that (3) holds, but
 that (4) does not. Then, there exists some $f\in\II$
@@ -4458,14 +4770,225 @@ If their coefficients sum to zero, then either we get a
 representation with smaller parameter if $k=2$, or with
 smaller $k$ in general, which cannot be.
 
-\emph{Case 2:} the divisors are disjoint. 
-\emph{Case 3:} the divisors are disjoint.
-\hacer{Write (3) implies (4).}
+\emph{Case 2:} the divisors are disjoint.  This situation
+is similarly simple to the first case. In this case, we have
+a well-defined bilinear operation of ``double insertion''
+\[
+\repl{T_k,T_{k-1}}{T}{-,-} \FF_\XX(\ari{T_{k-1}})\otimes \FF_\XX(\ari{T_{k}}) 
+\longrightarrow \FF_\XX(\ari{T})
+\]
+which replaces occurrences of $T_k$ and $T_{k-1}$ in 
+$T$ simultaneously.
+Let us write $g_k  = \lead{g_k} + g_k'$, and similarly
+with the other, and let us note that the following chain of
+equalities hold:
+\begin{align*}
+\repl{T_k}{T}{g_k} 
+	&= \repl{T_k,T_{k-1}}{T}{g_k,\lead{g_{k-1}}}   \\
+	&= \repl{T_k,T_{k-1}}{T}{g_k,g_{k-1}-g_{k-1}'}	\\
+		&=\repl{T_k,T_{k-1}}{T}{g_k,g_{k-1}}	- \repl{T_k,T_{k-1}}{T}{g_k,g_{k-1}'}	\\
+		&=\repl{T_k,T_{k-1}}{T}{\lead{g_k}+g_k',g_{k-1}}	- \repl{T_k,T_{k-1}}{T}{g_k,g_{k-1}'}	\\
+			&=\repl{T_k,T_{k-1}}{T}{\lead{g_k},g_{k-1}}
+			+\repl{T_k,T_{k-1}}{T}{g_k',g_{k-1}}
+				- \repl{T_k,T_{k-1}}{T}{g_k,g_{k-1}'}	\\
+		&=\repl{T_{k-1}}{T}{g_{k-1}}
+			+\repl{T_k,T_{k-1}}{T}{g_k',g_{k-1}}
+				- \repl{T_k,T_{k-1}}{T}{g_k,g_{k-1}'}.
+\end{align*}
+Note that this is saying there is an ``obvious'' relation
+between the two possible replacements we can make into $T$,
+but otherwise is not saying anything more profound. The takeaway
+is that we are able to replace the sum 
+$\lambda_{k-1}\repl{T_{k-1}}{T}{g_{k-1}} + 
+\lambda_k\repl{T_{k}}{T}{g_{k}} $ with the sum
+\[ 
+(\lambda_k + \lambda_{k-1})\repl{T_{k-1}}{T}{g_{k-1}} + 	
+\lambda_{k}(\repl{T_k,T_{k-1}}{T}{g_k',g_{k-1}}
+				- \repl{T_k,T_{k-1}}{T}{g_k,g_{k-1}'})
+\]
+where the last term can be expanded, by using Lemma~\ref{lemma:repl}
+and Proposition~\ref{prop:repllead}, into sums of terms
+with leading monomial smaller than $T$. Thus, either
+the parameter of our representation decreases, which
+happens if $k=2$ and the coefficients add up to zero,
+or the parameter remains unmodified but $k$ decreases.
+
+\emph{Case 3:} the divisors overlap. This is perhaps the
+most computationally heavy of the three cases. Let us
+assume that $T_k$ and $T_{k-1}$ have a small common
+multiple $T'$, which of course is a divisor of $T$.
+Using Lemma~\ref{lemma:repl}, we can write
+for $i\in \{k-1,k\}$:
+\[
+\lambda_i \repl{T_i}{T}{g_i}  = 
+\lambda_i \repl{T'}{T}{\repl{T_i}{T}{g_i}}
+\]
+and with this write the sum $\lambda_{k-1}\repl{T_{k-1}}{T}{g_{k-1}} +  \lambda_k\repl{T_{k}}{T}{g_{k}}$ as follows
+\begin{align*}
+ {} &= 
+\repl{T'}{T}{\lambda_{k-1}\repl{T_{k-1}}{T'}{g_{k-1}} + 
+  \lambda_k (\repl{T_{k-1}}{T'}{g_{k-1}} - S_{T'}(g_{k-1},g_k))} \\
+  &=
+  	\repl{T'}{T}{(\lambda_{k-1}+\lambda_k)
+  		\repl{T_{k-1}}{T'}{g_{k-1}} 
+  -   \lambda_k S_{T'}(g_{k-1},g_k)} \\
+  &=
+  	(\lambda_{k-1}+\lambda_k)
+  		\repl{T_{k-1}}{T}{g_{k-1}} 
+  -   \lambda_k \repl{T'}{T}{S_{T'}(g_{k-1},g_k)}.
+\end{align*}
+We have assumed that all $S$-polynomials admit at least
+one non-trivial representation, so we conclude that either
+we obtain a representation with a smaller parameter
+(which happens if $k=2$ and the coefficients cancel)
+or with the same parameter, but smaller $k$. To see
+this, the reader should again make use of 
+Lemma~\ref{lemma:repl}
+and Proposition~\ref{prop:repllead} (Exercise~\ref{ex:fillin}).
 \end{proof}
-\subsection{Buchberger Algorithm}
+
+As an example, let us consider the shuffle operad 
+$\mathsf{Lie}^\f$, given by a single binary generator
+and the Jacobi relation. Choosing the \texttt{grapathpermlex}
+that picks up the leading term as follows:
+\[
+\smallleftc{}{}{1}{2}{3}  \mathsymbol{1}{\leadsto}
+	 \smallleftc{}{}{1}{3}{2}   \mathsymbol{1}{+} \smallrightc{}{}{1}{2}{3} 
+\]
+and we again
+obtain the following left comb with four leaves as an overlapping ambiguity:
+\[
+{\smallLeftc{}{}{}{1}{2}{3}{4}}
+\]
+The resulting $S$-polynomial is the following sum of tree monomials:
+\[ \smallLeftc{}{}{}{1}{3}{2}{4} \mathsymbol{1}{+} \smallLeftr{}{}{}{2}{3}{1}{4}
+\mathsymbol{1}{-}  \smallLeftc{}{}{}{1}{2}{4}{3} \mathsymbol{1}{-} \smallfork{}{}{}{1}{2}{3}{4} \mathsymbol{1}{.}\]
+Instead of continuing to rewrite all four terms (all of them
+are divisible by our choice of leading term) which
+will create a total of eight terms, let us do this with the
+first two summands first, and then with the last two summands. We will
+see that the end results are the same, which means that this $S$-polynomial
+rewrites to zero through the Jacobi identity. The first two terms
+are divisible by occurrences of a divisor
+$\raisebox{-2.5 em}{\inlineleftc{}{}{1}{2}{4}}$
+ and applying the Jacobi identity we obtain the polynomial
+\[ \smallLeftc{}{}{}{1}{3}{4}{2} \mathsymbol{1}{+} 
+\smallfork{}{}{}{1}{3}{2}{4}  \mathsymbol{1}{+} 
+\smallfork{}{}{}{1}{4}{2}{3}  \mathsymbol{1}{+} 
+\smallRightl{}{}{}{1}{2}{3}{4}  \mathsymbol{1}{.} 
+\]
+We observe that the middle terms are reduced, and that only the last term and
+first term are not, since they have corresponding divisors
+\[
+\smallleftc{}{}{2}{3}{4}\mathsymbol{1}{,}\quad \smallleftc{}{}{1}{3}{4}
+\mathsymbol{1}{.}
+\]
+Applying the Jacobi identity one more time, we arrive at the six-term
+reduced polynomial
+\begin{align*}	
+\smallLeftc{}{}{}{1}{4}{3}{2} &\mathsymbol{1}{+} 
+\smallLeftr{}{}{}{3}{4}{1}{2}  \mathsymbol{1}{+} 
+\smallRightl{}{}{}{1}{2}{4}{3} \mathsymbol{1}{+} 
+\smallRightc{}{}{}{1}{2}{3}{4} \\
+&\mathsymbol{1}{+} \smallfork{}{}{}{1}{3}{2}{4}  \mathsymbol{1}{+}
+\smallfork{}{}{}{1}{4}{2}{3} 
+ \mathsymbol{1}{.}
+ \end{align*}
+ 
+We leave it as Exercise~\ref{ex:SpolyLie} to carry out the
+reduction algorithm on the other two terms (the ones carrying
+minus signs): if all goes well, the reader will arrive at the same
+six term reduced polynomial as the one above, thus confirming
+that the Jacobi identity does provide us with a one element
+Gr\"obner basis for $\mathsf{Lie}^\f$. We will see later
+that this guarantees that our presentation of $\mathsf{Com}^\f$
+is also a Gr\"obner basis, but for the reverse order.
+
+\subsection{Buchberger's Algorithm}
+
+The Diamond Lemma gives us a recipe to (attempt to) fix any 
+generating set to a Gr\"obner basis by uncovering hidden
+leading terms through $S$-polynomials: borrowing terminology
+from the original theory for commutative rings, we call it
+the Buchberger Algorithm. We present it here in the form
+of pseudo-code, and remark that the algorithm may not
+terminate (as some ideals may admite infinite reduced 
+Gr\"obner bases for certain choices of monomial orders).
+
+ \begin{algorithm}
+\caption{Buchberger's Algorithm}\label{algo:self-reduce}
+\textsc{Input:} a set of generators $\mathcal V$ for an ideal $\II$
+in a free shuffle operad.
+
+\textsc{Output:} the reduced Gr\"obner basis of $\II$,
+if it is finite.
+
+\begin{adjustwidth}{0 cm}{2 cm}
+\begin{algorithmic}[1]
+\Procedure{BuchbergerAlg}{$\texttt{Polynomials}$}
+	\State $\texttt{newSPolynomials} \gets \texttt{True}$
+	\State $\texttt{ToComplete} \gets \texttt{Polynomials}$
+	\While {$\texttt{newSPolynomials}$} 
+		\State $\texttt{ToComplete} \gets 
+					\textsc{SelfReduce}(\texttt{ToComplete})$
+		\State $\texttt{ToComplete} 
+					\gets \textsc{Sort}(\texttt{ToComplete},
+								\texttt{grapathpermlex})$
+		\State $\texttt{SPolynomials} \gets \varnothing$
+		\State $\texttt{newSPolynomials} \gets \texttt{False}$
+		\For {$g_1,g_2 \in \texttt{ToComplete} $}
+			\State $\texttt{LocalOverlap}\gets
+			 \textsc{Overlaps}(g_1,g_2)$
+			 \State $\texttt{DoneOverlaps} \gets \varnothing$
+			\While {$\texttt{LocalOverlaps}\neq \varnothing$}
+			\State $\texttt{Overlap} \gets 	
+				\texttt{LocalOverlaps}.\textsc{Pop}()$
+			\State $\texttt{DoneOverlaps}.\textsc{Add}(\texttt{Overlap})$
+			\State $\texttt{LocalSPoly} \gets 
+				\textsc{SPoly}(g_1,g_2,\texttt{Overlap}) $
+			\State $\texttt{RemainderSPoly} \gets \textsc{Reduce}(
+			\texttt{LocalSPoly},\texttt{ToComplete})$
+			\If {$\texttt{RemainderSPoly}\notin \texttt{SPolynomials}$}
+				\State $\texttt{newSPolynomials} 
+					\gets \texttt{True}$
+				\State $\texttt{SPolynomials}.
+					\textsc{Add}(\texttt{RemainderSPoly})$
+				\EndIf
+				\EndWhile
+			\EndFor
+			\State  
+				$\texttt{ToComplete}.\textsc{Union}(\texttt{SPolynomials})$
+\EndWhile
+\State \Return $\texttt{ToComplete}$
+\EndProcedure
+\end{algorithmic}
+\end{adjustwidth}
+\end{algorithm}
 
 \subsection{Exercises}
+
+\begin{question}\label{ex:DiamondLemma}
+Prove the implications $(4)\Longrightarrow (1) \Longrightarrow
+(2)\Longrightarrow (3)$ in the Diamond Lemma.
+\end{question}
+
+\begin{question}\label{ex:fillin}
+Fill in the missing details in the proof the implicatoin
+$(3)\Longrightarrow (4)$ of the Diamond Lemma, which require
+the use of Lemma~\ref{lemma:repl}
+and Proposition~\ref{prop:repllead}. 
+\end{question}
+
+\begin{question}\label{ex:SpolyLie}
+Complete the reduction of the $S$-polynomial coming from the
+self-overlap of the Jacobi identity in the presentation of
+the operad $\mathsf{Lie}^\f$ with respect to the 
+\texttt{grapathpermlex} order of tree monomials.
+\end{question}
+
+
 \newpage
+
 \appendix
 
 \section{Algebras over operads}
