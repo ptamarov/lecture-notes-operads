@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {4.1}Weight gradings and presentations}{31}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Quadratic operads}{32}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Exercises}{34}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Koszul duality I}{37}{section.5}%
+\contentsline {section}{\numberline {5}Koszul duality I: quadratic duals}{37}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Differential graded sequences}{37}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}The Koszul dual}{39}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Exercises}{42}{subsection.5.3}%
@@ -41,9 +41,14 @@
 \contentsline {subsection}{\numberline {9.2}Diamond Lemma}{66}{subsection.9.2}%
 \contentsline {subsection}{\numberline {9.3}Buchberger's Algorithm}{70}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}Exercises}{71}{subsection.9.4}%
-\contentsline {section}{\numberline {A}Algebras over operads}{72}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Algebras over operads}{72}{subsection.A.1}%
-\contentsline {section}{\numberline {B}Classical theory}{73}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{73}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{73}{subsection.B.2}%
+\contentsline {section}{\numberline {10}Koszul duality II: bar and cobar constructions}{73}{section.10}%
+\contentsline {subsection}{\numberline {10.1}The bar construction of an operad}{73}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}The Koszul dual homology cooperad}{77}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Exercises}{77}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Koszul duality III: Koszul complexes}{79}{section.11}%
+\contentsline {section}{\numberline {A}Algebras over operads}{81}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Algebras over operads}{81}{subsection.A.1}%
+\contentsline {section}{\numberline {B}Classical theory}{82}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{82}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{82}{subsection.B.2}%
 \contentsfinish 

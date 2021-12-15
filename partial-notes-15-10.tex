@@ -121,6 +121,7 @@
 	\end{pgfonlayer}
 \end{tikzpicture}}
 
+
 \newcommand{\leftc}[5]{
 	\begin{tikzpicture}[scale = .75]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1pt,minimum size=5pt]
@@ -139,6 +140,41 @@
 		\draw (3.center) to (0);
 		\draw (4.center) to (0);
 		\draw (5.center) to (1);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+
+
+\newcommand{\smallb}[3]{
+	\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1 pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = leaf] (0) at (-1, 1) {$#2$};
+		\node[style = inner] (1) at (0, 0) {$#1$};
+		\node[style = leaf] (2) at (1, 1) {$#3$};
+		\node (5) at (0, -1) {};
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
+		\draw (2.center) to (1);
+		\draw (5.center) to (1);
+		\end{pgfonlayer}	
+\end{tikzpicture}
+}
+\newcommand{\hplus}{\mathsymbol{.5}{+}}
+\newcommand{\hotimes}{\mathsymbol{.5}{\otimes}}
+
+\newcommand{\stick}[1]{
+	\begin{tikzpicture}[scale = .50]
+\tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1 pt,minimum size=5pt]
+\tikzstyle{leaf}=[circle, draw=white, fill=white, inner sep=3 pt,minimum size=5 pt]
+\begin{pgfonlayer}{main}
+		\node[style = leaf] (0) at (0, 2) {$#1$};
+		\node[style = leaf] (1) at (0, 0) {};
+		\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1) to (0);
 		\end{pgfonlayer}	
 \end{tikzpicture}
 }
@@ -522,6 +558,8 @@
 \newcommand{\QQ}{\mathcal{Q}}
 \newcommand{\FF}{\mathcal{F}}
 \newcommand{\GG}{\mathcal G}
+\newcommand{\B}[1]{\mathsf{B}(#1)}
+\newcommand{\syz}[1]{\mathsf{s}(#1)}
 
 \newcommand{\f}{\mathsf{f}}
 \newcommand{\ari}{\operatorname{ar}}
@@ -915,7 +953,7 @@ to the theory of algebraic operads, starting with the
 elements of the theory, and progressing slowly towards
 more advanced themes, including (inhomogeneous)
 Koszul duality theory, Gr\"obner bases and higher
-structures. The course  will consists of approximately
+structures. The course will consist of approximately
 twelve lectures, along with extra talks by
 willing participants, with the goal of introducing extra
 material to the course, and making them more
@@ -2749,15 +2787,11 @@ of algebras?
 \afterpage{\blankpage}
 \newpage
 
-
-
- \section{Koszul duality I}
+\section{Koszul duality I: quadratic duals}
 \textbf{Goals.}
 Give the definition of the Koszul dual
 operad of a quadratic operad, and then compute
-some Koszul duals. Give the definition of the
-Koszul complexes associated to a quadratic operad,
-and define Koszul operads.
+some Koszul duals.
 
 \subsection{Differential graded sequences}
 
@@ -4986,7 +5020,263 @@ the operad $\mathsf{Lie}^\f$ with respect to the
 \texttt{grapathpermlex} order of tree monomials.
 \end{question}
 
+\afterpage{\blankpage}
+\newpage
 
+\section{Koszul duality II: bar and cobar constructions}
+\textbf{Goals.} Define the bar (and cobar) construction,
+define the syzygy grading and give the first definition
+of what it means for an operad to be Koszul. 
+
+\subsection{The bar construction of an operad}
+
+We have defines a functor on quadratic data $(\XX,\RR) \longmapsto 
+(\XX^\vee,\RR^\perp)$ that gives us the Koszul dual
+functor $\PP \longmapsto \PP^!$ on quadratic operads.
+Let us explain how one can ``promote'' this construction
+to a functor define on all operads, and how our more
+down-to-earth construction can be recovered from
+this. Let us begin with a useful notion, which is
+to an operad what an coassociative coalgebra is to 
+an associative algebra.
+
+\begin{definition}
+A symmetric cooperad is a symmetric collection
+$\CC$ endowed with maps of collections
+$\Delta : \CC \longrightarrow \CC\circ_\Sigma\CC$
+and $\varepsilon: \CC\longrightarrow \kk$
+so that $\Delta$ is coassociative and counital
+for $\varepsilon$. A cooperad $\CC$ is augmented
+if there exists $\eta: \kk\longrightarrow \CC$
+such that $\varepsilon\eta = 1_\kk$. In this case,
+we write $\overline\CC$ for the cokernel of $\eta$.
+\end{definition}
+
+We warn the reader that, strictly speaking,
+we should have defined cooperads using a variant
+of the composition product $\circ_\Sigma$ that
+takes $\Sigma$-invariants instead of coinvariants.
+Since we will always work over a field of characteristic 
+zero, we will not worry about this. At any rate,
+unraveling the definitions, we see that
+a cooperad is a symmetric sequence endowed with
+equivariant decomposition maps of signature
+\[
+\Delta : \CC(n) \longrightarrow
+\bigoplus_{n_1+\cdots+n_k = n} \CC(k)\otimes \CC(n_1)\otimes\cdots \CC(n_k)
+\]
+that are coassociative. One can check (Exercise~\ref{ex:takeduals})
+that if $\CC$ is a cooperad then its arity-wise dual $\CC^*$ 
+is an operad, and that if $\PP$ is an arity-wise finite dimensional
+reduced operad then its arit-wise dual $\PP^*$ is a cooperad. 
+
+\begin{definition}
+The reduced and half-reduced decomposition maps of a cooperad $\CC$ are the
+maps $\overline{\Delta}$ and $\widetilde{\Delta}$
+ uniquely determined by the equation
+\[
+\Delta(\nu) =  \overline{\Delta}(\nu) +
+ (1;\nu) + (\nu ; 1,\ldots,1)=
+ \widetilde{\Delta}(\nu) +
+ (1;\nu)
+\] 
+for all arity-homogeneous $\nu\in\CC$. We say that
+$\CC$ is \emph{conilpotent} if for each $\nu\in\CC$
+the iteration of $\widetilde{\Delta}$ on $\nu$ defined by
+$
+\widetilde{\Delta}^n(\nu) = (1\circ \Delta)\widetilde{\Delta}^{n-1}(\nu)
+$
+stabilizes, in the sense that eventually all leaves are decorated by
+the identity element of $\CC$.
+\end{definition}
+
+
+
+As in the case of algebras and coalgebras, where for a vector space
+$V$ the underlying vector space of the free associative algebra
+$TV$ on $V$ and the free \emph{conilpotent} coassociative coalgebra
+coincide, the free \emph{conilpotent} cooperad over a symmetric
+sequence is an object we have meet before.
+
+\begin{definition}
+The free conilpotent cooperad over a symmetric sequence $\XX$,
+which we denote by $\FF_\XX^c$, has the same underlying symmetric
+sequence as the free operad $\FF_\XX$, and its decomposition maps
+are given by ``degrafing of trees''.
+\end{definition}
+
+We will look at the structure of the free conilpotent operad functor
+$\FF^c$ in more detail in Exercise~\ref{ex:cofree}. 
+As an example, if $x\in \XX(2)$ is a binary symmetric operation and 
+we consider the fork
+\[
+\mathsymbol{0.75}{T=}\smallfork{}{}{}{1}{4}{2}{3}\mathsymbol{0.75}{,}
+\]
+we have that $\overline{\Delta}(T)$ is equal to the sum
+\begin{align*}
+{}& 
+\smallleftc{}{}{}{}{} \hotimes \stick{1}  \hotimes \stick{4}
+	\hotimes\smallb{}{2}{3} \hplus \\
+	&
+	\smallrightc{}{}{}{}{} \hotimes 
+		\smallb{}{1}{4}   \hotimes \stick{2}
+	\hotimes \stick{3}\hplus\\
+	&\phantom{em}\smallb{}{}{} \hotimes 	
+	\smallb{}{1}{4} \hotimes \smallb{}{2}{3} \mathsymbol{0.5}{.}
+\end{align*}
+
+Although both $\FF_\XX$ and $\FF_\XX^c$ satisfy universal properties
+with respect to operad morphisms form $\XX$ into an operad or from
+a conilpotent cooperad into $\XX$, it will be convenient for us to 
+observe they both satisfy (and are uniquely characterized by) a
+second universal property. To state it, we need to consider a natural
+generalization of the ``Leibniz rule'' for derivatives in the case
+of (co)operads.
+
+\begin{definition}
+Let $\PP$ be an operad. A derivation of $\PP$ is a map
+$d : \PP\longrightarrow \PP$ with the property that
+for any arity-homogeneous elements $\mu_0,\mu_1,\ldots,\mu_k\in\PP$
+with $\ari{\mu_0} = k$, we have that 
+\[
+d\gamma(\mu_0;\mu_1,\ldots,\mu_k) = 
+	\sum_{i=0}^k \gamma(\mu_0;\mu_1,\ldots,d\mu_i,\ldots,\mu_k).
+	\]
+If $\PP$ is homologically graded, we require that $d$ is degree homogeneous,
+and then Koszul signs will appear in the display
+above.
+\end{definition}
+
+The following is the universal property we were after.
+
+\begin{lemma}
+Let $\XX$ be a symmetric collection. The free operad $\FF_\XX$
+on $\XX$ satisfies the following universal property: for every
+map of symmetric sequences $f: \XX\longrightarrow \PP$ where $\PP$
+is an operad, there exists a unique derivation $F: \FF_\XX
+\longrightarrow \PP$ which coincides with $f$ on $\FF_X^{(1)}=\XX$.
+Dually, the free conilpotent cooperad $\FF_\XX^c$ satisfies the following
+universal property: for every
+map of symmetric sequences $f: \CC\longrightarrow \XX$ where $\XX$
+is an conilpotent cooperad, there exists a unique coderivation $F: \CC
+\longrightarrow \FF_\XX^c$ which coincides with $f$ after
+projecting onto $\FF_X^{c,(1)}=\XX$.
+\end{lemma}
+
+We use it to define one of the most important functors we will 
+consider in this section, the \emph{bar construction}. To do this,
+let us begin with an augmented operad $\PP$, and let us form
+the free conilpotent cooperad $\FF_{s\overline{\PP}}^c$ on the
+na\"ive suspension $s\overline{\PP}$ of its augmentation ideal.
+This is for the moment a homologically graded cooperad, which we will
+make into a dg conilpotent cooperad as follows: the composition
+map of $\PP$ provides us with a map of symmetric collections
+\[
+\FF_{s\overline{\PP}}^c \longrightarrow s\overline\PP
+\]
+that is zero in all tree monomials of weight different from two, and
+on the latter, it is equal to the unique map
+\[
+\gamma' : s\overline\PP \circ_{(1)} s\overline{\PP} 
+ \longrightarrow s\overline{\PP}
+\]
+induced by the composition map of $\PP$. The universal property of $\FF^c$
+guarantees there is a unique coderivation 
+\[ d : \FF_{s\overline{\PP}}^c \longrightarrow \FF_{s\overline{\PP}}^c\]
+extending $\gamma'$. In Exercise~\ref{ex:zerosquare} we will see that
+$d^2 = 0$, but for the moment notice that $d$ has degree $-1$,
+as the map $\gamma'$ does: it erases one suspension sign from 
+a single tree monomial with exactly one internal edge whose
+two vertices are decorated by elements of $\overline{\PP}$,
+by composing them along this unique internal edge.
+
+\missingfigure{Picture of the map $\gamma'$}
+
+\begin{definition}
+Let $\PP$ be an augmented operad. 
+We call the dg cooperad $(\FF_{s\overline{\PP}}^c ,d)$
+the bar construction of $\PP$ and write it $\B{\PP}$.
+\end{definition}
+
+Let us begin exploring the shape of this gadget. For starters,
+since its underlying symmetric collection is equal to that of
+a free operad, whenever $\PP$ is reduced ---which is running
+assumption for us--- it has a basis of shuffle tree monomials
+decorated by elements of $\PP$ that are \emph{not} the unit;
+let us call these \emph{bar tree monomials}. A bar tree monomial
+has homological degree $d$ precisely when it has $d$ internal
+vertices, as the device of using $s\overline{\PP}$ instead of
+$\overline\PP$ means precisely that we are turning the canonical
+weight grading of $\FF$ into a homological grading. We will
+use the notation $|T|$ for this homological degree, as usual,
+and use the subscript notation $\B{\PP}_*$ when referring to
+this grading. Thus, for example,  $\B{\PP}_2$ consists of
+those bar tree monomials of homological degree two.
+
+\missingfigure{Picture of a bar tree monomial}
+
+At the same time, we will usually take $\PP$ to be \emph{itself}
+weight graded, so that bar tree monomials have a homological
+degree, which keeps track of how many elements of $\PP$ appear
+in a tree monomial, and a total weight, which simply is obtained
+by adding up the weights of the elements of $\PP$ in them.
+We will write $\lVert T\rVert$ for the weight of a tree monomial
+and use the notation $\B{\PP}_{(*)}$ when referring to this
+weight grading. Thus, for example, $\B{\PP}_{(2)}$ consists of
+those bar tree monomials of total weight degree two, which
+can then either have homological degree one and be decorated by
+one weight two element of $\PP$, or have homological degree two
+and be decorated by two weight one elements of $\PP$. Note
+that in general $|T|\leqslant \lVert T\rVert$.
+
+\begin{definition}
+The syzygy degree of a bar tree monomial $T$ is the difference
+$\lVert T\rVert - |T|$, and we write it $\syz{T}$. We call this
+the syzygy grading of $\B{\PP}$, and we use the superscript
+notation $\B{\PP}^*$ when referring this this cohomological
+grading: the differential $d$ has degree $+1$ in the syzygy
+grading.
+\end{definition}
+
+\missingfigure{Diagram with syzygy grading}
+
+\hacer{Look at some examples for Com.}
+
+The bar construction admits a dual construction for
+coaugmented conilpotent cooperads $\CC$, which we call
+the cobar construction and write $\Omega(\CC)$.
+
+\hacer{Twisting morphisms and the adjunction}
+
+\subsection{The Koszul dual homology cooperad}
+
+\subsection{Exercises}	
+\begin{question}\label{ex:cofree}
+\end{question}
+
+\begin{question}\label{ex:zerosquare}
+\end{question}
+
+\begin{question}\label{ex:conilpotent}
+Show that a cooperad $\CC$ is conilpotent if and only if
+there exists a symmetric sequence $\XX$ and an injective
+map of cooperads $\CC \longrightarrow \FF_\XX^c$. 
+\end{question}
+
+\begin{question}\label{ex:takeduals}
+Show that if $\CC$ is a cooperad then its arity-wise dual $\CC^*$ 
+is an operad, and that if $\PP$ is an arity-wise finite dimensional
+reduced operad then its arit-wise dual $\PP^*$ is a cooperad. 
+Make sure to explain why the second set of hypotheses are needed.
+\end{question}
+\afterpage{\blankpage}
+\newpage
+\section{Koszul duality III: Koszul complexes}
+\textbf{Goals.} Give the definition of the
+Koszul complexes associated to a quadratic operad,
+and give a second definition of Koszulness.
+
+\afterpage{\blankpage}
 \newpage
 
 \appendix
