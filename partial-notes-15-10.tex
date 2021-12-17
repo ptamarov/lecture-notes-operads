@@ -38,7 +38,7 @@
 
 \usepackage{booktabs}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
-
+\newcommand{\adjoint}{\;\substack{\longrightarrow \\[-0.6ex] \longleftarrow}\;}
 \newcommand{\lead}[1]{\operatorname{LT}(#1)}
 \newcommand{\leadm}[1]{\operatorname{LM}(#1)}
 \newcommand{\repl}[3]{\square_{#1}^{#2}(#3)}
@@ -165,6 +165,7 @@
 \newcommand{\hplus}{\mathsymbol{.5}{+}}
 \newcommand{\hotimes}{\mathsymbol{.5}{\otimes}}
 
+\newcommand{\Tw}{\mathsf{Tw}}
 \newcommand{\stick}[1]{
 	\begin{tikzpicture}[scale = .50]
 \tikzstyle{inner}=[circle,draw=black, fill=white, inner sep=1 pt,minimum size=5pt]
@@ -5155,6 +5156,7 @@ on $\XX$ satisfies the following universal property: for every
 map of symmetric sequences $f: \XX\longrightarrow \PP$ where $\PP$
 is an operad, there exists a unique derivation $F: \FF_\XX
 \longrightarrow \PP$ which coincides with $f$ on $\FF_X^{(1)}=\XX$.
+
 Dually, the free conilpotent cooperad $\FF_\XX^c$ satisfies the following
 universal property: for every
 map of symmetric sequences $f: \CC\longrightarrow \XX$ where $\XX$
@@ -5182,9 +5184,10 @@ on the latter, it is equal to the unique map
 \]
 induced by the composition map of $\PP$. The universal property of $\FF^c$
 guarantees there is a unique coderivation 
-\[ d : \FF_{s\overline{\PP}}^c \longrightarrow \FF_{s\overline{\PP}}^c\]
+\[ \partial : \FF_{s\overline{\PP}}^c 
+	\longrightarrow \FF_{s\overline{\PP}}^c\]
 extending $\gamma'$. In Exercise~\ref{ex:zerosquare} we will see that
-$d^2 = 0$, but for the moment notice that $d$ has degree $-1$,
+$\partial^2 = 0$, but for the moment notice that $\partial$ has degree $-1$,
 as the map $\gamma'$ does: it erases one suspension sign from 
 a single tree monomial with exactly one internal edge whose
 two vertices are decorated by elements of $\overline{\PP}$,
@@ -5194,7 +5197,7 @@ by composing them along this unique internal edge.
 
 \begin{definition}
 Let $\PP$ be an augmented operad. 
-We call the dg cooperad $(\FF_{s\overline{\PP}}^c ,d)$
+We call the dg cooperad $(\FF_{s\overline{\PP}}^c ,\partial)$
 the bar construction of $\PP$ and write it $\B{\PP}$.
 \end{definition}
 
@@ -5213,7 +5216,7 @@ and use the subscript notation $\B{\PP}_*$ when referring to
 this grading. Thus, for example,  $\B{\PP}_2$ consists of
 those bar tree monomials of homological degree two.
 
-\missingfigure{Picture of a bar tree monomial}
+\missingfigure{Picture of a bar tree monomial and its boundary}
 
 At the same time, we will usually take $\PP$ to be \emph{itself}
 weight graded, so that bar tree monomials have a homological
@@ -5244,14 +5247,69 @@ grading.
 
 The bar construction admits a dual construction for
 coaugmented conilpotent cooperads $\CC$, which we call
-the cobar construction and write $\Omega(\CC)$.
+the cobar construction and write $\Omega(\CC)$. These
+two functors for an \emph{adjoint pair} 
+\[
+\B{-} : \mathsf{Op} \adjoint
+   \mathsf{Coop}^c  : \Omega(-)
+\]
+from the category of augmented operads (which we may allow to be
+dg, see Exercise~\ref{ex:dgbar}) to the category of
+\emph{conilpotent} augmented dg cooperads. 
+Let us make this statement precise, and in the way discover
+a third construction that will be crucial for us:
 
+\begin{theorem}
+The bar and cobar functors form an adjoint pair
+$\B{-} : \mathsf{Op} \adjoint \mathsf{Coop}^c  : \Omega(-)$:
+for every operad $\PP$ and every conilpotent cooperad
+$\CC$, there exist a natural bijection
+\[
+\hom_{ \mathsf{Op}}(\CC,\B{\PP}) \longrightarrow
+ \hom_{\mathsf{Coop}^c }(\Omega(\CC),\PP).
+\]
+\end{theorem}
+
+\begin{proof}
+Let us consider a map $f : \CC \longrightarrow \B{\PP}$ of cooperads
+with $\CC$ conilpotent. Forgetting for the moment that the codomain
+has a differential, we notice that there exists a unique map of
+symmetric collections $\CC \longrightarrow s\overline{\PP}$
+that induces it. Equivalently, there is a degree $-1$ map
+$\tau : \CC \longrightarrow \PP$ such that $\varepsilon\tau = 0$
+and $\tau\eta = 0$ (this second equality follows since $\B{\PP}$ is
+augmented and connected)
+which induces $f$. The fact that $f$ commutes with the differential of
+$\B{\PP}$ is equivalent to the Maurer--Cartan equation
+\[
+\partial \tau + \frac{1}{2}[\tau,\tau] = 0.
+\]
+The degree $-1$ map $\tau : \CC\longrightarrow \PP$ in turn can
+be turned into a degree zero map $s^{-1}\overline{\CC}\longrightarrow
+\PP$ which, by the universal property of the free operad construction
+induces a map $\Omega(\CC) \longrightarrow \PP$, which in fact commutes with
+the differential, as one can check this is also equivalent
+to the equation above. We conclude that the two hom-sets in
+the statement of this theorem are in bijection with the set
+of symmetric sequence morphisms $\tau : \CC\longrightarrow \PP$
+that satisfy the above Maurer--Cartan equation and
+such that both $\tau\eta$ and $\varepsilon\tau$ vanish.
+\end{proof}
+
+\begin{definition}
+We write $\Tw(\CC,\PP)$ for the set of morphisms above,
+and call it the set of \emph{twisting morphisms} from
+$\CC$ to $\PP$.
+\end{definition}
 \hacer{Twisting morphisms and the adjunction}
 
 \subsection{The Koszul dual homology cooperad}
 
 \subsection{Exercises}	
 \begin{question}\label{ex:cofree}
+\end{question}
+
+\begin{question}\label{ex:dgbar}
 \end{question}
 
 \begin{question}\label{ex:zerosquare}

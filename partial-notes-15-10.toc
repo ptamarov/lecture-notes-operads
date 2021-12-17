@@ -43,12 +43,12 @@
 \contentsline {subsection}{\numberline {9.4}Exercises}{71}{subsection.9.4}%
 \contentsline {section}{\numberline {10}Koszul duality II: bar and cobar constructions}{73}{section.10}%
 \contentsline {subsection}{\numberline {10.1}The bar construction of an operad}{73}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}The Koszul dual homology cooperad}{77}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Exercises}{77}{subsection.10.3}%
-\contentsline {section}{\numberline {11}Koszul duality III: Koszul complexes}{79}{section.11}%
-\contentsline {section}{\numberline {A}Algebras over operads}{81}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Algebras over operads}{81}{subsection.A.1}%
-\contentsline {section}{\numberline {B}Classical theory}{82}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{82}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{82}{subsection.B.2}%
+\contentsline {subsection}{\numberline {10.2}The Koszul dual homology cooperad}{78}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Exercises}{78}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Koszul duality III: Koszul complexes}{80}{section.11}%
+\contentsline {section}{\numberline {A}Algebras over operads}{82}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Algebras over operads}{82}{subsection.A.1}%
+\contentsline {section}{\numberline {B}Classical theory}{83}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{83}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{83}{subsection.B.2}%
 \contentsfinish 
