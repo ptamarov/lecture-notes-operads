@@ -30,27 +30,29 @@
 \contentsline {subsection}{\numberline {7.1}Some reminders}{49}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Two statistics}{50}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Ordered shuffle operads}{52}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Exercises}{54}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Gr\"obner bases}{55}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Tree insertion}{55}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Long division}{57}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Existence and uniqueness}{61}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Exercises}{64}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Computing Gr\"obner bases}{65}{section.9}%
-\contentsline {subsection}{\numberline {9.1}$S$-polynomials}{65}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Diamond Lemma}{66}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Buchberger's Algorithm}{70}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Exercises}{71}{subsection.9.4}%
-\contentsline {section}{\numberline {10}Koszul duality II: bar and cobar constructions}{73}{section.10}%
-\contentsline {subsection}{\numberline {10.1}The bar construction}{73}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}The Koszul dual homology cooperad}{78}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Exercises}{80}{subsection.10.3}%
-\contentsline {section}{\numberline {11}Koszul duality III: Koszul complexes}{82}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Twisting morphisms and Koszul complexes}{82}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}The bar-cobar adjunction}{82}{subsection.11.2}%
-\contentsline {section}{\numberline {A}Algebras over operads}{85}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Algebras over operads}{85}{subsection.A.1}%
-\contentsline {section}{\numberline {B}Classical theory}{86}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{86}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{86}{subsection.B.2}%
+\contentsline {subsection}{\numberline {7.4}Exercises}{55}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Gr\"obner bases}{56}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Tree insertion}{56}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Long division}{58}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Existence and uniqueness}{62}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Exercises}{65}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Computing Gr\"obner bases}{66}{section.9}%
+\contentsline {subsection}{\numberline {9.1}$S$-polynomials}{66}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Diamond Lemma}{67}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Buchberger's Algorithm}{71}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Exercises}{72}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Bar and cobar constructions}{76}{section.10}%
+\contentsline {subsection}{\numberline {10.1}The bar construction}{76}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}The Koszul dual homology cooperad}{81}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Exercises}{83}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Koszul complexes}{86}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Twisting morphisms}{86}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Koszul complexes}{86}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Bar-cobar adjunction}{86}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Exercises}{87}{subsection.11.4}%
+\contentsline {section}{\numberline {A}Algebras over operads}{89}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Algebras over operads}{89}{subsection.A.1}%
+\contentsline {section}{\numberline {B}Classical theory}{90}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{90}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{90}{subsection.B.2}%
 \contentsfinish 

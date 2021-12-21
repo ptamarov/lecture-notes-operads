@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (3) at (0, 1) {};
+		\node [style=inner] (4) at (0, 2) {};
+		\node [style=inner] (5) at (-1.25, 2) {};
+		\node [style=inner] (6) at (1.25, 2) {};
+		\node [style=inner] (12) at (0, 0) {};
+		\node [style=inner] (13) at (-0.75, 3) {};
+		\node [style=inner] (14) at (0.75, 3) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (3.center) to (5.center);
+		\draw (4.center) to (3.center);
+		\draw (3.center) to (6.center);
+		\draw (3.center) to (12.center);
+		\draw (13.center) to (4.center);
+		\draw (14.center) to (4.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
