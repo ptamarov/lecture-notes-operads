@@ -4104,6 +4104,7 @@ you can obtain by choosing different induced orders
 on $\FF_\XX^\Sha$.
 \end{question}
 
+\afterpage{\blankpage}
  \pagebreak
  
 \section{Gr\"obner bases}
@@ -5688,6 +5689,15 @@ concentrated in syzygy degree zero.
 \end{definition}
 
 \subsection{Exercises}	
+
+\begin{question}
+All the results in this section have corresponding
+dual statements for conilpotent cooperads. State and
+prove them. In particular, define for each weight graded
+cooperad $\CC$ its cobar construction $\Omega(\CC)$,
+and describe the syzygy grading and the differential.
+\end{question}
+
 \begin{question}\label{ex:cofree}
 Consider a binary alphabet $\XX$ with a single operation,
 and compute the decomposition map of $\FF^c_\XX$ in case
@@ -5758,8 +5768,117 @@ Koszul complexes associated to a quadratic operad,
 and give a second definition of Koszulness.
 
 \subsection{Twisting morphisms}
-\hacer{Escribir esta secci\'on.}
 
+Let $\PP$ be a dg operad and let $\CC$ be a conilpotent
+dg cooperad, and let us assume (once and for all, throughout
+this section) that they are both (co)augmented. In this
+situation, we can consider morphisms of dg cooperads
+$\CC \longrightarrow \B{\PP}$, and we claim these
+can be described purely in terms of linear maps
+$\tau :\CC \longrightarrow \PP$ satisfying some conditions.
+
+Since we will use them often, let us define the infinitesimal
+composition  between two symmetric sequences $\XX$ and $\YY$,
+which we write $\XX\circ_{(1)} \YY$, to be the subfunctor
+of $\XX\circ(\kk\oplus \YY)$ that is linear in $\YY$. In other
+words, we consider corollas whose root vertex is decorated by
+$\XX$, and all whose leaves are ``empty'', except for one
+which is decorated by an element of $\XX$.
+
+Since $\PP$ is an operad, we can then consider its 
+\emph{infinitesimal composition map} $\gamma_{(1)} :\PP \circ_{(1)} 
+	\PP\longrightarrow \PP$ which encodes its partial
+	compositions. Similarly, we can consider the 
+	infinitesimal decomposition map $\Delta_{(1)}:
+\CC\longrightarrow  \CC\circ_{(1)} \CC$ obtained
+by projecting the decomposition map of $\CC$ onto 
+$\CC\circ_{(1)} \CC$.
+\begin{figure}[h]
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=leaf] (0) at (-0.5, 1) {};
+		\node [circle,draw=black, fill=white, inner sep=2 pt,minimum size=6 pt] (1) at (0, 0) { $c$};
+		\node [style=leaf] (2) at (-1.5, 1) {};
+		\node [style=leaf] (3) at (0.5, 1) {};
+		\node [style=leaf] (4) at (1.5, 1) {};
+		\node [style=leaf] (12) at (0, -1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (3.center) to (1.center);
+		\draw (1.center) to (4.center);
+		\draw (1.center) to (12.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\mathsymbol{1.5}{\leadsto}
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=leaf] (0) at (0, -1) {};
+		\node [style=inner] (1) at (0, 0) {\scriptsize $ f(c_{(1)})$};
+		\node [style=leaf] (2) at (-1.25, 1) {};
+		\node [style=leaf] (3) at (0, 1) {};
+		\node [style=inner] (4) at (1.25, 1) {\scriptsize $ g(c_{(2)})$};
+		\node [style=leaf] (5) at (0.75, 2) {};
+		\node [style=leaf] (6) at (1.75, 2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (3.center);
+		\draw (5.center) to (4.center);
+		\draw (4.center) to (6.center);
+		\draw (4.center) to (1.center);
+		\draw (1.center) to (0.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+	\mathsymbol{1.5}{\leadsto}
+	\begin{tikzpicture}
+\begin{pgfonlayer}{main}
+		\node [style=leaf] (0) at (-0.5, 1) {};
+		\node [circle,draw=black, fill=white, inner sep=2 pt,minimum size=6 pt] (1) at (0, 0) {$p$};
+		\node [style=leaf] (2) at (-1.5, 1) {};
+		\node [style=leaf] (3) at (0.5, 1) {};
+		\node [style=leaf] (4) at (1.5, 1) {};
+		\node [style=leaf] (12) at (0, -1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (3.center) to (1.center);
+		\draw (1.center) to (4.center);
+		\draw (1.center) to (12.center);
+	\end{pgfonlayer}
+	\end{tikzpicture}
+\caption{A schematic version of the star product: we use ``Sweedler notation'' for
+the infinitesimal decomposition of $\CC$ and write $p$ a generic
+summand $f(c_{(1)})\circ_i g(c_{(2)})$ appearing in the final result.}
+\label{fig:starprod}
+\end{figure}
+\begin{definition}
+Let $f,g\in \hom_\Sigma(\CC,\PP)$ be maps of symmetric
+sequences. We define their star product $f\star g$ 
+as the composition
+$\gamma_{(1)} \circ (f\circ_{(1)} g)\circ \Delta_{(1)}$,
+as depicted in Figure~\ref{fig:starprod}. We give 
+$\hom_\Sigma(\CC,\PP)$ the usual differential
+\[
+\partial(f) = d_\PP \circ f  - (-1)^{|f|} f\circ d_\CC.
+\]
+\end{definition}
+
+
+\begin{definition}
+We write $\Tw(\CC,\PP)$ for the set of degree $-1$ maps
+$\tau : \CC\longrightarrow \PP$
+such that $\tau\eta =0$, $\varepsilon\tau = 0$
+and 
+\[
+\partial(\tau) + \tau\star \tau = 0,
+\]
+and call it the set of \emph{twisting morphisms} from
+$\CC$ to $\PP$. We call the equation in the display the
+\emph{Maurer--Cartan equation} for $\tau$.
+\end{definition}
 
 \subsection{Koszul complexes}
 \hacer{Escribir esta secci\'on.}
@@ -5768,26 +5887,28 @@ and give a second definition of Koszulness.
 The bar construction admits a dual construction for
 coaugmented conilpotent cooperads $\CC$, which we call
 the cobar construction and write $\Omega(\CC)$. These
-two functors for an \emph{adjoint pair} 
+two functors fit into a diagram
 \[
 \B{-} : \mathsf{Op} \adjoint
    \mathsf{Coop}^c  : \Omega(-)
 \]
 from the category of augmented operads (which we may allow to be
 dg, see Exercise~\ref{ex:dgbar}) to the category of
-\emph{conilpotent} augmented dg cooperads. 
-Let us make this statement precise, and in the way discover
-a third construction that will be crucial for us:
+\emph{conilpotent} augmented dg cooperads. The following
+theorem can be considered as one of the incarnations of Koszul
+duality between operads and conilpotent cooperads.
 
-\begin{theorem}
+\begin{theorem}\label{thm:adjunction}
 The bar and cobar functors form an adjoint pair
-$\B{-} : \mathsf{Op} \adjoint \mathsf{Coop}^c  : \Omega(-)$:
+$\B{-} : \mathsf{Op} \adjoint \mathsf{Coop}^c  : \Omega(-)$.
+More precisely, 
 for every operad $\PP$ and every conilpotent cooperad
-$\CC$, there exist a natural bijection
-\[
-\hom_{ \mathsf{Op}}(\CC,\B{\PP}) \longrightarrow
- \hom_{\mathsf{Coop}^c }(\Omega(\CC),\PP).
-\]
+$\CC$, the following are in natural bijection:
+\begin{tenumerate}
+\item Maps of conilpotent dg cooperads $\CC \longrightarrow \B{\PP}$.
+\item Maps of dg operads $\Omega(\CC) \longrightarrow\PP$.
+\item Twisting morphisms $\CC \longrightarrow \PP$.
+\end{tenumerate}
 \end{theorem}
 
 \begin{proof}
@@ -5802,7 +5923,7 @@ augmented and connected)
 which induces $f$. The fact that $f$ commutes with the differential of
 $\B{\PP}$ is equivalent to the Maurer--Cartan equation
 \[
-\partial \tau + \frac{1}{2}[\tau,\tau] = 0.
+\partial \tau + \tau\star\tau = 0.
 \]
 The degree $-1$ map $\tau : \CC\longrightarrow \PP$ in turn can
 be turned into a degree zero map $s^{-1}\overline{\CC}\longrightarrow
@@ -5813,14 +5934,10 @@ to the equation above. We conclude that the two hom-sets in
 the statement of this theorem are in bijection with the set
 of symmetric sequence morphisms $\tau : \CC\longrightarrow \PP$
 that satisfy the above Maurer--Cartan equation and
-such that both $\tau\eta$ and $\varepsilon\tau$ vanish.
+such that both $\tau\eta$ and $\varepsilon\tau$ vanish,
+which are precisely the twisting morphisms we have defined.
 \end{proof}
 
-\begin{definition}
-We write $\Tw(\CC,\PP)$ for the set of morphisms above,
-and call it the set of \emph{twisting morphisms} from
-$\CC$ to $\PP$.
-\end{definition}
 
 \hacer{The Rosetta Stone.}
 
@@ -5829,6 +5946,20 @@ $\CC$ to $\PP$.
 \begin{question}
 Suppose that $\PP$ is locally finite dimensional and that $\PP(1) = \kk$. 
 Show that $\B{\PP}$ and $\Omega(\PP^*)$ are dual to each other.
+\end{question}
+
+\begin{question}
+Prove the claim in Theorem~\ref{thm:adjunction} that the Maurer--Cartan
+equation for the map $\tau : \CC\longrightarrow \PP$ corresponding
+to a morphism of dg cooperads $f : \CC\longrightarrow \B{\PP}$
+and to a morphism of dg operads $g  :\Omega(\CC) \longrightarrow \PP$
+is equivalent to the condition that $f$ and $g$ commute with the
+differentials.
+\end{question}
+
+\begin{question}
+Show that the bijection described in Theorem~\ref{thm:adjunction} is
+natural. 
 \end{question}
 \afterpage{\blankpage}
 \newpage

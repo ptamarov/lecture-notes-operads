@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  21 DEC 2021 19:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  23 DEC 2021 23:28
 entering extended mode
 **./partial-notes-15-10.tex
 (partial-notes-15-10.tex
@@ -2487,19 +2487,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[55]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[56]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[55] [56]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2522,6 +2510,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [58]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.14003pt}.
@@ -2530,21 +2521,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [59]
-Overfull \hbox (0.87727pt too wide) in paragraph at lines 4353--4356
-\T1/ptm/m/n/12 (-20) coefficient of $\OML/ztmcm/m/it/12 f \OMS/ztmcm/m/n/12   [
-]\U/msa/m/n/12 []\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 )$\T
-1/ptm/m/n/12 (-20) . But the leading term of the second term is, by Proposition
- [][]8.5[][],
- []
-
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 10.00012pt on input line 4378.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.40013pt on input line 4378.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 6.00012pt on input line 4378.
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 4388.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2554,6 +2530,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [60]
+Overfull \hbox (0.87727pt too wide) in paragraph at lines 4354--4357
+\T1/ptm/m/n/12 (-20) coefficient of $\OML/ztmcm/m/it/12 f \OMS/ztmcm/m/n/12   [
+]\U/msa/m/n/12 []\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 )$\T
+1/ptm/m/n/12 (-20) . But the leading term of the second term is, by Proposition
+ [][]8.5[][],
+ []
+
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 10.00012pt on input line 4379.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 7.40013pt on input line 4379.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 6.00012pt on input line 4379.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 4389.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2572,10 +2563,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [62]
-(/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/uc
-s/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2585,6 +2572,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [63]
+(/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/uc
+s/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2603,35 +2594,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [65]
-LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 47
-36.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.39996> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4736.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.65605> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4736.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.64006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4736.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 4736.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 10.65605pt on input line 4736.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 4736.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 4736.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 10.65605pt on input line 4736.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 4736.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4736.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4736.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2641,6 +2603,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [66]
+LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 47
+37.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.39996> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4737.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.65605> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4737.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.64006> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4737.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 4737.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 10.65605pt on input line 4737.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 8.64006pt on input line 4737.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 4737.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 10.65605pt on input line 4737.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 8.64006pt on input line 4737.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4737.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4737.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2677,7 +2668,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [70]
-Overfull \hbox (0.50854pt too wide) in paragraph at lines 5042--5044
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[71]
+Overfull \hbox (0.50854pt too wide) in paragraph at lines 5043--5045
 [] $[] \OMS/ztmcm/m/n/12   []\OT1/ztmcm/m/n/12 ([]\OML/ztmcm/m/it/12 ; []\OT1/z
 tmcm/m/n/12 )$ 
  []
@@ -2690,21 +2690,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[71]
-Overfull \hbox (0.30962pt too wide) in paragraph at lines 5080--5080
+[72]
+Overfull \hbox (0.30962pt too wide) in paragraph at lines 5081--5081
 \T1/ptm/m/n/12 (-20) the Jacobi identity in the presentation of the operad $[][
 ]$ with respect to the \T1/cmtt/m/n/12 grapathpermlex
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[72]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2722,7 +2713,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[74] [75]
+[74]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2731,7 +2722,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[76]
+[75] [76]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2795,6 +2786,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [83]
+Overfull \hbox (6.17126pt too wide) in paragraph at lines 5699--5699
+[]\T1/ptm/m/n/12 (-20) All the results in this section have corresponding dual 
+statements for conilpotent
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2803,7 +2799,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[84] [85]
+[84]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2812,7 +2808,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[86]
+[85] [86]
+LaTeX Font Info:    Calculating math sizes for size <8.00006> on input line 581
+8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.00006> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5818.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.92007> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5818.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.80008> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5818.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 8.00006pt on input line 5818.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 5.92007pt on input line 5818.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 4.80008pt on input line 5818.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 8.00006pt on input line 5818.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 5.92007pt on input line 5818.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 4.80008pt on input line 5818.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2821,7 +2838,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[87] [88]
+[87]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2830,7 +2847,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[89]
+[88]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2839,7 +2856,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[90] [91] (partial-notes-15-10.tdo)
+[89] [90]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[91]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[92] [93] (partial-notes-15-10.tdo)
 \tf@tdo=\write8
 \openout8 = `partial-notes-15-10.tdo'.
 
@@ -2856,7 +2891,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[92] (partial-notes-15-10.aux)
+[94] (partial-notes-15-10.aux)
 
  *File List*
  article.cls    2021/10/04 v1.4n Standard LaTeX document class
@@ -3080,11 +3115,11 @@ Package rerunfilecheck Info: File `partial-notes-15-10.out' has not changed.
 ### semi simple group (level 1) entered at line 519 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 43482 strings out of 480634
- 841985 string characters out of 2896310
- 1385509 words of memory out of 3000000
- 59220 multiletter control sequences out of 15000+600000
- 570849 words of font info for 666 fonts, out of 8000000 for 9000
+ 43614 strings out of 480634
+ 844386 string characters out of 2896310
+ 1386896 words of memory out of 3000000
+ 59306 multiletter control sequences out of 15000+600000
+ 588434 words of font info for 724 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  108i,24n,106p,3245b,12750s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/d
@@ -3116,9 +3151,9 @@ s/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX
 MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Librar
 y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrilli
 c/wncyr10.pfb>
-Output written on partial-notes-15-10.pdf (92 pages, 659213 bytes).
+Output written on partial-notes-15-10.pdf (94 pages, 666085 bytes).
 PDF statistics:
- 1376 PDF objects out of 1440 (max. 8388607)
- 524 named destinations out of 1000 (max. 500000)
- 170957 words of extra memory for PDF output out of 184870 (max. 10000000)
+ 1395 PDF objects out of 1440 (max. 8388607)
+ 534 named destinations out of 1000 (max. 500000)
+ 190925 words of extra memory for PDF output out of 221844 (max. 10000000)
 
