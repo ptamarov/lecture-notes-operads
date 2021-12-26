@@ -43,16 +43,20 @@
 \contentsline {subsection}{\numberline {9.4}Exercises}{73}{subsection.9.4}%
 \contentsline {section}{\numberline {10}Bar and cobar constructions}{77}{section.10}%
 \contentsline {subsection}{\numberline {10.1}The bar construction}{77}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}The Koszul dual homology cooperad}{82}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.2}Koszul dual cooperad}{82}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Exercises}{84}{subsection.10.3}%
 \contentsline {section}{\numberline {11}Koszul complexes}{87}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Twisting morphisms}{87}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Koszul complexes}{88}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Bar-cobar adjunction}{88}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Exercises}{89}{subsection.11.4}%
-\contentsline {section}{\numberline {A}Algebras over operads}{91}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Algebras over operads}{91}{subsection.A.1}%
-\contentsline {section}{\numberline {B}Classical theory}{92}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Linear self-reduction}{92}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Non-commutative Gr\"obner bases}{92}{subsection.B.2}%
+\contentsline {subsection}{\numberline {11.2}Adjunction}{89}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Koszul complexes}{91}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Exercises}{94}{subsection.11.4}%
+\contentsline {section}{\numberline {A}Technical homological results}{97}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Comparison theorem}{97}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Big Koszul complexes are acylic}{97}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Fundamental theorem}{97}{subsection.A.3}%
+\contentsline {section}{\numberline {B}Algebras over operads}{97}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Algebras over operads}{97}{subsection.B.1}%
+\contentsline {section}{\numberline {C}Classical theory}{99}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Linear self-reduction}{99}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}Non-commutative Gr\"obner bases}{99}{subsection.C.2}%
 \contentsfinish 
