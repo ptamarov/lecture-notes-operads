@@ -1,4 +1,3 @@
-
 \documentclass[fleqn, a4paper, twoside]{article} 
 
 %% for print
@@ -21,6 +20,8 @@
 % font sizes
 %\usepackage{scrextend}
 %\changefontsizes{14pt}
+
+\setcounter{section}{-1}
 
 \usepackage[all]{nowidow}
 \usepackage{microtype}
@@ -521,6 +522,7 @@
 \usepackage{etoolbox}
 \usetikzlibrary{trees}
 \newcommand{\antishriek}{\text{\raisebox{\depth}{\textexclamdown}}}
+\newcommand{\eantishriek}{\emph{\text{\raisebox{\depth}{\textexclamdown}}}}
 
 
 \patchcmd{\section}{\normalfont}{\normalfont\large}{}{}
@@ -982,7 +984,6 @@ familiar with the theory.
 
 \vfill
 
-
 \hfill	Leipzig, \today
 
 
@@ -1018,14 +1019,14 @@ which in particular allowed to produce these lecture notes. }
 
 
 \section{Motivation and history}
-
+ 
 \textbf{Goals.} The goals of this lecture is to
 give a broad picture of the history and 
 pre-history of operads, and some current trends,
 and give a road-map for the course.  
 
 \subsection{Introduction and motivation}
-
+ 
 Operads (topological operads, more precisely)
 originally appeared as tools in algebraic
 topology and homotopy theory, 
@@ -1122,6 +1123,7 @@ Symmetric operads & Rooted trees & $\circ_i$  & J. P. May \\
 \end{center}
 
 \subsection{Koszul duality}
+ 
 Koszul duality was invented by Steward Priddy in
 the seventies~\cite{Priddy1970}, with the objective of streamlining
 computations of certain cohomology theories for
@@ -1208,12 +1210,13 @@ Dotsenko--Khoroshkin, which we detail in the next
 section.
 
 \subsection{Gr\"obner bases}
+ 
 \hacer{Write introduction to Groebner bases.}
 \hacer{References for introduction.}
 \newpage
 
 \subsection{Exercises}
-
+ 
 \textbf{A. Symmetric groups.} Operads are meant to encode
 operations on objects \emph{along with their symmetries},
 which is done through the representation theory of the
@@ -6339,6 +6342,510 @@ is natural.
 \afterpage{\blankpage}
 \newpage
 
+\section{Methods to prove an operad is Koszul I}
+
+ \subsection{Monomial operads}
+ 
+ \hacer{Monomial things are pivotal.}
+ 
+\subsection{The numerical criterion}
+
+\textbf{Hilbert and Poincar\'e series.} Let us begin
+by presenting a numerical criterion that can give a \emph{negative}
+answer to the question ``Is this operad Koszul?''. This
+depends on certain invariants associated to chain complexes
+and graded modules, which we now introduce.
+
+\begin{definition}
+Let $\XX$ be a locally finite reduced symmetric sequence
+Its \emph{Hilbert series} is the formal power-series
+\[
+h_\XX(z) = \sum_{n\geqslant 1} \dim \XX(n) \frac{z^n}{n!}.
+\]
+If $\XX$ is weight graded (so that we may assume that each
+weight component is locally finite) we can consider the two
+variable Hilbert series
+ \[
+h_\XX(z,u) = \sum_{w\geqslant 0} h_{\XX^{(w)}}(z) u^w.
+\]
+\end{definition}
+
+We will mainly be interested in the case of a weight graded operad $\PP$.
+When $\PP$ is binary quadratic, the arity $n$ and the weight $w$ are related
+by $n = w+1$ and then the two variable Hilbert series carries no new information.
+For example, we can compute the following Hilbert series:
+\begin{align*}
+h_{\As}(z) &=  z + z^2 + z^3 + \cdots = \frac{z}{1-z} \\
+h_{\Lie}(z) &=  z + \frac {z^2}2 + \frac{z^3} 3 + \cdots =-\log(1-z) \\
+h_{\Com}(z) &=  z + \frac {z^2}2 + \frac{z^3} 6  + \cdots = \exp z -1 \\
+h_{\As^-}(z) &=  z +  {z^2} + z^3.
+\end{align*}
+
+%Let $(C,d)$ be a chain complex. Its Euler characteristic (when defined)
+%is the integer $\chi(C) = \sum_{n\in \mathbb Z} (-1)^n \dim C_n$. 
+
+There is a related invariant, which we now define:
+\begin{definition} Let $\PP$ be a weight graded operad, so that
+$\B{\PP}$ is a weight graded dg cooperad. The Poincar\'e series
+of $\PP$ is, by definition,
+\[
+p_{\PP}(z,u,t) = \sum_{w,d\geqslant 0,} \dim H_d(\B{\PP}^{(w)}(n)) t^d u^w z^n/n!.
+\]
+\end{definition}
+
+We can now state and prove a numerical criterion to check if an
+operad is \emph{not} Koszul.
+
+\begin{theorem}
+Let $\PP$ be a weight graded (non-dg) operad. Then we have the following
+functional equation between the Hilbert and the Poincar\'e series of $\PP$:
+\[
+h_\PP( p_\PP(z,u,-1),u) = p_\PP(h_\PP(z,u),u,-1) = z. \]
+Moreover, $\PP$ is Koszul (and in particular, quadratic) if and only
+if $p_\PP(z,u,t) = -h_{\PP^\eantishriek}(z,ut)$ in which case the previous
+equation simplifies to
+\[
+h_\PP( h_{\PP^\eantishriek}(z,-u),u) = h_{\PP^\eantishriek}(h_\PP(z,u),-u) = z. 
+\]
+\end{theorem}
+
+\begin{proof}
+Let us begin by proving the first functional equation. In this case,
+we can consider the two augmented bar complexes of Theorem~\ref{thm:augacyclic},
+of the form
+\[
+\PP\circ\B{\PP},\qquad \B{\PP}\circ\PP. 
+\]
+That theorem states these two complexes are acyclic, which means their
+(weight graded) Euler characteristics are equal to the Euler characteristic 
+of the symmetric sequence $(0,\kk,0,\ldots)$ where $\kk$ is placed in arity one,
+weight zero, and homological degree zero, so that its Euler characteristic is
+$z$. On the other hand, the Euler characteristic of $\B{\PP}$ is
+$p_\PP(z,u,-1)$ and that of $\PP$ is its Hilbert series (since $\PP$ carries no
+homological degrees). Thus, we obtain that 
+\[
+z = \chi(\PP\circ\B{\PP}) = \chi(\PP)\circ \chi(\B{\PP}) = 
+		h_\PP(p_\PP(z,-1)),
+\]
+while $z = p_\PP(h_\PP(z),-1)$ is proved in the same fashion. Suppose
+now that $\PP$ is Koszul, which means that $\dim H_d(\B{\PP})_{(w)} = 0$
+unless $w=d$. This is true if and only if the coefficient of $z^wu^d$ in
+$p_\PP(z,u)$ is zero unless $w=d$, in which case we have that
+$H_d(\B{\PP})_{(d)} \simeq  \PP^\antishriek_{(d)}$ and
+\[
+p_\PP(z,u,t) = \sum_{d\geqslant 0} \dim \PP^\antishriek_{(d)}(n) 
+	\frac{z^n}{n!} (tu)^d = h_{\PP^\antishriek}(z,tu).
+\]
+Plugging this back into the equation relating the Hilbert and Poincar\'e
+series for $\PP$ gives us the result.
+\end{proof}
+
+At this point it is useful to come back to the situation when $\PP$
+is binary and quadratic, in which case the functional equation
+simplifies even further. In this case, we notice that
+$h_\PP(z,u) = u h_\PP(zu,1)$ so we obtain the equations  
+\[
+h_\PP(-h_{\PP^\antishriek}(-z)) = h_{\PP^\antishriek}(-h_\PP(-z)) = z. 
+\]
+Since $\PP^!$ and $\PP^\antishriek$ have the same Hilbert series (even
+though one is homologically graded and the other is not, we are
+ignoring the $t$ variable here) we will use the functional equation above
+when with the operad $\PP^!$ most of the time.
+
+\begin{example}
+The quadratic operad $\As^-$ of anti-associative algebras is not Koszul.
+Indeed, one can compute the first few terms of its sign-modified inverse of the 
+Hilbert series to obtain
+\[
+z + z^2 + \frac{3}{2}z^3  + \frac 52 z^4 + \frac{17}4 z^5  + 7z^6 + 
+	\frac{21}{2} z^7 + \frac{99}8 z^8
++ \frac{55}{16} z^9 - \frac{715}{16} z^{10}  + \textrm{O}(z^{11}).
+\]
+Since the coefficient of $z^{10}$ is negative, we conclude that this operad
+cannot be Koszul. 
+\end{example}
+
+\begin{example}
+The quadratic operad $\mathsf{Nov}$ of Novikov algebras is not Koszul.
+Indeed, A. Dzhumadil'daev computed that $\mathsf{Nov}$ has the same Hilbert
+series $h(z)$ as its Koszul dual, and that 
+ \[ h(-h(-z)) = z + \frac 16 z^5 + \mathrm{O}(z^6) \neq z.
+ \] 
+ Thus, the Novikov operad is not Koszul.
+\end{example}
+
+
+ 
+\subsection{Exercises}
+
+\begin{question}
+Use the Haskell Calculator to show that $\mathsf{Nov}$ has Hilbert series
+\[
+h_\mathsf{Nov}(z) = z +2 \frac{z^2}{2!} +6 \frac{z^3}{3!} + 20 \frac{z^4}{4!} + 70 \frac{z^5}{5!} +
+\mathrm{O}(z^6).
+\]
+Show that $\mathsf{Nov}$ is Koszul dual to $\mathsf{Nov}^\mathrm{op}$
+and conclude that $\mathsf{Nov}$ is not Koszul.
+\end{question}
+\begin{question}\label{ex:preLieHilbert}
+Show (using Gr\"obner bases or otherwise) that the Hilbert series $h$
+of the operad $\mathsf{PreLie}$ satisfies the equation
+\[ h(z) = z\exp h(z) .\]
+Use this to compute a few terms of the series, or directly
+show that $\dim\mathsf{PreLie}(n) = n^{n-1}$. Compute
+the Hilbert series of $\mathsf{Perm}$ and verify that
+the numerical criterion holds.
+\end{question}
+
+\begin{figure}
+
+\begin{verbatim}
+
+Configuration:
+
+actions:        normalise count 
+count limit:    5
+arity limit:    5
+time limit:     none
+output:         
+field:          rationals
+operad type:    unsigned shuffle operad
+measure:        permutation reverse degree-lexicographic 
+signature:      x(2) y(2)
+theory:
+  x(x(1 3) 2)  -  x(x(1 2) 3)
+  y(1 x(2 3))  -  x(y(1 2) 3)
+  y(1 y(2 3))  -  x(y(1 3) 2)
+  x(x(1 2) 3)  -  x(1 x(2 3))  -  x(y(1 2) 3)  +  y(x(1 3) 2)
+  x(x(1 3) 2)  -  x(1 y(2 3))  -  x(y(1 3) 2)  +  y(x(1 2) 3)
+  y(1 x(2 3))  -  y(y(1 3) 2)  -  y(1 y(2 3))  +  y(y(1 2) 3)
+
+
+Arity: 4   
+Stable rewrite rules: 6   
+Current critical pairs: 26   
+Queued critical pairs: 0
+
+Arity: 5   
+Stable rewrite rules: 12   
+Current critical pairs: 105   
+Queued critical pairs: 68
+
+Stopped at arity 5.
+
+Counting normal forms:
+
+  arity | normal forms
+     3  |       6
+     4  |      20
+     5  |      70
+
+*Main> 
+\end{verbatim}
+\caption{Counting normal forms in the Novikov operad.}
+\end{figure}
+\afterpage{\blankpage}
+\newpage
+
+
+\section{Methods to prove an operad is Koszul II}
+
+\subsection{Filtrations and rewriting}
+
+In this section, we will focus on examples where
+$\PP$ is a binary quadratic operad and one can
+compute the homology of either the left or
+right Koszul complex explicitly. By this, we
+mean that one can pin down the result directly
+by inspection, or use some mild homological tools,
+like filtrations, to simplify the problem.
+
+\begin{example}
+Let us consider the associative operad $\As$,
+which we study as a ns operad, as sending a ns
+to the corresponding symmetric one does not
+break Koszulness. In this case, we can compute
+the Koszul complex 
+$K =\As^\antishriek\circ_\tau \As$ explicitly. 
+
+Namely, $\As^\antishriek(n)$ is one dimensional
+for each $n\geqslant 1$ generated by a cooperation
+$\mu_n^c$, and so is $\As(n)$, generated by the
+iterated associative product $\mu_n$,
+so that $K(n)$ is spanned by elements of the form
+\[
+[n_1,\ldots,n_k] = 
+	\mu_k^c(\mu_{n_1},\ldots,\mu_{n_k}).
+\]
+Moreover, the decomposition map of $\As^\antishriek$
+is dual up to one suspension to the (infinitesimal)
+composition map of $\otimes\As$, that is, we can
+explicitly compute that
+\[
+\Delta_{(1)}(\mu_k^c) = 
+ \sum_{k_1+k_2 = k+1}
+ 	\sum_{i=1}^{k_1}(-1)^{(k_2-1)(i-1)}
+ 		 \mu_{k_1}^c\circ_i \mu_{k_2}^c.
+\]
+To compute the differential on a generic basis element
+$B(k;n_1,\ldots,n_k)$, we need only restrict to the
+case when $k_2=2$, since in this case the weight
+one elements are precisely those of arity $2$.
+Computing the corresponding composition, we arrive
+at the following formula:
+\[
+\partial [n_1,\ldots,n_k] = 
+\sum_{i=1}^{k-1} 
+(-1)^{i-1}[n_1,\ldots,n_i+n_{i+1},\ldots,n_k].
+\]
+Thus, we see that $K(n)$ is isomorphic to the
+complex computing the simplicial homology
+of the $n-2$ simplex $\Delta^{n-2}$ spanned
+by vertices $v_1,\ldots,v_{n-1}$ if we consider
+sending the simplicial basis element
+$[v_{i_1},\ldots,v_{i_k}]$ where
+$i_1 < \cdots < i_k$ to the basis element
+in $K(n)$ given by
+$[i_1,i_2-i_1,\ldots,i_k-i_{k-1},n-i_k]$.
+
+ \end{example}
+
+%\textbf{Monomial quadratic operads.}
+%A symmetric operad $\PP$ is said to be 
+%monomial if it is generated by an
+%alphabet $\XX$ subject to relations
+%$\RR$ that are tree monomials. We will show
+%in this section that every monomial quadratic
+%operad is Koszul. Passing to the corresponding
+%shuffle operad, it is clear in this case that
+%$\PP^\f$ has $\RR^\f$ as a Gr\"obner basis  for any
+%choice of order $\prec$, and that a linear
+%basis for $\PP^\f$ consists of those shuffle tree
+%monomials not divisible by any tree monomial in
+%$\RR^\f$.
+%
+%First, let us begin by observing that the bar
+%complex $\B{\PP}$ of a monomial operad is
+%graded by the underlying tree monomial of a
+%bar tree monomial, as the differential either
+%sends a bar tree monomial to zero (if a divisor
+%appears), or simply merges two ``large vertices''
+%(perhaps introducing a sign) if no divisor appears.
+%Thus, when computing the bar homology of $\PP$,
+%we can assume that $\XX$ is finite and restrict
+%only to those divisors of a fixed underlying
+%tree monomial $T$, of which there are finitely many.
+%
+%Restricting to the case $\XX$ (and thus the
+%quadratic collection of monomials $\RR$) is finite
+%we notice that the dual is given by the complementary
+
+Let us now consider a common homological technique to 
+prove that complexes are acyclic. Let $(C,d)$ be
+a chain complex, and suppose that $F$ is a filtration
+of $C$, that is, a family 
+$\{ F_p \}_{p\in\mathbb Z}$ of subcomplexes
+such that $F_{p-1}\subseteq F_p$ for all
+ $p\in \mathbb Z$ and such that their union is
+ $C$; although this is a requirement for us, some
+ people call such filtrations \emph{exhaustive}. For 
+ reasons that will become apparent below,
+ we will restrict ourselves to filtrations that are
+ bounded below, that is, we will assume that $F_p=0$
+ if $p<0$.\footnote{Note that we use $p$ for the
+ indexing letter here: this is customary, to avoid
+ confusing it with homological degrees.}
+ 
+ If $(C,d,F)$ is a complex with a non-negative
+ filtration, we define $\mathrm{gr}_F(C)$ to be
+ the graded complex with $p$th graded piece given by
+ the quotient $\mathrm{gr}_F(C)_p =   F_p/F_{p-1}$.
+ This is indeed a complex, since $d$ preserves 
+ each subcomplex of $F$.
+ 
+ \begin{proposition}\label{prop:graded}
+ Let $(C,d,F)$ be a non-negative chain
+ complex with a filtration that is
+ bounded below. If $(\mathrm{gr}_F(C),d)$ is
+ acyclic, then the same is true for $C$.
+\end{proposition}  
+  
+  \begin{proof}
+  Pick $c\in C$ non-zero, 
+  and suppose that $dc=0$,
+  so that our aim is to show that $c$ is a boundary.
+  By hypothesis, there exists a smallest $p$
+  such that $c\in F_p$ but $c\notin F_{p-1}$,
+  so let us proceed by induction on $p$.
+  Since $c$ is a cycle in $C$, it is a cycle
+  in $\mathrm{gr}_F C$. 
+  By hypothesis, this complex is acyclic, 
+  which means that there exists a class $[c']$
+  such that $d[c'] = [c]$ in $F_p/F_{p-1}$. In
+  other words, there exists $c_1\in F_p$ and
+  $c'\in F_{p-1}$ such that
+  $c- dc_1 = c'\in F_{p-1}$.
+ Since $dc' = 0$, we know by induction that $c'=dc_2$
+ for some $c_2$, and so $c = dc_1+dc_2$ is a
+ boundary, too, like we wanted.
+  \end{proof}
+  
+ Let us now consider the situation where $\PP$
+ is a symmetric operad. Since the forgetful
+ functor from symmetric to shuffle operads is
+ monoidal, it preserves the bar construction,
+ in the sense that $\B{\PP^\f}$ and
+ $\B{\PP}^\f$ are naturally isomorphic,
+ and we can attempt to apply filtration methods
+ to the shuffle operad associated to $\PP$.
+ Thus, in what follows, we will consider instead
+ the case $\PP$ is a shuffle operad which is
+ filtered, in the sense it admits a bounded
+ below (exhaustive!) filtration by subcollections,
+ such that for any shuffle composition we have
+ \[
+ F_p \circ_{\sigma,i} F_q \subseteq
+  F_{p+q}.
+ \]
+ 
+ \begin{lemma}
+ Suppose that $(\PP,F)$ is a filtered shuffle operad.
+ Then declaring a shuffle tree monomial $T$ in $\PP$
+ to be in filtration degree $p$ if we have that
+ \[\sum_{v\in T} p(\mathsf{x}_v) \leqslant p \]
+ for the filtration degrees of its decorations
+ in $\PP$ defines a filtration $\B{F}$ 
+ of dg conilpotent
+ cooperads on the shuffle bar construction
+ $\B{\PP^\f}$.
+ \end{lemma}
+ 
+ \begin{proof}
+ The filtration will be one of cooperads without
+ imposing any compatibility conditions with the
+ shuffle compositions of $\PP$. This
+ later compatibility condition implies that
+ the differential of the bar construction
+ preserves the resulting subcomplexes,
+ so that the filtration is in fact of dg
+ cooperads.  \end{proof}
+ 
+ With this at hand, we arrive at one of the most
+ useful criteria to check if a symmetric operad
+ is Koszul.
+ 
+ \begin{theorem}
+ Let $\PP$ be a symmetric operad, and suppose
+ that the shuffle operad $\PP^\f$ admits
+ a filtration (of shuffle operads) for which
+ the associated graded operad is Koszul.
+ Then $\PP$ is a Koszul operad.
+ \end{theorem}
+ 
+ \begin{proof}
+ The only thing we have to show is that the
+ associated graded conilpotent cooperad to
+ $\B{\PP^\f}$ with respect to the filtration
+ $\B{F}$ is isomorphic to $\B{\mathrm{gr}_F\PP^\f}$.
+ Indeed, once this is verified we conclude using
+ Proposition~\ref{prop:graded} and our definition
+ of Koszulness using the syzygy grading: the
+ map $\PP^\antishriek \longrightarrow \B{\PP}$
+ induces a quasi-isomorphism in $H^0$, so it suffices
+ we prove that $\B{\PP}$ has no positive cohomology.
+ 
+ By definition, the basis elements of
+ $\mathrm{gr}_{\B{F}}\B{\PP^\f}$ of degree $p$
+ are those shuffle tree monomials $T$
+ whose decorations satisfy $T$
+ \[
+ \sum_{v\in T} p(\mathsf{x}_v) = p.
+ \]
+ At the same time, the shuffle operad 
+ $\mathrm{gr}_F\PP^\f$  is graded and 
+ thus its bar construction inherits an
+ extra weight grading: the weight of a tree
+ monomial $T$ is the sum of the weights of its
+ decorations, so that $\mathsf{wt}(T)= p$
+ precisely when
+ \[
+ \sum_{v\in T} \mathsf{wt}(\mathsf{x}_v) = p.
+ \]
+ Thus, we have a canonical map
+ \[
+ \mathrm{gr}_{\B{F}}\B{\PP^\f} \longrightarrow
+ \B{\mathrm{gr}_F\PP^\f}
+ \]
+ which is an isomorphism, since the weight
+ $\mathsf{wt}(\mathsf{x}_v)$ is precisely
+ the least of those $p$ such that $\mathsf{x}_v
+ \in F_p\PP^\f$, and if this drops, the total sum above
+ will also drop. 
+ \end{proof}
+ 
+ The previous result can be used together with
+ rewriting methods, as follows. If $\PP$ is
+ a shuffle operad generated by a collection
+ $\XX$, and we have chosen an admissible 
+ monomial ordering $\prec $
+ on $\FF_\XX$, the projection
+ $\FF_\XX\longrightarrow \PP$ defines a filtration
+ on $\PP$, by declaring that the class of a 
+ monomial is in degree at most $p$ if it
+ is represented by a monomial in the free shuffle
+ operad of weight $p$: notice that we are being
+ slightly imprecise with our notation, since now
+ $p$ does not belong to the natural numbers,
+ but rather to a totally order set (determined by
+ our choice of monomial order).
+ 
+ The resulting filtration $F_\prec$ in $\PP$
+ defines a graded shuffle operad $\mathrm{gr}_\prec
+ \PP$, and at the same time we have an associated
+ operad $\PP_{\mathsf{mon}} = \FF_\XX / (\lead{\RR})$
+ obtained by keeping only the leading terms
+ of relations of $\PP$. Moreover, we have a map
+ \[
+ \pi : \PP_{\mathsf{mon}} 
+  	\longrightarrow 
+  	\mathrm{gr}_\prec \PP
+ \]
+ since the leading terms of $\RR$ define
+ relations in the codomain, and in fact this
+ map is an isomorphism in weights one and two.
+ 
+ \begin{theorem}
+ Let $\PP$ be a quadratic operad and suppose
+ that the shuffle operad $\PP^\f$ admits a
+ quadratic Gr\"obner basis with respect to some
+ monomial order $\prec$. Then $\PP$ is
+ Koszul. 
+ \end{theorem}
+ 
+ \begin{proof}
+ By the previous theorem, it suffices to show
+ that $\mathrm{gr}_\prec \PP$ is Koszul. We
+ see that this operad is isomorphic to the
+ quotient of $\PP$ by the initial ideal associated
+ to $\RR$. Thus, $\pi$ is an isomorphism 
+ precisely when $\RR$ is a Gr\"obner basis
+ for $(\RR)$ with respect to $\prec$, and
+ it suffices to show
+ a shuffle operad with quadratic monomial
+ relations is Koszul, which we have
+ already done. Thus,
+ the claim follows for
+ $\PP^\f$, which is what we wanted. 
+ \end{proof}
+ 
+
+\subsection{Distributive laws}
+\hacer{Write section on distributive laws.}
+
+
+\afterpage{\blankpage}
+\newpage
+
 \appendix
 
 \section{Technical homological results}
@@ -6366,7 +6873,7 @@ equivalent:
 \item The map $f^\tau : \Omega(\CC)\longrightarrow \PP$ is a quasi-isomorphism.
 \end{tenumerate}
 \end{theorem}
-\section{Algebras over operads}
+\section{Further topics}
 
 \hacer{Write an appendix about algebras over operads.}
 
@@ -6416,63 +6923,65 @@ $\gamma_{V,1}(1,v) = v$.
 \end{tenumerate}
 
 
-
 \hacer{Example: recognition
 principle. Gerstenhaber algebras and Hochschild
 complex. }
+
+\subsection{Rewriting theory for algebras }
+\subsection{Homotopy algebras}
 
 \pagebreak
 
 
 \section{Classical theory}
 
-\subsection{Linear self-reduction}
-Let $M$ be a matrix with $m$ rows
-and $n$ columns. The following is the
-usual algorithm to put $M$ in row reduced
-echelon form, written as pseudo-code:
-\begin{algorithm}
-\caption{Linear self-reduction algorithm}\label{algo:gauss}
-\begin{adjustwidth}{2 cm}{2 cm}
-\begin{algorithmic}[1]
-\Procedure{LinearSelfReduce}{$\texttt{Matrix}$} 
-\State $\texttt{lead} \gets 0$
-\State $\texttt{A} \gets \texttt{Matrix}$
-\State $\texttt{rows} \gets \textsc{Width}(\texttt{A})$
-\State $\texttt{cols} \gets \textsc{Height}(\texttt{A})$
-	\For {$r\in [0,\texttt{ rows})$}
- 			\If {\texttt{cols} $\leqslant$\texttt{ lead}}
- 			\State \textbf{stop}
- 			\EndIf
- 	\State $i\gets r$
- 	\While {$\texttt{A}[i,\texttt{lead}]=0$}
- 			\State $i\gets i+1$
- 			 \If {\texttt{rows} $=i$}
-  					\State $i\gets r$
-  					\State $\texttt{lead} \gets \texttt{lead}+1$
-  					\If {\texttt{cols} $=$\texttt{ lead }}
-   						\State \textbf{stop}
-   					\EndIf
-   			\EndIf
-   	\EndWhile
-   \If {$i\neq r$}
-   		\State \textbf{swap} $\texttt{A}[r,:]$ and $\texttt{A}i,:]$
-   		\State $\texttt{A}[r,:]
-   			\gets \texttt{A}[r,:]/\texttt{A}[r,\texttt{lead}]$
-   		\For {$i \in [0,\texttt{rows})$}
-   			 \If {$i\neq r$}
-   			 \State $\texttt{A}[i,:] \gets 
-   			 	\texttt{A}[i,:] - 
-   			 		\texttt{A}[i, \texttt{lead}]\texttt{A}[r,:] $
-   			\EndIf
-   			\EndFor
-   \State $\texttt{lead} \gets \texttt{lead}+1$
-   \EndIf
-\EndFor
-\EndProcedure
-\end{algorithmic}
-\end{adjustwidth}
-\end{algorithm}
+%\subsection{Linear self-reduction}
+%Let $M$ be a matrix with $m$ rows
+%and $n$ columns. The following is the
+%usual algorithm to put $M$ in row reduced
+%echelon form, written as pseudo-code:
+%\begin{algorithm}
+%\caption{Linear self-reduction algorithm}\label{algo:gauss}
+%\begin{adjustwidth}{2 cm}{2 cm}
+%\begin{algorithmic}[1]
+%\Procedure{LinearSelfReduce}{$\texttt{Matrix}$} 
+%\State $\texttt{lead} \gets 0$
+%\State $\texttt{A} \gets \texttt{Matrix}$
+%\State $\texttt{rows} \gets \textsc{Width}(\texttt{A})$
+%\State $\texttt{cols} \gets \textsc{Height}(\texttt{A})$
+%	\For {$r\in [0,\texttt{ rows})$}
+% 			\If {\texttt{cols} $\leqslant$\texttt{ lead}}
+% 			\State \textbf{stop}
+% 			\EndIf
+% 	\State $i\gets r$
+% 	\While {$\texttt{A}[i,\texttt{lead}]=0$}
+% 			\State $i\gets i+1$
+% 			 \If {\texttt{rows} $=i$}
+%  					\State $i\gets r$
+%  					\State $\texttt{lead} \gets \texttt{lead}+1$
+%  					\If {\texttt{cols} $=$\texttt{ lead }}
+%   						\State \textbf{stop}
+%   					\EndIf
+%   			\EndIf
+%   	\EndWhile
+%   \If {$i\neq r$}
+%   		\State \textbf{swap} $\texttt{A}[r,:]$ and $\texttt{A}i,:]$
+%   		\State $\texttt{A}[r,:]
+%   			\gets \texttt{A}[r,:]/\texttt{A}[r,\texttt{lead}]$
+%   		\For {$i \in [0,\texttt{rows})$}
+%   			 \If {$i\neq r$}
+%   			 \State $\texttt{A}[i,:] \gets 
+%   			 	\texttt{A}[i,:] - 
+%   			 		\texttt{A}[i, \texttt{lead}]\texttt{A}[r,:] $
+%   			\EndIf
+%   			\EndFor
+%   \State $\texttt{lead} \gets \texttt{lead}+1$
+%   \EndIf
+%\EndFor
+%\EndProcedure
+%\end{algorithmic}
+%\end{adjustwidth}
+%\end{algorithm}
 
 \subsection{Non-commutative Gr\"obner bases}
 \hacer{Explain the analogous results for associative

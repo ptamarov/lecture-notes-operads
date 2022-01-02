@@ -1,8 +1,0 @@
-\babel@toc {british}{}
-\contentsline {section}{\numberline {1}August 21st: D. Lewanski}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Witten--Kontsevich}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Some closed formulas}{2}{subsection.1.2}%
-\contentsline {section}{\numberline {2}August 22nd: G. Baverez}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Motivation}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}White noise}{3}{subsection.2.2}%
-\contentsfinish 

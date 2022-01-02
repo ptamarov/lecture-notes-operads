@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  26 DEC 2021 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  2 JAN 2022 14:24
 entering extended mode
-**./partial-notes-15-10.tex
-(partial-notes-15-10.tex
+**./lecture-notes.tex
+(lecture-notes.tex
 LaTeX2e <2021-11-15>
 L3 programming layer <2021-11-12>
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ba
@@ -1547,7 +1547,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip94
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 615.
+Package hyperref Info: Option `colorlinks' set `true' on input line 617.
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/se
 ctsty/sectsty.sty
@@ -1691,35 +1691,35 @@ Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen391
 )
 \@indexfile=\write5
-\openout5 = `partial-notes-15-10.idx'.
+\openout5 = `lecture-notes.idx'.
 
 
-Writing index file partial-notes-15-10.idx
-(partial-notes-15-10.aux
+Writing index file lecture-notes.idx
+(lecture-notes.aux
 
 LaTeX Warning: Label `algo:self-reduce' multiply defined.
 
 )
-\openout1 = `partial-notes-15-10.aux'.
+\openout1 = `lecture-notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 951.
-LaTeX Font Info:    ... okay on input line 951.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 953.
+LaTeX Font Info:    ... okay on input line 953.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1755,20 +1755,20 @@ LaTeX Font Info:    ... okay on input line 951.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 951.
-Package microtype Info: Applying patch `item' on input line 951.
-Package microtype Info: Applying patch `toc' on input line 951.
+LaTeX Info: Redefining \microtypecontext on input line 953.
+Package microtype Info: Applying patch `item' on input line 953.
+Package microtype Info: Applying patch `toc' on input line 953.
 
-Package microtype Warning: Unable to apply patch `eqnum' on input line 951.
+Package microtype Warning: Unable to apply patch `eqnum' on input line 953.
 
-Package microtype Info: Applying patch `footnote' on input line 951.
+Package microtype Info: Applying patch `footnote' on input line 953.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 951.
+LaTeX Info: Redefining \showhyphens on input line 953.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1814,7 +1814,7 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 951.
+ 953.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ot1ztmcm.f
 d
@@ -1825,21 +1825,21 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 951.
+ 953.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/omlztmcm.f
 d
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 951.
+ 953.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/omsztmcm.f
 d
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 951.
+ 953.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/omxztmcm.f
 d
@@ -1854,23 +1854,23 @@ cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 9
-51.
+53.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 951.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 953.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 951.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 953.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 951.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 953.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 9
-51.
+53.
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/st
 maryrd/Ustmry.fd)
-Package xypdf Info: Line width: 0.47987pt on input line 951.
+Package xypdf Info: Line width: 0.47987pt on input line 953.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ragged2e/ragged2e
 .sty
@@ -1913,7 +1913,7 @@ anslations/dicts/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
-Package hyperref Info: Link coloring ON on input line 951.
+Package hyperref Info: Link coloring ON on input line 953.
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hy
 perref/nameref.sty
@@ -1929,26 +1929,25 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count414
 )
-LaTeX Info: Redefining \ref on input line 951.
-LaTeX Info: Redefining \pageref on input line 951.
-LaTeX Info: Redefining \nameref on input line 951.
- (partial-notes-15-10.out)
-(partial-notes-15-10.out)
+LaTeX Info: Redefining \ref on input line 953.
+LaTeX Info: Redefining \pageref on input line 953.
+LaTeX Info: Redefining \nameref on input line 953.
+ (lecture-notes.out) (lecture-notes.out)
 \@outlinefile=\write6
-\openout6 = `partial-notes-15-10.out'.
+\openout6 = `lecture-notes.out'.
 
 LaTeX Font Info:    Calculating math sizes for size <10.95007> on input line 98
-0.
+2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 980.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 982.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.1031> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 980.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 982.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.5701> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 980.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 982.
 
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <6.5701> not available
-(Font)              size <7> substituted on input line 980.
+(Font)              size <7> substituted on input line 982.
 
 [1
 
@@ -1962,7 +1961,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[3] [4] (partial-notes-15-10.toc
+[3] [4] (lecture-notes.toc
 LaTeX Font Info:    Calculating math sizes for size <10.00012> on input line 40
 .
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.00012> not available
@@ -1978,10 +1977,10 @@ LaTeX Font Warning: Font shape `U/stmry/m/n' in size <7.40013> not available
 
 )
 \tf@toc=\write7
-\openout7 = `partial-notes-15-10.toc'.
+\openout7 = `lecture-notes.toc'.
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-011.
+012.
 
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ba
 se/t1cmtt.fd
@@ -1997,7 +1996,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (8.1161pt too wide) in paragraph at lines 1045--1049
+Overfull \hbox (8.1161pt too wide) in paragraph at lines 1046--1050
 []\T1/ptm/m/n/12 (-20) (Stasheff, Sugawara) Study homotopy associative $\OML/zt
 mcm/m/it/12 H$\T1/ptm/m/n/12 (-20) -spaces, Stasheff implicitly discovers
  []
@@ -2008,9 +2007,39 @@ s/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [7]
 
+LaTeX Warning: Citation `Priddy1970' on page 8 undefined on input line 1128.
+
+
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
 (amsrefs)                for multiple cites 'KellerKoszul2003,Positselski2011, 
-Sinha2010,MO329,holstein2021categorical' on input line 1164.
+Sinha2010,MO329,holstein2021categorical' on input line 1166.
+
+
+LaTeX Warning: Citation `KellerKoszul2003' on page 8 undefined on input line 11
+66.
+
+
+LaTeX Warning: Citation `Positselski2011' on page 8 undefined on input line 116
+6.
+
+
+LaTeX Warning: Citation `Sinha2010' on page 8 undefined on input line 1166.
+
+
+LaTeX Warning: Citation `MO329' on page 8 undefined on input line 1166.
+
+
+LaTeX Warning: Citation `holstein2021categorical' on page 8 undefined on input 
+line 1166.
+
+
+Overfull \hbox (79.0636pt too wide) in paragraph at lines 1157--1178
+\T1/ptm/m/n/12 (-20) consult [[][]\T1/cmtt/m/n/12 ?KellerKoszul2003[][]\T1/ptm/
+m/n/12 (-20) , [][]\T1/cmtt/m/n/12 ?Positselski2011[][]\T1/ptm/m/n/12 (-20) , [
+][]\T1/cmtt/m/n/12 ?Sinha2010[][]\T1/ptm/m/n/12 (-20) , [][]\T1/cmtt/m/n/12 ?MO
+329[][]\T1/ptm/m/n/12 (-20) , [][]\T1/cmtt/m/n/12 ?holstein2021categorical[][]\
+T1/ptm/m/n/12 (-20) ]
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2022,7 +2051,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 1211.
+ine 1214.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2034,16 +2063,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 12.0pt on input line 1269.
+(Font)              scaled to size 12.0pt on input line 1272.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/mt-eus.
 cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1269.
+(Font)              scaled to size 9.0pt on input line 1272.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 7.0pt on input line 1269.
+(Font)              scaled to size 7.0pt on input line 1272.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2064,7 +2093,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-412.
+415.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -2088,7 +2117,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13] [14]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 1492.
+line 1495.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2100,7 +2129,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 1557.
+nput line 1560.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2112,7 +2141,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 Package hyperref Info: bookmark level for unknown variante defaults to 0 on inp
-ut line 1643.
+ut line 1646.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2158,7 +2187,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[21] (partial-notes-15-10-01.xyc) (partial-notes-15-10-02.xyc)
+[21] (lecture-notes-01.xyc) (lecture-notes-02.xyc)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2196,7 +2225,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 2296.
+t line 2299.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2235,7 +2264,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [31]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
-ine 2594.
+ine 2597.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2257,14 +2286,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [33]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <7.40013> not available
-(Font)              size <7> substituted on input line 2722.
+(Font)              size <7> substituted on input line 2725.
 
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 10.00012pt on input line 2722.
+(Font)              scaled to size 10.00012pt on input line 2725.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 7.40013pt on input line 2722.
+(Font)              scaled to size 7.40013pt on input line 2725.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 6.00012pt on input line 2722.
+(Font)              scaled to size 6.00012pt on input line 2725.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2302,13 +2331,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38]
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 12.0pt on input line 2930.
+(Font)              scaled to size 12.0pt on input line 2933.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2930.
+(Font)              scaled to size 9.0pt on input line 2933.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.0pt on input line 2930.
+(Font)              scaled to size 7.0pt on input line 2933.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 2933.
+input line 2936.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2319,7 +2348,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [39]
-Overfull \hbox (1.10588pt too wide) in paragraph at lines 3035--3041
+Overfull \hbox (1.10588pt too wide) in paragraph at lines 3038--3044
 []\T1/ptm/m/it/12 (-20) The commutative and Lie operads. \T1/ptm/m/n/12 (-20) W
 e have computed that if $\U/eus/m/n/12 X\OT1/ztmcm/m/n/12 (2)$ \T1/ptm/m/n/12 (
 -20) is the trivial representation
@@ -2389,7 +2418,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [46]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 3570.
+put line 3573.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2400,7 +2429,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [47]
-Overfull \hbox (3.66347pt too wide) in paragraph at lines 3643--3643
+Overfull \hbox (3.66347pt too wide) in paragraph at lines 3646--3646
 []\T1/ptm/m/n/12 (-20) Write down a presentation of the following as shuffle op
 erads: the commutative
  []
@@ -2423,7 +2452,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [49]
-Overfull \hbox (1.55725pt too wide) in paragraph at lines 3767--3770
+Overfull \hbox (1.55725pt too wide) in paragraph at lines 3770--3773
 []\T1/ptm/m/n/12 (-20) The reader should verify that $\U/msb/m/n/12 W[]$ \T1/pt
 m/m/n/12 (-20) is isomorphic, as a symmetric sequence, to the composition
  []
@@ -2450,7 +2479,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [51]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 3886.
+t line 3889.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2530,21 +2559,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [60]
-Overfull \hbox (0.87727pt too wide) in paragraph at lines 4355--4358
+Overfull \hbox (0.87727pt too wide) in paragraph at lines 4358--4361
 \T1/ptm/m/n/12 (-20) coefficient of $\OML/ztmcm/m/it/12 f \OMS/ztmcm/m/n/12   [
 ]\U/msa/m/n/12 []\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 )$\T
 1/ptm/m/n/12 (-20) . But the leading term of the second term is, by Proposition
- [][]8.5[][],
+ [][]7.5[][],
  []
 
+
+LaTeX Warning: Reference `algo:gauss' on page 61 undefined on input line 4378.
+
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 10.00012pt on input line 4380.
+(Font)              scaled to size 10.00012pt on input line 4383.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.40013pt on input line 4380.
+(Font)              scaled to size 7.40013pt on input line 4383.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 6.00012pt on input line 4380.
+(Font)              scaled to size 6.00012pt on input line 4383.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 4390.
+put line 4393.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2604,33 +2636,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [66]
 LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 47
-38.
+41.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.39996> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4738.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4741.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.65605> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4738.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4741.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.64006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4738.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4741.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 4738.
+(Font)              scaled to size 14.39996pt on input line 4741.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 10.65605pt on input line 4738.
+(Font)              scaled to size 10.65605pt on input line 4741.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 4738.
+(Font)              scaled to size 8.64006pt on input line 4741.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 4738.
+(Font)              scaled to size 14.39996pt on input line 4741.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 10.65605pt on input line 4738.
+(Font)              scaled to size 10.65605pt on input line 4741.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 4738.
+(Font)              scaled to size 8.64006pt on input line 4741.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4738.
+(hyperref)                removing `math shift' on input line 4741.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4738.
+(hyperref)                removing `math shift' on input line 4741.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2677,7 +2709,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [71]
-Overfull \hbox (0.50854pt too wide) in paragraph at lines 5044--5046
+Overfull \hbox (0.50854pt too wide) in paragraph at lines 5047--5049
 [] $[] \OMS/ztmcm/m/n/12   []\OT1/ztmcm/m/n/12 ([]\OML/ztmcm/m/it/12 ; []\OT1/z
 tmcm/m/n/12 )$ 
  []
@@ -2691,7 +2723,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [72]
-Overfull \hbox (0.30962pt too wide) in paragraph at lines 5082--5082
+Overfull \hbox (0.30962pt too wide) in paragraph at lines 5085--5085
 \T1/ptm/m/n/12 (-20) the Jacobi identity in the presentation of the operad $[][
 ]$ with respect to the \T1/cmtt/m/n/12 grapathpermlex
  []
@@ -2786,7 +2818,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [83]
-Overfull \hbox (6.17126pt too wide) in paragraph at lines 5700--5700
+Overfull \hbox (6.17126pt too wide) in paragraph at lines 5703--5703
 []\T1/ptm/m/n/12 (-20) All the results in this section have corresponding dual 
 statements for conilpotent
  []
@@ -2818,26 +2850,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [87]
-LaTeX Font Info:    Calculating math sizes for size <8.00006> on input line 587
-7.
+LaTeX Font Info:    Calculating math sizes for size <8.00006> on input line 588
+0.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.00006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5877.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5880.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.92007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5877.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5880.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.80008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5877.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5880.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 8.00006pt on input line 5877.
+(Font)              scaled to size 8.00006pt on input line 5880.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 5.92007pt on input line 5877.
+(Font)              scaled to size 5.92007pt on input line 5880.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 4.80008pt on input line 5877.
+(Font)              scaled to size 4.80008pt on input line 5880.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 8.00006pt on input line 5877.
+(Font)              scaled to size 8.00006pt on input line 5880.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 5.92007pt on input line 5877.
+(Font)              scaled to size 5.92007pt on input line 5880.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 4.80008pt on input line 5877.
+(Font)              scaled to size 4.80008pt on input line 5880.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2884,7 +2916,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [92]
-Overfull \hbox (7.82368pt too wide) in paragraph at lines 6207--6220
+Overfull \hbox (7.82368pt too wide) in paragraph at lines 6210--6223
 []\T1/ptm/m/n/12 (-20) The proof involves a computation, though the computation
  may get rather cumbersome,
  []
@@ -2942,15 +2974,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[99] [100] (partial-notes-15-10.tdo)
-\tf@tdo=\write8
-\openout8 = `partial-notes-15-10.tdo'.
-
- (partial-notes-15-10.bbl
-
-Package rkeyval Warning: Unknown key: \bib'how on input line 24.
-
-)
+[99]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2959,7 +2983,84 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[101] (partial-notes-15-10.aux)
+[100] [101]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[102]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[103]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[104]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[105] [106]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[107]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[108]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[109] [110] (lecture-notes.tdo)
+\tf@tdo=\write8
+\openout8 = `lecture-notes.tdo'.
+
+
+No file lecture-notes.bbl.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[111] (lecture-notes.aux)
 
  *File List*
  article.cls    2021/10/04 v1.4n Standard LaTeX document class
@@ -3158,14 +3259,13 @@ ations-basic-dictionary')
  nameref.sty    2021-04-02 v2.47 Cross-referencing by name of section
 refcount.sty    2019/12/15 v3.6 Data extraction from label references (HO)
 gettitlestring.sty    2019/12/15 v1.6 Cleanup title references (HO)
-partial-notes-15-10.out
-partial-notes-15-10.out
+lecture-notes.out
+lecture-notes.out
   t1cmtt.fd    2019/12/16 v2.5j Standard LaTeX font definitions
   uni-32.def    2013/05/13 UCS: Unicode data U+2000..U+20FF
   mt-eus.cfg    2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
   ts1ptm.fd    2001/06/04 font definitions for TS1/ptm.
    uni-0.def    2013/05/13 UCS: Unicode data U+0000..U+00FF
-partial-notes-15-10.bbl
  ***********
 
 
@@ -3173,55 +3273,74 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.4299pt have occurred.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `partial-notes-15-10.out' has not changed.
-(rerunfilecheck)             Checksum: D48FB1A6D30796328525DEB3974D0B59;10161.
+Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
+(rerunfilecheck)             Checksum: 1546C7BC6DC3B03B256A5DA92BAFDCEA;11781.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 519 (\begingroup)
+### semi simple group (level 1) entered at line 520 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44100 strings out of 480634
- 855858 string characters out of 2896310
- 1393848 words of memory out of 3000000
- 59745 multiletter control sequences out of 15000+600000
- 588628 words of font info for 727 fonts, out of 8000000 for 9000
+ 44116 strings out of 480634
+ 855911 string characters out of 2896310
+ 1398414 words of memory out of 3000000
+ 59748 multiletter control sequences out of 15000+600000
+ 582603 words of font info for 711 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 108i,24n,106p,3245b,12751s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/d
-vips/cm-super/cm-super-t1.enc}{/Users/ptamarov/Library/Application Support/MiKT
-eX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Applicat
-ion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></U
-sers/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/
-texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/ptamarov/Librar
-y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss
-12.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts
-/type1/public/amsfonts/cm/cmss8.pfb></Users/ptamarov/Library/Application Suppor
-t/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss9.pfb></Users/ptamar
-ov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/inst
-all/fonts/type1/public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Appli
-cation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10
-.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/te
-xmfs/install/fonts/type1/public/rsfs/rsfs10.pfb></Library/Application Support/M
-iKTeX/texmfs/install/fonts/type1/public/cm-super/sftt1000.pfb></Library/Applica
-tion Support/MiKTeX/texmfs/install/fonts/type1/public/cm-super/sftt1200.pfb></U
-sers/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pub
-lic/hoekwater/stmary10.pfb></Library/Application Support/MiKTeX/texmfs/install/
-fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/ins
-tall/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmf
-s/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX
-/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/
-MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Librar
-y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrilli
-c/wncyr10.pfb>
-Output written on partial-notes-15-10.pdf (101 pages, 701715 bytes).
+ 108i,24n,106p,3239b,12752s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.holstein2021categorical} has b
+een referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.MO329} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Sinha2010} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Positselski2011} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.KellerKoszul2003} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Priddy1970} has been referenced but does not e
+xist, replaced by a fixed one
+
+{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/cm-super/cm
+-super-t1.enc}{/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/instal
+l/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Application Support/MiKT
+eX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/ptamarov/Li
+brary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></Users/ptamarov/Library/Application Su
+pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users/p
+tamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/am
+sfonts/cm/cmss8.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/
+install/fonts/type1/public/amsfonts/cm/cmss9.pfb></Users/ptamarov/Library/Appli
+cation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/
+public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Application Support/M
+iKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/pta
+marov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/texmfs/install/fon
+ts/type1/public/rsfs/rsfs10.pfb></Library/Application Support/MiKTeX/texmfs/ins
+tall/fonts/type1/public/cm-super/sftt1200.pfb></Users/ptamarov/Library/Applicat
+ion Support/MiKTeX/texmfs/install/fonts/type1/public/hoekwater/stmary10.pfb></L
+ibrary/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pf
+b></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/us
+yr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/time
+s/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/ur
+w/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/ty
+pe1/urw/times/utmri8a.pfb></Users/ptamarov/Library/Application Support/MiKTeX/t
+exmfs/install/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb>
+Output written on lecture-notes.pdf (111 pages, 710323 bytes).
 PDF statistics:
- 1489 PDF objects out of 1728 (max. 8388607)
- 576 named destinations out of 1000 (max. 500000)
- 190957 words of extra memory for PDF output out of 221844 (max. 10000000)
+ 1603 PDF objects out of 1728 (max. 8388607)
+ 612 named destinations out of 1000 (max. 500000)
+ 184365 words of extra memory for PDF output out of 184870 (max. 10000000)
 
