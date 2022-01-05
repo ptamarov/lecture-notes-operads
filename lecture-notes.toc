@@ -41,30 +41,31 @@
 \contentsline {subsection}{\numberline {8.2}Diamond Lemma}{68}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Buchberger's Algorithm}{72}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}Exercises}{73}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Bar and cobar constructions}{77}{section.9}%
-\contentsline {subsection}{\numberline {9.1}The bar construction}{77}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Koszul dual cooperad}{82}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Exercises}{84}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Koszul complexes}{87}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Twisting morphisms}{87}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Adjunction}{89}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Koszul complexes}{91}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Exercises}{94}{subsection.10.4}%
-\contentsline {section}{\numberline {11}Methods to prove an operad is Koszul I}{97}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Monomial operads}{97}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}The numerical criterion}{97}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Exercises}{99}{subsection.11.3}%
-\contentsline {section}{\numberline {12}Methods to prove an operad is Koszul II}{102}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Filtrations and rewriting}{102}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Distributive laws}{105}{subsection.12.2}%
-\contentsline {section}{\numberline {A}Technical homological results}{107}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Comparison theorem}{107}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Big Koszul complexes are acylic}{107}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Fundamental theorem}{107}{subsection.A.3}%
-\contentsline {section}{\numberline {B}Further topics}{107}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Algebras over operads}{107}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Rewriting theory for algebras }{108}{subsection.B.2}%
-\contentsline {subsection}{\numberline {B.3}Homotopy algebras}{108}{subsection.B.3}%
-\contentsline {section}{\numberline {C}Classical theory}{109}{appendix.C}%
-\contentsline {subsection}{\numberline {C.1}Non-commutative Gr\"obner bases}{109}{subsection.C.1}%
+\contentsline {section}{\numberline {9}Bar and cobar constructions}{78}{section.9}%
+\contentsline {subsection}{\numberline {9.1}The bar construction}{78}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Koszul dual cooperad}{83}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Exercises}{85}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Koszul complexes}{88}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Twisting morphisms}{88}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Adjunction}{90}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Koszul complexes}{92}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Exercises}{95}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Methods to prove an operad is Koszul I}{98}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Monomial operads}{98}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}The numerical criterion}{98}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Exercises}{100}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Methods to prove an operad is Koszul II}{103}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Filtrations and rewriting}{103}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Distributive laws}{106}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Exercises}{107}{subsection.12.3}%
+\contentsline {section}{\numberline {A}Technical homological results}{109}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Comparison theorem}{109}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Big Koszul complexes are acylic}{109}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Fundamental theorem}{109}{subsection.A.3}%
+\contentsline {section}{\numberline {B}Further topics}{109}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Algebras over operads}{109}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Rewriting theory for algebras }{110}{subsection.B.2}%
+\contentsline {subsection}{\numberline {B.3}Homotopy algebras}{110}{subsection.B.3}%
+\contentsline {section}{\numberline {C}Classical theory}{111}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Non-commutative Gr\"obner bases}{111}{subsection.C.1}%
 \contentsfinish 

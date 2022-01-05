@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  2 JAN 2022 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  4 JAN 2022 09:26
 entering extended mode
 **./lecture-notes.tex
 (lecture-notes.tex
@@ -2007,39 +2007,9 @@ s/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [7]
 
-LaTeX Warning: Citation `Priddy1970' on page 8 undefined on input line 1128.
-
-
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
 (amsrefs)                for multiple cites 'KellerKoszul2003,Positselski2011, 
 Sinha2010,MO329,holstein2021categorical' on input line 1166.
-
-
-LaTeX Warning: Citation `KellerKoszul2003' on page 8 undefined on input line 11
-66.
-
-
-LaTeX Warning: Citation `Positselski2011' on page 8 undefined on input line 116
-6.
-
-
-LaTeX Warning: Citation `Sinha2010' on page 8 undefined on input line 1166.
-
-
-LaTeX Warning: Citation `MO329' on page 8 undefined on input line 1166.
-
-
-LaTeX Warning: Citation `holstein2021categorical' on page 8 undefined on input 
-line 1166.
-
-
-Overfull \hbox (79.0636pt too wide) in paragraph at lines 1157--1178
-\T1/ptm/m/n/12 (-20) consult [[][]\T1/cmtt/m/n/12 ?KellerKoszul2003[][]\T1/ptm/
-m/n/12 (-20) , [][]\T1/cmtt/m/n/12 ?Positselski2011[][]\T1/ptm/m/n/12 (-20) , [
-][]\T1/cmtt/m/n/12 ?Sinha2010[][]\T1/ptm/m/n/12 (-20) , [][]\T1/cmtt/m/n/12 ?MO
-329[][]\T1/ptm/m/n/12 (-20) , [][]\T1/cmtt/m/n/12 ?holstein2021categorical[][]\
-T1/ptm/m/n/12 (-20) ]
- []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2729,6 +2699,9 @@ Overfull \hbox (0.30962pt too wide) in paragraph at lines 5085--5085
  []
 
 
+LaTeX Warning: Float too large for page by 8.07928pt on input line 5244.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.14003pt}.
@@ -2754,7 +2727,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[75] [76]
+[75]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2763,7 +2736,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[77]
+[76] [77]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2818,7 +2791,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [83]
-Overfull \hbox (6.17126pt too wide) in paragraph at lines 5703--5703
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[84]
+Overfull \hbox (6.17126pt too wide) in paragraph at lines 5755--5755
 []\T1/ptm/m/n/12 (-20) All the results in this section have corresponding dual 
 statements for conilpotent
  []
@@ -2831,7 +2813,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[84]
+[85]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2840,37 +2822,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[85] [86]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[87]
-LaTeX Font Info:    Calculating math sizes for size <8.00006> on input line 588
-0.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.00006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5880.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.92007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5880.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.80008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5880.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 8.00006pt on input line 5880.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 5.92007pt on input line 5880.
-LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 4.80008pt on input line 5880.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 8.00006pt on input line 5880.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 5.92007pt on input line 5880.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 4.80008pt on input line 5880.
-
+[86] [87]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2880,6 +2832,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [88]
+LaTeX Font Info:    Calculating math sizes for size <8.00006> on input line 593
+2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.00006> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5932.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.92007> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5932.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.80008> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5932.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 8.00006pt on input line 5932.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 5.92007pt on input line 5932.
+LaTeX Font Info:    Font shape `U/eus/m/n' will be
+(Font)              scaled to size 4.80008pt on input line 5932.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 8.00006pt on input line 5932.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 5.92007pt on input line 5932.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 4.80008pt on input line 5932.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2916,11 +2889,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [92]
-Overfull \hbox (7.82368pt too wide) in paragraph at lines 6210--6223
-[]\T1/ptm/m/n/12 (-20) The proof involves a computation, though the computation
- may get rather cumbersome,
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2930,6 +2898,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [93]
+Overfull \hbox (7.82368pt too wide) in paragraph at lines 6262--6275
+[]\T1/ptm/m/n/12 (-20) The proof involves a computation, though the computation
+ may get rather cumbersome,
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2947,7 +2920,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[95] [96]
+[95]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2956,7 +2929,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[97]
+[96] [97]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2983,7 +2956,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[100] [101]
+[100]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2992,7 +2965,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[102]
+[101] [102]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3019,7 +2992,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[105] [106]
+[105]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3028,7 +3001,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[107]
+[106]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3037,7 +3010,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[108]
+[107] [108]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3046,12 +3019,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[109] [110] (lecture-notes.tdo)
+[109]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[110]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[111] [112] (lecture-notes.tdo)
 \tf@tdo=\write8
 \openout8 = `lecture-notes.tdo'.
 
+ (lecture-notes.bbl
 
-No file lecture-notes.bbl.
+Package rkeyval Warning: Unknown key: \bib'how on input line 24.
+
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3060,7 +3054,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[111] (lecture-notes.aux)
+[113] (lecture-notes.aux)
 
  *File List*
  article.cls    2021/10/04 v1.4n Standard LaTeX document class
@@ -3266,6 +3260,7 @@ lecture-notes.out
   mt-eus.cfg    2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
   ts1ptm.fd    2001/06/04 font definitions for TS1/ptm.
    uni-0.def    2013/05/13 UCS: Unicode data U+0000..U+00FF
+lecture-notes.bbl
  ***********
 
 
@@ -3279,37 +3274,22 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
-(rerunfilecheck)             Checksum: 1546C7BC6DC3B03B256A5DA92BAFDCEA;11781.
+(rerunfilecheck)             Checksum: 75C50CAB4391C519EA1D20FEAD4C097D;11914.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 520 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44116 strings out of 480634
- 855911 string characters out of 2896310
- 1398414 words of memory out of 3000000
- 59748 multiletter control sequences out of 15000+600000
- 582603 words of font info for 711 fonts, out of 8000000 for 9000
+ 44183 strings out of 480634
+ 856788 string characters out of 2896310
+ 1404690 words of memory out of 3000000
+ 59765 multiletter control sequences out of 15000+600000
+ 588799 words of font info for 731 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  108i,24n,106p,3239b,12752s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.holstein2021categorical} has b
-een referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.MO329} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Sinha2010} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Positselski2011} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.KellerKoszul2003} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Priddy1970} has been referenced but does not e
-xist, replaced by a fixed one
+pdfTeX warning (dest): name{section*.23} has been referenced bu
+t does not exist, replaced by a fixed one
 
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/cm-super/cm
 -super-t1.enc}{/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/instal
@@ -3329,18 +3309,19 @@ iKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/pta
 marov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/texmfs/install/fon
 ts/type1/public/rsfs/rsfs10.pfb></Library/Application Support/MiKTeX/texmfs/ins
-tall/fonts/type1/public/cm-super/sftt1200.pfb></Users/ptamarov/Library/Applicat
-ion Support/MiKTeX/texmfs/install/fonts/type1/public/hoekwater/stmary10.pfb></L
-ibrary/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pf
-b></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/us
-yr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/time
-s/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/ur
-w/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/ty
-pe1/urw/times/utmri8a.pfb></Users/ptamarov/Library/Application Support/MiKTeX/t
-exmfs/install/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb>
-Output written on lecture-notes.pdf (111 pages, 710323 bytes).
+tall/fonts/type1/public/cm-super/sftt1000.pfb></Library/Application Support/MiK
+TeX/texmfs/install/fonts/type1/public/cm-super/sftt1200.pfb></Users/ptamarov/Li
+brary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/hoekwater/st
+mary10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/
+symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1
+/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/
+type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/
+fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/in
+stall/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Library/Application Su
+pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb>
+Output written on lecture-notes.pdf (113 pages, 749457 bytes).
 PDF statistics:
- 1603 PDF objects out of 1728 (max. 8388607)
- 612 named destinations out of 1000 (max. 500000)
- 184365 words of extra memory for PDF output out of 184870 (max. 10000000)
+ 1647 PDF objects out of 1728 (max. 8388607)
+ 631 named destinations out of 1000 (max. 500000)
+ 193077 words of extra memory for PDF output out of 221844 (max. 10000000)
 

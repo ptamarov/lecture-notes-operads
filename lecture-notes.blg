@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: lecture-notes.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: amsrn.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: bibliography.bib
+You've used 6 entries,
+            1497 wiz_defined-function locations,
+            450 strings with 3562 characters,
+and the built_in function-call counts, 3993 in all, are:
+= -- 120
+> -- 322
+< -- 2
++ -- 28
+- -- 303
+* -- 358
+:= -- 735
+add.period$ -- 0
+call.type$ -- 6
+change.case$ -- 25
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 311
+empty$ -- 163
+format.name$ -- 14
+if$ -- 444
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 152
+newline$ -- 60
+num.names$ -- 12
+pop$ -- 314
+preamble$ -- 1
+purify$ -- 19
+quote$ -- 0
+skip$ -- 72
+stack$ -- 0
+substring$ -- 48
+swap$ -- 207
+text.length$ -- 36
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 0
+while$ -- 52
+width$ -- 0
+write$ -- 125
