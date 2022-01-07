@@ -2,11 +2,98 @@
 \begin{bibdiv}
 \begin{biblist}
 
+\bib{Bremner2016}{book}{
+      author={Bremner, Murray~R.},
+      author={Dotsenko, Vladimir},
+       title={Algebraic operads},
+   publisher={Chapman and Hall/{CRC}},
+        date={2016},
+         url={https://doi.org/10.1201/b20061},
+}
+
+\bib{Dotsenko2020}{article}{
+      author={Dotsenko, Vladimir},
+       title={Word operads and admissible orderings},
+        date={2020-01},
+     journal={Applied Categorical Structures},
+      volume={28},
+      number={4},
+       pages={595\ndash 600},
+         url={https://doi.org/10.1007/s10485-020-09591-0},
+}
+
+\bib{Dotsenko2010}{article}{
+      author={Dotsenko, Vladimir},
+      author={Khoroshkin, Anton},
+       title={Gr\"{o}bner bases for operads},
+        date={2010},
+     journal={Duke Mathematical Journal},
+      volume={153},
+      number={2},
+         url={https://doi.org/10.1215/00127094-2010-026},
+}
+
+\bib{Gan2003}{article}{
+      author={Gan, Wee~Liang},
+       title={{KoSzul} duality for dioperads},
+        date={2003},
+     journal={Mathematical Research Letters},
+      volume={10},
+      number={1},
+       pages={109\ndash 124},
+         url={https://doi.org/10.4310/mrl.2003.v10.n1.a11},
+}
+
+\bib{Getzler1998}{article}{
+      author={Getzler, E.},
+      author={Getzler, E.},
+      author={Kapranov, M.~M.},
+        date={1998},
+     journal={Compositio Mathematica},
+      volume={110},
+      number={1},
+       pages={65\ndash 125},
+         url={https://doi.org/10.1023/a:1000245600345},
+}
+
+\bib{Ginzburg1994}{article}{
+      author={Ginzburg, Victor},
+      author={Kapranov, Mikhail},
+       title={Koszul duality for operads},
+        date={1994},
+     journal={Duke Mathematical Journal},
+      volume={76},
+      number={1},
+         url={https://doi.org/10.1215/s0012-7094-94-07608-4},
+}
+
+\bib{Hoffbeck2009}{article}{
+      author={Hoffbeck, Eric},
+       title={A {P}oincar{\'{e}}--{B}irkhoff--{W}itt criterion for {K}oszul
+  operads},
+        date={2009},
+     journal={Manuscripta Mathematica},
+      volume={131},
+      number={1-2},
+       pages={87\ndash 110},
+         url={https://doi.org/10.1007/s00229-009-0303-2},
+}
+
 \bib{holstein2021categorical}{misc}{
       author={Holstein, Julian},
       author={Lazarev, Andrey},
        title={Categorical {K}oszul duality},
         date={2021},
+}
+
+\bib{Kajiura2008}{inproceedings}{
+      author={Kajiura, Hiroshige},
+      author={Stasheff, Jim},
+       title={Homotopy algebra of open{\textendash}closed strings},
+        date={2008-02},
+   booktitle={Geometry and topology monographs},
+   publisher={Mathematical Sciences Publishers},
+         url={https://doi.org/10.2140/gtm.2008.13.229},
 }
 
 \bib{KellerKoszul2003}{article}{
@@ -16,6 +103,35 @@
         date={2003},
        pages={6},
       eprint={https://webusers.imj-prg.fr/~bernhard.keller/publ/kdc.pdf},
+}
+
+\bib{MarklDistributive}{article}{
+      author={Markl, M.},
+       title={Distributive laws and {K}oszulness},
+        date={1996},
+        ISSN={0373-0956},
+     journal={Ann. Inst. Fourier (Grenoble)},
+      volume={46},
+      number={2},
+       pages={307\ndash 323},
+         url={http://www.numdam.org/item?id=AIF_1996__46_2_307_0},
+      review={\MR{1393517}},
+}
+
+\bib{Markl2007}{article}{
+      author={Markl, Martin},
+      author={Voronov, Alexander~A.},
+       title={Propped up graph cohomology},
+        date={2007},
+      eprint={math/0307081},
+}
+
+\bib{May1972}{book}{
+      author={May, J.~P.},
+       title={The geometry of iterated loop spaces},
+   publisher={Springer Berlin Heidelberg},
+        date={1972},
+         url={https://doi.org/10.1007/bfb0067491},
 }
 
 \bib{MO329}{misc}{
@@ -56,6 +172,28 @@
        title={Koszul duality in algebraic topology: an historical perspective},
         date={2010},
       eprint={https://arxiv.org/abs/1001.2032},
+}
+
+\bib{Vallette2004}{article}{
+      author={Vallette, Bruno},
+       title={Koszul duality for {PROPs}},
+        date={2004-06},
+     journal={Comptes Rendus Mathematique},
+      volume={338},
+      number={12},
+       pages={909\ndash 914},
+         url={https://doi.org/10.1016/j.crma.2004.04.004},
+}
+
+\bib{Vallette2020}{article}{
+      author={Vallette, Bruno},
+       title={Homotopy theory of homotopy algebras},
+        date={2020},
+     journal={Annales de l{\textquotesingle}Institut Fourier},
+      volume={70},
+      number={2},
+       pages={683\ndash 738},
+         url={https://doi.org/10.5802/aif.3322},
 }
 
 \end{biblist}

@@ -68,6 +68,8 @@
 \usepackage{xcolor}
 % Link colors and styles, change accordingly, these are the official colours of Trinity 
 \definecolor{trinityblue}{rgb}{0.05, 0.45,0.75}
+\definecolor{mpg-gruen}{rgb}{0.00, 0.428,0.404}
+
 \definecolor{trinitygray}{rgb}{0.33, 0.34,0.35}
 
 %% Tree macros %%
@@ -612,9 +614,9 @@ join=round] \draw (0,0) rectangle (1,1)
 
 % url colors
 \hypersetup{colorlinks,
-	linkcolor={trinityblue},
-		citecolor={trinityblue},
-			urlcolor={trinityblue}} 
+	linkcolor={mpg-gruen},
+		citecolor={mpg-gruen},
+			urlcolor={mpg-gruen}} 
 			
 \usepackage{sectsty}
 \chapterfont{\color{newcol}}  % sets colour of chapters
@@ -682,7 +684,7 @@ join=round] \draw (0,0) rectangle (1,1)
 % Coloured text etc.
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 
-\newcommand{\hacer}[1]{\todo[inline,linecolor=blue,backgroundcolor=blue!25!white,bordercolor=blue]{#1}}
+\newcommand{\hacer}[1]{\todo[inline,linecolor= mpg-gruen,backgroundcolor=mpg-gruen!25!white,bordercolor=mpg-gruen]{#1}}
 \newcommandx{\unsure}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25!white,bordercolor=blue,#1]{#2}}
 \newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 
@@ -909,8 +911,7 @@ join=round] \draw (0,0) rectangle (1,1)
   \textsc{Office F310, Non-linear Algebra Group}, MPIMiS, Leipzig, Germany \par\nopagebreak
   \textit{Addresses:} tamaroff@mis.mpg.de}
 }
-  
-
+   
 \usepackage{titletoc}
 
 \titlecontents{chapter}
@@ -970,17 +971,13 @@ twelve lectures, along with extra talks by
 willing participants, with the goal of introducing extra
 material to the course, and making them more
 familiar with the theory.
-%We will survey the Koszul duality theory introduced by Ginzburg--Kapranov and, more particularly, it's extension to inhomogenous 
-%(quadratic-linear) operads, appearing originally in the work of 
-%G\'alvez-Carrillo--Tonks--Vallette. We'll do this with a view 
-%towards its application to the computation of the homotopy 
-%quotient of the BV operad by the circle action
-%(Khoroshkin--Markarian--Shadrin, etc) and the corresponding 
-%geometrical statement (Drummond-Cole). If time permits, I'll 
-%mention some other interesting (old and new) related results 
-%related to non-commutative analogues, among others. 
 \end{abstract}
 
+\vspace{2 cm}
+
+\begin{center}
+\includegraphics[scale=.05]{logoMPG.png}
+\end{center}
 
 \vfill
 
@@ -1018,15 +1015,15 @@ which in particular allowed to produce these lecture notes. }
 \thispagestyle{empty}
 
 
-\section{Motivation and history}
+\section{Motivation and history}\label{section:theintro}
  
 \textbf{Goals.} The goals of this lecture is to
 give a broad picture of the history and 
 pre-history of operads, and some current trends,
 and give a road-map for the course.  
-
-\subsection{Introduction and motivation}
- 
+ \emph{Note:} references will be
+ added in the final version of the notes.
+  
 Operads (topological operads, more precisely)
 originally appeared as tools in algebraic
 topology and homotopy theory, 
@@ -1108,16 +1105,16 @@ out what ``wheeled structures'' are, and how
 they fit in the table below).
 
 \begin{center}
-\begin{tabular}{@{}llcc@{}} \toprule
-Type & Graph & Compositions & Due to \\ \midrule
+\begin{tabular}{@{}llccr@{}} \toprule
+Type & Graph & Compositions & Due to & Ref.\\ \midrule
 PROPs & Any graph & Any  & Adams--MacLane \\
-Modular & Any graph & $\xi_{i,j}$, $\circ_{i,j}$  & Getzler--Kapranov\\ 
-Properads & Connected graphs & Any & B. Vallette \\
-Dioperads & Trees & ${}_i\circ_j$ (no genus) & W. L. Gan \\
+Modular & Any graph & $\xi_{i,j}$, $\circ_{i,j}$  & Getzler--Kapranov & \cite{Getzler1998}\\ 
+Properads & Connected graphs & Any & B. Vallette & \cite{Vallette2004}\\
+Dioperads & Trees & ${}_i\circ_j$ & W. L. Gan & \cite{Gan2003}\\
 Half-PROPs & Trees & $\circ_j$ , ${}_i\circ$ & 
- Markl--Voronov \\ 
-Cyclic operads & Trees &  $\circ_{i,j}$ & Getzler--Kapranov\\ 
-Symmetric operads & Rooted trees & $\circ_i$  & J. P. May \\ 
+ Kontsevich\footnote{The reference explains that ``These results are based on the useful notion of a 1/2 PROP introduced by Kontsevich in an e-mail message to the first author.''} & \cite{Markl2007}\\ 
+Cyclic operads & Trees &  $\circ_{i,j}$ & Getzler--Kapranov & \cite{Kajiura2008}\\ 
+Symmetric operads & Rooted trees & $\circ_i$  & J. P. May & \cite{May1972}\\ 
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1162,7 +1159,7 @@ series we will follow Priddy's motivation and see it as an
 instance of a phenomenon in which certain algebraic objects
 have very economical ---and thus computationally and theoretically
 useful--- resolutions. An interested reader can 
-consult~\cite{KellerKoszul2003,Positselski2011,
+consult~\cites{KellerKoszul2003,Positselski2011,
 Sinha2010,MO329,holstein2021categorical} to obtain a broader
 view of this phenomenon, and in particular find a wide
 variety of answers to the question ``...but what \emph{exactly}
@@ -1183,11 +1180,11 @@ quadratic and, when in luck, Koszul. These can be anything
 from Lie, commutative or associative algebras, to Feynmann
 categories, dg categories, operads and their kin. In this
 lecture series, we will focus on algebraic operads: our goal
-is to introduce the reader to algebraic operads in general
+is to introduce the reader to these objects in general
 and to quadratic operads in particular, define what
 it means for such operads to be Koszul, and explore
 the consequences this property has on the operads
-and its representations.
+and its representations. We do this in Lectures~\ref{lecture:quadraticops}, \ref{lecture:KD1}, \ref{lecture:barcobar} and \ref{lecture:KD2}.
 
 Although, as we
 mentioned, we will take a rather old fashioned point of 
@@ -1199,20 +1196,87 @@ new developments in the area from the last two (or
 maybe three) decades:
 the inhomogenous Koszul duality for (pr)operads due
 to Galvez-Carillo--Tonks--Vallette, which
-followed the original theory of Ginzburg--Kapranov,
-the use of filtered distributive laws of Dotsenko
-which followed the methods of Markl, and the general
+followed the original theory of Ginzburg--Kapranov~\cite{Ginzburg1994},
+the use of filtered distributive laws of Dotsenko~\cite{Bremner2016}*{Section 6.3.5}
+which followed the methods of Markl~\cite{MarklDistributive}, and the general
 theory stating Koszul operads give rise to good
-notions of algebras up to homotopy, due to Vallette.
+notions of algebras up to homotopy, due to Vallette~\cite{Vallette2020}.
 Naturally, we will also focus on the classical developments,
-and on the effective methods of Hoffbeck and 
-Dotsenko--Khoroshkin, which we detail in the next
-section.
+and on the effective methods of Hoffbeck~\cite{Hoffbeck2009} and 
+Dotsenko--Khoroshkin~\cite{Dotsenko2010}, which we mention again in
+the next section.
 
 \subsection{Gr\"obner bases}
- 
-\hacer{Write introduction to Groebner bases.}
-\hacer{References for introduction.}
+Many algebraic structures that exhibit some kind of 
+associativity can be described by making the following check-list:
+they have a notion \emph{variable} (or alphabet) and a notion 
+of \emph{monomial} in the given alphabet. In turn, they have
+a notion of \emph{polynomial} and a notion of \emph{free algebra}:
+its basis is given by such monomials.
+At the same time, these structures have a notion of \emph{ideal} and
+\emph{quotient algebra}, and hence of a \emph{presentation} of an object of that
+type by \emph{generators and relations}.
+At this point, a natural question arises, which was 
+famously raised by Wolfgang Gr\"obner around 1964 to his student Bruno
+Buchberger: \emph{How can one find a basis of a free algebra by
+a set of relations?} 
+
+In his PhD thesis, Buchberger developed the tool-kit to 
+answer this question in a streamlined fashion for the case
+of commutative (associative) algebras: the first step is
+to have a notion of an admissible monomial order, that
+effectively allows to do linear algebra on the free algebra.
+With this at hand, one develops a notion of divisibility
+and of leading terms of polynomials: with this, one can
+perform long division and define normal forms. 
+In tandem, one can define what a 
+Gr\"obnber basis of an ideal is and, finally, long division 
+can be used to build Bucherberger's algorithm, that allows
+us to complete generators of ideals to Gr\"obner bases.
+With this at hand, the membership problem is solved:
+an element belong to an ideal if and only if the result
+of long division of it using a Gr\"obner basis is zero,
+and the normal forms with respect to a Gr\"obner basis give
+a linear basis of the quotient algebra.
+
+At this point, as in the following excerpt from~\cite{Bremner2016},
+one has to make the key observation that this tool-kit works,
+\emph{mutatis-mutandis}, for many different algebraic structures
+exhibiting some kind of associativity, and not only for
+those which Gr\"obner and Buchberger were originally concerned with:
+\[\claim{
+Both testing hypotheses and proving theorems about polynomial expressions of all those types often involves highly complex symbolic computations which can never be completed in a reasonable time unless one approaches them in an extremely structured way. [...] Our goal in this book is to present the solution 
+to the problem of determining normal forms in a way that all the individual building blocks 
+of that solution are clearly identified; this makes desired 
+generalizations of the theory straightforward. We give complete proofs of key 
+facts, many detailed examples, a large array of exercises, mostly coming from 
+actual research questions, and references to further reading.}
+\]
+
+Lectures~\ref{lecture:shuffleops}-\ref{lecture:GB2} in these
+notes are aimed at studying the analogue of the usual
+theory of Gr\"obnber bases for commutative algebras as it was
+developed for algebraic operads by Dotsenko and Khoroshkin, 
+following the breakthrough paper of Hoffbeck~\cite{Hoffbeck2009}
+giving a ``Poincar\'e--Birkhoff--Witt criterion'' for an operad
+to be Koszul. We will not deviate too much from the exposition of the 
+book~\cite{Bremner2016}, although we will incorporate to our
+exposition new developments that happened after that book
+was written, such as examples where we compute
+Gr\"obner bases and count normal forms 
+with the \textsf{Haskell Operad Calculator}
+developed by Dotsenko and Heijltjes, along with new
+monomial orders coming from~\cite{Dotsenko2020},
+one of which we have implemented (along with F. Lebr\'on)
+to this \textsf{Haskell} package. 
+
+\subsection{Effective methods}
+
+In Lectures~\ref{lecture:methods1} and~\ref{lecture:methods2}, we give
+a few methods to prove that an operad is Koszul.
+
+\hacer{Explain how to put it all together.}
+
 \newpage
 
 \subsection{Exercises}
@@ -1440,7 +1504,7 @@ sequences.
 \afterpage{\blankpage}
 
 \newpage
-\section{Symmetric modules and algebraic operads}
+\section{Symmetric modules and algebraic operads}\label{lecture:thebasics}
 
 \textbf{Goals.}
 We will define
@@ -1954,8 +2018,7 @@ in any Markl operad.
 \end{question}
 
 \begin{question}
- Check that examples (1), (2), (4), (5) in page 10
- are indeed all operads.
+ Check that examples (1), (2), (4), (5) are indeed all operads.
 \end{question}
 %
 %\begin{question}
@@ -2147,7 +2210,7 @@ above is usually written in the form
 
 \afterpage{\blankpage}
 \newpage
-\section{Free operads and presentations}
+\section{Free operads and presentations}\label{lecture:freeops}
 
 \textbf{Goals.} We will define algebraic operads
 by generators and relations, and with this at
@@ -2472,7 +2535,7 @@ leaves are labeled by $I$).
 \afterpage{\blankpage}
 \newpage
 
-\section{Quadratic operads}
+\section{Quadratic operads}\label{lecture:quadraticops}
 
  \textbf{Goal.} Introduce weight graded gadgets,
  define operads by generators and relations, and
@@ -2710,7 +2773,7 @@ satisfying the `anti-associative law'
 
 
  \begin{question}
-During Lecture 3 we introduced the associative and commutative operads
+During Lecture~\ref{lecture:quadraticops} we introduced the associative and commutative operads
 through binary quadratic presentations. Show  that 
 for all $n\geqslant 1$ the space $\mathsf{Ass}(n)$ is the
 regular representation of $S_n$, and that for 
@@ -2719,7 +2782,7 @@ trivial representation.
 \end{question}
 
 \begin{question} Use the presentation of the Poisson operad given
-during Lecture 3 to show that $\dim\mathsf{Poiss}(n)\leqslant n!$
+during Lecture~\ref{lecture:quadraticops} to show that $\dim\mathsf{Poiss}(n)\leqslant n!$
 for all $n\geqslant 1$\footnote{There are at least three different
 ways to show that equality holds.}. 
 \end{question}
@@ -2738,7 +2801,7 @@ presentation} of the associative operad.
 \end{question}
 
 \begin{question} 
-During Lecture 3, we introduced to operad $\mathsf{tCom}_k$ of totally
+During Lecture~\ref{lecture:quadraticops}, we introduced to operad $\mathsf{tCom}_k$ of totally
 associative commutative $k$-ary algebras. It is generated by a single
 fully symmetric operation $\mu$ or arity $k$ subject to the relations
 $\mu\circ_1\mu = \mu\circ_i\mu$
@@ -2800,7 +2863,7 @@ of algebras?
 \afterpage{\blankpage}
 \newpage
 
-\section{Koszul duality I: quadratic duals}
+\section{Quadratic duals}\label{lecture:KD1}
 \textbf{Goals.}
 Give the definition of the Koszul dual
 operad of a quadratic operad, and then compute
@@ -3000,7 +3063,8 @@ only if $\sus\PP$ is Koszul.
 \end{note}
 
 \textbf{Some examples.} Let us compute the Koszul duals of 
-some of the quadratic operads we introduced in \textbf{Lecture 3}.
+some of the quadratic operads we considered in 
+Lecture~\ref{lecture:quadraticops}.
 For simplicity, we will consider only those with binary 
 generators of degree zero, though one can in the same way
 carry out computations with generators of higher arities and
@@ -3168,7 +3232,7 @@ during the lectures is $S_3$-invariant.
 %\afterpage{\blankpage}
 \newpage
 
-\section{Shuffle operads}
+\section{Shuffle operads}\label{lecture:shuffleops}
 
 \textbf{Goal.} Introduce shuffle operads
 and prove that the free symmetric operad
@@ -3754,7 +3818,7 @@ $X$ it itself well ordered: we can find the minimum
 by induction on $n$.
 \end{proof}
 
-We now recall from \textbf{Lecture 1} the definition
+We now recall Lecture~\ref{lecture:thebasics} the definition
 of the \emph{word operad of a monoid $M$}.
 
 \begin{definition}
@@ -4111,7 +4175,7 @@ on $\FF_\XX^\Sha$.
 \afterpage{\blankpage}
  \pagebreak
  
-\section{Gr\"obner bases}
+\section{Gr\"obner bases}\label{lecture:GB1}
 
 \textbf{Goal.} Define the long division algorithm for shuffle
 tree polynomials. Prove Gr\"obner bases for shuffle operads exist
@@ -4670,8 +4734,7 @@ non-constructive: we are considering the poset of
 leading terms of $\II$ under divisibility, 
 which we admits a (possibly infinite) set of 
 minimal elements, and arguing these constitute the
-reduced Gr\"obner basis of~$\II$. In the next
-lecture, we will learn how to begin with any generating
+reduced Gr\"obner basis of~$\II$. In the Lecture~\ref{lec:GB2}, we will learn how to begin with any generating
 set of $\II$, and complete it to a (possibly infinite)
 reduced Gr\"obnber basis.
  
@@ -4717,12 +4780,22 @@ $T$ divides $T'$, then $T\prec T'$.
 \end{question}
 
 \begin{question}\label{ex:self-reduction}
-Translate the self-reduction algorithm into prose.
+Translate the self-reduction algorithm into prose
 and prove Proposition~\ref{lemma:self-reduction}.
 \end{question}
 
 \begin{question}\label{ex:repl}
 Give a proof of Lemma~\ref{lemma:repl}.
+\end{question}
+
+\begin{question}
+Look up examples
+of associative algebras
+with a presentation and choice
+of monomial order that leads to
+an infinite reduced Gr\"obner
+basis. Why does this never happen
+for commutative algebras?
 \end{question}
 \vfill
 
@@ -4731,7 +4804,7 @@ Give a proof of Lemma~\ref{lemma:repl}.
 %\afterpage{\blankpage}
 \newpage
 
-\section{Computing Gr\"obner bases}
+\section{Computing Gr\"obner bases}\label{lecture:GB2}
 
 \textbf{Goal.} 
 Define overlapping ambiguities and $S$-polynomials of overlapping
@@ -5159,11 +5232,10 @@ $\mathsf{Dend}$.}
 Configuration:
 
 actions:        normalise 
-count limit:    0
+count limit:    
 arity limit:    6
 time limit:     none
-output:         newly stable rewrite rules
-                final theory
+output:         final theory
 field:          rationals
 operad type:    unsigned asymmetric operad
 measure:        degree-lexicographic permutation 
@@ -5205,8 +5277,8 @@ time limit:     none
 output:         final theory
 field:          rationals
 operad type:    unsigned shuffle operad
-measure:        quantum degree-lexicographic permutation 
 signature:      x(2) y(2)
+measure:        quantum(x,y) degree-lexicographic permutation 
 theory:
 
   y(y(1 2) 3)  -  y(y(1 3) 2)  -  y(1 y(2 3))
@@ -5237,15 +5309,14 @@ Counting normal forms:
      5  |     120
      6  |     720
 \end{verbatim}
-\caption{Implementation of the ``quantum order'' and 
-verification that the associative, Jacobi and 
+\caption{Verification that the associative, Jacobi and 
 Leibniz rule give a Gr\"obner basis for the
-Poisson operad with respect to this order.}
+Poisson operad with respect to the $\mathsf{QM}$ order.}
 \end{figure}
-\afterpage{\blankpage}
+%\afterpage{\blankpage}
 \newpage
 
-\section{Bar and cobar constructions}
+\section{Bar and cobar constructions}\label{lecture:barcobar}
 \textbf{Goals.} Define the bar (and cobar) construction,
 define the syzygy grading and give the first definition
 of what it means for an operad to be Koszul. 
@@ -5463,7 +5534,7 @@ those bar tree monomials of homological degree two.
 	\end{pgfonlayer}
 \end{tikzpicture}
 \hspace{0.5 em}
-\mathsymbol{1.5}{+}
+\mathsymbol{1.5}{-}
 \hspace{-1 em}
 \begin{tikzpicture}
 	\begin{pgfonlayer}{main}
@@ -5817,7 +5888,7 @@ $\PP$ and write it $\B{\PP}$.
  
 \afterpage{\blankpage}
 \newpage
-\section{Koszul complexes}
+\section{Koszul complexes}\label{lecture:KD2}
 
 \textbf{Goals.} Define twisting morphisms, unravel the
 bar-cobar adjunction. Give the definition of the
@@ -6394,18 +6465,119 @@ is natural.
 \afterpage{\blankpage}
 \newpage
 
-\section{Methods to prove an operad is Koszul I}
+\section{Methods to prove an operad is Koszul I}\label{lecture:methods1}
 
  \subsection{Monomial operads}
  
-Let us fix an operad $\PP$ generated by some set of
+Let us fix a shuffle operad $\PP$ generated by some set of
 variables $\XX$ subject to some relations $\RR$ determined
 by tree polynomials, and suppose that $\prec$ is an admissible
-monomial order on $\FF_\XX$. With this information, one
+monomial order on $\FF_\XX^\Sha$. With this information, one
 can consider the operad $\PP_\mathrm{mon}$, generated by
 the same variables $\XX$ but by the tree monomials 
-$\leadm{\RR}$.
- 
+$\leadm{\RR}$, sometimes denoted $\mathrm{in}_\prec(\RR)$
+in the cases of associative (or associative commutative) algebras.
+We call it the monomial operad associated to  $\PP$.
+
+If we let $\mathcal N$ denote the subsequence of $\FF_\XX$ 
+generated by the normal forms for this order with respect to $\RR$,
+we have an isomorphism of collections $\PP_\mathrm{mon} \cong \mathcal N$
+and, at the same time, a map of sequences
+\[
+\eta : \PP_\mathrm{mon} \longrightarrow \PP 
+\]
+obtained as the composition of the inclusion $\mathcal N\subseteq
+\FF_\XX$ with the projection $\FF_\XX^\Sha\longrightarrow \PP$. One observation
+we can begin to make is the following.
+
+\begin{lemma} The composition $\PP_\mathrm{mon}\xrightarrow{\cong} \mathcal N \hookrightarrow 	\FF_\XX^\Sha \twoheadrightarrow \PP$
+is an isomorphism of collections if, and only if, the set of relations 
+$\RR$ is a Gr\"obnber basis for $\PP$. 
+\end{lemma}
+
+\begin{proof}
+The normal forms generate $\PP$ if and only if this map is surjective, which simply
+amounts to the statement that every tree polynomial can be reduced
+modulo $\RR$ to a normal form: this is always true, since we have
+available to us the long division algorithm. At the same time,
+this map is injective if and only if every tree polynomial has a unique normal form
+modulo $\RR$, which is precisely the condition that our set of
+relations constitutes a Gr\"obner basis.
+\end{proof}
+
+Thus, one can think of monomial operads (shuffle, symmetric, or ns) 
+as certain pivotal objects that have a simpler ``multiplication table''
+than generic operads, and can be used as a first approximation to studying
+these latter objects. More precisely, one can in general prove that the
+homotopy type of an algebraic operad with a Gr\"obner basis can be obtained
+by perturbing the homotopy type of the corresponding monomial operad,
+which allows to make concrete informal claims such as the previous one.
+Since we are interested in studying quadratic operads, 
+let us begin by studying quadratic monomial operads and to do so,
+let us introduce them proper.
+
+\begin{definition}
+Let $\XX$ be a set collection, and let $\RR$ be a set of tree monomials
+in $\FF_\XX$. We call $\FF(\XX,\RR)$ the monomial operad associated to the
+datum $(\XX,\RR)$. 
+\end{definition}
+
+Note that, just like in the case of associative algebras, one can apply
+a linear change of coordinates to a monomial operad to obtain an operad
+that is not presented by relations that are tree monomials. We will only
+consider monomial operads with a given presentation or, what is the same,
+``monomial data'' $(\XX,\RR)$ as above.
+
+\begin{lemma}
+Let $(\XX,\RR)$ be a shuffle quadratic monomial datum, and let us write
+$(\XX^\vee,\RR^\perp)$ for the Koszul dual datum. 
+\begin{tenumerate}
+\item The shuffle tree monomials
+not divisible by any element of $\RR$ form a linear basis of
+$\PP = \FF(\XX,\RR)$.
+\item  The set of shuffle tree monomials for which every
+quadratic divisor belongs to $\RR$ forms a basis of $\PP^!$.
+\end{tenumerate} 
+\end{lemma}
+
+\begin{proof}
+This is a particular case of Exercise~\ref{ex:quadratic-GB-dual}.
+\end{proof}
+
+Let us now describe the right Koszul complex of a quadratic monomial operad
+and show that quadratic monomial operads are Koszul.
+
+\begin{theorem}
+Quadratic monomial operads are Koszul
+\end{theorem}
+
+\begin{proof}
+Let $\PP$ be the monomial operad associated to a monomial datum $(\XX,\RR)$.
+The right Koszul complex $\PP^\antishriek\circ\PP$ has a basis consisting
+of all shuffle tree graftings of the form
+\[ x = \gamma_{\pi}(T; T_1,\ldots,T_k) 
+\]
+where $T$ is a shuffle tree not divisible by any monomial in $\RR$ and
+$T_1,\ldots,T_k$ are shuffle trees all whose quadratic divisors are in $\RR$.
+The differential acts by first extracting a variable from $T$, that is,
+applying $\Delta_{(1)}$ and then $\tau$ at the top, and then grafting this
+variable with the corresponding trees at the top. If the resulting tree 
+is divisible by a relation, it is zero in $\PP$, and this term vanishes,
+and if not, it remains a basis element of $\PP$. Note that $dx$ will 
+contain several summands. 
+
+In parallel, let us consider the degree $+1$ map $h$ on $\PP^\antishriek\circ\PP$
+that takes a grafting $x$ and, for the first $T_i$ that can be written as a
+grafting $\gamma_{1,2}(v ; T',T'')$ for $v$ a variable, replaces
+$T$ by the tree $\tilde{T}$ obtained by grafting $v$ on $T$, to obtain the element
+\[
+\gamma_{\tilde{\pi}}(\tilde{T}; T_1,\ldots,T_{i-1},T',T'',\ldots,T_k).
+\]
+We send this element to zero if $\tilde{T}$ is not in $\PP^\antishriek$
+and to itself otherwise. One can check that $hd + dh = 1-\iota\pi$, 
+where $\pi$ is the projection onto $\kk$ in arity $1$ and $\iota$ the 
+corresponding inclusion, so we obtain a contracting homotopy for our complex.
+\end{proof}
 \subsection{The numerical criterion}
 
 \textbf{Hilbert and Poincar\'e series.} Let us begin
@@ -6615,11 +6787,11 @@ Counting normal forms:
 \end{verbatim}
 \caption{Counting normal forms in the Novikov operad.}
 \end{figure}
-\afterpage{\blankpage}
+%\afterpage{\blankpage}
 \newpage
 
 
-\section{Methods to prove an operad is Koszul II}
+\section{Methods to prove an operad is Koszul II}\label{lecture:methods2}
 
 \subsection{Filtrations and rewriting}
 
@@ -6919,9 +7091,57 @@ operad is Koszul, too. We will prove in Exercise~\ref{ex:quadratic-GB-dual} that
 a quadratic Gr\"obner basis also admits a Gr\"obner basis.
 \end{example}
 
-\hacer{Other well known operads with quadratic Gr\"obner bases.}
+The following figure tabulates some well-known
+quadratic operads, their shuffle generators,
+and a choice of order that yields a quadratic
+Gr\"obner basis. 
+
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}} \toprule
+Operad & Type & $\Sha$-generators & Order \\
+\midrule 
+PreLie & $\Sigma$ & $\circ,\bar\circ$ & 
+	\texttt{deglex perm} for $\bar\circ \prec \circ$.\\
+Perm &   $\Sigma$ & $\cdot,\bar\cdot$ &
+	\texttt{deglex perm} for $\cdot \prec \bar \cdot$  \\
+Zinb &  $\Sigma$  & $\cdot,\bar\cdot$ &
+	\texttt{deglex perm} for $\cdot \prec \bar \cdot$ \\
+
+Leib &  $\Sigma$  & $\cdot,\bar\cdot$ & 
+	\texttt{deglexr perm} for $\bar\cdot \prec \cdot$\\
+Dias &   $\Sigma$  & \\
+Poiss &   $\Sigma$ & \\
+Dend &  ns  & $\prec,\succ$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+
 
 \subsection{Distributive laws}
+
+If $V$ and $W$ are associative algebras, and if we
+are given a map $\tau : W\otimes V\longrightarrow V\otimes W$,
+we can consider defining a new associative algebra structure
+on $V\otimes W$ by first using the map
+\[
+V\otimes W\otimes V\otimes W 
+	\xrightarrow{1\otimes \tau\otimes x}
+	 V\otimes V\otimes W\otimes W
+	 \]
+and then the products of $V$ and $W$. This map will be
+associative precisely when $\tau$ satisfies a certain
+compatibility condition with $\mu_V$ and $\mu_W$. The upshot
+is that one obtains a new associative algebra
+$V\otimes_\tau W$ where elements of $V$ and $W$ do not
+commute, but we have
+\[ 1\otimes w\cdot v\otimes 1 = \tau(v\otimes w).
+\]
+One can produce a completely analogous formalism for
+algebraic operads, as it was done by Markl in~\cite{MarklDistributive}. 
+
 \hacer{Write section on distributive laws.}
 
 \newpage
@@ -6950,7 +7170,7 @@ Gr\"obner basis.
 Gr\"obner basis if and only if its Koszul dual operad does. 
 \end{tenumerate}
 \end{question}
-\afterpage{\blankpage}
+%\afterpage{\blankpage}
 \newpage
 
 \appendix
@@ -7105,470 +7325,3 @@ algebras, and the case of the Steenrod algebra.}
 \bibliography{bibliography}
 
 \end{document}
-
-
-\section{Koszul duality II}
-
-\subsection{Bar construction}
-
-\subsection{Twisting cochains}
-
-\subsection{The Koszul complexes}
-
-\subsection{Exercises}
-\newcommand{\antishriek}{\text{\raisebox{\depth}{\textexclamdown}}}
-\begin{definition}
-A quadratic operad is Koszul if one (and hence all)
-of the following equivalent conditions are
-satisfied:
-\begin{tenumerate}
-\item The cohomology group $H^s(\mathsf{B}(\PP))$ is zero for $s>0$.
-\item We have $\mathrm{rate}(\PP)=1$.
-\item The inclusion
-$H^0(\mathsf{B}(\PP)) \longrightarrow \mathsf{B}^*(\PP)$
-is a quasi-isomorphism. 
-\end{tenumerate}
-We call $H^0(\mathsf{B}(\PP))$ the
-\emph{Koszul dual cooperad to $\PP$} and 
-write it $\PP^\antishriek$.
-\end{definition}
-
-\textcolor{trinityblue}{Add equivalence with simpler
-definition using twisting cochains.}
-%\item The Koszul complex $\PP\circ_\tau \PP^\antishriek$ is acyclic.
-%\item The Koszul complex $\PP^\antishriek\circ_\tau \PP$ is acyclic.
-%\item The canonical map $\Omega \PP^\antishriek \longrightarrow \PP$
-%is a quasi-isomorphism.
-
-
-\section{Methods to prove Koszulness I}
-
-\subsection{Distributive law methods}
-
-\subsection{Koszul (co)homology}
-
-\subsection{Exercises}
-
-\section{Pre-Lie algebras and algebraic operads}
-
-\subsection{Pre-Lie algebras associated to operads}
-
-\subsection{The rooted trees operad}
-
-\subsection{Exercises}
-
-
-
-
-\section{Gr\"obner bases for algebraic operads II}
-
-\subsection{Tree monomials}
-\subsection{Admissible orders}
-\subsection{Exercises}
-
-\section{Methods to prove Koszulness II}
-
-\subsection{Gr\"obner basis arguments}
-\subsection{Filtration arguments}
-\subsection{Exercises}
-
-\section{Operads in algebraic topology 1}
-
-\subsection{The little disks operad}
-\subsection{Stasheff's operad}
-\subsection{Recognition principles}
-
-
-\section{Koszul duality II}
-
-\subsection{Inhomogeneous duality}\label{sec:inhom}
-
-Suppose that $\PP$ admits a quadratic linear presentation
-defined by $\XX$ and $\RR\subseteq \XX\oplus \FF_\XX^{(2)}$.
-There is a projection $q : \FF_\XX \longrightarrow \FF_\XX^{(2)}$
-and we define $q\PP = \FF_{\XX}/(q\RR)$, and call it 
-the \emph{quadratic operad associated to $\PP$}. We say
-a quadratic-linear presentation is admissible if it
-satisfies the following conditions:
-\begin{tenumerate}
-\item There are no superfluous generators in $\XX$,
-that is, have that $\RR\cap \XX = 0$.
-\item No new quadratic relations can be deduced from the
-quadratic-linear relations, that is
-\[ (\RR\circ_{(1)} \XX + \XX\circ_{(1)} \RR) \cap \FF_\XX^{(2)}
-\subseteq \RR\cap \FF_\XX^{(2)}.\]
-\end{tenumerate}
-When condition (1) is satisfied, there is a map 
-$f: q\RR \longrightarrow \XX$ such that $\RR = \{
-r - f(r) : r\in q\RR \}$ is the graph of $f$. The operad
-$\PP$ is filtered by weight, and we write $\mathrm{gr}(\PP)$
-for the resulting operad. There is a surjection
-$ q\PP \longrightarrow \mathrm{gr}(\PP)$
-that is an isomorphism in weights $0$ and $1$, but
-not necessarily in weight $2$.
-
-The map $f: q\RR \longrightarrow \XX$ induces a map
-$d_f : q\PP^\antishriek \longrightarrow \FF_{s\XX}^c$
-which is the unique coderivation that correstricts on
-$s\XX$ to the composition
-\[ \PP^\antishriek  \xrightarrow{\pi} 
- s^2 q\RR \xrightarrow{s^{-1}f} s\XX.\] 
- Moreover, the following holds:
- \begin{tenumerate}
- \item The coderivation $d_f$ maps into $q\PP^\antishriek$
- if and only if 
- $(\RR\circ_{(1)} \XX + \XX\circ_{(1)} \RR) \cap \FF_\XX^{(2)} \subseteq q\RR$.
- \item If condition (2) above is satisfied, then the previous
- condition holds, as $\RR\cap \FF_\XX^{(2)}\subseteq q\RR$,
- and $d_f^2=0$.
- \end{tenumerate}
- 
-\begin{definition}
-A quadratic-linear presentation of $\PP$ is inhomogeneous
-Koszul if and only if it satisfies conditions (1) and (2)
-and if the quadratic operad $q\PP$ is Koszul. In this case,
-we call $(q\PP^\antishriek,d_f)$ the Koszul dual conilpotent
-dg-cooperad
-of $\PP$ and write it $\PP^\antishriek$.
-\end{definition}
-
- \textbf{Warning!} Although not every operad 
-is quadratic, every operad admits
-a inhomogeneous Koszul presentation (Exercise 3.8.10
-in \cite{LodVal}).  The problem is finding `economical
-and useful' one.
-Concretely, if we choose $\XX = \#\PP$ (the symmetric 
-sequence underlying $\#\PP$) and 
-quadratic-linear relations $\# \mu \circ_i \#\nu = \#(\mu\circ_i \nu)$ for every $\mu,\nu\in\PP$ and $i\in [1,\ari(\mu)]$,
-then $\PP^\antishriek = \mathsf{B}(\PP)$ is the
-bar construction of $\PP$ with its usual differential.
-
-The main
-theorem about inhomogeneous Koszul operads is the
-following:
-
-\begin{theorem}
-If $\PP$ admits an inhomogenous Koszul presentation then
-the canonical morphism
- $\Omega \PP^\antishriek \longrightarrow \PP$
-determined by $s^{-1}\PP^\antishriek \twoheadrightarrow
-\XX \hookrightarrow \PP$ is a quasi-isomorphism of
-operads.
-\end{theorem}
-
-In general, one can show that the map $\Omega\mathsf{B}(\PP)
-\longrightarrow \PP$ is a quasi-isomorphism: this is the
-original approach of Ginzburg--Kapranov) who instead
-define a duality functor $\mathsf{D}(\PP)$ along with a
-quasi-isomorphism
-$\mathsf{D}\mathsf{D}(\PP) \longrightarrow \PP$,
-and define the Koszul dual operad to $\PP$ as
-$H_\Delta(\mathsf{D}(\PP))$. The
-theorem above gives us a more economical resolution of
-$\PP$ in case it is quadratic-linear Koszul. Note that
-the bar-cobar construction is, more or less, obtained
-as the `least economical' resolution arising from the
-corresponding `least economical' quadratic-linear 
-presentation of an operad $\PP$. 
-
-\section{Prototype of inhomogeneous duality}
-\textbf{Goals.}
-We will define the operad governing BV algebras 
-and show it admits a small inhomogeneous Koszul 
-presentation. We will compute the homology of the 
-corresponding dg-cooperad, and
-explain how it gives rise to the Gravity operad
-of E. Getzler. At the same time, we will explain
-how the homotopy quotient of $\mathsf{BV}$ by
-the circle action is the hypercommutative
-operad of Yu. I. Manin.
-\subsection{Definition and computations}
-\newcommand{\BV}{\mathsf{BV}}
-The BV operad is an algebraic symmetric operad, which we
-write $\BV$, generated by a binary commutative associative
-operation $\mu$ that we will write $x_1x_2$ 
-of degree zero and a unary square-zero operation
-$\Delta$ of degree $-1$ that satisfy the following 
-homogeneous $7$-term
-relation:
-\[ 
- \Delta(x_1x_2x_3) = x_1\Delta(x_2x_3)+
- x_2\Delta(x_1x_3) + x_3\Delta(x_1x_2)
-  - x_1x_2\Delta(x_3) - x_1x_3\Delta(x_2)
-   	- x_2x_3\Delta(x_1).\]
-Batalin--Vilkovisky algebras appear in several
-areas of mathematics:
-\begin{tenumerate}
-\item (Algebra) Vertex operator algebras, cohomology of Lie algebras,
-bar construction of $A_\infty$-algebras.
-\item (Algebraic geometry) Gromov--Witten invariants and moduli spaces of curves (quantum cohomology, Frobenius manifolds), chiral algebras (geometric Langlands program),
-\item (Differential geometry) The sheaf of 
-polyvector fields of an orientable (resp. Poisson or
-Calabi--Yau) manifold, the differential 
-forms of a manifold (Hodge decomposition 
-in the Riemannian case), Lie algebroids,
-Lagrangian (resp. coisotropic) intersections.
-\item (Noncommutative geometry) 
-The Hoschchild cohomology of a symmetric 
-algebra  and the cyclic Deligne conjecture,
-non-commutative differential operators.
-\item (Algebraic topology)
-2-fold loop spaces on topological spaces 
-carrying an action of the circle,
-topological conformal field theories, 
-Riemann surfaces, string topology. 
-\item  (Mathematical physics)
-BV quantization (gauge theory), BRST
-cohomology, string theory, topological field theory, Renormalization theory.
-
-\end{tenumerate}
-
- One can express the seven term relation by saying
- that $[\Delta,\mu] = \beta$ is a derivation
- for $\mu$, where $[f,g]$
- is the operadic commutator (\`a la Gerstenhaber)
- defined by
- \[ [f,g] = \sum_{i=1}^{\ari(f)} f\circ_i g 
- 	  -(-1)^{|f||g|} \sum_{j=1}^{\ari(g)} g\circ_j f. \]
- This suggests defining $\beta = [\Delta,m]$, and presenting
- the BV-operad by quadratic-linear relations:
- \[ [\mu,\mu] = 0 ,\quad \Delta^2 =0 , \quad
-  	[\Delta,\mu] = \beta, \quad
-  	\beta\circ_1 \mu = \mu \circ_2 \beta +
-  	 	\mu\circ_1 \beta (23).\]
-  This presentation satisfies condition (1), but it
-  \emph{does not} satisfy condition (2): one can
-  deduce that $\beta$ is a Lie bracket of degree $-1$
- and that $\Delta$ is a derivation for $\beta$
-  from the first three equations. In other words, one
-  can deduce that $(\Delta,\beta)$ defines the
-  datum of a dg Lie algebra purely from the
-  fact that $\Delta^2=0$ and that $\mu$ is associative. 
-  
-  \begin{lemma}
-  The BV-operad admits a quadratic-linear presentation
-  satisfying conditions (1) and (2) 
-  given by generators $\mu,\beta,\Delta$ of arities
-  $2$, $2$ and $1$ and degrees $0$, $-1$ and $-1$,
-  respectively. The operation $\mu$ is associative 
-  commutative, $\beta$ is a Lie bracket, $\Delta$
-  squares to zero, and 
- \[	\mathsf{Leib}(\Delta,\mu) = \beta, \quad
-  	\mathsf{Leib}(\beta,\mu)=0, \quad
-  	\mathsf{Leib}(\Delta,\beta) = 0.\]
-  	  \end{lemma}
-  	  
-  	  \begin{theorem}
-  	  The quadratic operad $q\BV$ is Koszul.
-  	  \end{theorem}
-  	  
-  	  \begin{proof}
-  	  We will use the distributive law criterion of
-  	  Markl, adapted to the case the operads in his
-  	  result have unary operators. One can first
-  	  show that $\BV(n)$ and its
-  	  quadratic counterpart both have dimension $2^n n!$
-  	  by a Gr\"obner basis argument,
-  	  and then that $q\BV$ is obtained from
-  	  a distributive law between the quadratic 
-  	  operads $\mathsf{Ger}$ and 
-  	  $\mathsf{D} = \kk[\Delta]/(\Delta^2)$, in light of the
-  	  relations
-  	  \[\Delta(x_1x_2) = x_1\Delta(x_2) + \Delta(x_1)x_2, 
-  	  \quad 
-  	   \Delta[x_1,x_2] = [x_1,\Delta x_2] + [\Delta x_1,x_2]. \]
-  	  One can prove this again by a dimension counting argument
-  	  using the result above. With this at hand, we
-  	  observe that $\mathsf{Ger}$ is Koszul, as it is
-  	  in turn obtained from a distributive law between
-  	  $\mathsf{Com}$ and $\sus\mathsf{Lie}$, which are
-  	  both Koszul, and that $\mathsf{D}$ is
-  	  Koszul (as any algebra with trivial multiplications
-  	  is). We conclude that $q\BV$ is Koszul, and that we
-  	  have isomorphisms of symmetric sequences
-  	  \[ q\BV \cong \Com \circ \sus\Lie\circ \mathsf{D},
-  	    	  \quad q\BV^\antishriek \cong
-  	    	  T^c(\delta) \circ \Com^c \circ \sus^{-1}\Lie^c,\]
-  	  which will be useful to describe the dg-cooperad
-  	  $\BV^{\antishriek}$.
-  	  \end{proof}
-
-\subsection{The differential}  	  
-  	 Let us note that a generic element
-  	 of $\Com^c \circ \sus^{-1}\Lie^c$ consists of a
-  	 corolla decorated by Lie words on a Lie bracket
-  	 of degree $1$. Any Lie word can always be
-  	 written uniquely as a linear combination of
-  	 words in the form
-  	 $\ell = [x_1, x_{\sigma 2} , \ldots , x_{\sigma n} ]
-     $
-     where $\sigma\in S_n$ fixes $1$, and we adopt the
-     right bracketing convention:
-     \[ [y_1,y_2,\ldots,y_n ] = [y_1,[y_2,\ldots,y_n]].\]
-     We call $x_1$ the `head' of $\ell$. 
-     We will then write an element of $\Com^c \circ \sus^{-1}\Lie^c$ generically by
-  	 \[ \ell_1\odot \cdots  \odot \ell_n \]
-	 where $\ell_i$ is a Lie word supported on $\pi_i$,
-	 with `head' $x_j$ with $j_i = \min\pi_i$ and such that
-	 $\min \pi_1 < \cdots < \min \pi_n$. 
-	 	 
-	 \begin{theorem}
-	 A generic element of $q\BV^\antishriek$ is of the form
-	     \[x =\delta^k\otimes \ell_1\odot \cdots  \odot \ell_n \]
-	  and the differential $d$ of $q\BV^\antishriek$ is
-	  \[ dx = \sum_{i=1}^n(-1)^{\varepsilon_i} \delta^{k-1} \otimes \ell_1\odot
-	   \cdots \odot \ell_i^{(1)} \odot \ell_i^{(2)}
-	    \odot \cdots \odot \ell_n,
-	  	 \]	  	 
-	  	 where $\ell \longmapsto 
-	  	 	\sum \ell^{(1)}\otimes \ell^{(2)}$
-	  	 is the binary component of the decomposition map in
-	  	 $\sus^{-1}\Lie^c$.	  	 
-	  	 \end{theorem}
-  	  
-%The operad Gerstenhaber, Gravity, Hypercomm, PreLie,
-%Perm, Zinbiel, Dias, Leib, NAP (Livernet) and the 
-%Connes--Kreimer Hopf algebra of
-%renormalization. 
-\subsection{Exercises}
-
-%\section{Further contents}
-
-%\subsection{Iterated integrals}
-%$C^*_{\mathrm{dR}}(\Omega X)$, Chen iterated integrals,
-%work of Getzler--Jones for $\Omega^2 X$. 
-
-\bibliographystyle{alpha}
-\bibliography{biblio}
-
-
-\Addresses
-
-\end{document}
-
-	  	 
-	  	
-\subsection{The gravity operad and the hypercommutative operad}
-  	  
-  	 There is a unique square zero derivation $\Delta$ 
-	 of $\mathsf{Ger}$
-	 of degree $-1$ that sends the commutative
-	 product $x_1x_2$ to the Lie bracket $[x_1,x_2]$,
-	 which arises from the action of $S^1$ on $D_2$
-	 by turning the whole configuration.
-	 This derivation is acyclic, and $\mathsf{Grav}$
-	 is, by definition, $\ker\Delta   =
-	 \operatorname{im}\Delta  $.	 
-	 	 
-	 \begin{lemma}
-	 Let $M$ be an $S^1$-space with a free action, and
-	 let $\Delta : H_*(M) \longrightarrow H_{*+1}(M)$
-	 be the square zero operator arising from the
-	 fundamental class of $S^1$. Then
-	 \[ \ker\Delta \cong \Sigma H_*(M/S^1) . \]
-	 \end{lemma} 
-
-	 The action of $S^1$ on little disks is free
-	 (except in arity one) 
-	 with quotient homotopy equivalent to the moduli
-	 space of marked curves of genus zero, so 
-	 	 	  \[ \ker\Delta =  
-	 	 	  \Sigma H_*(D_2/S^1) = \Sigma H_*(\mathcal{M}_{0,\bullet+1}). \]
-	 
-	 \begin{theorem}
-	 One can realize $\mathsf{Grav}$ as the suboperad
-	 of $\mathsf{Ger}$ generated by
-	 \[ \{x_1,\ldots,x_n\} =  
-	 \sum_{i<j} \{x_i,x_j\}
-	  x_1\cdots \widehat{x_i}\cdots \widehat{x_j} \cdots x_n, 
-	  	\quad n\geqslant 2.\]
-	 Similarly, one can realize it as the suboperad of	 
-	 $\mathsf{BV}$ generated by 
-	 \[ \{x_1,\ldots,x_n\} = 
-	  \Delta(x_1\cdots x_n) - \sum_{i=1}^n x_1\cdots \Delta x_i
-	   	\cdots x_n, \quad n\geqslant 2.\]
-	   	We have that $\Sigma H_*(\mathcal{M}_{0,n+1}) \cong
-	   	\mathsf{Grav}(n)$ for $n\geqslant 2$ where the
-	   	operation $\{x_1,\ldots,x_n\}$ corresponds to the
-	   	suspension of the generator of 
-	   	$H_0(\mathcal{M}_{0,n+1})$.
-	  \end{theorem}
-	  
-	 \begin{theorem}
-	 The homology of the dg-cooperad 
-	 $\mathsf{BV}^\antishriek$ (and hence
-	 the bar homology of $\mathsf{BV}$) is
-	 isomorphic to
-	 \[ T(\delta) \oplus \sus^{-1}\mathsf{Grav}^*,\]
-	 and the  
-	 homotopy quotient of $\mathsf{BV}$ by
-	 $\Delta$ is quasi-isomorphic to $\mathsf{Hycomm}$,
-	 the Koszul dual of $\mathsf{Grav}$. These
-	 two last operads are Koszul.
-	 \end{theorem}
-
-
-
-\subsection{The homotopy quotient}
-
-\begin{definition} 
-Let $f:\PP\to \mathcal Q$ be a morphism of operads, 
-and factor $f$ into a cofibration
-$i: \PP\longrightarrow \FF$ followed
-by a trivial fibration $j:\FF\longrightarrow \QQ$.
-We define the homotopy cofibre $C_f$ of $f$
-as the quotient of $\FF$ by the ideal generated
-by $\PP$. We write $\PP\sslash \QQ$ for
-the homology of $C_f$.
-\end{definition}
-
-Note that $\PP\sslash \mathcal Q$ is independent 
-of the choice of factorization of $f$.
-Usually we can take $\FF$ of the form 
-$(\PP \star \FF_\XX,d)$ where $\star$ is the
-coproduct in the category of operads, 
-so $C_f$ is
-isomorphic to $(\FF_\XX,\bar{d})$. 
-If $\alpha\in\PP$, we define the homotopy
-quotient of $\PP$ as the homotopy cofibre of
-the inclusion
-$i : \PP_\alpha \longrightarrow \PP$
-where $\PP_\alpha$ is the suboperad of $\PP$ 
-generated by $\alpha$, and write it more
-simply by $\PP\sslash \alpha$.  
-In this case, to compute $\PP\sslash\alpha$, it suffices we compute a quasi-free
-model $\FF = (\FF_\XX,d)$ of $\PP$ ---which in
-particular we can assume contains an 
-isomorphic copy of $\FF_\alpha$, and compute
-the homology of the quotient $\FF/ (\FF_\alpha).$
-
-This algebraic homotopy quotient is related
-to the more geometrical homotopy quotient
-with respect to the action of a topological
-group $G$. Concretely, the exact functor 
-$ t:\mathsf{Top} \longrightarrow \mathsf{Top}_G$
-from the category of topological spaces to 
-the category of topological spaces with a 
-$G$-action, that sends a space $X$ to the
-same space $tX$ with the trivial action, admits
-a (non-Quillen-exact) left adjoint $F$ and
-the homotopy quotient is obtained
-as the left derived functor $\mathbb LF$ of
-$F$, which we usually write $X\longmapsto X_{hG}$. At the level of homotopy categories, it
-follows that we have an adjunction isomorphism
-$[X_{hG},Y] \longrightarrow [X,tY]$.
-
-Naturally, we may pass from the geometric to
-the algebraic setting through the cohomology
-functor, by considering the sphere $S^1$ whose
-cohomology algebra coincides with 
-$\Bbbk[\Delta]$. In this way, we can consider
-the category $\mathsf{Op}_\Delta$ of dg-operads
-under $\Bbbk[\Delta]$, and the exact functor
-$t:\mathsf{Op} \longrightarrow \mathsf{Op}_\Delta$
-that assigns an operad $\PP$ to the trivial
-map $\Bbbk[\Delta]\to \PP$ sending $\Delta$ to $0$. The homotopy quotient functor $\PP\longmapsto \PP\sslash \Delta$ is the left adjoint, at the level of homotopy categories,
-to $t$: we have an adjunction isomorphism
-$[ \PP\sslash \Delta, \mathcal Q]
- 	\longrightarrow [ \PP,t\mathcal Q]$. 
- 	  
