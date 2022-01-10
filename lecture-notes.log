@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  7 JAN 2022 17:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  7 JAN 2022 19:13
 entering extended mode
 **./lecture-notes.tex
 (lecture-notes.tex
@@ -2353,7 +2353,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [41]
-Overfull \hbox (1.10588pt too wide) in paragraph at lines 3102--3108
+Overfull \hbox (1.10588pt too wide) in paragraph at lines 3104--3110
 []\T1/ptm/m/it/12 (-20) The commutative and Lie operads. \T1/ptm/m/n/12 (-20) W
 e have computed that if $\U/eus/m/n/12 X\OT1/ztmcm/m/n/12 (2)$ \T1/ptm/m/n/12 (
 -20) is the trivial representation
@@ -2423,7 +2423,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 3637.
+put line 3639.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2434,7 +2434,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [49]
-Overfull \hbox (3.66347pt too wide) in paragraph at lines 3710--3710
+Overfull \hbox (3.66347pt too wide) in paragraph at lines 3712--3712
 []\T1/ptm/m/n/12 (-20) Write down a presentation of the following as shuffle op
 erads: the commutative
  []
@@ -2457,7 +2457,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [51]
-Overfull \hbox (1.55725pt too wide) in paragraph at lines 3834--3837
+Overfull \hbox (1.55725pt too wide) in paragraph at lines 3836--3839
 []\T1/ptm/m/n/12 (-20) The reader should verify that $\U/msb/m/n/12 W[]$ \T1/pt
 m/m/n/12 (-20) is isomorphic, as a symmetric sequence, to the composition
  []
@@ -2484,7 +2484,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [53]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 3953.
+t line 3955.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2564,7 +2564,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [62]
-Overfull \hbox (0.87727pt too wide) in paragraph at lines 4422--4425
+Overfull \hbox (0.87727pt too wide) in paragraph at lines 4424--4427
 \T1/ptm/m/n/12 (-20) coefficient of $\OML/ztmcm/m/it/12 f \OMS/ztmcm/m/n/12   [
 ]\U/msa/m/n/12 []\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 )$\T
 1/ptm/m/n/12 (-20) . But the leading term of the second term is, by Proposition
@@ -2572,16 +2572,16 @@ Overfull \hbox (0.87727pt too wide) in paragraph at lines 4422--4425
  []
 
 
-LaTeX Warning: Reference `algo:gauss' on page 63 undefined on input line 4442.
+LaTeX Warning: Reference `algo:gauss' on page 63 undefined on input line 4444.
 
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 10.00012pt on input line 4447.
+(Font)              scaled to size 10.00012pt on input line 4449.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.40013pt on input line 4447.
+(Font)              scaled to size 7.40013pt on input line 4449.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 6.00012pt on input line 4447.
+(Font)              scaled to size 6.00012pt on input line 4449.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 4457.
+put line 4459.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2623,7 +2623,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [66]
 
-LaTeX Warning: Reference `lec:GB2' on page 67 undefined on input line 4737.
+LaTeX Warning: Reference `lec:GB2' on page 67 undefined on input line 4739.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2644,33 +2644,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [68]
 LaTeX Font Info:    Calculating math sizes for size <14.39996> on input line 48
-14.
+16.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.39996> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4814.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4816.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.65605> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4814.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4816.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.64006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4814.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4816.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 4814.
+(Font)              scaled to size 14.39996pt on input line 4816.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 10.65605pt on input line 4814.
+(Font)              scaled to size 10.65605pt on input line 4816.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 4814.
+(Font)              scaled to size 8.64006pt on input line 4816.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 4814.
+(Font)              scaled to size 14.39996pt on input line 4816.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 10.65605pt on input line 4814.
+(Font)              scaled to size 10.65605pt on input line 4816.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 4814.
+(Font)              scaled to size 8.64006pt on input line 4816.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4814.
+(hyperref)                removing `math shift' on input line 4816.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4814.
+(hyperref)                removing `math shift' on input line 4816.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2717,7 +2717,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [73]
-Overfull \hbox (0.50854pt too wide) in paragraph at lines 5120--5122
+Overfull \hbox (0.50854pt too wide) in paragraph at lines 5122--5124
 [] $[] \OMS/ztmcm/m/n/12   []\OT1/ztmcm/m/n/12 ([]\OML/ztmcm/m/it/12 ; []\OT1/z
 tmcm/m/n/12 )$ 
  []
@@ -2731,7 +2731,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [74]
-Overfull \hbox (0.30962pt too wide) in paragraph at lines 5158--5158
+Overfull \hbox (0.30962pt too wide) in paragraph at lines 5160--5160
 \T1/ptm/m/n/12 (-20) the Jacobi identity in the presentation of the operad $[][
 ]$ with respect to the \T1/cmtt/m/n/12 grapathpermlex
  []
@@ -2835,7 +2835,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [85]
-Overfull \hbox (6.17126pt too wide) in paragraph at lines 5826--5826
+Overfull \hbox (6.17126pt too wide) in paragraph at lines 5828--5828
 []\T1/ptm/m/n/12 (-20) All the results in this section have corresponding dual 
 statements for conilpotent
  []
@@ -2868,25 +2868,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [89]
 LaTeX Font Info:    Calculating math sizes for size <8.00006> on input line 600
-3.
+5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.00006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6003.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6005.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.92007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6003.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6005.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.80008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6003.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6005.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 8.00006pt on input line 6003.
+(Font)              scaled to size 8.00006pt on input line 6005.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 5.92007pt on input line 6003.
+(Font)              scaled to size 5.92007pt on input line 6005.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 4.80008pt on input line 6003.
+(Font)              scaled to size 4.80008pt on input line 6005.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 8.00006pt on input line 6003.
+(Font)              scaled to size 8.00006pt on input line 6005.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 5.92007pt on input line 6003.
+(Font)              scaled to size 5.92007pt on input line 6005.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 4.80008pt on input line 6003.
+(Font)              scaled to size 4.80008pt on input line 6005.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2933,7 +2933,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [94]
-Overfull \hbox (7.82368pt too wide) in paragraph at lines 6333--6346
+Overfull \hbox (7.82368pt too wide) in paragraph at lines 6335--6348
 []\T1/ptm/m/n/12 (-20) The proof involves a computation, though the computation
  may get rather cumbersome,
  []
@@ -3393,7 +3393,7 @@ exmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/Mi
 KTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Library/
 Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrillic/
 wncyr10.pfb>
-Output written on lecture-notes.pdf (116 pages, 1099822 bytes).
+Output written on lecture-notes.pdf (116 pages, 1099862 bytes).
 PDF statistics:
  1742 PDF objects out of 2073 (max. 8388607)
  669 named destinations out of 1000 (max. 500000)
