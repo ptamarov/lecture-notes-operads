@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  11 JAN 2022 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  11 JAN 2022 19:07
 entering extended mode
 **./lecture-notes.tex
 (lecture-notes.tex
@@ -2624,7 +2624,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [62]
-Overfull \hbox (0.87727pt too wide) in paragraph at lines 246--249
+Overfull \hbox (0.87727pt too wide) in paragraph at lines 242--245
 \T1/ptm/m/n/12 (-20) coefficient of $\OML/ztmcm/m/it/12 f \OMS/ztmcm/m/n/12   [
 ]\U/msa/m/n/12 []\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 )$\T
 1/ptm/m/n/12 (-20) . But the leading term of the second term is, by Proposition
@@ -2632,16 +2632,16 @@ Overfull \hbox (0.87727pt too wide) in paragraph at lines 246--249
  []
 
 
-LaTeX Warning: Reference `algo:gauss' on page 63 undefined on input line 266.
+LaTeX Warning: Reference `algo:gauss' on page 63 undefined on input line 262.
 
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 10.00012pt on input line 271.
+(Font)              scaled to size 10.00012pt on input line 267.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.40013pt on input line 271.
+(Font)              scaled to size 7.40013pt on input line 267.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 6.00012pt on input line 271.
+(Font)              scaled to size 6.00012pt on input line 267.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 281.
+put line 277.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2683,7 +2683,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [66]
 
-LaTeX Warning: Reference `lec:GB2' on page 67 undefined on input line 561.
+LaTeX Warning: Reference `lec:GB2' on page 67 undefined on input line 557.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3218,7 +3218,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [114
 
 
-] [115]
+]
 
 Package rkeyval Warning: Unknown key: \bib'how on input line 267.
 
@@ -3235,7 +3235,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[116])
+[115])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3244,7 +3244,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[117] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
+[116] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
 (lecture-03.aux) (lecture-04.aux) (lecture-05.aux) (lecture-06.aux)
 (lecture-07.aux) (lecture-08.aux) (lecture-09.aux) (lecture-10.aux)
 (lecture-11.aux) (lecture-12.aux) (appendix.aux))
@@ -3490,8 +3490,8 @@ Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
 ### semi simple group (level 1) entered at line 490 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44828 strings out of 480634
- 873014 string characters out of 2896310
+ 44827 strings out of 480634
+ 873006 string characters out of 2896310
  1415481 words of memory out of 3000000
  60137 multiletter control sequences out of 15000+600000
  595213 words of font info for 799 fonts, out of 8000000 for 9000
@@ -3530,9 +3530,9 @@ exmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/Mi
 KTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Library/
 Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrillic/
 wncyr10.pfb>
-Output written on lecture-notes.pdf (117 pages, 840577 bytes).
+Output written on lecture-notes.pdf (116 pages, 839914 bytes).
 PDF statistics:
- 1818 PDF objects out of 2073 (max. 8388607)
- 709 named destinations out of 1000 (max. 500000)
+ 1813 PDF objects out of 2073 (max. 8388607)
+ 708 named destinations out of 1000 (max. 500000)
  197178 words of extra memory for PDF output out of 221844 (max. 10000000)
 
