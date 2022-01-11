@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (1) at (0, 1) {$2$};
+		\node [style=inner] (2) at (0, 2) {$3$};
+		\node [style=inner] (3) at (1, 2) {$4$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (1.center) to (3.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

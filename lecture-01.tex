@@ -1,0 +1,766 @@
+\section{Symmetric modules and algebraic operads}\label{lecture:thebasics}
+
+\textbf{Goals.}
+We will define
+some related gadgets (symmetric collections,
+algebras, modules, endomorphism operads)
+necessary to introduce operads. 
+Then, we define what an operad is (topological,
+algebraic, symmetric, non-symmetric). 
+We will then give some
+(not so) well known examples of topological
+and algebraic operads.
+
+\subsection{Basic definitions}
+\emph{What is an operad?} A group is a model of
+$\operatorname{Aut}(X)$ for $X$ a set, an algebra
+over a field
+is a model of $\End(V)$ for $V$
+a vector space. Equivalently, groups are the
+gadgets that act on objects by automorphisms,
+and algebras are the gadgets that act
+on objects by their (linear) endomorphisms. 
+Operads are the gadgets that act on
+objects through operations with many 
+inputs (and one output), and at the same
+time keep track of symmetries when
+the inputs are permuted.
+
+The underlying objects to operads are known as
+\emph{symmetric sequences}: a symmetric sequence
+(also known as a $\Sigma$-module or symmetric 
+module) is a sequence of vector spaces
+$\XX = (\XX(n))_{n\geqslant 0}$ such that for
+each $n\in\NN_0$ there is a right action of
+$S_n$ on $\XX(n)$. We usually consider \emph{reduced}
+$\Sigma$-modules, those for which $\XX(0)=0$
+(or, in other cases, the terminal object of the
+category).
+
+A map of $\Sigma$-modules is a collection of maps
+$(f_n : \XX_1(n) \longrightarrow \XX_2(n))_{n\geqslant 0}$,
+each equivariant for the corresponding group action. 
+This defines the category $\SMod$ of symmetric
+sequences, and whenever we think of symmetric sequences
+using this definition, we will say we are considering  
+a biased or skeletal approach to them.
+
+In parallel, it is convenient to consider the 
+category $\GSet$ of finite sets and bijections.
+An object in this category is a finite set $I$,
+and a morphism $\sigma : I\longrightarrow J$ is a
+bijection. Since every finite set $I$ with $n$
+elements is (non-canonically) isomorphic to 
+$[n] =\{1,\ldots,n\}$, the following holds:
+
+\begin{lemma} The skeleton of $\GSet$ is
+equal to the category with objects the finite sets
+$[n]$ for $n\geqslant 0$ and with morphisms the
+bijections $[n]\longrightarrow [n]$ (and no morphism
+between $[n]$ and $[m]$ if $m\neq n$).
+\end{lemma}
+
+\begin{proof}
+This is Exercise~\ref{ex:skeleton}.
+\end{proof}
+
+We set ${}_\Sigma\Mod  = 
+\Fun(\GSet,\mathsf{Vect}^{\mathrm{op}})$,
+so that a $\Sigma$-module is a pre-sheaf of vector
+spaces $I\longmapsto \XX(I)$ assigning to each
+isomorphism $\tau : I\longrightarrow J$ an isomorphism
+$\XX(\tau): \XX(J)\longrightarrow \XX(I)$. When we
+think of $\Sigma$-modules as pre-sheaves, we will say we 
+are taking an unbiased approach, if we specify only
+its values on natural numbers, we will say we are taking the
+biased or skeletal approach; we will come back to this later.
+
+With this at hand, 
+we can in turn define the \emph{Cauchy product}
+of two $\Sigma$-modules $\XX$ and $\YY$
+\[ (\XX\otimes_\Sigma \YY)(I) = 
+ 	\bigoplus_{S\sqcup T= I}
+ 		 \XX(S)\otimes \YY(T)\] 
+where the right-hand is the usual tensor product of
+vector spaces
+and the sum runs through partitions of $I$ into
+two disjoint sets. The symmetric product is then
+defined by 
+\[ (\XX\circ_\Sigma \YY)(I) 
+ 	= \bigoplus_{\pi \vdash I} \XX(\pi) 
+ 		\otimes \YY^{\otimes k}(\pi)\] 
+as the sum runs through (ordered) partitions of $I$.
+These two products will be central in what follows.
+
+\begin{lemma}
+The category ${}_\Sigma\Mod$ with $\circ_\Sigma$ is
+monoidal with unit the $\Sigma$-module taking the value $\kk e_x$ at 
+the singleton sets $\{x\}$ and zero everywhere else. The same
+category is monoidal for $\otimes_\Sigma$ with unit
+the species taking the value $\kk$ at $\varnothing$
+and zero everywhere else.
+\end{lemma}
+
+We will use the notation $\kk$ for the base field but
+also for the unit for the composition product $\circ_\Sigma$,
+hoping it will not cause much confusion. It will be useful 
+later to think of $\kk$ as a twig or ``stick''.
+
+Observe that the associator for $\circ_\Sigma$ is
+not too simple and involves reordering certain
+factors of tensor products in $\mathsf{Vect}$. In
+particular, replacing vector spaces by graded vector
+spaces or complexes will create signs in the
+associator.
+
+We are now ready to define the prototypical symmetric
+ sequence that carries the structure of an algebraic 
+ operad. 
+ 
+\begin{definition}
+The \emph{endomorphism operad} of a space $V$ is the symmetric sequence $\End_V$
+where for each $n\in\NN$ we set $\End_V(n) = \End(V^\otimes n, V)$. 
+The symmetric group $S_n$ acts on the right
+on $\End_V(n)$ 
+so that $(f\sigma)(v) = f(\sigma v)$ for
+$v\in V^{\otimes n}$, where $S_n$ acts on
+the left on $V^{\otimes n}$ by $(\sigma v)_i
+= v_{\sigma i}$. The composition maps are defined
+by $\gamma(f;g_1,\ldots,g_n) = f\circ (g_1\otimes\cdots \otimes g_n)$. 
+If $f\in\End_V(n)$, we say that $f$ has arity $n$ and write
+it $\ari{f}$.
+\end{definition}
+
+
+The following two operations on permutations 
+will streamline our definition of (algebraic)
+operads.
+
+\medskip
+
+\textbf{Two useful maps.} For each $k\geqslant 1$
+and each tuple $\lambda = (n_1,\ldots,n_k)$ 
+with sum $n$
+there is a map
+\[ S_k \longrightarrow S_{n_1+\cdots+n_k} \]
+that sends $\sigma\in S_k$ to the permutation
+$\lambda(\sigma)$ of $[n]$ that permutes the blocks 
+$\pi_i = \{n_1+\cdots+n_{i-1}+1,\ldots
+			n_1+\cdots+n_{i-1}+n_i\}$
+			according to $\sigma$.
+There is also a map
+\[S_{n_1}\times \cdots \times  S_{n_k} 
+	\longrightarrow S_{n_1+\cdots+n_k}  \] 
+	that sends a tuple of permutations 
+	$(\sigma_1,\ldots,\sigma_k)$ to the
+	permutation $\sigma_1\#\cdots \# \sigma_k$
+	that acts like $\sigma_i$ on the block $\pi_i$
+	as above. These operations are illustrated
+	in Figure~\ref{fig:1}. With these at hand, 
+one can check that these composition maps
+satisfy the following axioms:
+
+\begin{figure}
+$$\lambda = (2,1,2), \quad \sigma = 312
+	\quad \leadsto \quad \lambda(\sigma) =  34512 \in S_5
+	$$
+	$$
+	(213,213,132)\in S_3\times S_3\times S_3 \quad \leadsto \quad 213546798\in S_9 $$
+\caption{The useful operations}
+\label{fig:1}
+\end{figure}
+
+\begin{tenumerate}
+\item \emph{Associativity}: let $f\in \End_V(n)$,
+and consider $g_1,\ldots,g_n \in \End_V$ and
+for each $i\in [n]$ a tuple $h_i= (h_{i1},\ldots,h_{i n_i})$
+were $n_i= \mathrm{ar}(g_i)$. Then for
+$f_i = \gamma(g_i; h_{i1},\ldots,h_{in_i})$ 
+and $g= \gamma(f; g_1,\ldots,g_n)$ we have
+that
+\[ \gamma(f;f_1,\ldots,f_n) = 
+	\gamma(g; h_1,\ldots,h_n).\]
+\item \emph{Intrinsic equivariance}: for
+each $\sigma\in S_k$ and $\lambda = (\ari(g_1),\ldots,\ari(g_k))$ we have that
+\[ \gamma(f\sigma; g_1,\ldots,g_k) = 	
+	\gamma(f; g_{\sigma 1} ,\ldots, 
+		g_{\sigma k})\lambda(\sigma),\]
+	
+\item \emph{Extrinsic equivariance}: for each
+tuple of permutations $(\sigma_1,\ldots,\sigma_k) \in S_{n_1} \times
+\cdots \times S_{n_k}$, if $\sigma = \sigma_1\#\cdots\#\sigma_k$, we have that
+\[\gamma(f,g_1\sigma_1,\ldots,g_k\sigma_k) = 
+	\gamma(f; g_1,\ldots,g_k)\sigma.\]
+\item \emph{Unitality:} the identity $1\in\End_V(1)$
+satisfies $\gamma(1;g) = g$ and $\gamma(g;1,\ldots,1) = g$ for every $g\in\End_V$.
+\end{tenumerate}
+
+\begin{definition} 
+A symmetric operad (in vector spaces) is a
+$\Sigma$-module $\PP$ along with a composition
+map $\gamma : \PP\circ \PP \longrightarrow \PP$
+of signature
+\[\gamma : \PP(k)\otimes 
+	\PP(n_1) \otimes \cdots \otimes \PP(n_k)
+	 	\longrightarrow \PP(n_1+\cdots+n_k)\]
+along with a unit $1\in \PP(1)$, that satisfy
+the axioms above. 
+\end{definition} 
+
+\begin{variante} A non-symmetric operad is
+an operad whose underlying object is a collection
+(with no symmetric group actions). Operads in
+topological spaces or chain complexes require
+the composition maps to be morphisms (that is,
+continuous maps or maps of chain complexes,
+respectively) and, more generally, operads 
+defined on a symmetric monoidal category
+require, naturally, that the composition
+maps be morphisms in that category. 
+\end{variante}
+
+\textbf{Pseudo-operads.}
+One can define operads through \emph{partial 
+composition maps}, modeling the honest partial
+composition map
+\[ f\circ_i g = f(1,\ldots,1,g,1,\ldots,1)\] 
+in $\End_V$. These composition maps satisfy the
+following properties:
+
+\begin{tenumerate}
+\item \emph{Associativity}: for
+each $f,g,h\in\End_V$, and $\delta = i-j+1$,
+we have
+\[ 
+(f \circ_j g) \circ_i h  = 
+ 	\begin{cases} 
+ 		 (f \circ_i h) \circ_{\ari(f)+j-1} g
+ 		  	& \delta \leqslant 0  \\
+ 		  	f\circ_j (g \circ_\delta h) &
+ 		  	\delta\in [1,\ari(g)] \\
+ 		  	(f \circ_\delta h) \circ_j g & \delta > \ari(g)
+ 		   \end{cases}
+ 		 \]
+\item \emph{Intrinsic equivariance}: for
+each $\sigma\in S_k$, we have that
+\[  (f\sigma) \circ_i g  = (f\circ_{\sigma i} g)\sigma'\]
+where $\sigma'$ is the same permutation as $\sigma$
+that treats the block $\{i,i+1,\ldots,i+\ari(g)-1\}$
+as a single element. 
+\item \emph{Extrinsic equivariance}: 
+ for each $\sigma\in S_k$, we have that
+\[  f \circ_i (g\sigma)  = (f\circ_i g)\sigma''\]
+where $\sigma''$ acts by only permuting the
+block $\{i,\ldots,i+\ari(g)-1\}$ according
+to $\sigma$.
+\item \emph{Unitality:} the identity $1\in\End_V(1)$
+satisfies $1 \circ_1 g = g$ and $g\circ_i 1 = g$ for every $g\in\End_V$ and $1\leqslant i\leqslant \ari(g)$.
+\end{tenumerate}
+
+\begin{definition}
+A symmetric operad (in vector spaces) is a
+$\Sigma$-module $\PP$ along with partial composition
+map of signature
+\[ -\circ_i -  : \PP(m)\otimes \PP(n) 
+	\longrightarrow \PP(m+n-1) \]
+and a unit $1\in\PP(1)$ satisfying the axioms above.
+\end{definition}
+
+It is not hard to see (but must be checked at least once)
+that an operad with $\PP(n) = 0$ for $n\neq 1$ is
+exactly the same as an associative algebra. 
+
+\textbf{Warning!} If one does not require
+the existence of a unit, the notion of a
+\emph{pseudo-operad} by Markl (defined by partial
+compositions) does not coincide with the
+notion of an operad as defined by May.
+
+
+\subsection{Constructing operads by hand}
+
+One can define operads in various ways. For example,
+one can define the underlying collection explicitly,
+and give the composition maps directly:
+\begin{tenumerate}
+\item \emph{Commutative operad.} The reduced symmetric topological (or set)
+operad with $\mathsf{Com}(n)$ a single point for each
+$n\in \NN$, and composition maps the unique
+map from a point to a point.
+\item \emph{Associative operad.} 
+The reduced set operad with
+$\mathsf{As}(n) = S_n$
+the regular representation and composition maps
+\[ S_k \times S_{n_1} \times
+\cdots \times S_{n_k} \longrightarrow S_{n_1+\cdots+ n_k} \]
+the unique equivariant map that sends the tuple
+of identities to the identity.
+\item  \emph{Stasheff operad.}
+Let $K_{n+2}$ be the subset of $I^n$ (the
+product of $n$ copies of $I=[0,1]$) 
+consisting of tuples $(t_1,\ldots,t_{n+2})$
+such that $t_1\cdots t_k\leqslant 2^{-k}$
+for $j\in [n+2]$. The boundary of 
+$K_{n+2}$ consists of those points such
+that for some $j\in [n+2]$ we have
+either $t_j$ or $t_1\cdots t_j = 2^{-j}$.
+It is tedious (but otherwise doable)
+to show that for each pair $(r,s)$ of
+natural numbers and each $i\in [r]$
+there exists an inclusion
+\[ \circ_i : K_{r+1} \times K_{s+1} \longrightarrow
+ 	K_{r+s+1} \] 
+that defines on the sequence of
+spaces $\{K_{n+2}\}_{n\geqslant 0}$
+the structure of a non-symmetric operad.
+
+\item If $M$ is a monoid, there is an
+operad $\mathbb W_M$ with $\mathbb{W}_M(n) =
+M^n$ such that 
+\[(m_1,\ldots,m_s) \circ_i (m_1',\ldots,m_t') = 
+ 	(m_1,\ldots,m_{i-1}, m_im_1',\ldots,m_im_t',m_{i+1},\ldots, m_s).\] We call it the
+ \emph{word operad of $M$}. Its underlying
+ symmetric collection is $\mathsf{As}\circ M$. 
+ 
+ \item Write $\operatorname{Aff}(\mathbb C) = \mathbb{C}\times \mathbb{C}^\times$ for the group of affine transformations of
+$\mathbb C$ with group law $(z,\lambda)(w,\mu) = (z+\lambda w,\lambda\mu)$. In turn, define for each finite set $I$ the topological space
+\[ \mathcal{C}(I) = \{ (z_i,\lambda_i)\in \operatorname{Aff}(\mathbb C)^I  : |z_i-z_j|>|\lambda_i|+|\lambda_j| \}.\] 
+The group law of $\operatorname{Aff}(\mathbb C)$ allows us to
+define an operad structure on $\mathcal{C}(I)$ using the
+exact same definition as in the word operad of a monoid. 
+The subspaces $\mathcal{D}_2^{\mathrm{fr}}(I)
+	\subseteq \mathcal{C}(I)$
+where $|z_i|+|\lambda_i|\leqslant 1$ for all $i\in I$, and 
+where the inequality is strict unless $z_i=0$ is called
+the \emph{framed little disks operad}. The little disks operad
+is the suboperad where $\lambda_i = 1$ for all $i\in I$, and 
+we write it $\mathcal{D}_2(I)$.
+
+ \item The operad of rooted trees $\mathsf{RT}$ has
+ $\mathsf{RT}(n)$ the collection of rooted trees with $n$
+ vertices labelled by $[n]$, and the composition $T \circ_j T'$
+  is obtained by inserting $T'$ at the $j$th vertex of $T$
+  and reattaching the children of that vertex to $T'$ in
+  all possible ways. For example, if
+\[
+\mathsymbol{.6}{S=} \begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (2) at (0, 1) {$2$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+	\end{pgfonlayer}
+\end{tikzpicture}\quad
+\mathsymbol{.6}{T=}
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (1) at (-.75, 1) {$2$};
+		\node [style=inner] (3) at (.75, 1) {$3$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1.center) to (0.center);
+		\draw (0.center) to (3.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+then we have that  
+\[
+\mathsymbol{.6}{T\circ_1 S \; =} \;
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (1) at (-1, 1) {$2$};
+		\node [style=inner] (2) at (0, 1) {$3$};
+		\node [style=inner] (3) at (1, 1) {$4$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (1.center) to (0.center);
+		\draw (2.center) to (0.center);
+		\draw (0.center) to (3.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\;\mathsymbol{.6}{+}\quad
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (1) at (0, 1) {$2$};
+		\node [style=inner] (2) at (0, 2) {$3$};
+		\node [style=inner] (3) at (1, 2) {$4$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (1.center) to (3.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\;\mathsymbol{.6}{+}\quad
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (1) at (0, 1) {$2$};
+		\node [style=inner] (2) at (0, 2) {$3$};
+		\node [style=inner] (3) at (1, 1) {$4$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (0.center) to (3.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\;\mathsymbol{.6}{+}\quad
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (1) at (0, 1) {$2$};
+		\node [style=inner] (2) at (0, 2) {$4$};
+		\node [style=inner] (3) at (1, 1) {$3$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (0.center) to (3.center);
+	\end{pgfonlayer}
+\end{tikzpicture}\mathsymbol{.6}{.}
+\]
+\end{tenumerate}
+\subsection{Exercises}
+
+ \begin{question}
+ Follow the lecture notes and read about the
+ partial definition of an operad (and what
+ a Markl operad is). Show that a unital
+ pseudo-operad is the same as a unital 
+ May operad. 
+ \end{question}
+ 
+ \begin{question}
+Define the category of collections
+in $\mathsf{Vect}$
+using the biased approach and the 
+unbiased approach (this requires considering
+\emph{totally ordered} sets instead of sets,
+and their order preserving bijections. We will
+write them with calligraphic letters but
+use subscripts, so $\mathcal X$ has ns
+components $\{\mathcal X_n\}_{n\geqslant 1}$.
+
+\begin{enumerate}
+\item Show
+that it supports a non-symmetric Cauchy
+product given by 
+\[ (\mathcal{X}\otimes\mathcal{Y})_n =
+  \bigoplus_{i+j=n} \mathcal{X}_i\otimes
+   	\mathcal{Y}_j.\]
+   	
+   	\item Use this and the unbiased approach to 
+   	argue that the ns counterpart of a
+   	`subset of $I$' is an interval:
+   	a totally ordered subset of $I$ of the
+   	form $[i,j] = \{ x\in I : i\leqslant x \leqslant j\}$.
+ \item Use the previous item to define the
+ non-symmetric composition of ns collections.
+ Define the generating function associated
+ to a collection, and show it behaves
+ well with respect to the products above. 
+\end{enumerate}
+\end{question}
+
+\begin{question}
+Since every finite totally ordered set
+is, in particular, a finite set (and
+every order preserving function is a
+fortiori a function) there is a 
+map of categories 
+$ \mathsf{FinOrd}^\times \longrightarrow
+ 	\mathsf{FinSet}^\times$
+which induces a map that `forgets the
+symmetries' ${}_\Sigma\mathsf{Mod}	\longrightarrow\mathsf{Coll}$. 
+Show that there is a functor that assigns
+a ns sequence $\mathcal{X}$ to the 
+sequence $\mathcal{X}_\Sigma(n) =
+\kk S_n\otimes \mathcal{X}_n$.  Show that it is
+left adjoint to the forgetful functor and that it is monoidal. 
+\end{question}
+ 
+\begin{question}
+Describe the associator for $\circ_\Sigma$ in the
+category of differential graded collections. 
+In particular,
+write down the signs explicitly. Explain
+how this is related to the signs
+in the parallel composition axiom
+for \emph{graded operads} that read as follows:
+for elements $f,g$ and $h$
+in an operad (of homogeneous arities)
+and $\delta = i-j+1$, we have that
+\[ 
+(f \circ_j g) \circ_i h  = 
+ 	\begin{cases} 
+ 		(-1)^{|g||h|}
+ 		 (f \circ_i h) \circ_{\ari(f)+j-1} g
+ 		  	& \delta \leqslant 0  \\
+ 		 \phantom{(-1)^{|g||h|}(} 	f\circ_j (g \circ_\delta h) &
+ 		  	\delta\in [1,\ari(g)] \\
+ 		(-1)^{|g||h|}
+   	(f \circ_\delta h) \circ_j g
+   		 & \delta > \ari(g).
+ 		   \end{cases}
+ 		 \]
+\end{question}
+
+\begin{question}
+A (unital associative) monoid $x$ in a monoidal category 
+$(\mathcal C,\otimes,\alpha,\rho,\lambda,1)$ is an object
+along with maps $\mu: x\otimes x\to x$ and $\eta : 1
+ \longrightarrow x$ such that $\mu$ is associative, 
+ that is $\mu (\mu\otimes 1) = \mu(1\otimes \mu)
+ \alpha_{x,x,x}$, and unital for
+$\eta$, that is $\mu(\eta\otimes 1)=\rho_x$
+and $\mu(1\otimes \eta) = \lambda_x$.
+Show that a $\Sigma$-operad is exactly the
+same as a monoid in $({}_\Sigma\mathsf{Mod},\circ_\Sigma)$.
+\end{question}
+
+\begin{question}
+We write $\mathsf{End}$ for
+ category of endofunctors of $\mathsf{Vect}$. Show
+ that there is a \emph{monoidal}
+ functor $S:{}_\Sigma\mathsf{Mod}
+ \longrightarrow \mathsf{End}$ that assigns
+ $\mathcal{X}$ to $V\longmapsto \bigoplus_{n\geqslant 0} \mathcal{X}(n)\otimes_{\Sigma_n} V^{\otimes n}$.
+ It is called the \emph{Schur functor} associated
+ to $\mathcal{X}$. The endofunctors in the essential
+ image of $S$ are called \emph{analytic}.
+\end{question}
+
+\begin{question}
+	 If $\mathcal{X}$
+	 is a symmetric sequence, describe the $\Sigma_n$
+	 action on $\mathcal{X}^{\otimes n}$ where
+	 $\otimes$ is the Cauchy product. Observe that
+	 it commutes with the $\Aut(I)$ action on 
+	 $\mathcal{X}^{\otimes n}(I)$.
+\end{question}
+	 
+\begin{question}
+Define ${}_\Sigma\mathsf{Mod}(\CC)$
+for any symmetric monoidal category $(\CC,\otimes,1)$
+(such as the category of sets, or topological spaces,
+or chain complexes, among others) along with
+its \emph{symmetric composition product}
+ $-\circ_\Sigma - $.
+ \end{question}
+ 
+\begin{question} Prove that non-unital Markl operads
+and non-unital May operads differ.
+To do this, consider the non-unital ns operad
+$\PP$ such that $\PP(2)$ and $\PP(4)$
+are its only non-zero components, and are
+both one dimensional, and define
+\[ \gamma : \PP(2)\otimes \PP(2)\otimes \PP(2)
+ 	\longrightarrow \PP(4) \]
+to be an isomorphism, and set all other maps to zero. 
+Check that $\PP$ is a May operad, and
+show that $\PP$ is not a Markl
+operad by exploring the consequences
+of the equality
+\[ \mu(\mu,\mu) = (\mu \circ_2\mu)\circ_1 \mu \]
+in any Markl operad.
+\end{question}
+
+\begin{question}
+ Check that examples (1), (2), (4), (5) are indeed all operads.
+\end{question}
+%
+%\begin{question}
+%Follow these steps to construct the
+%Stasheff operad as a sequence of 
+%convex polytopes $K_2',K_3',\ldots$
+%for which the boundary of $K_{n+1}'$
+%is a union of products $K_{r+1}'\times
+%K_{s+1}'$ with $r+s=n$ indexes by
+%planar rooted trees with two internal
+%vertices.
+%\end{question}
+%\begin{enumerate}
+%\item Let us write $T_n$ for the collection
+%of planar rooted \emph{binary} 
+%trees with $n+1$ leaves, which we 
+%order from left to right. Explain how
+%this gives a total order on the vertices,
+%which we will thus call $1,\ldots,n$.
+%\item  For
+%each $t\in T_n$ and each vertex $i$ of
+%$t$, let $L(i)$ denote the number of paths
+%from $i$ to a leaf of $t$ going through
+%its left child, and let $R(i)$ denote
+%the the number of paths
+%from $i$ to a leaf of $t$ going through
+%its right child. We define
+%\[ x(t) = (L(1)R(1),\ldots,L(n)R(n))
+%	\in \mathbb N^n. \]
+%Show that $x(t)$ always lies in the
+%hyperplane $x_1+\cdots x_n = \binom{n}{2}$.	
+%We write $K_{n+2}'$ for the convex hull of 
+%the points $\{ x(t) : t\in T_n \}$.
+%\emph{Hint.} Any planar binary rooted tree
+%$t$ decomposes into a left tree $L_t$
+%and a right tree $R_t$ by looking at the
+%children of the unique child of the root.
+%Express $W(t) = \sum_{i=1}^n x(t)$ in terms of $W(R_t)$ and $W(L_t)$.
+%
+%\item 
+%Show that the polytope $K_{n+2}'$ 
+%is of dimension $n$, 
+%and its $k$-cells for $k\in [n]$
+%are in bijection with planar rooted
+%trees with $n-k+1$ internal vertices
+%and $n+2$ leaves. Conclude, in particular,
+%that its codimension one faces are
+%in bijection with planar rooted trees
+%with $2$ internal vertices and $n+2$
+%leaves.
+%
+%\item Suppose that $t$ has $r+1$
+%leaves and that $t'$ has $s+1$ leaves,
+%and consider the grafting $t\circ_i t'$.
+%We define $x(t)\circ_i x(t')$ by
+%$x(t\circ_i t')$. Show that this
+%defines a map
+%\[\circ_i :  K_{r+1}'\times K_{s+1}' 
+%	\longrightarrow K_{r+s+1}'.\]
+%\item Show the maps above give the
+%collection $\{K_{n+2}'\}_{n\geqslant 0}$
+%the structure of a ns operad.
+%\end{enumerate}
+
+\begin{question}
+Suppose that $T\in\mathsf{RT}(n)$ and
+that $T'\in \mathsf{RT}(m)$, where $\mathsf{RT}$
+is the symmetric collection
+ of rooted trees of Lecture 1,
+and let $\mathrm{In}(T,i)$ denote the
+set of incoming edges of $T$ at the
+vertex labeled $i$. For each function
+$f: \mathrm{In}(T,i)\longrightarrow [m]$,
+define the tree $T\circ_i^f T'$ by
+replacing vertex $i$ of $T$ by $T'$ and
+attaching the loose incoming edges of 
+vertex $i$ to the vertices of $T'$
+according to the map $f$: the edge
+$e\in \mathrm{In}(T,i)$ is attached
+to vertex $f(e)\in T'$. Finally,
+define $T\circ_i T'$ by taking the
+sum through all possible functions
+$f$. Show that this gives $\mathsf{RT}$
+the structure of a unital pseudo-operad,
+and thus of a usual operad, with unit
+the tree with no edges and one vertex.
+\end{question}
+
+
+\begin{question}
+ Describe the operation $T\star T' = S(T,T')$ where
+$S$ is the rooted tree 
+\[
+\mathsymbol{.6}{S=} \begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {$1$};
+		\node [style=inner] (2) at (0, 1) {$2$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+above in terms of 
+insertions of $T'$ in $T$ and regrafting of incoming 
+edges. Show that it satisfies the following \emph{pre-Lie
+identity}:
+\[
+  (T\star T')\star T'' -  T \star (T' \star T'' ) =
+    (T\star T'')\star T' -  T \star (T'' \star T' ) 
+ 	\]
+ 	by explicitly interpreting the left hand side in
+ 	terms of certain insertions of $T'$ and $T''$ in $T$,
+ 	and showing the resulting sum of trees is symmetric
+ 	in $T'$ and $T''$.
+
+\end{question}
+
+\begin{question}
+Suppose that $\mathcal P$ is an operad
+and that $\mathcal X\subseteq \mathcal P$
+is a symmetric subsequence. We say
+$\mathcal X$ generates $\mathcal P$
+if every element of $\mathcal P$ is
+an iterated composition of elements of
+$\mathcal X$. 
+Show that the rooted trees operad 
+$\mathrm{RT}$ 
+is generated by the symmetric subsequence
+generated by the rooted tree $S$ of the
+previous exercise, which spans
+the regular representation of
+$S_2$. Follow these steps:
+\end{question}
+\begin{tenumerate}
+\item Suppose that $T$ is an $n$-rooted tree
+and let $J$ be a subset of $[n]$ corresponding
+to leaves of $T$ that are the children of a
+vertex $i\in T$. Let $T'$ be the
+tree obtained by erasing all these leaves
+and replacing the vertex label by a new
+symbol $\ast$, and let $T''$ be the rooted
+tree with root $i$ and children labeled
+by $J$. Show that $T'\star_\ast T'' = T$.
+\item Use the above and induction on the
+number of vertices to show it suffices to prove
+the claim for the corollas, that is, trees with
+one internal root vertex.
+\item Let us write $T_n$
+for the operation in $\mathsf{RT}(n)$
+corresponding to a corolla with root $1$,
+so in particular $T_2 = S$.
+Show that 
+\[ 
+T_n = 
+ T_2\star T_{n-1} - 
+  	\sum_{i=1}^{n-1} (T_{n-1}\star T_i)\sigma_i
+\]
+where $\sigma_i = (i+1,i+2,\ldots,n)\in S_n$
+is a cycle, and use this to conclude.
+\end{tenumerate}
+
+\emph{Note.} The operation $T_n$ is usually
+denoted $\{x_1; x_2,\ldots,x_n\}$ and is called
+a \emph{symmetric brace}, and the equation
+above is usually written in the form
+\[ 
+\{x_1; x_2,\ldots,x_n\} = 
+ \{\{x_1; x_2,\ldots,x_{n-1}\}; x_n\}
+ - \sum_{i=1}^{n-1} \{ x_1; x_2,
+ \ldots, x_{i-1}, \{x_i ; x_n \},
+ x_{i+1},\ldots,x_{n-1}\}.
+ \]
+ 
+ \begin{question}
+ Let $\mathcal X$ be a symmetric sequence,
+ and define the derivative $\partial\mathcal X$ 
+ of $\mathcal X$ to be symmetric sequence
+ with $(\partial\mathcal X)(I) = \mathcal X(I^*)$
+ where $I^* = I \sqcup \{ I \}$. Note that
+ $S_I$ acts on $I^*$ fixing the element $I$.
+ Show that $(\partial \mathcal X)(n)$ 
+ is isomorphic to the restriction of $\mathcal{X}(n+1)$ to $S_n = \mathrm{Fix}(n+1)$, and
+ conclude that 
+ \[ \partial_z f_{\mathcal X}(z) = 
+  			f_{\partial\mathcal X}(z). \]	
+  Let $s$ be the sequence of singletons and
+  define the pointing of operation by
+  $\mathcal X^\bullet = s\otimes_\Sigma \partial   \mathcal{X}$. Determine the representation
+  $\mathcal{X}^\bullet(n)$ in terms of
+  $\mathcal{X}(n)$. 
+ \end{question}

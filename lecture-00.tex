@@ -1,0 +1,511 @@
+
+
+\section{Motivation and history}\label{lecture:theintro}
+ 
+\textbf{Goals.} The goals of this lecture is to
+give a broad picture of the history and 
+pre-history of operads, and some current trends,
+and give a road-map for the course.  
+ \emph{Note:} references will be
+ added in the final version of the notes.
+  
+Operads (topological operads, more precisely)
+originally appeared as tools in algebraic
+topology and homotopy theory, 
+specifically in the study of iterated loop 
+spaces (May, 1972 and Boardman and Vogt before).
+They also appeared as \emph{comp algebras} in Gerstenhaber's 
+work on Hochschild cohomology and topologically as 
+Stasheff's `associahedra' for his homotopy
+characterization of loop spaces (both in 1963).
+The theory of operads, in particular topological
+and algebraic, saw itself very much influenced by
+homological algebra, category theory, algebraic
+geometry, rational homotopy theory and mathematical
+phyisics. Here we list a few examples:
+
+\begin{tenumerate}
+\item Stasheff~\cite{Stasheff1970,Stasheff1963,Stasheff1963a} and Sugawara~\cite{Sugawara55}
+studied homotopy associative 
+$H$-spaces, Stasheff implicitly discovers a topological
+non-symmetric operad $K$ with $C_*(K) = \mathsf{As}_\infty$ and a
+recognition principle for $A_\infty$-spaces.
+
+\item Boardmann--Vogt~\cite{Boardman1973,bams/1183530111} studied infinite loop spaces,
+built a PROP that provides a version of an $E_\infty$-operad, 
+and obtained a recognition principle for infinite
+loop spaces.
+
+\item Kontsevich~\cite{Kontsevich2003} used $L_\infty$-algebras and
+configuration spaces to prove his deformation
+quantization theorem that every Poisson manifold
+admits a deformation quantization.
+
+\item The above is
+implied by Kontsevich's the formality theorem: the
+Lie algebra of polyvector fields is 
+$L_\infty$-quasi-isomorphic to the Hochschild
+complex, and $f_1 = \mathsf{HKR}$. 
+
+\item Tamarkin~\cite{Tamarkin2003,Hinich2003} approached this result through 
+the formality of the little disks operad $D_2$.
+Proves that the Hochschild complex of a polynomial
+algebra is \emph{intrinsically formal} as a 
+Gerstenhaber algebra.
+
+\item Manifold calculus describes the
+homotopy type of embedding spaces as certain 
+derived operadic module maps and to
+produces their explicit deloopings
+using little disk operads, due to 
+many authors~\cite{Arone2007,Goodwillie1999,
+Weiss1996,Weiss1999}. We point the reader
+to~\cite{IdrissiPeccot} for a comprehensive
+list of references.
+
+\item Koszul duality~\cite{Ginzburg1994}
+for algebraic 
+operads and cousins allows to develop a robust 
+homotopy theory of homotopy 
+algebras~\cite{Vallette2020,Hinich1999}, cohomology
+theory, deformation theory, Quillen homology, etc. Rational homotopy theory~\cite{Quillen1967,Felix2001,Sullivan1977}
+motivated and heralded the development of the homotopy theory of and Koszul duality
+theory for algebraic operads.
+
+\item The study
+of natural operations on the Hochschild complex
+of an associative algebra~\cite{Hochschild1945} lead to a manifold of 
+results beginning with the proof that there is
+an action of the little disks operad $D_2$ on
+it (Deligne's conjecture), and the ultimate version by Batanin--Markl~\cite{Batanin2014},
+who proved that the operad of natural operations
+on it has the homotopy type of $C_*(D_2)$.  
+\end{tenumerate}
+
+Operads are modelled by trees: planar or
+non-planar, rooted or not, there exists a monad
+of trees that defines them. This idea
+ in fact extends
+to more complicated situations, like that of
+properads, dioperads or modular operads,
+in the sense that relaxing these
+graphs to allow for more structure 
+lets us to produce other type of 
+algebraic structures. The following table
+gives the reader a ``taxonomy cheat sheet''
+for operads and their kin; we will, for better
+or worse, defer from diving into the curious
+world that lies beyond operads, but encourage
+the reader to do this for themselves (and find
+out what ``wheeled structures'' are, and how
+they fit in the table below).
+
+\begin{center}
+\begin{tabular}{@{}llccr@{}} \toprule
+Type & Graph & Compositions & Due to & Ref.\\ \midrule
+PROPs & Any graph & Any  & Adams--MacLane \\
+Modular & Any graph & $\xi_{i,j}$, $\circ_{i,j}$  & Getzler--Kapranov & \cite{Getzler1998}\\ 
+Properads & Connected graphs & Any & B. Vallette & \cite{Vallette2004}\\
+Dioperads & Trees & ${}_i\circ_j$ & W. L. Gan & \cite{Gan2003}\\
+Half-PROPs & Trees & $\circ_j$ , ${}_i\circ$ & 
+ Kontsevich\footnote{The reference explains that ``These results are based on the useful notion of a 1/2 PROP introduced by Kontsevich in an e-mail message to the first author.''} & \cite{Markl2007}\\ 
+Cyclic operads & Trees &  $\circ_{i,j}$ & Getzler--Kapranov & \cite{Kajiura2008}\\ 
+Symmetric operads & Rooted trees & $\circ_i$  & J. P. May & \cite{May1972}\\ 
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Koszul duality}
+ 
+Koszul duality was invented by Steward Priddy in
+the seventies~\cite{Priddy1970}, with the objective of streamlining
+computations of certain cohomology theories for
+classes of algebras (notably, Lie and associative 
+algebras). One of the reasons this was (and still is)
+relevant is that such cohomology groups play a central
+role in the computation of other more complicated invariants
+of algebras and topological spaces: in particular,
+the cohomology of the Steenrod algebra famously featured
+in Adam's spectral sequence computing the stable homotopy
+groups of spheres at each prime. In Priddy's own words:
+\[
+\claim{
+The purpose of this paper is to construct resolutions for a 
+large class of algebras which includes the Steenrod algebra
+and the universal enveloping algebras. 
+It is a basic problem of homological algebra to compute the 
+cohomology algebras of various augmented algebras. Unfortunately, 
+the canonical tool for attacking this problem ---the bar resolution--- is often intractable. In some instances,
+however, one is able to find a simpler resolution.
+}
+\]
+Priddy developed his theory for both ``inhomogeneous''
+and ``homogeneous'' quadratic algebras ---those presented
+in coordinates by quadratic equations in their variables---
+and, while in the homogeneous case his formalism gave the
+answer immediately, the inhomogenous case required an
+additional step, which nonetheless simplified the existing
+methods considerably.  
+
+Although Koszul duality nowadays has a much broader meaning
+and casts an immense net in modern day algebra, representation
+theory, combinatorics, topology and geometry, 
+among other areas of mathematics, in this lecture
+series we will follow Priddy's motivation and see it as an
+instance of a phenomenon in which certain algebraic objects
+have very economical ---and thus computationally and theoretically
+useful--- resolutions. An interested reader can 
+consult~\cites{KellerKoszul2003,Positselski2011,
+Sinha2010,MO329,holstein2021categorical} to obtain a broader
+view of this phenomenon, and in particular find a wide
+variety of answers to the question ``...but what \emph{exactly}
+is Koszul duality?''.  
+%
+%With the risk of diverging 
+%from our initial definition, a ``Koszul duality phenomenon'' 
+%comes in the shape of a Quillen equivalence between 
+%two model categories of algebraic objects of some kind,
+%which allows to consider ``object-wise Koszul duality phenomenona''.
+%The latter then induce equivalences between categories of
+%``representations'' of such objects.
+
+Naturally, one of the reasons why Koszul duality has cemented
+itself in modern day mathematics is that it appears often:
+algebraic structures of interest have an inclination to be
+quadratic and, when in luck, Koszul. These can be anything
+from Lie, commutative or associative algebras, to Feynmann
+categories, dg categories, operads and their kin. In this
+lecture series, we will focus on algebraic operads: our goal
+is to introduce the reader to these objects in general
+and to quadratic operads in particular, define what
+it means for such operads to be Koszul, and explore
+the consequences this property has on the operads
+and its representations. We do this in Lectures~\ref{lecture:quadraticops}, \ref{lecture:KD1}, \ref{lecture:barcobar} and \ref{lecture:KD2}.
+
+Although, as we
+mentioned, we will take a rather old fashioned point of 
+view and think of Koszul operads as those operads 
+having a ``nice resolution'', we aim to give the reader
+a modern outlook on the current methods available to
+prove that an operad is Koszul, and some relatively 
+new developments in the area from the last two (or
+maybe three) decades:
+the inhomogenous Koszul duality for (pr)operads due
+to Galvez-Carillo--Tonks--Vallette, which
+followed the original theory of Ginzburg--Kapranov~\cite{Ginzburg1994},
+the use of filtered distributive laws of Dotsenko~\cite{Bremner2016}*{Section 6.3.5}
+which followed the methods of Markl~\cite{MarklDistributive}, and the general
+theory stating Koszul operads give rise to good
+notions of algebras up to homotopy, due to Vallette~\cite{Vallette2020}.
+Naturally, we will also focus on the classical developments,
+and on the effective methods of Hoffbeck~\cite{Hoffbeck2009} and 
+Dotsenko--Khoroshkin~\cite{Dotsenko2010}, which we mention again in
+the next section.
+
+\subsection{Gr\"obner bases}
+Many algebraic structures that exhibit some kind of 
+associativity can be described by making the following check-list:
+they have a notion \emph{variable} (or alphabet) and a notion 
+of \emph{monomial} in the given alphabet. In turn, they have
+a notion of \emph{polynomial} and a notion of \emph{free algebra}:
+its basis is given by such monomials.
+At the same time, these structures have a notion of \emph{ideal} and
+\emph{quotient algebra}, and hence of a \emph{presentation} of an object of that
+type by \emph{generators and relations}.
+At this point, a natural question arises, which was 
+famously raised by Wolfgang Gr\"obner around 1964 to his student Bruno
+Buchberger: \emph{How can one find a basis of a free algebra by
+a set of relations?} 
+
+In his PhD thesis, Buchberger developed the tool-kit to 
+answer this question in a streamlined fashion for the case
+of commutative (associative) algebras: the first step is
+to have a notion of an admissible monomial order, that
+effectively allows to do linear algebra on the free algebra.
+With this at hand, one develops a notion of divisibility
+and of leading terms of polynomials: with this, one can
+perform long division and define normal forms. 
+In tandem, one can define what a 
+Gr\"obnber basis of an ideal is and, finally, long division 
+can be used to build Bucherberger's algorithm, that allows
+us to complete generators of ideals to Gr\"obner bases.
+With this at hand, the membership problem is solved:
+an element belong to an ideal if and only if the result
+of long division of it using a Gr\"obner basis is zero,
+and the normal forms with respect to a Gr\"obner basis give
+a linear basis of the quotient algebra.
+
+At this point, as in the following excerpt from~\cite{Bremner2016},
+one has to make the key observation that this tool-kit works,
+\emph{mutatis-mutandis}, for many different algebraic structures
+exhibiting some kind of associativity, and not only for
+those which Gr\"obner and Buchberger were originally concerned with:
+\[\claim{
+Both testing hypotheses and proving theorems about polynomial expressions of all those types often involves highly complex symbolic computations which can never be completed in a reasonable time unless one approaches them in an extremely structured way. [...] Our goal in this book is to present the solution 
+to the problem of determining normal forms in a way that all the individual building blocks 
+of that solution are clearly identified; this makes desired 
+generalizations of the theory straightforward. We give complete proofs of key 
+facts, many detailed examples, a large array of exercises, mostly coming from 
+actual research questions, and references to further reading.}
+\]
+
+Lectures~\ref{lecture:shuffleops}-\ref{lecture:GB2} in these
+notes are aimed at studying the analogue of the usual
+theory of Gr\"obnber bases for commutative algebras as it was
+developed for algebraic operads by Dotsenko and Khoroshkin, 
+following the breakthrough paper of Hoffbeck~\cite{Hoffbeck2009}
+giving a ``Poincar\'e--Birkhoff--Witt criterion'' for an operad
+to be Koszul. We will not deviate too much from the exposition of the 
+book~\cite{Bremner2016}, although we will incorporate to our
+exposition new developments that happened after that book
+was written, such as examples where we compute
+Gr\"obner bases and count normal forms 
+with the \textsf{Haskell Operad Calculator}
+developed by Dotsenko and Heijltjes, along with new
+monomial orders coming from~\cite{Dotsenko2020},
+one of which we have implemented (along with F. Lebr\'on)
+to this \textsf{Haskell} package. 
+
+\subsection{Effective methods}
+
+In Lectures~\ref{lecture:methods1} and~\ref{lecture:methods2}, we give
+a few methods to prove that an operad is Koszul.
+
+\hacer{Explain how to put it all together.}
+
+\newpage
+
+\subsection{Exercises}
+ 
+\textbf{A. Symmetric groups.} Operads are meant to encode
+operations on objects \emph{along with their symmetries},
+which is done through the representation theory of the
+symmetric groups. The following exercises will remind
+you of some basic facts about them.
+
+
+\begin{question} Let $I = [n]$ so that $\Aut(I) = S_n$ is 
+the symmetric group on $n$ letters. For each ordered 
+partition $\pi = (\pi_1,\ldots,\pi_k)$, let $\lambda$
+be the ordered partition of $n$ with $\lambda_i = \# \pi_i$
+for $i\in [k]$. Show that the permutations of
+$[n]$ that preserve $\pi$ determine a subgroup of $S_n$
+isomorphic to $S_\lambda := S_{\lambda_1}\times
+\cdots \times S_{\lambda_k}$. 
+\end{question}
+
+
+\begin{question} Consider the subgroup of $S_n$ corresponding
+to the ordered partition of $[n]$ given by $([1,k],[k+1,n])$, along with the 
+inclusion $S_k\times S_{n-k} \hookrightarrow S_n$. Show that
+a set of representatives for the cosets of this inclusion
+in $S_n$ is given by the \emph{$(k,n-k)$-shuffles}, those
+permutations $\sigma\in S_n$ that preserve the linear order in
+$[1,k]$ and $[k+1,n]$. Conclude that there are exactly
+$\binom nk$ shuffles of type $(k,n-k)$ on $[n]$. Define
+shuffles associated to other partitions of $n$.
+\end{question}
+
+\medskip
+\textbf{B. Categories.} The language of categories and
+functors permeates most of modern algebra and geometry,
+and in particular is useful to work with operads and
+other combinatorial structures defines by graphs. The
+following will remind you of some important notions
+we will use during the course.
+
+\begin{question} A category $\mathcal C$ is the datum of
+a set of objects $\operatorname{Ob}(\mathcal{C})$, and
+for each $x,y\in \operatorname{Ob}(\mathcal{C})$ a
+set $\mathcal C(x,y)$ of morphisms from $x$ to $y$.
+Moreover, we require the existence of an associative
+and unital composition law
+\[-\circ -: \mathcal C(y,z) \times  \mathcal C(x,y) 
+	\longrightarrow \mathcal C(x,z). \] 
+	The latter means there are distinguished elements
+	$1_x\in \mathcal{C}(x,x)$ for each object of $\mathcal{C}$
+	that induce the identity $-\circ 1_x$ and $1_x\circ -$
+	of any $\mathcal{C}(-,x)$ and $\mathcal{C}(x,-)$.
+	Find examples of categories: sets, finite sets,
+	rings, vector spaces, open subsets, posets, and 
+	others.
+\end{question}
+
+\begin{question} A functor $F: \mathcal{C}_1\longrightarrow 
+\mathcal{C}_2$ is a datum that assigns to each object
+$x$ of the domain an object $F(x)$ of the codomain,
+and to each morphism $f:x\to y$ a morphism $F(f)$ such
+that $F(f\circ g) = F(f) \circ F(g)$ and $F(1_x) = 1_{Fx}$
+for each pair of composable arrows $f$ and $g$ and each
+object $x$ of $\mathcal C_1$. Find examples of functors
+between the examples of categories you found above.
+
+\end{question}
+\begin{question} A monoidal category is a category $\mathcal C$ 
+along with the datum of a bifunctor $\otimes :
+\mathcal{C}\times \mathcal{C}\longrightarrow \mathcal{C}$
+along with an associator and left and right units. 
+A monoidal category is \emph{strict} if the associator and left
+and right units are identities.
+\begin{enumerate}
+\item Expand on the details of these definitions. Define what
+a braided monoidal category and what a symmetric monoidal category are.
+\item Exhibit monoidal
+structures the following categories: sets, vector spaces,
+linear representations of a group $G$, topological spaces,
+associative algebras, Lie algebras, and others.
+\end{enumerate}
+ \emph{Hint.} In the case of Lie algebras,
+ consider the category of Lie groups with its
+ canonical tensor product (the cartesian product) 
+ and the functor $G\longmapsto T_e(G)$ to decide
+ what the tensor product of two Lie algebras is.
+\end{question}
+
+
+\begin{question}
+If $(\mathcal{V},\otimes)$ is a monoidal category, we say a category $\mathcal{C}$ 
+is $\mathcal V$-enriched if each hom-set 
+$\mathcal{C}(x,y)$ is an object of $\mathcal{V}$ and
+there is a composition law 
+\[-\circ -: \mathcal C(y,z) \otimes  \mathcal C(x,y) 
+	\longrightarrow \mathcal C(x,z). \] 
+which consists of morphisms in $\mathcal{V}$, and which is 
+associative and unital. Note that an ordinary category is
+just a category enriched over the category of sets.
+A linear category is a category enriched over the
+category of vector spaces, an additive category is a
+category enriched over Abelian groups.
+Expand on what this means. Find about Abelian
+categories, and ponder over the difference: an additive
+category is a category with structure, while an
+Abelian category is a category with additional properties.
+\end{question}
+
+\begin{question}\label{ex:skeleton}
+A category $\mathcal D$ is skeletal if no two distinct
+objects in it are isomorphic. We say that $\mathcal{D}$ is
+the skeleton of a category $\mathcal{C}$ if:
+\begin{tenumerate}
+\item It is a full subcategory of $\mathcal{C}$: for each
+pair of objects $x,y\in\mathcal{D}$, we have that $\mathcal{D}(x,y) = \mathcal{C}(x,y)$.
+\item The inclusion of $\mathcal{D}$ in $\mathcal{C}$ is
+essentially surjective: every object of $\mathcal{C}$ is
+isomorphic to an object of $\mathcal{D}$.
+\item $\mathcal{D}$ is skeletal.
+\end{tenumerate}
+Show that every small category admits a skeleton, and
+compute the skeleton of the following categories: sets,
+finite sets, finite dimensional vector spaces over
+a field.
+\end{question}
+\medskip
+
+\begin{question}
+Suppose that $x$ is an object in a symmetric monoidal
+category $(\mathcal{C},\tau)$. For each $n\in\NN$ and 
+each $i\in [n-1]$ define $\tau_i : x^{\otimes n} 
+\longrightarrow x^{\otimes n}$ by
+\[ \tau_i = 1^{i-1} \otimes \tau \otimes 1^{n-i-1}.\]
+Show that the assignment
+$(i,i+1)\in S_n\longmapsto \tau_i
+	 \in\operatorname{Aut}( x^{\otimes n})$ 
+	 is a group homomorphism. \emph{Note.} This
+	 produces in particular a map $S_2\longrightarrow 
+	 \operatorname{Aut}(x^{\otimes 2})$ that sends
+	 the transposition $(12)\in S_2$ to the
+	 flip $\tau_{x,x}:x\otimes x\longrightarrow 
+	 x\otimes x$.  
+\end{question}
+
+\begin{question} A product and permutation category (abbreviated `PROP')
+is a monoidal category $\mathcal{C}$ whose set of objects is $\mathbb N = 
+\{0,1,2,\ldots\}$ and its tensor product is addition (in particular, it is strict and symmetric). Unravel the definitions:
+\begin{tenumerate}
+\item Use that $n = 1+\cdots + 1$ to show that $\mathcal{C}(m,n)$ is a right $S_n$-module.
+\item Similarly, show that $\mathcal{C}(m,n)$ is also a left $S_m$-module.
+\item Show these two actions are compatible (i.e. they commute).
+\item Show that the product $+$ induces a \emph{horizontal} composition rule 
+\[ \mathcal{C}(m,n) \times \mathcal{C}(m',n') 	\longrightarrow
+ 	\mathcal{C}(m+m',n+n'). \]
+\item Interpret the usual categorical product as a \emph{vertical} composition rule 
+\[ \mathcal{C}(n,k) \times \mathcal{C}(m,n) 	\longrightarrow
+ 	\mathcal{C}(m,k). \]
+\end{tenumerate}
+Consider the definition of a PROP enriched over a symmetric strict 
+monoidal category, like $\mathsf{Vect}$, the category of vector spaces (these are called $\kk$-linear
+PROPs). Define the category of PROPs. 
+\end{question}
+
+\emph{Note.} For 
+each $n\in\mathrm{Ob}(\mathcal C)$ the
+object $\mathcal{C}(n,n)$ is a monoid under composition
+ that receives a map $S_n\longrightarrow \mathcal{C}(n,n)$.
+ Under the interpretation above, the image of $\sigma$
+  is equal to both the left and the right action of $S_n$ 
+  on the identity map $n\to n$. In particular, the twist
+  $\tau$ of $\mathcal{C}$ is equal to $(12)\mathrm{id}_2$,
+  and may (or may not) be trivial.
+  
+  \medskip
+  
+\textbf{C. Graded spaces and complexes.} When studying
+algebraic structures like operads, it will be necessary
+to use some tools from homological algebra: graded spaces,
+chain complexes, differentials, their homology, among
+others. The following exercises are intended to familiarize
+you with the elements of homological algebra, but we will
+look at them in more detail during the course.
+
+\begin{question} A $\mathbb Z$-graded vector space (usually 
+just called a graded vector space) is a $\mathbb Z$-indexed 
+sequence of vector spaces $n\in\mathbb Z\longmapsto V_n\in\mathsf{Vect}$. 
+If $v\in V_n$ we say that $v$ is homogeneous of
+degree $n$. Find out about the category of
+graded vector spaces, specifically:
+\begin{titemize}
+\item What are its (degree zero) morphisms?
+\item What are its (degree homogeneous) morphisms?
+\item What is the tensor product of two graded spaces?
+\item What is the natural isomorphism $V\otimes W\longrightarrow W\otimes V$?
+\item How does the last item relate to the `Koszul sign
+rule'?
+\end{titemize}
+\emph{Note:} there is a subtle difference between
+graded spaces (as we just defined) and \emph{weight graded} spaces, 
+which we can define later. One can think of graded 
+spaces as a ``discrete diagram of spaces over the integers'',
+while a weight graded space (usually graded over the natural 
+numbers) is a vector space with the
+\emph{additional} datum of a direct sum
+decomposition indexed by $\mathbb N$. Informally,
+one can say that a graded space is like a (possibly infinite)
+row of houses,
+while a weight graded object is like a (possibly infinitely tall)
+house that has been 
+turned into an apartment building by subdividing it
+horizontally.
+\end{question}
+
+\begin{question} A differential graded (dg) vector space,
+usually called a complex, is a pair $(V,d)$ where $V$ is 
+a graded vector space $V$ and $d: V \to V$ is a homogeneous
+map of degree $-1$ such that $d^2=0$. Repeat the previous
+exercise replacing $\mathsf{gVect}$ with $\mathsf{Ch}$,
+the category of complexes of vector spaces.
+\end{question}
+
+\begin{question} If $(V,d)$ is a complex, then $Z(V) = \ker d$ 
+is called its space of cycles, and $B(V) = \operatorname{im} d$ 
+is called
+its space of boundaries. The quotient $Z(V)/B(V)$ is called
+the homology of $V$, and is written $H(V)$. Show that a map 
+of complexes $f:V\to W$ induces a map $Z(V) \to Z(W)$ and 
+in turn a map $H(f) : H(V) \to H(W)$. 
+\end{question}
+ 
+\begin{question} (Leisure) Find a book on homological algebra
+and read about the \emph{snake lemma} and the \emph{five lemma}.
+If you are very motivated, read about double complexes and spectral
+sequences.
+\end{question}

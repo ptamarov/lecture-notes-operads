@@ -1,0 +1,323 @@
+\section{Free operads and presentations}\label{lecture:freeops}
+
+\textbf{Goals.} We will define algebraic operads
+by generators and relations, and with this at
+hand define quadratic and quadratic-linear
+presentations of operads. 
+
+\subsection{Trees}
+
+Operads and their kin are gadgets modeled after
+combinatorial graph-like objects. Operads themselves are modeled after
+rooted trees, so it is a good idea to have a concrete definition of 
+what a rooted tree is. We will also consider planar rooted trees,
+and trees with certain decorations, so it is a good idea to digest
+the definitions carefully to later embellish them.
+
+A rooted tree $\tau$ is the datum of a finite set $V(\tau)$
+of vertices along with a partition $V(\tau) = 
+\mathrm{Int}(\tau)\sqcup L(\tau) \cup R(\tau)$,
+where the first are the \emph{interior} vertices, $L$ are the leaves, and $R(\tau)$ is
+a singleton, called the root of $\tau$. We also require there is 
+a function $p :V(\tau)\smallsetminus R(\tau) \longrightarrow V(\tau)$,
+describing the edges of $\tau$, 
+with the following properties: call a vertex $v\in V(\tau)$ a child 
+of $w\in V(\tau)$ if $v\in p^{-1}(w)$. Then:
+\begin{tenumerate}
+\item The root $r\in R(\tau)$ has exactly one child.
+\item The leaves of $\tau$ have no children.
+\item For each non-root vertex $v$ there exist a unique sequence
+$(v_0,v_1,\ldots,v_k)$ such that $p(v_{i-1}) = v_{i}$ for $i\in [k]$
+with $v_0 = v$ and $v_k = r$.
+\end{tenumerate}
+We will call a non-leaf vertex that has no children a \emph{stump}
+(or an endpoint, or a cherry-top).
+A tree is reduced if has no stumps. We say it is 
+series-reduced if all of its non-root and
+non-leaf vertices have at least two children. We will also call
+the root the (unique) \emph{output vertex} of $\tau$, and the leaves
+the \emph{input vertices} of $\tau$. 
+
+A planar rooted tree is a rooted tree $\tau$
+along with a linear order in each of the fibres
+of the parent function $p$ of $\tau$. In short,
+the children of each vertex are linearly ordered,
+so we are effectively considering a drawing of
+$\tau$ in the plane, where the clockwise
+orientation gives us the order at each
+vertex. 
+
+Two rooted trees $\tau$ and $\tau'$ are isomorphic
+if there exists a bijection $f : V(\tau) \longrightarrow 
+V(\tau')$ that preserves the root, the input vertices and the
+interior vertices, so that $p'\circ f = p$ where we
+also write $f$ for the induced bijection $f : V(\tau)\smallsetminus r \longrightarrow 
+V(\tau')\smallsetminus r'$. Two planar rooted trees
+are isomorphic if in addition $f$ respects the linear order
+at each vertex.
+
+For example, consider the rooted tree $\tau$ with
+$V = \{1,2,3\}\cup \{4,5\}\cup \{0\}$, that is,
+three leaves, two interior vertices and the root.
+Then the choice of $p : [5] \to \llbracket 5 \rrbracket$ 
+with $p(\{1,2\}) = 4$, $p(\{3,4\}) = 5$, $p(5) = 0$
+gives a tree isomorphic to the one with 
+with $p(\{1,2\}) = 3$, $p(\{3,4\}) = 5$, $p(5) = 0$.
+On the other hand, if we consider the vertices linearly
+ordered by their natural order, these two planar rooted trees 
+are no longer isomorphic. 
+
+\begin{definition}
+For a finite set $I$, an $I$-labeled tree $T$
+is a pair $(\tau,f)$ where $\tau$ is a 
+reduced rooted tree, along with
+a bijection $f : I \longrightarrow L(\tau)$.
+Two $I$-labeled trees $T$ an $T'$ are isomorphic
+if there exists a pair $(g,\sigma)$ where
+$g$ is an isomorphism between $\tau$ and $\tau'$
+and $\sigma$ is an automorphism of $I$ such that
+$g\mid_{L(\tau)}\circ f = \sigma\circ f'$. 
+\end{definition}
+
+Suppose that $(\tau,f)$ is an $I$-tree and that
+$(\tau',f')$ is a $J$-tree, and that $i\in I$. We define
+$K=I\cup_i J = I\sqcup J \smallsetminus i$ and the
+$K$-tree $\tau\circ_i \tau'$ as follows:
+\begin{tenumerate}
+\item Its leaves are $L(\tau\circ_i \tau') = L(\tau)\sqcup L(\tau')\smallsetminus f^{-1}(i)$.
+\item Its internal vertices are $V(\tau)\sqcup V(\tau')$, with
+root $r$. 
+\item The parent function $q$ is defined by declaring that:
+	\begin{titemize} 
+	\item $q$ coincides with $p$ on $V(\tau)$, 
+	\item $q(w) = p(f^{-1}(i))$ if
+$w$ is the unique children of the root of $\tau'$, 
+	\item  $q$
+coincides with $p'$ on $V(\tau')\smallsetminus \{r',w\}$.
+\end{titemize}
+\item The leaf labeling is the unique bijection $L(\tau\circ_i \tau') \longrightarrow I\circ_i J$ extending $f$ and $f'$.
+\end{tenumerate} 
+
+\subsection{Tree monomials}
+Let us now consider an 
+(unbiased) reduced symmetric sequence $\XX$ which
+we will think of as an \emph{alphabet}. A tree monomial in the
+alphabet $\XX$ 
+is a pair $(\tau,x)$ where $\tau$ is a reduced rooted
+tree and $x : \mathrm{Int}(\tau) \longrightarrow \XX$ is a map
+with the property that $x(v) \in \XX(p^{-1}(v))$. Observe that
+reduced sequences and reduced trees correspond to each other, in the
+sense that with this definition we can only decorate a stump
+of $\tau$ with an element of $\XX(\varnothing)$. 
+
+An $I$-labeled
+$\XX$-tree $T$ is a triple $(\tau,x,f)$ where $(\tau,f)$ is $I$-labeled
+and $(\tau,x)$ is an $\XX$-tree. We will say that $(\tau,x,f)$
+is a (symmetric) tree monomial if $\XX$ is symmetric. If it
+is just a collection, we will say that $(\tau,x,f)$ is a
+ns tree monomial. In particular, if $T$ is an $I$-labeled
+tree, and if $\sigma \in \Aut(I)$, there is another 
+$I$-labeled tree $\sigma(T)=(\tau,f\sigma^{-1})$. 
+
+
+Suppose that $T = (\tau,x,f)$ is a tree monomial on an
+alphabet $\XX$, and let us pick a vertex $v$ of $\tau$
+and a permutation $\sigma$ of the set $C = p^{-1}(v)$ of
+children of $v$. We define the tree $\tau^\sigma$ as
+follows: the datum defining $\tau$ remains unchanged
+except $p$ is modified to $p^\sigma$ so that 
+\[ p^\sigma(w) = 
+\begin{cases}
+ p(w) & \text{if $p^2(w)\neq v$} \\
+ p(\sigma^{-1}(w')) & \text{if $p(w)=w'\in C$}.
+\end{cases}
+\]
+Briefly, we just relabel the vertices of $\tau$
+using $\sigma$. With this at hand, we define
+$T^\sigma$ to be the tree monomial with underlying 
+tree $\tau^\sigma$ and with $x$ modified to $x^\sigma$ so that
+\[ x^\sigma(w) = 
+\begin{cases}
+ \sigma x(v) & \text{if $v=w$,} \\
+ x(\sigma^{-1}(w')) & \text{if $p(w)=w'\in C$}.
+\end{cases}
+\]
+Note that it is possible some children of $v$ are
+leaves, in which case the definitions make sense if
+we think of leaves as decorated by the unit of
+$\kk$. 
+
+\begin{example}
+Let us consider the alphabet 
+$\XX = \XX(2) = \{\ast \}$ where
+the unique operation is antisymmetric.
+Then we have the following equalities
+of symmetric tree monomials:
+\[ 
+	\leftc{}{}{2}{1}{3}  \mathsymbol{1.5}{=}
+\rightc{}{}{3}{1}{2}  
+   \mathsymbol{1.5}{=-}
+ {\leftc{}{}{1}{2}{3}}
+  \mathsymbol{1.5}{.}\]
+ 
+\end{example}
+
+
+Let us now define for each $n\geqslant 1$ the
+space $\FF_\XX(I)$ as the span of all tree monomials
+$T = (\tau,f,x)$ on $\XX$ with leaves labeled by $I$,
+modulo the subspace generated by all elements of the form
+\[ R(T,v,\sigma) = T - T^\sigma \]
+where $\sigma$ ranges through $\Aut(p^{-1}(v))$ as
+$v$ ranges through the vertices of $\tau$. In case
+all children of $v$ are leaves, this is saying that
+the tree where $x_v$ is replace by $\sigma(x_v)$
+is equal to the tree where the leaves of $T$ that are
+children of $v$ are relabeled according to $\sigma$.
+We also require that tree decorations behave like
+tensors, so that $T = T_1+T_2$ if the decoration
+of $T$ at a vertex $v$ is of the form $x_1 + x_2$
+and for $i\in [2]$ the tree $T_i$ coincides with
+$T$ except that it is decorated by $x_i$ at $v$.
+
+
+
+\subsection{The free operad}
+An algebraically inclined way to construct
+(algebraic) operads is through generators and
+relations. There is a forgetful functor
+from the category of operads to the category
+of collections. In general, it admits a left
+adjoint, which is the free operad functor.
+
+\begin{definition}
+The \emph{free symmetric operad} on $\XX$ is the
+symmetric sequence $\FF_\XX$ along with the composition
+law obtained by grafting of trees. More precisely,
+suppose that $T\in \FF_\XX(I)$ and that $T'\in\FF_\XX(J)$,
+and that $i\in I$. We define $T'' =T\circ_i T' \in 
+\FF_\XX(I\cup_I J)$ by taking its underlying labeled
+tree to be $\tau\circ_i \tau'$, and by decorating it
+in the unique way which extends the decorations of 
+$T$ and $T'$.
+\end{definition}
+
+The following lemma shows that this indeed defines an operad.
+
+\begin{lemma}
+Tree grafting respects both $I$-tree 
+isomorphisms and the relations $T\sim T^\sigma$
+above, and hence is well defined on $\FF_\XX$.
+\end{lemma}
+
+\begin{proof}
+This is Exercise~\ref{ex:grafting}.
+\end{proof}
+
+The functor $\XX\longmapsto \FF_\XX$ is in fact a \emph{monad},
+the monad of rooted trees,
+which gives us the definition of an operads alluded to 
+in Lecture~\ref{lecture:theintro}. The
+advantage of this `monadic approach' is its 
+flexibility, which allow us to define other
+operad like structures, like the ones 
+mentioned in the introduction.
+In this direction, a curious reader 
+can consider the following 
+equivalent definition; see also Exercise~\ref{ex:colim}.
+
+\begin{definition}
+The free operad generated by a symmetric
+collection $X$ is defined inductively by
+letting  $\FF_{0,X}=\kk$ be spanned
+by the `twig' (tree with no vertices and one edge)
+in arity zero and
+\[ \FF_{n+1,\XX} = \kk\oplus (\XX\circ  \FF_{n,\XX} ), \]
+and finally by setting
+$\FF_\XX = \varinjlim_n \FF_{n+1,\XX}$.
+The composition maps are defined by induction,
+and the axioms are also checked by induction.
+\end{definition}
+
+Intuitively, the previous definition says that an element of
+$\FF_\XX$ is either the twig, or corolla
+with $n$ vertices decorated by $\XX$, whose leaves
+have on them an element of $\FF_\XX$. The
+final shape of $\FF_\XX$ will however
+depend on the symmetric structure of $ \XX$. 
+ \subsection{Exercises}
+
+
+ 
+ \begin{question}
+Let $\XX$ be a collection such that $\underline{\XX} = 
+\XX(2)$. Compute a basis of tree monomials 
+for the free operad over
+$\XX$ in case $\XX(2)$ is:
+\begin{tenumerate}
+\item The regular representation of $S_2$.
+\item The sign representation of $S_2$.
+\item The trivial representation of $S_2$. 
+\end{tenumerate} 
+In all cases, decompose the $S_3$-module $\mathcal{F}_\XX(3)$
+into irreducible representations.
+\end{question}
+
+
+\begin{question}\label{ex:grafting}
+Show that tree grafting respects both $I$-tree
+isomorphism and the relation $T\sim T^\sigma$,
+and hence descends to $\FF_\XX$.
+\end{question}
+
+\begin{question}
+Suppose that $\XX$ is an alphabet (in sets) that is
+finite in each arity and such that $\XX(n) = \varnothing$
+for $n=0,1$. Show that $\mathcal{F}_\XX$ is finite
+in each arity. 
+\end{question}
+ 
+\begin{question}
+Define non-symmetric tree monomials over a ns alphabet
+$\XX$ and thus define the free \emph{non-symmetric}
+operad over a collection $\XX$.
+\end{question}
+
+\begin{question}\label{ex:colim}
+Read the statement and proof of \emph{Theorem 5.4.2} in
+`Algebraic Operads' that the colimit construction briefly
+described in the lecture notes does give the free
+operad on a symmetric collection.
+\end{question}
+
+\begin{question}
+Consider the map from ns collections to symmetric sequences
+that assigns $\XX$ to $\Sigma\otimes \XX$ such that
+$(\Sigma\times \XX)(n) = \Sigma_n\times \XX(n)$ with its
+corresponding symmetric group action. What is the relation
+between the free ns operad on $\XX$ and the free symmetric
+operad on $\Sigma\times \XX$?
+\end{question}
+
+\begin{question}
+Let $V$ be an $S_2$-module, and let $\XX$ be the
+symmetric collection with $\XX(2) = V$ and zero
+everywhere else. Show that $\mathcal{F}_\XX(3)$
+consists of three copies of $V^{\otimes 2}$ and
+describe explicitly the action of $S_3$ on it.
+\end{question}
+
+\begin{question}
+Show that the construction of the free operad we carried
+out during \textbf{Lecture~2} indeed defines the free
+operad on $\XX$ where $i:\XX \longrightarrow \mathcal F_\XX$
+sends an element $x\in \XX(I)$ to the corolla whose unique
+internal vertex is labeled by $x$ (and whose
+leaves are labeled by $I$). 
+\end{question}
+
+% \begin{question}
+% Follow the lecture notes and read about 
+% weight gradings and the canonical weight
+% grading on a free operad. 
+% \end{question}

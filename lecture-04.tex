@@ -1,0 +1,368 @@
+
+\section{Quadratic duals}\label{lecture:KD1}
+\textbf{Goals.}
+Give the definition of the Koszul dual
+operad of a quadratic operad, and then compute
+some Koszul duals.
+
+\subsection{Differential graded sequences}
+
+
+\textbf{Homologically graded $\Sigma$-modules.}
+A (homologically) graded vector space is a
+vector space $V$ along with a direct sum
+decomposition $V = \bigoplus_{n\in\mathbb Z} V_n$.
+We call the components of this sum the \emph{graded (or
+homogeneous)
+components of $V$}, and say that an element in 
+on of these summands is \emph{homogeneous}. If
+$v\in V_n$, we say that $v$ is \emph{homogeneous of
+degree $n$} and write $|v|=n$. 
+
+A map $f : V\longrightarrow W$ of graded vector spaces
+is \emph{homogeneous of degree $n$} if $f(V_j)\subseteq W_{j+n}$ for
+all $j\geqslant 1$. We write $\hom(V,W)$ for the
+space of all homogeneous maps, which is itself a graded
+vector space with $\hom(V,W)_n$ the space of all
+graded maps of degree $n$ for each $n\in\mathbb Z$. 
+In this way, we obtain the category $\mathsf{Vect}_\mathbb{Z}$
+of graded vector spaces and graded maps. 
+
+A \emph{differential graded (dg) vector space} is a pair 
+$(V,d)$ where $V$ is a graded vector space and 
+$d : V\longrightarrow V$ is a homogeneous map of degree 
+$-1$ such that $d^2=0$. We usually will call $(V,d)$
+a \emph{chain complex}. The collection of homogeneous
+maps $V\longrightarrow W$ is again a chain
+complex, with differential
+\[ d\varphi 
+	= d_V\varphi - (-1)^{|\varphi|} \varphi d_W. \]
+A homogeneous map of degree zero such that $d(\varphi)=0$
+is called a \emph{chain map}.
+It is
+convenient to also consider \emph{cohomologically graded}
+vector spaces, by formally inverting the order of $\mathbb{Z}$
+and letting $V^n = V_{-n}$ for all $n\in\mathbb Z$. 
+
+\bigskip
+
+\textbf{Monoidal structure.} If $V$ and $W$ are
+graded vector spaces, we define their tensor product
+by setting
+\[ (V\otimes W)_n = \bigoplus_{i+j = n} V_i\otimes W_j \]
+for all $n\in\mathbb Z$, and setting the symmetry map
+\[\tau : V\otimes W \longrightarrow W\otimes V\]
+to be $\tau(v\otimes w) = (-1)^{|v||w|}w\otimes v$
+on homogeneous elements, and extending it linearly on all of
+$V\otimes W$. This makes $\mathsf{Vect}_\mathbb{Z}$ into a
+symmetric monoidal category with unit the graded vector
+space with $V_0 = \kk$ and $V_n = 0$ for $n\neq 0$.
+The tensor product of maps $f: V\longrightarrow V'$
+and $g : W\longrightarrow W'$ acts
+in such a way that $f\otimes g : V\otimes V'
+\longrightarrow W\otimes W'$ is the map
+\[ (f\otimes g)(v\otimes w)  = (-1)^{|g||v|} f(v)\otimes g(w).\]
+In case $V$ and $W$ are in fact dg, their tensor product is
+also dg with $d_{V\otimes W} = d_V\otimes 1+ 1\otimes d_W$. 
+
+\begin{definition}
+A (homologically) graded $\Sigma$-module $\XX$
+is a $\Sigma$-module taking values in the category
+of graded vector spaces. Similarly, a dg $\Sigma$-module
+is one taking values in dg vector spaces.
+\end{definition}
+
+\textbf{The endomorphism operad functor on dg modules.}
+Let us consider the most natural way to create dg modules
+from dg vector spaces, as we did in the case of usual
+vector spaces. Namely, we may as before consider the
+\emph{endomorphism operad} of a dg vector space $V$
+by setting, for each $n\geqslant 0$,
+\[ \End_V(n) = \hom(V^{\otimes n},V) \]
+where these consists of homogeneous maps of dg vector
+spaces. In particular, each of these arity components is 
+itself a dg vector space, and the (total or partial)
+composition maps
+of the resulting operad are maps of dg vector spaces.
+
+Of particular importance to us will be the \emph{suspension}
+operation on dg vector spaces. Let us write $s$ for the
+unique dg vector space with $s_1 = \mathbb C$ and zero
+elsewhere, and similarly let us write $s^{-1}$ for the
+unique dg vector space with $s^{-1} = \mathbb{C}$
+and zero elsewhere. The \emph{suspension} of the dg vector
+space $V$ is the tensor product $s\otimes V$, which
+we write more simply $sV$, and whose basis elements we
+write $sv$ for $v\in V$. Thus $|sv| = |v|+1$ for all 
+homogeneous $v\in V$. Similarly, we define the
+\emph{desuspension} $s^{-1}V$.
+
+\begin{note}
+The differential of $sV$ is given by $d(sv) = -s dv$. Can you explain why this is so using
+the Koszul sign rule?
+\end{note}
+ 
+The following lemma shows that $V\mapsto \End_V$ is 
+monoidal for the \emph{Hadamard product} of operads on the
+target (and the usual tensor product on the domain): 
+ \begin{lemma}\label{lemma:hadamard}
+The map $\Phi : \End_V\otimes \End_W\longrightarrow \End_{V\otimes W}$
+that assigns $\varphi \otimes \psi \in \End_V(n)\otimes \End_W(n)$
+to the map
+\[ \Phi(\varphi,\psi)(v,w) = (-1)^\varepsilon \varphi(v)\otimes\psi(w)\]
+where $\varepsilon = \sum_{i=1}^n (|w_1| +\cdots + |w_{i-1}|+|\psi|)|v_i|$
+is an isomorphism of operads provided $V$ and $W$
+are locally finite.
+ \end{lemma}
+ 
+ \begin{proof}
+ This is Exercise~\ref{ex:suspensions}
+ \end{proof}
+
+In particular, we see that $\End_{sV}$ is canonically isomorphic
+with $\End_s\otimes \End_V$, and hence that algebra structures on $sV$
+are related to algebra structures on $V$ through the operad $\End_s$.
+Let us give it a name. 
+
+\subsection{The Koszul dual}
+
+\newcommand{\sus}{\mathscr{S}}
+\textbf{Suspensions.} 
+We call $\End_{s}$ the suspension operad
+and write it $\sus$. Note that $\End_{s}(n)$ is
+the sign representation of $\Sigma_n$ put in degree $1-n$.
+
+\begin{proposition} For each $n\geqslant 1$ let us
+we write $\nu_n$ for the unique map in $\End_s(n)$ 
+that sends $s^n$ to $s$. Then for every $m\geqslant 1$
+we have that
+\[ \nu_n \circ_i \nu_m = (-1)^{(i-1)(m-1)} \nu_{m+n-1}. \]
+In particular, the binary operation $\nu := \nu_2$ of degree
+$-1$ generates $\End_s$,
+and presents it as a quadratic operad subject to the 
+anti-associativity relation
+\[ \nu \circ_1\nu + \nu\circ_2 \nu = 0.\]
+\end{proposition}
+\begin{proof}
+ This is Exercise~\ref{ex:suspensionoperad}.
+\end{proof}
+
+If $\PP$ is an operad, then the arity-wise tensor product
+$\sus\otimes \PP$ is called the suspension of $\PP$
+and we write it $\sus\PP$ or $\PP\{1\}$. Dually, we
+write $\sus^{-1}$ for the desuspension operad
+defined by $\End_{s^{-1}\kk}$. 
+
+\begin{note} As we just observed,
+the operad  $\sus\PP$ has the property that
+$\sus\PP(sV) = s\PP(V)$, so that algebras over $\sus\PP$
+are exactly those vector spaces $V$ such that $s^{-1}V$ is a
+$\PP$-algebra. Equivalently, $sV$ is a $\sus\PP$-algebra
+if and only if $V$ is a $\PP$-algebra. 
+\end{note}
+
+\textbf{Pairings.} We define a pairing between $\FF_\XX$ and
+$\FF_{s^{-1}\sus^{-1}\XX^*}$ as follows (the appearance of
+the suspensions will be evident later):
+\[ \langle \Sigma\nu^* \circ_j \Sigma\mu*, 
+	\rho \circ_i \tau  \rangle
+   = \delta_{ij} (-1)^{\varepsilon}
+   	\nu^*(\rho)\mu^*(\tau). \]
+with $\varepsilon = \varepsilon_1+\varepsilon_2$,
+where $\varepsilon_1 = (\ari(\nu)-1)(|\mu|+i-1)+|\nu||\mu|$ 
+and $\varepsilon_2$ counts the total
+number of inversions in the shuffle permutations
+appearing in the two tree monomials.
+If $\XX = \XX(2)$ is binary and has no homological degrees, 
+this simplifies to
+\[ \langle \Sigma\nu^* \circ_i \Sigma\mu*, 
+	\rho \circ_i \tau  \rangle
+   =  \begin{cases}
+    	(-1)^\varepsilon \nu^*(\rho)\mu^*(\tau) & i=1 \\
+    	-	\nu^*(\rho)\mu^*(\tau) & i = 2.
+    	\end{cases} \] 
+where $\varepsilon$ depends on the decoration
+of the leaves (it is $1$ if both decorations
+are equal, and is $-1$ if exactly one is the
+shuffle $132$. 
+
+\begin{definition}
+The Koszul dual operad of a quadratic operad $\PP$ 
+generated by $\XX$ subject to relations $\RR$, is
+the operad $\PP^!$ generated by $s^{-1}\sus^{-1}\XX^*$ 
+and subject to the orthogonal space of relations
+$\RR^\perp$ according to the pairing above.
+\end{definition} 
+
+\begin{note}
+Let $\PP$ be an operad. Then $\PP$ is quadratic if and
+only if $\sus\PP$ is quadratic, and it is Koszul if and
+only if $\sus\PP$ is Koszul. 
+\end{note}
+
+\textbf{Some examples.} Let us compute the Koszul duals of 
+some of the quadratic operads we considered in 
+Lecture~\ref{lecture:quadraticops}.
+For simplicity, we will consider only those with binary 
+generators of degree zero, though one can in the same way
+carry out computations with generators of higher arities and
+varying homological degrees.
+
+\bigskip
+
+\emph{The associative operad}. We saw previously that for
+$\underline{\XX}$ consisting of a single operation
+$x_1x_2$ with no symmetries, the
+space $\FF_\XX(3)$ is twelve dimensional, spanned by
+the $S_3$-orbits of $\alpha = x_1(x_2x_3)$ and $\beta =(x_1x_2)x_3$,
+each of size six. We also noted that $\alpha-\beta$
+spans a six dimensional submodule, complemented by the
+orbit of $\alpha+\beta$. 
+
+Using the pairing above, we see that
+\[\langle \alpha,\alpha\rangle = 1,
+	\quad \langle\beta,\beta\rangle = -1,
+	\quad \langle \alpha,\beta\rangle = 0, \] 
+from where it follows that the dual space to the associativity
+relation is the corresponding associativity relation
+$\alpha^* - \beta^*$ in $\XX^*$. In other words,
+the associative operad is Koszul self-dual:
+\[\mathsf{Ass}^! = \mathsf{Ass}.\]
+
+It is important to note how the minus sign in our
+definition of the pairing or, more generally, the
+Koszul sign we have introduced, guaranteeing that
+this pairing in equivariant, introduces the minus sign
+in the dual of $\alpha+\beta$.
+
+\bigskip
+
+\emph{The commutative and Lie operads.}
+We have computed that if $\XX(2)$ is the trivial representation
+of $S_2$ spanned by some commutative operation $x_1x_2$,
+then $\FF_\XX(3)$ is three dimensional, spanned by
+$x_1(x_2x_3)$, $(x_1x_2)x_3$ and $(x_1x_3)x_2$.
+Moreover, we verified that if we put
+\[ \alpha = x_1(x_2x_3) -(x_1x_2)x_3, 	\quad 
+     \beta =  x_1(x_2x_3) -(x_1x_3)x_2 \]
+     then these two element span an $S_3$-submodule
+     that is complemented by the $S_3$-submodule generated by
+     \[ \gamma = x_1(x_2x_3) +(x_1x_2)x_3+  (x_1x_3)x_2.\]
+ This is in fact an orthogonal complement as a direct computation
+ shows, so we see that the orthogonal set of relations
+ to the commutative associative relation is the dual of
+ $\gamma$ for the dual antisymmetric operation $[x_1,x_2]$:
+ this is exactly the Jacobi relation
+ \[ 
+ \gamma^* = -[x_1,[x_2,x_3]] +[[x_1,x_2],x_3]+[[x_1,x_3],x_2].
+ \]
+ It follows that the Koszul dual of the commutative operad is the
+ Lie operad, and conversely:
+ \[ \mathsf{Com}^! = \mathsf{Lie}, \quad
+  \mathsf{Lie}^! = \mathsf{Com}.
+  	\]
+With this at hand, one can compute that the Poisson operad is self-dual:
+one only needs to address the Leibniz relation.  
+
+\bigskip
+
+\emph{The pre-Lie and permutative operads. The Novikov operad.}
+Recall the pre-Lie operad is generated by a single operation $x_1x_2$
+with no symmetries, subject to the pre-Lie relation
+\[(x_1x_2)x_3 - x_1(x_2x_3) - (x_1x_3)x_2 + x_1(x_3x_2). \]
+One can check that the $S_3$-orbit $V$ of this element is three dimensional,
+so let us write $\alpha_1,\alpha_2$ and $\alpha_3$ for the translates of
+this relation in $\FF_\XX(3)$. 
+
+This orbit is complemented by the orbit $W$ of the associativity relation
+$(x_1x_2)x_3 - x_1(x_2x_3)$ and the orbit $U$ of the permutative relation
+$(x_1x_2)x_3 - (x_1x_3)x_2$. The first is six dimensional, as we already
+computed, while the second is three dimensional. It is a direct computation
+to check that $V^\perp$ identifies with the nine dimensional subspace
+$U^*\oplus W^*$. 
+
+Thus, we see that the operad of pre-Lie algebra is Koszul dual to that
+of permutative algebras:
+\[ \mathsf{PreLie}^! = \mathsf{Perm},\quad
+ 	\mathsf{Perm}^! = \mathsf{PreLie}.\]
+One can use this to show that the operad controlling Novikov algebras,
+those pre-Lie algebras whose product is \emph{left} permutative
+\[ x_1(x_2x_3) = x_2(x_1x_3) \]
+is almost Koszul self-dual: we have that $\mathsf{Nov}^! = 
+\mathsf{Nov}^{\mathrm{op}}$, by which we mean the resulting
+operad controls pre-Lie algebras with associator symmetric
+in the \emph{first two} variables (left-symmetric) and 
+whose pre-Lie operation is \emph{right} permutative.
+\subsection{Exercises}
+
+\begin{question}\label{ex:suspensions}
+Show the map $\Phi_{V,W}$ of Lemma~\ref{lemma:hadamard}
+is an isomorphism for $V$ and $W$ locally finite dimensional
+dg symmetric sequences.
+\end{question}
+
+\begin{question}\label{ex:suspensionoperad}
+Show that the suspension operad is binary quadratic
+generated by a single operation $\nu$ of degree $-1$
+that is ``anti-associative'', in the sense that
+$\nu\circ_1\nu + \nu\circ_2\nu=0$. 
+\end{question}
+\begin{question} Show that:
+\begin{tenumerate}
+\item $\mathsf{Ass}$ is Koszul
+self dual.
+\item $\mathsf{Com}$ and $\mathsf{Lie}$
+are Koszul dual to each other.
+\item $\mathsf{PreLie}$
+and $\mathsf{Perm}$ are Koszul dual to each
+other.
+\item the Poisson operad is Koszul self-dual.
+\end{tenumerate}
+\end{question}
+
+\begin{question} 
+The operad $\mathsf{Nov}$ of Novikov algebras
+is the quotient of the (right) pre-Lie operad by the 
+left permutative relation
+$x_1(x_2x_3) = x_2(x_1x_3)$.
+Show that $\mathsf{Nov}$ is Koszul dual to its
+``opposite'' operad $\mathsf{Nov}^\mathrm{op}$
+controlling left pre-Lie algebras satisfying the
+right permutative relation. 
+\end{question}
+
+\begin{question}
+Show that:
+\begin{tenumerate}
+\item 
+The Koszul dual of the operad controlling
+totally associative $k$-ary algebras is the
+operad controlling partially associative
+$k$-ary algebras.
+\item The Koszul dual of the operad controlling
+commutative totally associative $k$-ary algebras
+is the operad controlling $k$-ary Lie algebras. 
+\end{tenumerate}
+\end{question}
+
+\begin{question}
+Let $x_1x_2$ be a binary operation and consider
+the two relations:
+\[
+  R = (x_1x_2)x_3 -
+   	\sum_{\sigma \in S_3} 
+   		\lambda_\sigma \sigma(x_1(x_2x_3)),
+   		\qquad
+   		S = x_1(x_2x_3) - 
+   	\sum_{\sigma \in S_3} 
+   		\lambda_\sigma \sigma^{-1}((x_1x_2)x_3).
+ 	\]
+Show that the resulting quadratic operads $\FF(x_1x_2)/(R)$
+and $\FF(x_1x_2)/(S)$ are Koszul dual to each other.
+\end{question}
+
+\begin{question}
+Show that in the case of binary operads,
+the bilinear form we constructed 
+during the lectures is $S_3$-invariant.
+\end{question}

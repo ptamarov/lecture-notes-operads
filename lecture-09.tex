@@ -1,0 +1,570 @@
+\section{Bar and cobar constructions}\label{lecture:barcobar}
+\textbf{Goals.} Define the bar (and cobar) construction,
+define the syzygy grading and give the first definition
+of what it means for an operad to be Koszul. 
+
+\subsection{The bar construction}
+
+We have defines a functor on quadratic data $(\XX,\RR) \longmapsto 
+(\XX^\vee,\RR^\perp)$ that gives us the Koszul dual
+functor $\PP \longmapsto \PP^!$ on quadratic operads.
+Let us explain how one can ``promote'' this construction
+to a functor define on all operads, and how our more
+down-to-earth construction can be recovered from
+this. Let us begin with a useful notion, which is
+to an operad what an coassociative coalgebra is to 
+an associative algebra.
+
+\begin{definition}
+A symmetric cooperad is a symmetric collection
+$\CC$ endowed with maps of collections
+$\Delta : \CC \longrightarrow \CC\circ_\Sigma\CC$
+and $\varepsilon: \CC\longrightarrow \kk$
+so that $\Delta$ is coassociative and counital
+for $\varepsilon$. A cooperad $\CC$ is augmented
+if there exists $\eta: \kk\longrightarrow \CC$
+such that $\varepsilon\eta = 1_\kk$. In this case,
+we write $\overline\CC$ for the cokernel of $\eta$.
+\end{definition}
+
+We warn the reader that, strictly speaking,
+we should have defined cooperads using a variant
+of the composition product $\circ_\Sigma$ that
+takes $\Sigma$-invariants instead of coinvariants.
+Since we will always work over a field of characteristic 
+zero, we will not worry about this. At any rate,
+unraveling the definitions, we see that
+a cooperad is a symmetric sequence endowed with
+equivariant decomposition maps of signature
+\[
+\Delta : \CC(n) \longrightarrow
+\bigoplus_{n_1+\cdots+n_k = n} \CC(k)\otimes \CC(n_1)\otimes\cdots \CC(n_k)
+\]
+that are coassociative. One can check (Exercise~\ref{ex:takeduals})
+that if $\CC$ is a cooperad then its arity-wise dual $\CC^*$ 
+is an operad, and that if $\PP$ is an arity-wise finite dimensional
+reduced operad then its arit-wise dual $\PP^*$ is a cooperad. 
+
+\begin{definition}
+The reduced and half-reduced decomposition maps of a cooperad $\CC$ are the
+maps $\overline{\Delta}$ and $\widetilde{\Delta}$
+ uniquely determined by the equation
+\[
+\Delta(\nu) =  \overline{\Delta}(\nu) +
+ (1;\nu) + (\nu ; 1,\ldots,1)=
+ \widetilde{\Delta}(\nu) +
+ (1;\nu)
+\] 
+for all arity-homogeneous $\nu\in\CC$. We say that
+$\CC$ is \emph{conilpotent} if for each $\nu\in\CC$
+the iteration of $\widetilde{\Delta}$ on $\nu$ defined by
+$
+\widetilde{\Delta}^n(\nu) = (1\circ \Delta)\widetilde{\Delta}^{n-1}(\nu)
+$
+stabilizes, in the sense that eventually all leaves are decorated by
+the identity element of $\CC$.
+\end{definition}
+
+
+
+As in the case of algebras and coalgebras, where for a vector space
+$V$ the underlying vector space of the free associative algebra
+$TV$ on $V$ and the free \emph{conilpotent} coassociative coalgebra
+coincide, the free \emph{conilpotent} cooperad over a symmetric
+sequence is an object we have meet before.
+
+\begin{definition}
+The free conilpotent cooperad over a symmetric sequence $\XX$,
+which we denote by $\FF_\XX^c$, has the same underlying symmetric
+sequence as the free operad $\FF_\XX$, and its decomposition maps
+are given by ``degrafing of trees''.
+\end{definition}
+
+We will look at the structure of the free conilpotent operad functor
+$\FF^c$ in more detail in Exercise~\ref{ex:cofree}. 
+As an example, if $x\in \XX(2)$ is a binary symmetric operation and 
+we consider the fork
+\[
+\mathsymbol{0.75}{T=}\smallfork{}{}{}{1}{4}{2}{3}\mathsymbol{0.75}{,}
+\]
+we have that $\overline{\Delta}(T)$ is equal to the sum
+\begin{align*}
+{}& 
+\smallleftc{}{}{}{}{} \hotimes \stick{1}  \hotimes \stick{4}
+	\hotimes\smallb{}{2}{3} \hplus \\
+	&
+	\smallrightc{}{}{}{}{} \hotimes 
+		\smallb{}{1}{4}   \hotimes \stick{2}
+	\hotimes \stick{3}\hplus\\
+	&\phantom{em}\smallb{}{}{} \hotimes 	
+	\smallb{}{1}{4} \hotimes \smallb{}{2}{3} \mathsymbol{0.5}{.}
+\end{align*}
+
+Although both $\FF_\XX$ and $\FF_\XX^c$ satisfy universal properties
+with respect to operad morphisms form $\XX$ into an operad or from
+a conilpotent cooperad into $\XX$, it will be convenient for us to 
+observe they both satisfy (and are uniquely characterized by) a
+second universal property. To state it, we need to consider a natural
+generalization of the ``Leibniz rule'' for derivatives in the case
+of (co)operads.
+
+\begin{definition}
+Let $\PP$ be an operad. A derivation of $\PP$ is a map
+$d : \PP\longrightarrow \PP$ with the property that
+for any arity-homogeneous elements $\mu_0,\mu_1,\ldots,\mu_k\in\PP$
+with $\ari{\mu_0} = k$, we have that 
+\[
+d\gamma(\mu_0;\mu_1,\ldots,\mu_k) = 
+	\sum_{i=0}^k \gamma(\mu_0;\mu_1,\ldots,d\mu_i,\ldots,\mu_k).
+	\]
+If $\PP$ is homologically graded, we require that $d$ is degree homogeneous,
+and then Koszul signs will appear in the display
+above.
+\end{definition}
+
+The following is the universal property we were after.
+
+\begin{lemma}
+Let $\XX$ be a symmetric collection. The free operad $\FF_\XX$
+on $\XX$ satisfies the following universal property: for every
+map of symmetric sequences $f: \XX\longrightarrow \PP$ where $\PP$
+is an operad, there exists a unique derivation $F: \FF_\XX
+\longrightarrow \PP$ which coincides with $f$ on $\FF_X^{(1)}=\XX$.
+
+Dually, the free conilpotent cooperad $\FF_\XX^c$ satisfies the following
+universal property: for every
+map of symmetric sequences $f: \CC\longrightarrow \XX$ where $\XX$
+is an conilpotent cooperad, there exists a unique coderivation $F: \CC
+\longrightarrow \FF_\XX^c$ which coincides with $f$ after
+projecting onto $\FF_X^{c,(1)}=\XX$.
+\end{lemma}
+
+We use it to define one of the most important functors we will 
+consider in this section, the \emph{bar construction}. To do this,
+let us begin with an augmented operad $\PP$, and let us form
+the free conilpotent cooperad $\FF_{s\overline{\PP}}^c$ on the
+na\"ive suspension $s\overline{\PP}$ of its augmentation ideal.
+This is for the moment a homologically graded cooperad, which we will
+make into a dg conilpotent cooperad as follows: the composition
+map of $\PP$ provides us with a map of symmetric collections
+\[
+\FF_{s\overline{\PP}}^c \longrightarrow s\overline\PP
+\]
+that is zero in all tree monomials of weight different from two, and
+on the latter, it is equal to the unique map
+\[
+\gamma' :  \FF_{s\overline{\PP}}^{c,(2)} 
+ \longrightarrow s\overline{\PP}
+\]
+induced by the composition map of $\PP$. The universal property of $\FF^c$
+guarantees there is a unique coderivation 
+\[ \partial : \FF_{s\overline{\PP}}^c 
+	\longrightarrow \FF_{s\overline{\PP}}^c\]
+extending $\gamma'$. In Exercise~\ref{ex:zerosquare} we will see that
+$\partial^2 = 0$, but for the moment notice that $\partial$ has degree $-1$,
+as the map $\gamma'$ does: it erases one suspension sign from 
+a single tree monomial with exactly one internal edge whose
+two vertices are decorated by elements of $\overline{\PP}$,
+by composing them along this unique internal edge.
+
+\begin{figure}
+
+\end{figure}
+
+\begin{definition}
+Let $\PP$ be an augmented operad. 
+We call the dg cooperad $(\FF_{s\overline{\PP}}^c ,\partial)$
+the bar construction of $\PP$ and write it $\B{\PP}$.
+\end{definition}
+
+Let us begin exploring the shape of this gadget. For starters,
+since its underlying symmetric collection is equal to that of
+a free operad, whenever $\PP$ is reduced ---which is running
+assumption for us--- it has a basis of shuffle tree monomials
+decorated by elements of $\PP$ that are \emph{not} the unit;
+let us call these \emph{bar tree monomials}. A bar tree monomial
+has homological degree $d$ precisely when it has $d$ internal
+vertices, as the device of using $s\overline{\PP}$ instead of
+$\overline\PP$ means precisely that we are turning the canonical
+weight grading of $\FF$ into a homological grading. We will
+use the notation $|T|$ for this homological degree, as usual,
+and use the subscript notation $\B{\PP}_*$ when referring to
+this grading. Thus, for example,  $\B{\PP}_2$ consists of
+those bar tree monomials of homological degree two.
+
+\begin{figure}
+\[
+\mathsymbol{0.5}{\Leftr{}{}{}{2}{4}{1}{3}}
+\mathsymbol{1.5}{\leadsto}
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (3) at (0, 1) {};
+		\node [style=inner] (4) at (0, 2) {};
+		\node [style=leaf] (5) at (-1.25, 2) {$1$};
+		\node [style=leaf] (6) at (1.25, 2) {$3$};
+		\node [style=leaf] (12) at (0, 0) {};
+		\node [style=leaf] (13) at (-0.75, 3) {$2$};
+		\node [style=leaf] (14) at (0.75, 3) {$4$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (3.center) to (5.center);
+		\draw (4.center) to (3.center);
+		\draw (3.center) to (6.center);
+		\draw (3.center) to (12.center);
+		\draw (13.center) to (4.center);
+		\draw (14.center) to (4.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\hspace{0.5 em}
+\mathsymbol{1.5}{-}
+\hspace{-1 em}
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 1) {};
+		\node [style=inner] (1) at (-1, 2) {};
+		\node [style=leaf] (2) at (1, 2) {$3$};
+		\node [style=leaf] (3) at (-2, 3) {$1$};
+		\node [style=leaf] (4) at (-1, 3) {$2$};
+		\node [style=leaf] (5) at (0, 3) {$4$};
+		\node [style=leaf] (6) at (0, 0) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (3.center) to (1.center);
+		\draw (4.center) to (1.center);
+		\draw (5.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (0.center) to (2.center);
+		\draw (0.center) to (6.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\]
+\caption{A boundary map in $\B{\Com}$, vertices are not decorated
+as there is a unique $k$-ary variable in $\Com$ for each $k\in\NN$.}
+\end{figure}
+At the same time, we will usually take $\PP$ to be \emph{itself}
+weight graded, so that bar tree monomials have a homological
+degree, which keeps track of how many elements of $\PP$ appear
+in a tree monomial, and a total weight, which simply is obtained
+by adding up the weights of the elements of $\PP$ in them.
+We will write $\lVert T\rVert$ for the weight of a tree monomial
+and use the notation $\B{\PP}_{(*)}$ when referring to this
+weight grading. Thus, for example, $\B{\PP}_{(2)}$ consists of
+those bar tree monomials of total weight degree two, which
+can then either have homological degree one and be decorated by
+one weight two element of $\PP$, or have homological degree two
+and be decorated by two weight one elements of $\PP$. Note
+that in general $|T|\leqslant \lVert T\rVert$.
+
+\begin{definition}
+The syzygy degree of a bar tree monomial $T$ is the difference
+$\lVert T\rVert - |T|$, and we write it $\syz{T}$. We call this
+the syzygy grading of $\B{\PP}$, and we use the superscript
+notation $\B{\PP}^*$ when referring this this cohomological
+grading: the differential $d$ has degree $+1$ in the syzygy
+grading.
+\end{definition}
+
+\begin{figure}
+\[
+\begin{tikzpicture}[scale = 0.8]
+\tikzset{>=latex}
+
+%Draw a nice grid
+\draw[help lines, color=gray!30, dashed] 
+	(-4,-1) grid (10.5,9.5);
+
+%Draw bar components 
+\foreach \x in {1,2,3,4}
+	{     
+	\pgfmathsetmacro\result{\x} 
+	\foreach \y in {1,...,\result}
+	  {
+	  \node (\y\x) at (3*\x - 3*\y,2*\x) {$\B{\PP}_{\y,(\x)}$};
+	  	  }
+	}
+    {
+    \draw[->,>=stealth] (22) edge (12);
+    \draw[->,>=stealth] (33) edge (23);
+     \draw[->,>=stealth] (23) edge (13);
+    \draw[->,>=stealth] (44) edge (34);
+    \draw[->,>=stealth] (34) edge (24) ;
+    \draw[->,>=stealth] (24)  edge (14);
+
+    }
+   
+%Draw P antishriek
+
+\foreach \x in {1,2,3,4}
+	 {
+	 \node (P\x) at (-3,2*\x) {$\PP^\antishriek_{(\x)}$} ;
+	 \draw[->,>=stealth] (P\x) edge (\x\x);
+ }
+ 
+ %draw lonely unit
+ 
+ \node at (-3,0) {$\kk$};
+ 
+ %draw some "axes"
+ 
+ \draw[->] (-4,-1) -- (10.5,-1) ;
+  \draw[->] (-4,-1) -- (-4,9.5) ;
+ \node (S) at (10.5,-0.5) {\scriptsize{syzygy}};
+  \node (W) at (-4,10) {\scriptsize{weight}};
+ \end{tikzpicture}	
+\]
+\caption{The bar construction of a weight graded operad $\PP$. Horizontal arrows
+are differentials, leftmost arrows are inclusions. Note
+that the diagonals where $s+w$ is constant return the
+usual homological degree $d$. }
+\end{figure}
+
+\begin{example} Let us consider the case where $\PP = \Com$ is the
+commutative operad, in which case $\XX = s\overline{\PP}$ is a symmetric
+sequence such that $\XX(0) = \XX(1) = 0$ and for which $\XX(n)$ is
+one dimensional for each $n\geqslant 1$ and concentrated in
+degree zero and weight $n-1$. It follows that $\B{\Com}$ has basis consisting
+of shuffle trees where the internal vertices have
+all possible arities greater or equal to $2$, and in this case the
+degree of a bar tree monomial is equal to the number of 
+its internal vertices. Let us write $S_m$ for the element in
+$\B{\Com}$ of degree $1$ and weight $m-1$ corresponding to the 
+$m$-fold product in $\Com$.
+
+If we write $T_i(A,B)$ for the shuffle tree in
+Figure~\ref{fig:twolevel}, where $A = \{ i,j_1,\ldots,j_m\}$
+and $B = \{1,\ldots,i-1,k_1,\ldots,k_n\}$, we see that
+$\partial T_i(A,B) = (-1)^{i-1} S_m$ where $m\geqslant 3$,
+so all of these elements are zero in homology. For example, if
+we look at $\B{\Com}(3)$, we notice this complex has total 
+dimension four, with the usual three shuffle tree monomials
+\[ T_1(12,3), 
+	\quad
+		T_1(13,2),
+			\quad
+			\text{ and  }
+		 	\quad T_2(1,23)
+			\]
+with three leaves in degree two (and weight two) and
+one single tree monomial (the corolla $S_3$) in degree one.
+Moreover, the computation above shows that generators for
+the homology are
+\[ 
+T_1(12,3) + T_2(1,23),\qquad 
+T_1(13,2) + T_2(1,23)
+\]
+Similarly, one can compute as in Exercise~\ref{ex:barcom} that
+$\B{\Com}$ is of dimension $26$, and that the degree two cycles
+are of dimension $9$ (all $10$ basis shuffle trees map to the only basis
+elements of degree $1$). Moreover, one can check that all of these
+cycles in degree two are boundaries. Since this complex has
+$\chi = 6$ and we have just noted it has homology only in
+degree three, we see this homology group is of this 
+dimension. We will
+see very soon that in
+syzygy degree zero, the homology of $\B{\Com}(n)$ 
+is of dimension $(n-1)!$.
+\end{example}
+
+\subsection{Koszul dual cooperad}
+
+Let us begin by observing that, in the syzygy grading,
+$H^0(\B{\PP})$ is computed as the kernel of a linear operator,
+as all syzygy degrees are non-negative (so there are no boundaries
+in degree zero). We can in fact try to study the shape of the bar
+construction with a little more care, and determine precisely
+what this homology group is as a \emph{cooperad} in case
+$\PP$ is quadratic.
+
+To do this, let us assume that $\PP$ is generated by 
+$\XX$ (in weight one) subject to some quadratic relations $\RR$ in 
+$\FF_\XX^{(2)}$. Then, we see that elements of $\B{\PP}^0$ 
+(that is, those that have degree equal to weight) must
+be precisely those of in $\FF^c_{s\XX}$. Note the difference!
+While all of $\B{\PP}$ is given by a free cooperad on $\PP$,
+the syzygy degree zero part only retains the elements 
+that generate $\PP$. 
+
+Having said this, if we decompose 
+$\FF_{s\XX}^c$ into its tree monomial components, and
+if we write $\mathcal V = \FF_\XX^{(2)} / \RR$,
+we see
+that the differential $\partial$ maps $\FF_{s\XX}^c$ to
+$\FF_{s\XX\oplus s\mathcal V}^c$, since it at
+most can introduce an element of $\PP$ of weight two,
+and it maps to the symmetric subsequence
+$\FF_{s\XX,s\mathcal V}^c$ where
+\emph{exactly one} internal vertex is decorated by an 
+element of $s\mathcal V$. 
+
+\begin{definition}
+Let $\XX$ be a symmetric sequence and let $\RR\subseteq \FF_\XX^{c,(2)}$.
+The cofree conilpotent cooperad cogenerated by $\XX$ subject
+to the correlations $\RR$ is the unique conilpotent cooperad $\FF^c\XX,\RR)$
+that is universal among those conilpotent cooperads
+$\CC$ along with a map $\CC\longrightarrow \XX$ such
+that the projection of the unique map $\CC \longrightarrow \FF_\XX^c$
+to $\CC \longrightarrow \FF_\XX^{c,(2)}$ has image in
+$\RR\subseteq \FF_\XX^{c,(2)}$. 
+\end{definition}
+
+If the reader finds the definition slightly confusing, let us remark
+that the quotient operad $\FF(\XX,\RR) = \FF_\XX/ (\RR)$ is universal
+among those operads $\PP$ along with a map $\XX\longrightarrow \PP$
+with the property that the restriction of the unique map 
+$\FF_\XX\longrightarrow \PP$ to $\FF_\XX^{(2)}$ \emph{factors}
+through $\FF_\XX^{(2)}/\RR$: whereas the condition on the operad is
+that $\RR$ is contained in the kernel of this map, the condition
+on conilpotent operads is that $\RR$ is contained in the image. 
+
+\begin{proposition}
+If $\PP  = \FF(\XX,\RR)$ then the zeroth
+syzygy homology groups $H^0(\B{\PP})$ are equal to $\FF^c(s\XX,s^2\RR)$.
+More precisely, $\CC = H^0(\B{\PP})$ is a weight graded subcooperad,
+with $\CC_{(1)} = s\XX$ and the projection $\CC \longrightarrow s\XX$
+satisfies the universal property of the definition above for $s^2\RR$.
+\end{proposition}
+
+\begin{proof}
+First, let us note that not only is $H^0(\B{\PP})$ equal to $s\XX$ in
+weight $1$, but it is also equal to $s^2\RR$ in weight $2$, as this is
+by definition the kernel of the composition
+\[
+ \B{\PP}_{2,(2)} = \FF^{(2)}_{s\XX} \subseteq \B{\PP}^0
+ 	\longrightarrow 
+ 	s\overline{\PP}_{(2)}  \subseteq   \B{\PP}^1 
+\]
+so that the projection $H^0(\B{\PP})\longrightarrow s\XX$ does induce a map
+$H^0(\B{\PP}) \longrightarrow \FF^c_\XX$ with the desired properties. 
+Suppose that $\CC$ is a cooperad with a map $f$ to $\XX$ for which
+the projection $\pi\circ F: \CC \longrightarrow \FF_\XX^{c,(2)}$ lands
+in $s^2\RR$. Since $H^0(\B{\PP})$ is a subcooperad of $\FF^c_{s\XX}$,
+it suffices to show that the map $F: \CC\longrightarrow \FF^c_{s\XX}$
+has image in $H^0(\B{\PP}) = \ker \partial^0$.
+
+By definition, $F$ is obtained through $f$ by iteration of the decomposition
+map of $\CC$: for each $n\geqslant 1$ the component $F: \CC\longrightarrow 
+\FF^{c,(n)}_{s\XX}$ in weight $n$ is obtained using $n-1$ instances of the
+decomposition map of $\CC$. By hypothesis, every use of the decomposition
+map of $\CC$ always creates quadratic summands that are in $\RR$, so by
+coassociativity, iteration of $\Delta$ will produce terms that can be written
+to contain relations in any ``big vertex'' of $\FF_{s\XX}^c$ we prefer.
+This guarantees that when we apply $\partial^0$ the result will be
+zero (as this is an alternating sum of terms, each which annihilates 
+an appropriate way of writing down the result of iterating $\Delta$)
+so that $F$ indeed lands in $H^0(\B{\PP})$, like we wanted.
+\end{proof}
+
+The reader may compare to the case of associative algebras (that is,
+when $\XX$ consists exclusively of arity one operations) in which case
+the cofree conilpotent coalgebra $C$ with cogenerators $V$ and relations
+$R\subseteq V^{\otimes 2}$ is such that for each $n\geqslant 2$,
+\[
+C_{(n)} = \bigcap_{i=1}^{n-1} V^{\otimes (i-1)}\otimes R\otimes 
+					V^{\otimes(n-i-1)}.
+\]
+
+\begin{definition}
+Let $\PP$ be the quadratic operad associated to the quadratic datum 
+$(\XX,\RR)$. We call $H^0(\B{\PP})= \FF^c(s\XX,s^2\RR)$ the Koszul dual cooperad
+to $\PP$, and write it $\PP^\antishriek$.
+\end{definition}
+
+Recall that we defined $\sus = \End_{s\kk}$, the suspension operad.
+We will use $\sus^c$ to denote the endomorphism cooperad $\End_{s\kk}^c$,
+which we can think simply as the arity-wise dual of $\sus^{-1}$.
+The ``Koszul pairing'' we used when we defined the operad $\PP^!$
+gives a hint to the following result.
+
+\begin{lemma}\label{lemma:dualcooperad}
+The dual of the cooperad  $\sus^c\otimes \PP^\emph{\antishriek}$
+is isomorphic to $\PP^!$.
+\end{lemma}
+
+\begin{proof}
+This is Exercise~\ref{ex:dualcooperad}. 
+\end{proof}
+
+In particular, this proves that the dual operad to $H^0(\B{\Com})$ is
+equal to the Lie operad, which explains the computations done and suggested
+above. We can now conclude this lecture by introducing one of the
+central definitions in these notes.
+
+\begin{definition}[First definition]
+A weight graded (quadratic) operad $\PP$ is Koszul if
+the inclusion of cooperads $\PP^\antishriek \longrightarrow \B{\PP}$
+is a quasi-isomorphism. In other words, we say that $\PP$
+is Koszul if the homology of its bar construction is
+concentrated in syzygy degree zero.
+\end{definition}
+
+\subsection{Exercises}	
+
+\begin{question}
+All the results in this section have corresponding
+dual statements for conilpotent cooperads. State and
+prove them. In particular, define for each weight graded
+cooperad $\CC$ its cobar construction $\Omega(\CC)$,
+and describe the syzygy grading and the differential.
+\end{question}
+
+\begin{question}\label{ex:cofree}
+Consider a binary alphabet $\XX$ with a single operation,
+and compute the decomposition map of $\FF^c_\XX$ in case
+this operation is symmetric, antisymmetric or regular 
+for tree monomials with four leaves.
+\end{question}
+
+
+\begin{question}\label{ex:conilpotent}
+Show that a cooperad $\CC$ is conilpotent if and only if
+there exists a symmetric sequence $\XX$ and an injective
+map of cooperads $\CC \longrightarrow \FF_\XX^c$. 
+\end{question}
+
+\begin{question}\label{ex:takeduals}
+Show that if $\CC$ is a cooperad then its arity-wise dual $\CC^*$ 
+is an operad, and that if $\PP$ is an arity-wise finite dimensional
+reduced operad then its arit-wise dual $\PP^*$ is a cooperad. 
+Make sure to explain why the second set of hypotheses are needed.
+\end{question}
+
+\begin{question}\label{ex:dualcooperad}
+Prove Lemma~\ref{lemma:dualcooperad}, which states
+that the dual of the cooperad  $\sus^c\otimes \PP^{\antishriek}$
+is isomorphic to $\PP^!$.
+\end{question} 
+
+\begin{question}\label{ex:barcom}
+Compute the homology of the complex $\B{\Com}(4)$ explicitly.
+Show it is concentrated in syzygy degree $0$, where it is
+six dimensional, and give representatives for the 
+cocycles giving a basis of it.
+\end{question}
+
+\begin{question}\label{ex:zerosquare}
+Show that the differential $\partial$ of the bar construction of
+an operad $\PP$ squares to zero if and only if the composition
+map of $\PP$ is associative. 
+\end{question}
+
+\begin{question}\label{ex:dgbar} Suppose that $\PP$ is a dg
+operad, and let us write $\partial_1$ for the differential of its
+bar construction (considered as a non-dg operad). Recall
+that $s\PP$ gets the differential $-s d_\PP s^{-1}: 
+s\overline{\PP}\longrightarrow s\overline{\PP}$.
+
+\begin{tenumerate}
+\item Show that in this case the differential
+of $s\PP$ induces a differential $\partial_2$ on $\FF_{s\PP}$. 
+\item Show that $\partial_1\partial_2 + \partial_2\partial_1=0$
+is equivalent to $d_\PP$ being a derivation for $\gamma_\PP$.
+\item
+Conclude that $\partial = \partial_1 + \partial_2$ is a differential
+on $\FF_{s\PP}$. 
+\end{tenumerate}
+We call the resulting cooperad the bar construction of
+$\PP$ and write it $\B{\PP}$.
+\end{question}
+
+
+ 

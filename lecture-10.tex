@@ -1,0 +1,573 @@
+\section{Koszul complexes}\label{lecture:KD2}
+
+\textbf{Goals.} Define twisting morphisms, unravel the
+bar-cobar adjunction. Give the definition of the
+Koszul complexes associated to a quadratic operad,
+and give a second definition of Koszulness.
+
+\subsection{Twisting morphisms}
+
+We begin with some more operadic algebra, this time focusing
+on certain variants of the circle product that will help us
+state and prove some (perhaps technical) results about
+operads, conilpotent cooperads, and their (co)bar
+constructions. 
+
+\medskip
+
+\textbf{Infinitesimal composites.}
+Since we will use them often, let us define two flavours of
+``infinitesimal composites''  between two symmetric sequences $\XX$ and $\YY$.
+First, for a third sequence $\YY'$, let us write $\XX\circ (\YY;\YY')$
+for the subfunctor of $\XX\circ (\YY\oplus \YY')$ which is linear
+in $\YY'$. In other words,  we consider corollas whose root 
+vertex is decorated by
+$\XX$, and all whose leaves are  decorated by an element 
+of $\YY$ except for one
+which is decorated by an element of~$\YY'$. This construction
+enjoys some sort of ``mixed functoriality'' with the usual
+composition product:
+
+\begin{definition}
+Let $f:\XX \longrightarrow \XX'$ and $g: \YY\longrightarrow \YY'$
+be maps of symmetric sequences. We define the infinitesimal
+composite $f\circ' g$ to be the map
+\[ f\circ' g: \XX\circ \YY \longrightarrow \XX'\circ (\YY;\YY') \]
+such that
+$(f\circ' g)(x;y_1,\ldots,y_k) = 
+\sum_{i=1}^k (f(x);y_1,\ldots,g(y_i),\ldots,y_k)$.
+\end{definition}
+
+As usual, Koszul signs will appear if our sequences are dg.
+We write $\XX\circ_{(1)} \YY$ for $\XX\circ (\kk,\YY)$. In other
+words, we consider corollas whose root vertex is decorated by
+$\XX$, and all whose leaves are ``empty'', except for one
+which is decorated by an element of $\YY$. If $f$ and $g$
+are as above, there is a map
+\[
+f\circ_{(1)} g : \XX\circ_{(1)} \YY \longrightarrow \XX'\circ_{(1)} \YY'
+\]
+such that $(f\circ_{(1)} g )(x;1,\ldots,1,y,1,\ldots,1) = 
+ (f(x);1,\ldots,1,g(y),1,\ldots,1)$.
+As we suggest,
+these two constructions are better behaved than
+composite product when it comes to linearity:
+
+\begin{lemma}
+For any four symmetric sequences $\XX,\YY,\YY_1,\YY_2$,
+we have a natural isomorphism
+\[ \XX\circ (\YY;\YY_1\oplus \YY_2) \longrightarrow 
+				\XX\circ (\YY;\YY_1) \oplus \XX\circ (\YY;\YY_2).\]
+In particular, if $\YY=\kk$, we have a natural isomorphism				
+\[ \XX\circ_{(1)} (\YY_1\oplus \YY_2) \longrightarrow 
+				(\XX\circ_{(1)} \YY_1) \oplus (\XX\circ_{(1)} \YY_2),\]
+so that the functor $-\circ_{(1)}-$ is bilinear.
+\end{lemma}
+
+It is useful to remark that although $f\circ' g$ and $f\circ_{(1)} g$
+look similar, they have different (co)domains and they act in different
+ways on summands: while the former outputs a sum of terms, the latter
+outputs one term only.
+
+\medskip
+
+\textbf{Infinitesimal (de)compositions.}
+Let $\PP$ be a dg operad and let $\CC$ be a conilpotent
+dg cooperad, and let us assume (once and for all, throughout
+this section) that they are both (co)augmented. In this
+situation, we can consider morphisms of dg cooperads
+$\CC \longrightarrow \B{\PP}$, and we claim these
+can be described purely in terms of linear maps
+$\tau :\CC \longrightarrow \PP$ satisfying some conditions.
+
+Since $\PP$ is an operad, we can then consider its 
+\emph{infinitesimal composition map} $\gamma_{(1)} :\PP \circ_{(1)} 
+	\PP\longrightarrow \PP$ which encodes its partial
+	compositions. Similarly, we can consider the 
+	infinitesimal decomposition map $\Delta_{(1)}:
+\CC\longrightarrow  \CC\circ_{(1)} \CC$ obtained
+by projecting the decomposition map of $\CC$ onto 
+$\CC\circ_{(1)} \CC$.
+\begin{figure}[h]
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=leaf] (0) at (-0.5, 1) {};
+		\node [circle,draw=black, fill=white, inner sep=2 pt,minimum size=6 pt] (1) at (0, 0) { $c$};
+		\node [style=leaf] (2) at (-1.5, 1) {};
+		\node [style=leaf] (3) at (0.5, 1) {};
+		\node [style=leaf] (4) at (1.5, 1) {};
+		\node [style=leaf] (12) at (0, -1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (3.center) to (1.center);
+		\draw (1.center) to (4.center);
+		\draw (1.center) to (12.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+\mathsymbol{1.5}{\leadsto}
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=leaf] (0) at (0, -1) {};
+		\node [style=inner] (1) at (0, 0) {\scriptsize $ f(c_{(1)})$};
+		\node [style=leaf] (2) at (-1.25, 1) {};
+		\node [style=leaf] (3) at (0, 1) {};
+		\node [style=inner] (4) at (1.25, 1) {\scriptsize $ g(c_{(2)})$};
+		\node [style=leaf] (5) at (0.75, 2) {};
+		\node [style=leaf] (6) at (1.75, 2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (3.center);
+		\draw (5.center) to (4.center);
+		\draw (4.center) to (6.center);
+		\draw (4.center) to (1.center);
+		\draw (1.center) to (0.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+	\mathsymbol{1.5}{\leadsto}
+	\begin{tikzpicture}
+\begin{pgfonlayer}{main}
+		\node [style=leaf] (0) at (-0.5, 1) {};
+		\node [circle,draw=black, fill=white, inner sep=2 pt,minimum size=6 pt] (1) at (0, 0) {$p$};
+		\node [style=leaf] (2) at (-1.5, 1) {};
+		\node [style=leaf] (3) at (0.5, 1) {};
+		\node [style=leaf] (4) at (1.5, 1) {};
+		\node [style=leaf] (12) at (0, -1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (3.center) to (1.center);
+		\draw (1.center) to (4.center);
+		\draw (1.center) to (12.center);
+	\end{pgfonlayer}
+	\end{tikzpicture}
+\caption{A schematic version of the star product: we use ``Sweedler notation'' for
+the infinitesimal decomposition of $\CC$ and write $p$ a generic
+summand $f(c_{(1)})\circ_i g(c_{(2)})$ appearing in the final result.}
+\label{fig:starprod}
+\end{figure}
+\begin{definition}
+Let $f,g\in \hom_\Sigma(\CC,\PP)$ be maps of symmetric
+sequences. We define their star product $f\star g$ 
+as the composition
+$\gamma_{(1)} \circ (f\circ_{(1)} g)\circ \Delta_{(1)}$,
+as depicted in Figure~\ref{fig:starprod}. We give 
+$\hom_\Sigma(\CC,\PP)$ the usual differential
+\[
+\partial(f) = d_\PP \circ f  - (-1)^{|f|} f\circ d_\CC.
+\]
+\end{definition}
+
+One can show that $\hom_\Sigma(\CC,\PP)$ along with
+the star product $-\star -$ becomes a pre-Lie algebra,
+ which is dg if $\CC$ or $\PP$ are. By anti-symmetrizing
+ $-\star -$, we thus obtain a dg Lie algebra structure
+ on $\hom_\Sigma(\CC,\PP)$. As in any dg Lie algebra,
+ the degree $-1$ elements satisfying a particular equation
+ play an important role and, for historical reasons,
+  we give them a name here that 
+ different from the usual ``Maurer--Cartan element'':
+ 
+\begin{definition}
+We write $\Tw(\CC,\PP)$ for the set of degree $-1$ maps
+$\tau : \CC\longrightarrow \PP$
+such that $\tau\eta =0$, $\varepsilon\tau = 0$
+and 
+\[
+\partial(\tau) + \tau\star \tau = 0,
+\]
+and call it the set of \emph{twisting morphisms} from
+$\CC$ to $\PP$. We call the equation in the display the
+\emph{Maurer--Cartan equation} for $\tau$.
+\end{definition}
+
+
+\subsection{Adjunction}
+The bar construction admits a dual construction for
+coaugmented conilpotent cooperads $\CC$, which we call
+the cobar construction and write $\Omega(\CC)$. These
+two functors fit into a diagram
+\[
+\B{-} : \mathsf{Op} \adjoint
+   \mathsf{Coop}^c  : \Omega(-)
+\]
+from the category of augmented operads (which we may allow to be
+dg, see Exercise~\ref{ex:dgbar}) to the category of
+\emph{conilpotent} augmented dg cooperads. The following
+theorem can be considered as one of the incarnations of Koszul
+duality between operads and conilpotent cooperads.
+
+\begin{theorem}\label{thm:adjunction}
+The bar and cobar functors form an adjoint pair
+$\B{-} : \mathsf{Op} \adjoint \mathsf{Coop}^c  : \Omega(-)$.
+More precisely, 
+for every operad $\PP$ and every conilpotent cooperad
+$\CC$, the following are in natural bijection:
+\begin{tenumerate}
+\item Maps of conilpotent dg cooperads $\CC \longrightarrow \B{\PP}$.
+\item Maps of dg operads $\Omega(\CC) \longrightarrow\PP$.
+\item Twisting morphisms $\CC \longrightarrow \PP$.
+\end{tenumerate}
+\end{theorem}
+
+\begin{proof}
+Let us consider a map $f : \CC \longrightarrow \B{\PP}$ of cooperads
+with $\CC$ conilpotent. Forgetting for the moment that the codomain
+has a differential, we notice that there exists a unique map of
+symmetric collections $\CC \longrightarrow s\overline{\PP}$
+that induces it. Equivalently, there is a degree $-1$ map
+$\tau : \CC \longrightarrow \PP$ such that $\varepsilon\tau = 0$
+and $\tau\eta = 0$ (this second equality follows since $\B{\PP}$ is
+augmented and connected)
+which induces $f$. The fact that $f$ commutes with the differential of
+$\B{\PP}$ is equivalent to the Maurer--Cartan equation
+\[
+\partial \tau + \tau\star\tau = 0.
+\]
+The degree $-1$ map $\tau : \CC\longrightarrow \PP$ in turn can
+be turned into a degree zero map $s^{-1}\overline{\CC}\longrightarrow
+\PP$ which, by the universal property of the free operad construction
+induces a map $\Omega(\CC) \longrightarrow \PP$, which in fact commutes with
+the differential, as one can check this is also equivalent
+to the equation above. We conclude that the two hom-sets in
+the statement of this theorem are in bijection with the set
+of symmetric sequence morphisms $\tau : \CC\longrightarrow \PP$
+that satisfy the above Maurer--Cartan equation and
+such that both $\tau\eta$ and $\varepsilon\tau$ vanish,
+which are precisely the twisting morphisms we have defined.
+\end{proof}
+
+Since it will be useful for us, let us make the bijection
+in the theorem above more explicit. To do this, let us consider
+the map $\pi : \B{\PP} \longrightarrow \PP$ obtained
+as the projection onto $s\overline{\PP}$ and the degree
+$-1$ inclusion into $\PP$. Then the bijection
+\[
+\hom_{\mathsf{Coop}^c}(\CC,\B{\PP})
+ 	\longrightarrow
+ 	 \mathsf{Tw}(\CC,\PP)
+\]
+is given by post-composition with $\pi$, while the
+inverse is given by extending the
+resulting degree zero map 
+$\CC\longrightarrow \PP$ to a unique coderivation
+$\CC\longrightarrow \B{\PP}$. We call $\pi$
+the universal twisting cochain (it is one, as per
+Exercise~\ref{ex:universaltw}), and observe that it
+corresponds to the identity map of $\B{\PP}$ under
+the bijection above. 
+
+Dually, there is a degree $-1$ inclusion $\iota:
+\CC\longrightarrow \Omega(\CC)$ which is also a 
+twisting cochain ---the universal twisting cochain
+for the conilpotent cooperad $\CC$--- and the bijection
+\[
+\hom_{\mathsf{Op}}(\Omega(\CC),\PP)
+ 	\longrightarrow
+ 	 \mathsf{Tw}(\CC,\PP)
+\]
+is given by pre-composition with $\iota$. To summarize,
+for any map $\CC\longrightarrow \PP$ we have a commutative
+diagram
+\[
+\begin{tikzcd}
+{} & \Omega(\CC) \arrow[dr] & {} \\
+\CC \arrow[ur,"\iota"]
+	\arrow[dr]
+	\arrow[rr,"\tau"] & {} & \PP \\
+{} & \B{\PP} \arrow[ur,"\pi",swap] & {} 
+\end{tikzcd}
+\]
+where the diagonal maps are the universal twisting cochains, 
+the anti-diagonal maps are maps of dg (co)operads and
+the only horizontal arrow is the corresponding twisting cochain.
+In other words, every twisting cochain $\CC\longrightarrow \PP$
+factors uniquely as the composition of the universal twisting
+cochain $\iota$ followed by a morphism of dg operads, and
+as the composition of a morphism of dg conilpotent cooperads
+followed by the universal twisting cochain $\pi$.
+
+\subsection{Koszul complexes}
+
+\textbf{Left and right modules over operads.} Since it will be useful
+later, let us begin by noticing that operads admit representations other
+than their algebras (which we introduce in the Appendix). We will
+use this to define certain objects that are central to our lectures:
+the Koszul complexes of twisting cochains.
+
+\begin{definition}
+Let $\PP$ be an operad. A right $\PP$-module is a symmetric
+sequence $\MM$ along with a map $\rho :\MM\circ\PP\longrightarrow \MM$
+that is unital and associative for the unit and the composition
+map of $\PP$, that is, the following diagrams commute:
+\[
+\begin{tikzcd}
+(\MM\circ \PP)\circ \PP 
+	\arrow[r,"\rho\circ 1"]
+	\arrow[dd,"\alpha",swap] 				& \MM\circ \PP \arrow[dr,"\rho"] \\
+	{} 						& {} 			& \MM\\
+\MM\circ (\PP \circ \PP) \arrow[r,"1\circ\gamma"] & 
+	\MM \circ \PP \arrow[ur,"\rho",swap]
+\end{tikzcd}
+\qquad
+\begin{tikzcd}
+\MM\circ \kk \arrow[dd,"1\circ\eta",swap] \arrow[dr,"\cong"] & {} \\
+ {}                               &  \MM \\
+\MM\circ \PP \arrow[ur,"\rho",swap]
+\end{tikzcd}
+\]
+A map of right $\PP$-modules is a morphism
+of symmetric sequences $f:\MM\longrightarrow \MM'$ 
+such that the following diagram commutes:
+\[
+\begin{tikzcd}[row sep = large, column sep = large]
+\MM\circ \PP \arrow[r,"\rho"]
+	\arrow[d,"f\circ 1",swap] & \MM \arrow[d,"f"]\\
+\MM'\circ \PP \arrow[r,"\rho",swap] & \MM'
+\end{tikzcd}
+\]
+Finally, a free right $\PP$-module is any module that is isomorphic
+to one of the form $\MM = \XX\circ\PP$ where the map $\rho : \MM\circ\PP
+\longrightarrow \MM$ is given by the composition
+\[
+(\XX\circ \PP)\circ\PP 
+\stackrel{\alpha}{\longrightarrow}
+\XX \circ (\PP \circ \PP) 
+	\stackrel{1\circ\gamma}{\longrightarrow} 
+		\XX\circ \PP.
+\]
+\end{definition}
+
+\emph{Note.} If we replace the word ``right'' above by ``left'' we obtain
+the corresponding definitions for \emph{left $\PP$-modules}. A word of
+caution is in order, however, as right modules and left modules in
+case of operads behave completely differently. For example, right
+actions are linear, in the sense that their signature is of the
+form
+\[
+(m;p_1,\ldots,p_k) \longrightarrow \rho(m;p_1,\ldots,p_k)
+\] 
+and in particular there is only one argument in $\MM$. On the
+other hand, left actions are not linear, in the sense that their
+signature is of the form
+\[
+(p;m_1,\ldots,m_k) \longrightarrow \lambda(p;m_1,\ldots,m_k)
+\] 
+for multiple $m_1,\ldots,m_k\in \MM$: an element in $\PP$
+of arity $k$ must act simultaneously on $k$ elements of $\MM$
+at once and, since modules have no units, there is no way
+to linearize this. We will have the opportunity to see
+how this distinction will affect our development of the
+theory in some cases.
+
+\begin{definition}
+Let $\MM$ be a left $\PP$-module. An endomorphism
+$f: \MM \longrightarrow \MM$ of symmetric sequences is
+called a derivation if for all $m_1,\ldots,m_k\in\MM$
+and $p\in\PP(k)$ we have that $f \lambda = \lambda(1\circ' f)$
+\end{definition}
+ 
+In the case of right $\PP$-modules, there is no difference
+between a derivation and a right linear map ---in both cases
+the relevant requirement is that $f\rho = \rho(f\circ 1)$---, but we will use
+both names for consistency. Note that the condition above of
+being a derivation is linear, as $f$ appears only once in each
+use of $\lambda$, so left linear maps and left derivations
+are slightly different. However, they are in natural bijection
+when we restrict ourselves to the class of free modules:
+
+\begin{lemma}\label{lemma:derivations}
+Let $\PP$ be an operad and let $\MM$ be a free
+left (resp. right) $\PP$-module with basis $\XX$.
+There is a natural bijection between maps of 
+symmetric sequences $\XX\longrightarrow \MM$
+and left (resp. right) derivations $\MM\longrightarrow \MM$.
+More precisely:
+\begin{tenumerate}
+\item If $\MM$ is left free, then the unique derivation $f:\MM\longrightarrow\MM$
+which extends $\varphi: \XX\longrightarrow \MM$ is given by
+\[
+f = d_\PP \circ 1 + (\gamma_{(1)}\circ 1)(1\circ'\varphi).
+\]
+\item  If $\MM$ is right free, then the unique derivation $f:\MM\longrightarrow\MM$ 
+which extends $\varphi: \XX\longrightarrow \MM$ is given by
+\[
+f = 1\circ' d_\PP  + (1\circ\gamma)(\varphi\circ 1).
+\]
+\end{tenumerate}
+\end{lemma}
+
+\textbf{Koszul complexes.}
+Let $\tau : \CC\longrightarrow \PP$ be a twisting cochain,
+and let us explain how to produce a map that assigns $\tau$
+two complexes $\CC\circ_\tau \PP$ and $\PP\circ_\tau\CC$, 
+the \emph{right (resp. left) Koszul complex} associated to $\tau$.
+In the first case, let us consider the free right $\PP$-module
+$\CC\circ \PP$, and let us consider the map
+$\CC \longrightarrow \CC\circ \PP$
+obtained as the composition $(1\circ_{(1)} \tau)\Delta_{(1)}$.
+By Lemma~\ref{lemma:derivations}, there is a unique derivation
+of right $\PP$-modules
+$d_\tau^r : \CC\circ \PP \longrightarrow \CC\circ \PP$
+extending the map above. It is given by the following composition:
+\[
+\begin{tikzcd}[column sep = large]
+{} & (	\CC\circ_{(1)} \CC )\circ\PP \arrow[r,"(1\circ_{(1)}\alpha)\circ 1"] 
+	& (	\CC\circ_{(1)} \PP )\circ
+	\PP  \arrow[dr,"\cong"]\\ 
+\CC\circ \PP \arrow[ur,"\Delta_{(1)}\circ 1"]\arrow[dr,"d_\tau^r",swap] & {} & {} & \CC\circ (\PP;\PP\circ\PP)\arrow[dl,"1\circ(1;\gamma)"]\\ 
+{} &  \CC\circ \PP &  \CC\circ (\PP;\PP)\arrow[l,"\cong"] &{}
+\end{tikzcd}
+ \]
+Dually, we write $d_\tau^l$ for the unique derivation of the free left 
+$\PP$-module $\PP\circ\CC$ extending the map $\CC\longrightarrow \PP\circ \CC$
+given by the composition $(\tau\circ 1)\Delta$. 
+
+
+\begin{proposition}
+The derivation $\partial_\tau = d_\CC\circ 1  + 1\circ' d_\PP + d_\tau^r$
+of $\CC\circ \PP$
+is such that $\partial_\tau^2 = d_{\partial(\tau) + \tau\star\tau}^r$. In 
+particular, it squares to zero if and only if $\tau$ is a twisting
+morphisms. Similarly, the derivation  $\partial_\tau = d_\PP\circ 1  + 1\circ' 
+d_\CC + d_\tau^l$ of $\PP\circ \CC$ is such that 
+$\partial_\tau^2 = d_{\partial(\tau) + \tau\star\tau}^l$,
+so that it squares to zero if and only if $\tau$ is a twisting
+morphisms.
+\end{proposition}
+
+\begin{proof}
+The proof involves a computation, though the computation may get
+rather cumbersome, so we provide some details. In fact, we will
+prove something a bit stronger: the assignment that takes 
+a morphism $\tau : \CC\longrightarrow \PP$ of symmetric
+sequences to the derivation $d_\tau^r : \CC\circ\PP \longrightarrow
+\CC\circ \PP$ is a morphism of dg Lie algebras, where we put
+on $\hom_\Sigma(\CC,\PP)$ the dg Lie algebra structure induced by
+the pre-Lie star product $-\star-$ and we give the space of
+derivations $\operatorname{Der}(\CC\circ\PP)$ the usual
+structure of a Lie algebra through the commutator of
+derivations (recall that the composition of two derivations
+need not be a derivation, but the commutator of derivations
+is a derivation).
+
+To see how this claim implies the proposition, we notice
+that $\partial_\tau\circ\partial_\tau = \frac{1}{2}[\partial_\tau,\partial_\tau]$
+and that if we write $\partial_\tau = d_{\CC\circ\PP} + d_\tau^r$, then
+\begin{tenumerate}
+\item The original differential squares to zero, so that $[d_{\CC\circ\PP},d_{\CC\circ\PP}] = 0$,
+\item The fact this is a morphism of complexes shows that $[d_{\CC\circ\PP},d_\tau^r] = d_{\partial(\tau)}^r$ and,
+\item The claim above proves that $[d_\tau^r,d_\tau^r] = d_{[\tau,\tau]}^r$.
+\end{tenumerate}
+\hacer{Prove the stronger claim.}
+This completes the proof of the proposition.
+\end{proof}
+
+\begin{definition}
+We write $\CC\circ_\tau \PP$ for the complex in right $\PP$-modules
+$(\CC\circ \PP,\partial_\tau)$, and call it the \emph{right Koszul
+complex associated to $\tau$}. Analogously, we write $\PP\circ_\tau \CC$
+for the complex in free left $\PP$-modules $(\PP\circ \CC,\partial_\tau)$
+and call it the \emph{left Koszul complex associated to $\tau$}.
+\end{definition}
+
+We are now ready to make concrete our claim that Koszul (co)operads are
+those that admit economic resolutions: we did not say of \emph{what}
+object, but we can do that now. The only observation we need to make
+is the following:
+
+\begin{definition}
+Let $\PP$ be a quadratic operad. The map $\kappa : \PP^\antishriek
+\longrightarrow \PP$ obtained as the composition
+$\PP^\antishriek \hookrightarrow \B{\PP} \longrightarrow \PP$
+is a twisting cochain.
+\end{definition} 
+
+Note that $\kappa$ can be described even in simpler terms as
+the degree $-1$ map obtained as the compositions of the projection
+$\PP^\antishriek \twoheadrightarrow s\XX$ onto weight $1$,
+the desuspension map $s\XX\stackrel{s^{-1}}\longrightarrow \XX$
+and the inclusion $\XX \hookrightarrow \PP$. 
+
+\begin{proof}
+This is actually a straightforward computation,
+since in our situation $\PP$ has no differential
+and we only need to show that $\kappa\star \kappa = 0$. 
+But $\kappa\star\kappa : \PP^\antishriek \longrightarrow \PP$
+is obtained as the composition
+\[
+\PP^\antishriek\stackrel{\Delta_{(1)}}\longrightarrow 
+ 	\PP^\antishriek \circ_{(1)} 	\PP^\antishriek 
+ 	 \longrightarrow
+ 	 	\PP \circ_{(1)} 	\PP 
+ 	 		\stackrel{\gamma_{(1)}}\longrightarrow 
+ 	 		\PP
+\]
+where the map $\kappa\circ_{(1)} \kappa$ in the middle is only non-zero
+on elements of $s\XX\circ_{(1)} s\XX \subseteq \PP^\antishriek\circ_{(1)} \PP^\antishriek$, and in this case the decomposition of $\PP^\antishriek$
+lands on $s^2\mathcal R$ by construction. This means that
+the image after using the composition map of $\gamma$ lands in $\RR$,
+which is zero in $\PP$, as we claimed.
+\end{proof}
+
+With this at hand, here is our second definition of Koszulness.
+By Theorem~\ref{thm:fundamental} in the Appendix, the following
+is equivalent to our original definition of Koszulness of a quadratic
+operad, stating that the inclusion $\PP^\antishriek \longrightarrow 
+\B{\PP}$ is a quasi-isomorphism of cooperads. 
+
+\begin{definition}[Second definition]
+A quadratic operad $\PP$ is Koszul if and only if the
+right Koszul complex $\PP^\antishriek \circ_\kappa \PP$
+is a resolution of the trivial module $\kk$ in right
+$\PP$-modules. Equivalently, 
+a quadratic operad $\PP$ is Koszul if and only if the
+left Koszul complex $\PP \circ_\kappa \PP^\antishriek$
+is a resolution of the trivial module $\kk$ in left
+$\PP$-modules.
+\end{definition}
+
+\subsection{Exercises}
+
+\begin{question}
+Suppose that $\PP$ is locally finite dimensional and that $\PP(1) = \kk$. 
+Show that $\B{\PP}$ and $\Omega(\PP^*)$ are dual to each other.
+\end{question}
+
+\begin{question}
+Prove the claim in Theorem~\ref{thm:adjunction} that the Maurer--Cartan
+equation for the map $\tau : \CC\longrightarrow \PP$ corresponding
+to a morphism of dg cooperads $f : \CC\longrightarrow \B{\PP}$
+and to a morphism of dg operads $g  :\Omega(\CC) \longrightarrow \PP$
+is equivalent to the condition that $f$ and $g$ commute with the
+differentials.
+\end{question}
+
+
+\begin{question}\label{ex:universaltw}
+Show that the universal twisting cochain
+$\pi:\B{\PP}\longrightarrow \PP$ is indeed
+a twisting cochain, and that the Maurer--Cartan
+equation is equivalent to the condition that 
+$\PP$ is a dg operad. Do the same for the 
+ universal twisting cochain $\iota : \CC 
+\longrightarrow \Omega(\CC)$, and 
+\end{question}
+
+
+\begin{question}
+Show that $\PP \longmapsto \pi_\PP$ is natural, in
+the sense that for a morphism of operads $\PP\longrightarrow 
+\PP'$ we have a commutative square
+\[
+\begin{tikzcd}[ampersand replacement=\&]
+\B{\PP} \arrow[r] \arrow[d] \&  \PP \arrow[d] \\
+\B{\PP'} \arrow[r] \& \PP'
+\end{tikzcd}
+\]
+Do the same for $\iota$. Show that the bijection described in Theorem~\ref{thm:adjunction} 
+is natural.  
+\end{question}

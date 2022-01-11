@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{main}
+		\node [style=inner] (0) at (0, 0) {};
+		\node [style=inner] (2) at (0, 1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{bg}
+		\draw (2.center) to (0.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

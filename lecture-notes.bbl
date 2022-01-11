@@ -2,6 +2,54 @@
 \begin{bibdiv}
 \begin{biblist}
 
+\bib{Arone2007}{article}{
+      author={Arone, Gregory},
+      author={Lambrechts, Pascal},
+      author={Voli{\'{c}}, Ismar},
+       title={Calculus of functors, operad formality, and rational homology of
+  embedding spaces},
+        date={2007},
+     journal={Acta Mathematica},
+      volume={199},
+      number={2},
+       pages={153\ndash 198},
+         url={https://doi.org/10.1007/s11511-007-0019-7},
+}
+
+\bib{Batanin2014}{article}{
+      author={Batanin, Michael},
+      author={Markl, Martin},
+       title={Crossed interval groups and operations on the hochschild
+  cohomology},
+        date={2014},
+     journal={Journal of Noncommutative Geometry},
+      volume={8},
+      number={3},
+       pages={655\ndash 693},
+         url={https://doi.org/10.4171/jncg/167},
+}
+
+\bib{bams/1183530111}{article}{
+      author={Boardman, J.~M.},
+      author={Vogt, R.~M.},
+       title={{Homotopy-everything $H$-spaces}},
+        date={1968},
+     journal={Bulletin of the American Mathematical Society},
+      volume={74},
+      number={6},
+       pages={1117 \ndash  1122},
+         url={https://doi.org/},
+}
+
+\bib{Boardman1973}{book}{
+      author={Boardman, J.~M.},
+      author={Vogt, R.~M.},
+       title={Homotopy invariant algebraic structures on topological spaces},
+   publisher={Springer Berlin Heidelberg},
+        date={1973},
+         url={https://doi.org/10.1007/bfb0068547},
+}
+
 \bib{Bremner2016}{book}{
       author={Bremner, Murray~R.},
       author={Dotsenko, Vladimir},
@@ -33,6 +81,20 @@
          url={https://doi.org/10.1215/00127094-2010-026},
 }
 
+\bib{Felix2001}{book}{
+      author={F\'{e}lix, Yves},
+      author={Halperin, Stephen},
+      author={Thomas, Jean-Claude},
+       title={Rational homotopy theory},
+      series={Graduate Texts in Mathematics},
+   publisher={Springer-Verlag, New York},
+        date={2001},
+      volume={205},
+        ISBN={0-387-95068-0},
+         url={https://doi.org/10.1007/978-1-4613-0105-9},
+      review={\MR{1802847}},
+}
+
 \bib{Gan2003}{article}{
       author={Gan, Wee~Liang},
        title={{KoSzul} duality for dioperads},
@@ -48,6 +110,7 @@
       author={Getzler, E.},
       author={Getzler, E.},
       author={Kapranov, M.~M.},
+       title={Modular operads},
         date={1998},
      journal={Compositio Mathematica},
       volume={110},
@@ -65,6 +128,52 @@
       volume={76},
       number={1},
          url={https://doi.org/10.1215/s0012-7094-94-07608-4},
+}
+
+\bib{Goodwillie1999}{article}{
+      author={Goodwillie, Thomas~G},
+      author={Weiss, Michael},
+       title={Embeddings from the point of view of immersion theory : Part
+  {II}},
+        date={1999-05},
+     journal={Geometry {\&} Topology},
+      volume={3},
+      number={1},
+       pages={103\ndash 118},
+         url={https://doi.org/10.2140/gt.1999.3.103},
+}
+
+\bib{Hinich1999}{article}{
+      author={Hinich, V.},
+       title={Homological algebra of homotopy algebras},
+        date={1997},
+     journal={Comm. in Algebra},
+      volume={25},
+      number={10},
+       pages={3291\ndash 3323},
+      eprint={https://doi.org/10.1080/00927879708826055},
+         url={https://doi.org/10.1080/00927879708826055},
+}
+
+\bib{Hinich2003}{article}{
+      author={Hinich, Vladimir},
+       title={Tamarkins proof of kontsevich formality theorem},
+        date={2003-01},
+     journal={Forum Mathematicum},
+      volume={15},
+      number={4},
+         url={https://doi.org/10.1515/form.2003.032},
+}
+
+\bib{Hochschild1945}{article}{
+      author={Hochschild, G.},
+       title={On the cohomology groups of an associative algebra},
+        date={1945-01},
+     journal={The Annals of Mathematics},
+      volume={46},
+      number={1},
+       pages={58},
+         url={https://doi.org/10.2307/1969145},
 }
 
 \bib{Hoffbeck2009}{article}{
@@ -86,6 +195,13 @@
         date={2021},
 }
 
+\bib{IdrissiPeccot}{book}{
+      author={Idrissi, Najib},
+       title={Real homotopy of configuration spaces},
+        date={2021},
+         url={https://idrissi.eu/post/peccot-notes},
+}
+
 \bib{Kajiura2008}{inproceedings}{
       author={Kajiura, Hiroshige},
       author={Stasheff, Jim},
@@ -103,6 +219,17 @@
         date={2003},
        pages={6},
       eprint={https://webusers.imj-prg.fr/~bernhard.keller/publ/kdc.pdf},
+}
+
+\bib{Kontsevich2003}{article}{
+      author={Kontsevich, Maxim},
+       title={Deformation quantization of poisson manifolds},
+        date={2003-12},
+     journal={Letters in Mathematical Physics},
+      volume={66},
+      number={3},
+       pages={157\ndash 216},
+         url={https://doi.org/10.1023/b:math.0000027508.00421.bf},
 }
 
 \bib{MarklDistributive}{article}{
@@ -152,7 +279,6 @@
      journal={Memoirs of the American Mathematical Society},
       volume={212},
       number={996},
-       pages={0–0},
          url={http://dx.doi.org/10.1090/S0065-9266-2010-00631-8},
 }
 
@@ -167,11 +293,84 @@
          url={https://doi.org/10.1090/s0002-9947-1970-0265437-8},
 }
 
+\bib{Quillen1967}{book}{
+      author={Quillen, D.~G.},
+       title={Homotopical algebra},
+      series={Lecture Notes in Mathematics, No. 43},
+   publisher={Springer-Verlag, Berlin-New York},
+        date={1967},
+      review={\MR{0223432}},
+}
+
 \bib{Sinha2010}{article}{
       author={Sinha, Dev},
        title={Koszul duality in algebraic topology: an historical perspective},
         date={2010},
       eprint={https://arxiv.org/abs/1001.2032},
+}
+
+\bib{Stasheff1970}{book}{
+      author={Stasheff, James},
+       title={H-spaces from a homotopy point of view},
+   publisher={Springer Berlin Heidelberg},
+        date={1970},
+         url={https://doi.org/10.1007/bfb0065896},
+}
+
+\bib{Stasheff1963}{article}{
+      author={Stasheff, James~Dillon},
+       title={Homotopy associativity of h-spaces. i},
+        date={1963-08},
+     journal={Transactions of the American Mathematical Society},
+      volume={108},
+      number={2},
+       pages={275},
+         url={https://doi.org/10.2307/1993608},
+}
+
+\bib{Stasheff1963a}{article}{
+      author={Stasheff, James~Dillon},
+       title={Homotopy associativity of h-spaces. {II}},
+        date={1963-08},
+     journal={Transactions of the American Mathematical Society},
+      volume={108},
+      number={2},
+       pages={293},
+         url={https://doi.org/10.2307/1993609},
+}
+
+\bib{Sugawara55}{article}{
+      author={Sugawara, Masahiro},
+       title={A condition that a space is group-like},
+        date={1955},
+     journal={Mathematical Journal of Okayama Univ.},
+      volume={7},
+      number={2},
+       pages={123–149},
+  url={https://ousar.lib.okayama-u.ac.jp/files/public/3/33632/20160528030232178482/fulltext.pdf},
+}
+
+\bib{Sullivan1977}{article}{
+      author={Sullivan, D.},
+       title={Infinitesimal computations in topology},
+        date={1977},
+        ISSN={0073-8301},
+     journal={Inst. Hautes \'{E}tudes Sci. Publ. Math.},
+      number={47},
+       pages={269\ndash 331 (1978)},
+         url={http://www.numdam.org/item?id=PMIHES_1977__47__269_0},
+      review={\MR{646078}},
+}
+
+\bib{Tamarkin2003}{article}{
+      author={Tamarkin, Dmitry~E.},
+       title={Formality of chain operad of little discs},
+        date={2003-10},
+     journal={Letters in Mathematical Physics},
+      volume={66},
+      number={1/2},
+       pages={65\ndash 72},
+         url={https://doi.org/10.1023/b:math.0000017651.12703.a1},
 }
 
 \bib{Vallette2004}{article}{
@@ -194,6 +393,28 @@
       number={2},
        pages={683\ndash 738},
          url={https://doi.org/10.5802/aif.3322},
+}
+
+\bib{Weiss1996}{article}{
+      author={Weiss, Michael},
+       title={Calculus of embeddings},
+        date={1996},
+     journal={Bulletin of the American Mathematical Society},
+      volume={33},
+      number={2},
+       pages={177\ndash 187},
+         url={https://doi.org/10.1090/s0273-0979-96-00657-x},
+}
+
+\bib{Weiss1999}{article}{
+      author={Weiss, Michael},
+       title={Embeddings from the point of view of immersion theory : Part i},
+        date={1999-05},
+     journal={Geometry {\&} Topology},
+      volume={3},
+      number={1},
+       pages={67\ndash 101},
+         url={https://doi.org/10.2140/gt.1999.3.67},
 }
 
 \end{biblist}

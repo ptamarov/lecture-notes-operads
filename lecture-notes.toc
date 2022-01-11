@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {0}Motivation and history}{7}{section.0}%
 \contentsline {subsection}{\numberline {0.1}Koszul duality}{8}{subsection.0.1}%
 \contentsline {subsection}{\numberline {0.2}Gr\"obner bases}{9}{subsection.0.2}%
-\contentsline {subsection}{\numberline {0.3}Effective methods}{10}{subsection.0.3}%
+\contentsline {subsection}{\numberline {0.3}Effective methods}{11}{subsection.0.3}%
 \contentsline {subsection}{\numberline {0.4}Exercises}{12}{subsection.0.4}%
 \contentsline {section}{\numberline {1}Symmetric modules and algebraic operads}{17}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Basic definitions}{17}{subsection.1.1}%

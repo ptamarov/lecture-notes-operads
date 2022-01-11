@@ -1,0 +1,139 @@
+
+\section{Technical homological results}
+
+\subsection{Comparison theorem}
+
+\subsection{Big Koszul complexes are acylic}
+
+\begin{theorem}\label{thm:augacyclic}
+Let $\PP$ be an operad and let $\CC$ be a conilpotent cooperad. All four
+Koszul complexes associated to the canonical twisting cochains
+$\pi$ and $\iota$ are all acyclic. 
+\end{theorem}
+\subsection{Fundamental theorem}
+
+\begin{theorem}\label{thm:fundamental}
+Let $\PP$ (resp. $\CC$) be a connected weight graded dg operad
+(resp. conilpotent cooperad), and let $\tau : \CC\longrightarrow
+\PP$ be a twisting morphism. Then the following four assertions are
+equivalent:
+\begin{tenumerate}
+\item The right Koszul complex $\CC\circ_\tau \PP$ is acyclic.
+\item The left Koszul complex $\PP\circ_\tau \CC$ is acyclic.
+\item The map $f_\tau : \CC\longrightarrow \B{\PP}$ is a quasi-isomorphism.
+\item The map $f^\tau : \Omega(\CC)\longrightarrow \PP$ is a quasi-isomorphism.
+\end{tenumerate}
+\end{theorem}
+\section{Further topics}
+
+\hacer{Write an appendix about algebras over operads.}
+
+\subsection{Algebras over operads}
+Operads are important not in and of themselves 
+but through their representations, more commonly
+called \emph{algebras over operads}. In fact,
+one can usually `create' an operad by declaring
+what kind of algebras it governs. If the
+algebra has certain operations of certain
+arities, these define the generators of the operad,
+and the relations these operators must satisfy 
+give us the relations presenting our operad. 
+
+\begin{definition}
+A $\PP$-algebra structure on a vector
+space $V$ is the datum of a map of operads 
+$\PP \longrightarrow \End_V$.
+\end{definition}
+
+Alternatively, one can consider the situation
+when $\otimes$ is closed and has a right
+adjoint $\hom$ (the internal hom) so that
+what we want are maps
+\[\label{eq:Palgebramap}
+\gamma_{V,n} : 
+\PP(n)\otimes_{S_n} V^{\otimes n} \longrightarrow V \]
+declaring how each $\mu \in\PP(n)$ acts as an operation
+$\mu : V^{\otimes n} \longrightarrow V$. 
+It follows that a
+ $\PP$-algebra structure on $V$ is the same as the datum
+of maps as in \ref{eq:Palgebramap} that satisfy the following
+conditions:
+
+\begin{tenumerate}
+\item \emph{Associativity:} let $\nu\in \PP(n)$ and
+$\nu_i \in \PP(k_i)$ for $i\in [n]$, and pick
+$w_i \in V^{\otimes k_i}$. Set $v_i = \gamma_{V,k_i}(\nu_i,w_i) \in V$
+and $\mu = \gamma_\PP(\nu;\nu_1,\ldots,\nu_n)$. Then 
+\[ \gamma_{V,k_1+\cdots+k_n}(\mu; w_1,\ldots,w_n) = 
+	\gamma_{V,n}(\nu ;v_1,\ldots, v_n).\]
+\item \emph{Equivariance:} for $\nu\in\PP(n)$, $v_1\otimes\cdots \otimes v_n \in V^{\otimes n}$
+and $\sigma\in S_n$, we have that
+\[ \gamma_{V,n}(\nu \sigma, v_{\sigma 1} \otimes \cdots \otimes v_{\sigma n}) = \gamma_{V,n}(\nu; v_1\otimes\cdots \otimes v_n). \]
+\item \emph{Unitality:} if $1\in\PP(1)$ is the unit, then
+$\gamma_{V,1}(1,v) = v$.  
+\end{tenumerate}
+
+
+\hacer{Example: recognition
+principle. Gerstenhaber algebras and Hochschild
+complex. }
+
+\subsection{Rewriting theory for algebras }
+\subsection{Homotopy algebras}
+
+\pagebreak
+
+
+\section{Classical theory}
+
+%\subsection{Linear self-reduction}
+%Let $M$ be a matrix with $m$ rows
+%and $n$ columns. The following is the
+%usual algorithm to put $M$ in row reduced
+%echelon form, written as pseudo-code:
+%\begin{algorithm}
+%\caption{Linear self-reduction algorithm}\label{algo:gauss}
+%\begin{adjustwidth}{2 cm}{2 cm}
+%\begin{algorithmic}[1]
+%\Procedure{LinearSelfReduce}{$\texttt{Matrix}$} 
+%\State $\texttt{lead} \gets 0$
+%\State $\texttt{A} \gets \texttt{Matrix}$
+%\State $\texttt{rows} \gets \textsc{Width}(\texttt{A})$
+%\State $\texttt{cols} \gets \textsc{Height}(\texttt{A})$
+%	\For {$r\in [0,\texttt{ rows})$}
+% 			\If {\texttt{cols} $\leqslant$\texttt{ lead}}
+% 			\State \textbf{stop}
+% 			\EndIf
+% 	\State $i\gets r$
+% 	\While {$\texttt{A}[i,\texttt{lead}]=0$}
+% 			\State $i\gets i+1$
+% 			 \If {\texttt{rows} $=i$}
+%  					\State $i\gets r$
+%  					\State $\texttt{lead} \gets \texttt{lead}+1$
+%  					\If {\texttt{cols} $=$\texttt{ lead }}
+%   						\State \textbf{stop}
+%   					\EndIf
+%   			\EndIf
+%   	\EndWhile
+%   \If {$i\neq r$}
+%   		\State \textbf{swap} $\texttt{A}[r,:]$ and $\texttt{A}i,:]$
+%   		\State $\texttt{A}[r,:]
+%   			\gets \texttt{A}[r,:]/\texttt{A}[r,\texttt{lead}]$
+%   		\For {$i \in [0,\texttt{rows})$}
+%   			 \If {$i\neq r$}
+%   			 \State $\texttt{A}[i,:] \gets 
+%   			 	\texttt{A}[i,:] - 
+%   			 		\texttt{A}[i, \texttt{lead}]\texttt{A}[r,:] $
+%   			\EndIf
+%   			\EndFor
+%   \State $\texttt{lead} \gets \texttt{lead}+1$
+%   \EndIf
+%\EndFor
+%\EndProcedure
+%\end{algorithmic}
+%\end{adjustwidth}
+%\end{algorithm}
+
+\subsection{Non-commutative Gr\"obner bases}
+\hacer{Explain the analogous results for associative
+algebras, and the case of the Steenrod algebra.}
