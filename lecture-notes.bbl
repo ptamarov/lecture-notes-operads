@@ -29,6 +29,16 @@
          url={https://doi.org/10.4171/jncg/167},
 }
 
+\bib{Bergeron1997}{book}{
+      author={Bergeron, Fran{\c{c}}ois},
+      author={Labelle, Gilbert},
+      author={Leroux, Pierre},
+       title={Combinatorial species and tree-like structures},
+   publisher={Cambridge University Press},
+        date={1997},
+         url={https://doi.org/10.1017/cbo9781107325913},
+}
+
 \bib{bams/1183530111}{article}{
       author={Boardman, J.~M.},
       author={Vogt, R.~M.},
@@ -97,7 +107,7 @@
 
 \bib{Gan2003}{article}{
       author={Gan, Wee~Liang},
-       title={{KoSzul} duality for dioperads},
+       title={{K}oszul duality for dioperads},
         date={2003},
      journal={Mathematical Research Letters},
       volume={10},
@@ -107,7 +117,6 @@
 }
 
 \bib{Getzler1998}{article}{
-      author={Getzler, E.},
       author={Getzler, E.},
       author={Kapranov, M.~M.},
        title={Modular operads},
@@ -195,11 +204,31 @@
         date={2021},
 }
 
+\bib{MO187545}{misc}{
+      author={(https://mathoverflow.net/users/2906/richard montgomery),
+  Richard~Montgomery},
+       title={Breaking up the free lie algebra into gl irreps},
+         how={MathOverflow},
+         url={https://mathoverflow.net/q/187545},
+        note={URL:https://mathoverflow.net/q/187545 (version: 2014-11-19)},
+}
+
 \bib{IdrissiPeccot}{book}{
       author={Idrissi, Najib},
        title={Real homotopy of configuration spaces},
         date={2021},
          url={https://idrissi.eu/post/peccot-notes},
+}
+
+\bib{Joyal1981}{article}{
+      author={Joyal, Andr{\'{e}}},
+       title={Une th{\'{e}}orie combinatoire des s{\'{e}}ries formelles},
+        date={1981-10},
+     journal={Advances in Mathematics},
+      volume={42},
+      number={1},
+       pages={1\ndash 82},
+         url={https://doi.org/10.1016/0001-8708(81)90052-9},
 }
 
 \bib{Kajiura2008}{inproceedings}{
@@ -221,6 +250,17 @@
       eprint={https://webusers.imj-prg.fr/~bernhard.keller/publ/kdc.pdf},
 }
 
+\bib{Klyachko1975}{article}{
+      author={Klyachko, A.~A.},
+       title={Lie elements in the tensor algebra},
+        date={1975},
+     journal={Siberian Mathematical Journal},
+      volume={15},
+      number={6},
+       pages={914\ndash 920},
+         url={https://doi.org/10.1007/bf00966559},
+}
+
 \bib{Kontsevich2003}{article}{
       author={Kontsevich, Maxim},
        title={Deformation quantization of poisson manifolds},
@@ -230,6 +270,15 @@
       number={3},
        pages={157\ndash 216},
          url={https://doi.org/10.1023/b:math.0000027508.00421.bf},
+}
+
+\bib{Loday2012}{book}{
+      author={Loday, Jean-Louis},
+      author={Vallette, Bruno},
+       title={Algebraic operads},
+   publisher={Springer Berlin Heidelberg},
+        date={2012},
+         url={https://doi.org/10.1007/978-3-642-30362-3},
 }
 
 \bib{MarklDistributive}{article}{

@@ -166,7 +166,7 @@ functional equation between the Hilbert and the Poincar\'e series of $\PP$:
 \[
 h_\PP( p_\PP(z,u,-1),u) = p_\PP(h_\PP(z,u),u,-1) = z. \]
 Moreover, $\PP$ is Koszul (and in particular, quadratic) if and only
-if $p_\PP(z,u,t) = -h_{\PP^\eantishriek}(z,ut)$ in which case the previous
+if $p_\PP(z,u,t) = h_{\PP^\eantishriek}(z,ut)$ in which case the previous
 equation simplifies to
 \[
 h_\PP( h_{\PP^\eantishriek}(z,-u),u) = h_{\PP^\eantishriek}(h_\PP(z,u),-u) = z. 
@@ -178,7 +178,7 @@ Let us begin by proving the first functional equation. In this case,
 we can consider the two augmented bar complexes of Theorem~\ref{thm:augacyclic},
 of the form
 \[
-\PP\circ\B{\PP},\qquad \B{\PP}\circ\PP. 
+\PP\circ_\pi \B{\PP},\qquad \B{\PP}\circ_\pi\PP. 
 \]
 That theorem states these two complexes are acyclic, which means their
 (weight graded) Euler characteristics are equal to the Euler characteristic 
@@ -189,9 +189,9 @@ $p_\PP(z,u,-1)$ and that of $\PP$ is its Hilbert series (since $\PP$ carries no
 homological degrees). Thus, we obtain that 
 \[
 z = \chi(\PP\circ\B{\PP}) = \chi(\PP)\circ \chi(\B{\PP}) = 
-		h_\PP(p_\PP(z,-1)),
+		h_\PP(p_\PP(z,u,-1,u)),
 \]
-while $z = p_\PP(h_\PP(z),-1)$ is proved in the same fashion. Suppose
+while $z = p_\PP(h_\PP(z,u),u,-1)$ is proved in the same fashion. Suppose
 now that $\PP$ is Koszul, which means that $\dim H_d(\B{\PP})_{(w)} = 0$
 unless $w=d$. This is true if and only if the coefficient of $z^wu^d$ in
 $p_\PP(z,u)$ is zero unless $w=d$, in which case we have that

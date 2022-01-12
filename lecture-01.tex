@@ -28,14 +28,17 @@ the inputs are permuted.
 
 The underlying objects to operads are known as
 \emph{symmetric sequences}: a symmetric sequence
-(also known as a $\Sigma$-module or symmetric 
-module) is a sequence of vector spaces
+(also known as a $\Sigma$-module or combinatorial 
+species) is a sequence of vector spaces
 $\XX = (\XX(n))_{n\geqslant 0}$ such that for
 each $n\in\NN_0$ there is a right action of
 $S_n$ on $\XX(n)$. We usually consider \emph{reduced}
 $\Sigma$-modules, those for which $\XX(0)=0$
 (or, in other cases, the terminal object of the
-category).
+category). They were introduced in~\cite{Joyal1981}
+to provide a ``combinatorial theory of formal
+power series''; see Exercise~\ref{ex:operations-on-species} and 
+the book~\cite{Bergeron1997} for more information.
 
 A map of $\Sigma$-modules is a collection of maps
 $(f_n : \XX_1(n) \longrightarrow \XX_2(n))_{n\geqslant 0}$,
@@ -83,13 +86,27 @@ of two $\Sigma$-modules $\XX$ and $\YY$
  		 \XX(S)\otimes \YY(T)\] 
 where the right-hand is the usual tensor product of
 vector spaces
-and the sum runs through partitions of $I$ into
+and the sum runs through ordered 
+partitions of $I$ into
 two disjoint sets. The symmetric product is then
 defined by 
 \[ (\XX\circ_\Sigma \YY)(I) 
- 	= \bigoplus_{\pi \vdash I} \XX(\pi) 
- 		\otimes \YY^{\otimes k}(\pi)\] 
-as the sum runs through (ordered) partitions of $I$.
+ 	= \bigoplus_{\substack{k\geqslant 1 \\ \pi \vdash I}} \XX(\pi) 
+ 		\otimes_{S_k} \YY^{\otimes k}(I)\] 
+as the sum runs through (ordered) partitions of $I$, where the tensor product in the exponent is
+the Cauchy product. Writing things down 
+explicitly, we see that 
+\[ (\XX\circ_\Sigma \YY)(I) 
+ 	= \bigoplus_{k\geqslant 1}\XX(\pi) 
+ 		\otimes_{S_k} 
+ 		\left[
+ 		\bigoplus_{\pi\vdash_k I}\YY(\pi_1)\otimes\cdots\otimes
+ 			\YY(\pi_k) \right]\]
+where for a partition $\pi$ of size $k$ of $I$,
+the action of $S_k$ on $X(\pi)$ is by permutation
+of the factors, and the action of $S_k$
+on the big summand on the right is by permutation
+of the individual factors. 
 These two products will be central in what follows.
 
 \begin{lemma}
@@ -119,7 +136,7 @@ We are now ready to define the prototypical symmetric
  
 \begin{definition}
 The \emph{endomorphism operad} of a space $V$ is the symmetric sequence $\End_V$
-where for each $n\in\NN$ we set $\End_V(n) = \End(V^\otimes n, V)$. 
+where for each $n\in\NN$ we set $\End_V(n) = \End(V^{\otimes n}, V)$. 
 The symmetric group $S_n$ acts on the right
 on $\End_V(n)$ 
 so that $(f\sigma)(v) = f(\sigma v)$ for
@@ -140,17 +157,16 @@ operads.
 
 \textbf{Two useful maps.} For each $k\geqslant 1$
 and each tuple $\lambda = (n_1,\ldots,n_k)$ 
-with sum $n$
-there is a map
-\[ S_k \longrightarrow S_{n_1+\cdots+n_k} \]
+with sum $n$ there is a map $\lambda : S_k
+ \longrightarrow S_{n_1+\cdots+n_k} $
 that sends $\sigma\in S_k$ to the permutation
 $\lambda(\sigma)$ of $[n]$ that permutes the blocks 
 $\pi_i = \{n_1+\cdots+n_{i-1}+1,\ldots
 			n_1+\cdots+n_{i-1}+n_i\}$
 			according to $\sigma$.
 There is also a map
-\[S_{n_1}\times \cdots \times  S_{n_k} 
-	\longrightarrow S_{n_1+\cdots+n_k}  \] 
+$S_{n_1}\times \cdots \times  S_{n_k} 
+	\longrightarrow S_{n_1+\cdots+n_k}$
 	that sends a tuple of permutations 
 	$(\sigma_1,\ldots,\sigma_k)$ to the
 	permutation $\sigma_1\#\cdots \# \sigma_k$
@@ -460,7 +476,8 @@ product given by
    	a totally ordered subset of $I$ of the
    	form $[i,j] = \{ x\in I : i\leqslant x \leqslant j\}$.
  \item Use the previous item to define the
- non-symmetric composition of ns collections.
+ non-symmetric composition $\circ_{ns}$
+  of ns collections.
  Define the generating function associated
  to a collection, and show it behaves
  well with respect to the products above. 
@@ -530,6 +547,9 @@ We write $\mathsf{End}$ for
  functor $S:{}_\Sigma\mathsf{Mod}
  \longrightarrow \mathsf{End}$ that assigns
  $\mathcal{X}$ to $V\longmapsto \bigoplus_{n\geqslant 0} \mathcal{X}(n)\otimes_{\Sigma_n} V^{\otimes n}$.
+ That is, 
+  you have to show that $S_\XX\circ
+ S_\YY$ is naturally isomorphic to $S_{\XX\circ_\Sigma \YY}$.
  It is called the \emph{Schur functor} associated
  to $\mathcal{X}$. The endofunctors in the essential
  image of $S$ are called \emph{analytic}.
@@ -746,21 +766,22 @@ above is usually written in the form
  x_{i+1},\ldots,x_{n-1}\}.
  \]
  
- \begin{question}
- Let $\mathcal X$ be a symmetric sequence,
- and define the derivative $\partial\mathcal X$ 
- of $\mathcal X$ to be symmetric sequence
+ \begin{question}\label{ex:operations-on-species}
+ Let $\XX$ and $\YY$ be a symmetric sequences.
+ We define \[f_\XX(z) = \sum_{n\geqslant 0} \dim \XX(n) \frac{z^n}{n!}\]
+ and call it the Hilbert series of $\XX$
+ (or dimension series, if we would like to be
+ faithful to the original name). The derivative $\partial\mathcal X$ 
+ of $\mathcal X$ is the symmetric sequence
  with $(\partial\mathcal X)(I) = \mathcal X(I^*)$
- where $I^* = I \sqcup \{ I \}$. Note that
- $S_I$ acts on $I^*$ fixing the element $I$.
- Show that $(\partial \mathcal X)(n)$ 
- is isomorphic to the restriction of $\mathcal{X}(n+1)$ to $S_n = \mathrm{Fix}(n+1)$, and
- conclude that 
- \[ \partial_z f_{\mathcal X}(z) = 
-  			f_{\partial\mathcal X}(z). \]	
-  Let $s$ be the sequence of singletons and
-  define the pointing of operation by
-  $\mathcal X^\bullet = s\otimes_\Sigma \partial   \mathcal{X}$. Determine the representation
-  $\mathcal{X}^\bullet(n)$ in terms of
-  $\mathcal{X}(n)$. 
+ where $I^* = I \sqcup \{ I \}$.
+ \begin{tenumerate}
+ \item Show that there is an equality of power series $f_{\XX\otimes \YY}(z) = f_\XX(z)\cdot f_\YY(z)$.
+ \item Show that $(\partial \mathcal X)(n)$ 
+ is isomorphic to the restriction of $\mathcal{X}(n+1)$ to $S_n = \mathrm{Fix}(n+1)$.
+ \item  Show  that there is an equality of power series $f_{\mathcal X}'(z) = 
+  			f_{\partial\mathcal X}(z)$.
+  \item Suppose that $\YY$ is reduced. Show that $f_{\XX}(f_\YY(z))$ is defined and that it is equal to 
+  $f_{\XX\circ \YY}(z)$.
+  \end{tenumerate}
  \end{question}

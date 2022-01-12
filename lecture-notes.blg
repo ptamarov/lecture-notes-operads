@@ -5,49 +5,77 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: amsrn.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 A level-1 auxiliary file: lecture-00.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-01.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-02.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-03.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-04.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-05.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-06.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-07.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-08.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-09.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-10.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-11.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: lecture-12.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+A level-1 auxiliary file: appendix.aux
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: bibliography.bib
-You've used 39 entries,
+Warning--missing date in MO187545
+You've used 44 entries,
             1497 wiz_defined-function locations,
-            719 strings with 9087 characters,
-and the built_in function-call counts, 29442 in all, are:
-= -- 1042
-> -- 2518
-< -- 26
-+ -- 306
-- -- 2385
-* -- 2820
-:= -- 5796
+            766 strings with 10094 characters,
+and the built_in function-call counts, 32947 in all, are:
+= -- 1149
+> -- 2809
+< -- 28
++ -- 335
+- -- 2659
+* -- 3143
+:= -- 6456
 add.period$ -- 0
-call.type$ -- 39
-change.case$ -- 173
-chr.to.int$ -- 78
-cite$ -- 39
-duplicate$ -- 2032
-empty$ -- 1044
-format.name$ -- 110
-if$ -- 3144
+call.type$ -- 44
+change.case$ -- 195
+chr.to.int$ -- 84
+cite$ -- 45
+duplicate$ -- 2297
+empty$ -- 1182
+format.name$ -- 124
+if$ -- 3524
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 986
-newline$ -- 415
-num.names$ -- 78
-pop$ -- 1888
+missing$ -- 1114
+newline$ -- 463
+num.names$ -- 88
+pop$ -- 2151
 preamble$ -- 1
-purify$ -- 133
+purify$ -- 150
 quote$ -- 0
-skip$ -- 529
+skip$ -- 589
 stack$ -- 0
-substring$ -- 432
-swap$ -- 1450
-text.length$ -- 292
+substring$ -- 476
+swap$ -- 1631
+text.length$ -- 325
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 316
-warning$ -- 0
-while$ -- 411
+type$ -- 358
+warning$ -- 1
+while$ -- 458
 width$ -- 0
-write$ -- 959
+write$ -- 1068
+(There was 1 warning)
