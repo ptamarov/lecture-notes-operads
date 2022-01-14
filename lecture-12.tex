@@ -142,26 +142,16 @@ such that $F_{p-1}\subseteq F_p$ for all
  boundary, too, like we wanted.
   \end{proof}
   
- Let us now consider the situation where $\PP$
- is a symmetric operad. Since the forgetful
- functor from symmetric to shuffle operads is
- monoidal, it preserves the bar construction,
- in the sense that $\B{\PP^\f}$ and
- $\B{\PP}^\f$ are naturally isomorphic,
- and we can attempt to apply filtration methods
- to the shuffle operad associated to $\PP$.
- Thus, in what follows, we will consider instead
- the case $\PP$ is a shuffle operad which is
- filtered, in the sense it admits a bounded
- below (exhaustive!) filtration by subcollections,
- such that for any shuffle composition we have
- \[
- F_p \circ_{\sigma,i} F_q \subseteq
-  F_{p+q}.
- \]
+  \begin{example}
+  \hacer{Lie to PreLie Koszul complex.}
+  \end{example}
+  
+  
+
  
  \begin{lemma}
- Suppose that $(\PP,F)$ is a filtered shuffle operad.
+ Suppose that $(\PP,F)$ is a
+ weight graded filtered shuffle operad.
  Then declaring a shuffle tree monomial $T$ in $\PP$
  to be in filtration degree $p$ if we have that
  \[\sum_{v\in T} p(\mathsf{x}_v) \leqslant p \]
@@ -182,23 +172,61 @@ such that $F_{p-1}\subseteq F_p$ for all
  so that the filtration is in fact of dg
  cooperads.  \end{proof}
  
+  Let us now consider the situation where $\PP$
+ is a symmetric operad. Since the forgetful
+ functor from symmetric to shuffle operads is
+ monoidal, it preserves the bar construction,
+ in the sense that $\B{\PP^\f}$ and
+ $\B{\PP}^\f$ are naturally isomorphic,
+ and we can attempt to apply filtration methods
+ to the shuffle operad associated to $\PP$.
+ Thus, in what follows, we will consider instead
+ the case $\PP$ is a shuffle operad which is
+ filtered, in the sense it admits a bounded
+ below (exhaustive!) filtration by subcollections,
+ such that for any shuffle composition we have
+ \[
+ F_p \circ_{\sigma,i} F_q \subseteq
+  F_{p+q}\quad\text{for all $p,q$, all $i$
+  and all shuffle permutations $\sigma$.}
+ \]
+ 
+ 
  With this at hand, we arrive at one of the most
  useful criteria to check if a symmetric operad
- is Koszul.
+ is Koszul. Note that a filtration compatible with
+ the weight is simply a filtration of $\PP^\f$
+ as a weight graded shuffle operad. 
  
  \begin{theorem}
- Let $\PP$ be a symmetric operad, and suppose
+ Let $\PP$ be a quadratic
+ symmetric operad, and suppose
  that the shuffle operad $\PP^\f$ admits
- a filtration (of shuffle operads) for which
+ a filtration compatible with the weight
+ (of shuffle operads) for which
  the associated graded operad is Koszul.
  Then $\PP$ is a Koszul operad.
  \end{theorem}
+ 
+ \emph{Warning!} It is not true in general
+ that if $\PP$ is an operad for which $\PP^\f$
+ admits a filtration with Koszul associated
+ graded, then $\PP$ is Koszul. Even in the case
+ of associative algebras, there exist non-quadratic
+ algebras $A$ along with a filtration $\mathcal F$
+ such that $\mathrm{gr}_\mathcal F \, A \cong 
+ \mathsf{Sym}(V)$, as in the case of the
+ universal enveloping algebra of a non-Abelian
+ Lie algebra. It is important for us that we
+ are working with weight graded objects.
  
  \begin{proof}
  The only thing we have to show is that the
  associated graded conilpotent cooperad to
  $\B{\PP^\f}$ with respect to the filtration
- $\B{F}$ is isomorphic to $\B{\mathrm{gr}_F\PP^\f}$.
+ $\B{F}$ is isomorphic to $\B{\mathrm{gr}_F\PP^\f}$,
+ and notice, as we remarked above, that
+ weight degrees are respected.
  Indeed, once this is verified we conclude using
  Proposition~\ref{prop:graded} and our definition
  of Koszulness using the syzygy grading: the
@@ -232,8 +260,7 @@ such that $F_{p-1}\subseteq F_p$ for all
  $\mathsf{wt}(\mathsf{x}_v)$ is precisely
  the least of those $p$ such that $\mathsf{x}_v
  \in F_p\PP^\f$, and if this drops, the total sum above
- will also drop. 
- \end{proof}
+ will also drop.  \end{proof}
  
  The previous result can be used together with
  rewriting methods, as follows. If $\PP$ is
@@ -350,6 +377,11 @@ commute, but we have
 \]
 One can produce a completely analogous formalism for
 algebraic operads, as it was done by Markl in~\cite{MarklDistributive}. 
+
+\begin{theorem}
+Any operad obtained from a distributive law
+between Koszul operads is again Koszul.
+\end{theorem}
 
 \hacer{Write section on distributive laws.}
 
