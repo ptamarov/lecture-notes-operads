@@ -91,14 +91,14 @@ partitions of $I$ into
 two disjoint sets. The symmetric product is then
 defined by 
 \[ (\XX\circ_\Sigma \YY)(I) 
- 	= \bigoplus_{\substack{k\geqslant 1 \\ \pi \vdash I}} \XX(\pi) 
+ 	= \bigoplus_{\substack{k\geqslant 1 }} \XX(k) 
  		\otimes_{S_k} \YY^{\otimes k}(I)\] 
 as the sum runs through (ordered) partitions of $I$, where the tensor product in the exponent is
 the Cauchy product. Writing things down 
 explicitly, we see that 
 \[ (\XX\circ_\Sigma \YY)(I) 
- 	= \bigoplus_{k\geqslant 1}\XX(\pi) 
- 		\otimes_{S_k} 
+ 	= \bigoplus_{\substack{k\geqslant 1}}\XX(k) 
+ 		\otimes_{S_k}
  		\left[
  		\bigoplus_{\pi\vdash_k I}\YY(\pi_1)\otimes\cdots\otimes
  			\YY(\pi_k) \right]\]
@@ -444,12 +444,26 @@ then we have that
 \subsection{Exercises}
 
  \begin{question}
- Follow the lecture notes and read about the
- partial definition of an operad (and what
- a Markl operad is). Show that a unital
- pseudo-operad is the same as a unital 
- May operad. 
- \end{question}
+ Our definition of the composition product of
+ $\Sigma$-modules is not completely unbiased.
+ Show that for each finite set $I$,
+ the space $(\XX\circ_\Sigma \YY)(I)$ is isomorphic
+ to
+\[
+\bigoplus_{\pi\vdash I} \XX(\pi)\otimes
+ \YY[\pi] \quad \text{ where }\quad
+\YY[\pi]  = \bigotimes_{p\in\pi}\YY(p).
+\]
+ The action of $\sigma\in\Aut(I)$ is as
+ follows: for each ordered partition $\pi$ of $I$,
+ the set ${}^\sigma\pi = \{ \sigma(p) : p\in \pi\}$
+ is a partition of $I$, and we have an induced
+ map $f_\pi :  \XX(\pi)\otimes \YY[\pi]
+ \longrightarrow \XX({}^\sigma\pi)\otimes \YY[{}^\sigma\pi]$. The resulting map is obtained
+ by summing these. Make sure to explain why
+ in our original definition there is are tensor
+ products taken over $S_k$ for $k\geqslant 1$.
+  \end{question}
  
  \begin{question}
 Define the category of collections
