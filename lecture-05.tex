@@ -26,12 +26,12 @@ An ordered partition $\pi$ of length $n$
 of a finite totally order set
 set is called \emph{shuffling} if
 $\min \pi_i < \min \pi_{i+1}$ for
-each $i\in [n-1]$. Equivalently, 
-a surjection $f:I\longrightarrow [n]$
+each $i\in \underline{n-1}$. Equivalently, 
+a surjection $f:I\longrightarrow \underline{n}$
 with $I$ a totally ordered set
 is called \emph{shuffling} if
 $\min f^{-1}(i) < \min f^{-1}(i+1)$
-for each $i\in [n-1]$.
+for each $i\in \underline{n-1}$.
 \end{definition}
 
 Although totally ordered
@@ -51,8 +51,8 @@ totally order finite set we have that
 (\XX\circ_{\Sha} \YY)(I)
 	=
 	 \bigoplus_{\substack{r\geqslant 1
-	 	\\ f: I \longrightarrow [r]}}
-	 \XX([r])\otimes 
+	 	\\ f: I \longrightarrow \underline{r}}}
+	 \XX(\underline{r})\otimes 
 	 \YY(f^{-1}(1))
 	 	\otimes
 	 		\cdots
@@ -62,7 +62,7 @@ totally order finite set we have that
 where the sum runs through all $r\geqslant 1$
 and all possible 
 shuffling surjections 
-$f : I \longrightarrow [r]$.
+$f : I \longrightarrow \underline{r}$.
 \end{definition}
 
 One can prove that this product is
@@ -102,7 +102,7 @@ shuffle composition maps, one for each
 shuffle partition $\pi$ of a finite ordered
 set $I$ of the form
 \[
-\gamma_\pi : \PP(r)\otimes
+\gamma_\pi : \PP(\underline{r})\otimes
 		\PP(\pi_1)\otimes\cdots\otimes\PP(\pi_r)
 		 	\longrightarrow \PP(I)
 \]
@@ -144,10 +144,10 @@ shuffling partitions $\pi$ of the form
  (1,\ldots,i-1,A,j_1,\ldots,j_s)
  	\]
  where $\min(A) = i$. Namely, for each
- $[n]$ we need simply choose a subset 
- $A$ of $[n]\smallsetminus [i-1]$ that contains
+ $\underline{n}$ we need simply choose a subset 
+ $A$ of $\underline{n}\smallsetminus \underline{i-1}$ that contains
  $i$, and this can be done by choosing a subset
- of $[n]\smallsetminus [i]$ and appending 
+ of $\underline{n}\smallsetminus \underline{i}$ and appending 
  $i$. 
 \begin{definition}
 An ideal of a shuffle operad $\PP$ is a
@@ -198,7 +198,7 @@ Now let $\XX$ be a ns collection and let
 $T$ be a planar tree monomial with variables
 in $\XX$, and let us pick a bijective labelling
 $\mathsf{n} : L(\tau) 
-\longrightarrow [n]$ of the leaves of
+\longrightarrow \underline{n}$ of the leaves of
 $\tau$. This induces a
 labelling of the vertices of $\tau$
 inductively by inductively labelling
@@ -237,9 +237,9 @@ for the corresponding linear ns collection.
 		leaves on a binary generator.}\end{figure}
 
 Suppose that $T$ and $T'$ are shuffle tree
-monomials on $[n]$ and $[m]$, that $i\in [n]$
+monomials on $\underline{n}$ and $\underline{m}$, that $i\in \underline{n}$
 and that we pick a shuffling partition $\pi$ of
-$[m+n-1]$ whose only non-singleton part
+$\underline{m+n-1}$ whose only non-singleton part
 is of the form 
 \[ \{i=j_1,j_2,\dots,j_m\}.\]
 We define the tree monomial $T\circ_\pi T'$
@@ -293,7 +293,7 @@ We may as well define the ``total shuffle
 composition'' of a tree $T_0$ with trees
 $T_1,\ldots,T_n$ along a shuffling partition
 $\pi = (\pi_1,\ldots,\pi_n)$ with $T_i$ having
-as many leafs as $\pi_i$ for each $i\in [n]$
+as many leafs as $\pi_i$ for each $i\in \underline{n}$
 Concretely, we consider for each such $i$
 the unique order preserving bijection
 between $\pi_i$ and the labels of $T_i$,

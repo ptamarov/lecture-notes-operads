@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  14 JAN 2022 23:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  18 JAN 2022 18:20
 entering extended mode
 **./lecture-notes.tex
 (lecture-notes.tex
@@ -2303,7 +2303,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [33]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
-ine 123.
+ine 122.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2324,11 +2324,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35]
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 10.00012pt on input line 251.
+(Font)              scaled to size 10.00012pt on input line 250.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 7.40013pt on input line 251.
+(Font)              scaled to size 7.40013pt on input line 250.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 6.00012pt on input line 251.
+(Font)              scaled to size 6.00012pt on input line 250.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2374,13 +2374,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [40]
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 12.0pt on input line 132.
+(Font)              scaled to size 12.0pt on input line 131.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 9.0pt on input line 132.
+(Font)              scaled to size 9.0pt on input line 131.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.0pt on input line 132.
+(Font)              scaled to size 7.0pt on input line 131.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 135.
+input line 134.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2391,7 +2391,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [41]
-Overfull \hbox (1.10588pt too wide) in paragraph at lines 240--246
+Overfull \hbox (1.10588pt too wide) in paragraph at lines 239--245
 []\T1/ptm/m/it/12 (-20) The commutative and Lie operads. \T1/ptm/m/n/12 (-20) W
 e have computed that if $\U/eus/m/n/12 X\OT1/ztmcm/m/n/12 (2)$ \T1/ptm/m/n/12 (
 -20) is the trivial representation
@@ -2631,9 +2631,6 @@ Overfull \hbox (0.87727pt too wide) in paragraph at lines 242--245
  [][]7.5[][],
  []
 
-
-LaTeX Warning: Reference `algo:gauss' on page 63 undefined on input line 262.
-
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
 (Font)              scaled to size 10.00012pt on input line 267.
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
@@ -2781,7 +2778,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [73]
-Overfull \hbox (0.50854pt too wide) in paragraph at lines 314--316
+Overfull \hbox (0.50854pt too wide) in paragraph at lines 321--323
 [] $[] \OMS/ztmcm/m/n/12   []\OT1/ztmcm/m/n/12 ([]\OML/ztmcm/m/it/12 ; []\OT1/z
 tmcm/m/n/12 )$ 
  []
@@ -2795,7 +2792,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [74]
-Overfull \hbox (0.30962pt too wide) in paragraph at lines 352--352
+Overfull \hbox (0.30962pt too wide) in paragraph at lines 358--358
 \T1/ptm/m/n/12 (-20) the Jacobi identity in the presentation of the operad $[][
 ]$ with respect to the \T1/cmtt/m/n/12 grapathpermlex
  []
@@ -3220,7 +3217,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Package rkeyval Warning: Unknown key: \bib'how on input line 211.
 
 
-Package rkeyval Warning: Unknown key: \bib'how on input line 316.
+Package rkeyval Warning: Unknown key: \bib'how on input line 339.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3252,9 +3249,6 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.4299pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
@@ -3265,11 +3259,11 @@ Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
 ### semi simple group (level 1) entered at line 490 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44853 strings out of 480634
- 873345 string characters out of 2896310
- 1412921 words of memory out of 3000000
- 60124 multiletter control sequences out of 15000+600000
- 596018 words of font info for 807 fonts, out of 8000000 for 9000
+ 44868 strings out of 480634
+ 873538 string characters out of 2896310
+ 1417365 words of memory out of 3000000
+ 60130 multiletter control sequences out of 15000+600000
+ 595899 words of font info for 806 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  108i,24n,106p,3239b,12833s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced bu
@@ -3305,9 +3299,9 @@ exmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/Mi
 KTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Library/
 Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrillic/
 wncyr10.pfb>
-Output written on lecture-notes.pdf (116 pages, 851828 bytes).
+Output written on lecture-notes.pdf (116 pages, 857166 bytes).
 PDF statistics:
- 1860 PDF objects out of 2073 (max. 8388607)
- 735 named destinations out of 1000 (max. 500000)
+ 1876 PDF objects out of 2073 (max. 8388607)
+ 746 named destinations out of 1000 (max. 500000)
  197178 words of extra memory for PDF output out of 221844 (max. 10000000)
 

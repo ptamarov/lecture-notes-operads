@@ -272,6 +272,29 @@
          url={https://doi.org/10.1023/b:math.0000027508.00421.bf},
 }
 
+\bib{LodayLeib}{article}{
+      author={Loday, Jean-Louis},
+       title={Une version non commutative des alg\`ebres de {Lie} : les
+  alg\`ebres de {Leibniz}},
+    language={fr},
+        date={1993},
+     journal={Les rencontres physiciens-math\'ematiciens de Strasbourg -RCP25},
+      volume={44},
+         url={http://www.numdam.org/item/RCP25_1993__44__127_0/},
+        note={talk:5},
+}
+
+\bib{LodayDialg}{book}{
+      author={Loday, Jean-Louis},
+      author={Chapoton, Fr{\'{e}}d{\'{e}}ric},
+      author={Frabetti, Alessandra},
+      author={Goichot, Fran{\c{c}}ois},
+       title={Dialgebras and related operads},
+   publisher={Springer Berlin Heidelberg},
+        date={2001},
+         url={https://doi.org/10.1007/b80864},
+}
+
 \bib{Loday2012}{book}{
       author={Loday, Jean-Louis},
       author={Vallette, Bruno},

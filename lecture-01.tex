@@ -54,13 +54,13 @@ An object in this category is a finite set $I$,
 and a morphism $\sigma : I\longrightarrow J$ is a
 bijection. Since every finite set $I$ with $n$
 elements is (non-canonically) isomorphic to 
-$[n] =\{1,\ldots,n\}$, the following holds:
+$\underline{n} =\{1,\ldots,n\}$, the following holds:
 
 \begin{lemma} The skeleton of $\GSet$ is
 equal to the category with objects the finite sets
-$[n]$ for $n\geqslant 0$ and with morphisms the
-bijections $[n]\longrightarrow [n]$ (and no morphism
-between $[n]$ and $[m]$ if $m\neq n$).
+$\underline{n}$ for $n\geqslant 0$ and with morphisms the
+bijections $\underline{n}\longrightarrow \underline{n}$ (and no morphism
+between $\underline{n}$ and $\underline{m}$ if $m\neq n$).
 \end{lemma}
 
 \begin{proof}
@@ -160,7 +160,7 @@ and each tuple $\lambda = (n_1,\ldots,n_k)$
 with sum $n$ there is a map $\lambda : S_k
  \longrightarrow S_{n_1+\cdots+n_k} $
 that sends $\sigma\in S_k$ to the permutation
-$\lambda(\sigma)$ of $[n]$ that permutes the blocks 
+$\lambda(\sigma)$ of $\underline{n}$ that permutes the blocks 
 $\pi_i = \{n_1+\cdots+n_{i-1}+1,\ldots
 			n_1+\cdots+n_{i-1}+n_i\}$
 			according to $\sigma$.
@@ -189,7 +189,7 @@ $$\lambda = (2,1,2), \quad \sigma = 312
 \begin{tenumerate}
 \item \emph{Associativity}: let $f\in \End_V(n)$,
 and consider $g_1,\ldots,g_n \in \End_V$ and
-for each $i\in [n]$ a tuple $h_i= (h_{i1},\ldots,h_{i n_i})$
+for each $i\in \underline{n}$ a tuple $h_i= (h_{i1},\ldots,h_{i n_i})$
 were $n_i= \mathrm{ar}(g_i)$. Then for
 $f_i = \gamma(g_i; h_{i1},\ldots,h_{in_i})$ 
 and $g= \gamma(f; g_1,\ldots,g_n)$ we have
@@ -316,13 +316,13 @@ Let $K_{n+2}$ be the subset of $I^n$ (the
 product of $n$ copies of $I=[0,1]$) 
 consisting of tuples $(t_1,\ldots,t_{n+2})$
 such that $t_1\cdots t_k\leqslant 2^{-k}$
-for $j\in [n+2]$. The boundary of 
+for $j\in \underline{n+2}$. The boundary of 
 $K_{n+2}$ consists of those points such
-that for some $j\in [n+2]$ we have
+that for some $j\in \underline{n+2}$ we have
 either $t_j$ or $t_1\cdots t_j = 2^{-j}$.
 It is tedious (but otherwise doable)
 to show that for each pair $(r,s)$ of
-natural numbers and each $i\in [r]$
+natural numbers and each $i\in \underline{r}$
 there exists an inclusion
 \[ \circ_i : K_{r+1} \times K_{s+1} \longrightarrow
  	K_{r+s+1} \] 
@@ -354,7 +354,7 @@ we write it $\mathcal{D}_2(I)$.
 
  \item The operad of rooted trees $\mathsf{RT}$ has
  $\mathsf{RT}(n)$ the collection of rooted trees with $n$
- vertices labelled by $[n]$, and the composition $T \circ_j T'$
+ vertices labelled by $\underline{n}$, and the composition $T \circ_j T'$
   is obtained by inserting $T'$ at the $j$th vertex of $T$
   and reattaching the children of that vertex to $T'$ in
   all possible ways. For example, if
@@ -648,7 +648,7 @@ in any Markl operad.
 %\item 
 %Show that the polytope $K_{n+2}'$ 
 %is of dimension $n$, 
-%and its $k$-cells for $k\in [n]$
+%and its $k$-cells for $k\in \underline{n}$
 %are in bijection with planar rooted
 %trees with $n-k+1$ internal vertices
 %and $n+2$ leaves. Conclude, in particular,
@@ -678,7 +678,7 @@ is the symmetric collection
 and let $\mathrm{In}(T,i)$ denote the
 set of incoming edges of $T$ at the
 vertex labeled $i$. For each function
-$f: \mathrm{In}(T,i)\longrightarrow [m]$,
+$f: \mathrm{In}(T,i)\longrightarrow \underline{m}$,
 define the tree $T\circ_i^f T'$ by
 replacing vertex $i$ of $T$ by $T'$ and
 attaching the loose incoming edges of 
@@ -742,7 +742,7 @@ $S_2$. Follow these steps:
 \end{question}
 \begin{tenumerate}
 \item Suppose that $T$ is an $n$-rooted tree
-and let $J$ be a subset of $[n]$ corresponding
+and let $J$ be a subset of $\underline{n}$ corresponding
 to leaves of $T$ that are the children of a
 vertex $i\in T$. Let $T'$ be the
 tree obtained by erasing all these leaves

@@ -279,11 +279,18 @@ the Buchberger Algorithm. We present it here in the form
 of pseudo-code, and remark that the algorithm may not
 terminate (as some ideals may admite infinite reduced 
 Gr\"obner bases for certain choices of monomial orders).
+To avoid overloading the code below,
+we call a function \textsc{Pop}(), which removes the last element
+from an array and returns that element. Since we have not
+really explained how to order overlapping ambiguities, the
+reader can simply interpret this as ``pick one of the
+overlapping ambiguities, if there are any'', and continue with
+the algorithm.
 
  \begin{algorithm}
 \caption{Buchberger's Algorithm}\label{algo:self-reduce}
 \textsc{Input:} a set of generators $\mathcal V$ for an ideal $\II$
-in a free shuffle operad.
+in a free shuffle operad. 
 
 \textsc{Output:} the reduced Gr\"obner basis of $\II$,
 if it is finite.
@@ -291,16 +298,16 @@ if it is finite.
 \begin{adjustwidth}{0 cm}{2 cm}
 \begin{algorithmic}[1]
 \Procedure{BuchbergerAlg}{$\texttt{Polynomials}$}
-	\State $\texttt{newSPolynomials} \gets \texttt{True}$
+	\State $\texttt{newSPolys} \gets \texttt{True}$
 	\State $\texttt{ToComplete} \gets \texttt{Polynomials}$
-	\While {$\texttt{newSPolynomials}$} 
+	\While {$\texttt{newSPolys}$} 
 		\State $\texttt{ToComplete} \gets 
 					\textsc{SelfReduce}(\texttt{ToComplete})$
 		\State $\texttt{ToComplete} 
 					\gets \textsc{Sort}(\texttt{ToComplete},
 								\texttt{grapathpermlex})$
-		\State $\texttt{SPolynomials} \gets \varnothing$
-		\State $\texttt{newSPolynomials} \gets \texttt{False}$
+		\State $\texttt{SPolys} \gets \varnothing$
+		\State $\texttt{newSPolys} \gets \texttt{False}$
 		\For {$g_1,g_2 \in \texttt{ToComplete} $}
 			\State $\texttt{LocalOverlap}\gets
 			 \textsc{Overlaps}(g_1,g_2)$
@@ -308,21 +315,20 @@ if it is finite.
 			\While {$\texttt{LocalOverlaps}\neq \varnothing$}
 			\State $\texttt{Overlap} \gets 	
 				\texttt{LocalOverlaps}.\textsc{Pop}()$
-			\State $\texttt{DoneOverlaps}.\textsc{Add}(\texttt{Overlap})$
+			\State $\texttt{DoneOverlaps}\gets \texttt{DoneOverlaps}\cup \{ \texttt{Overlap} \}$
 			\State $\texttt{LocalSPoly} \gets 
 				\textsc{SPoly}(g_1,g_2,\texttt{Overlap}) $
 			\State $\texttt{RemainderSPoly} \gets \textsc{Reduce}(
 			\texttt{LocalSPoly},\texttt{ToComplete})$
-			\If {$\texttt{RemainderSPoly}\notin \texttt{SPolynomials}$}
-				\State $\texttt{newSPolynomials} 
+			\If {$\texttt{RemainderSPoly}\notin \texttt{SPolys}$}
+				\State $\texttt{newSPolys} 
 					\gets \texttt{True}$
-				\State $\texttt{SPolynomials}.
-					\textsc{Add}(\texttt{RemainderSPoly})$
+				\State $\texttt{SPolys}\gets\texttt{SPolys}\cup \{\texttt{RemainderSPoly}\}$
 				\EndIf
 				\EndWhile
 			\EndFor
 			\State  
-				$\texttt{ToComplete}.\textsc{Union}(\texttt{SPolynomials})$
+				$\texttt{ToComplete}\gets \texttt{ToComplete}\cup \texttt{SPolys}$
 \EndWhile
 \State \Return $\texttt{ToComplete}$
 \EndProcedure

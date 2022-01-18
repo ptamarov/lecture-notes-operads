@@ -137,7 +137,7 @@ of $T$ and $f\in \mathcal V(\ell')$.
 \end{tikzcd}
 \]
 \caption{Two possible results of substituting
-a left comb by a right comb in the leftmost tree.}
+a left comb by a right comb in the topmost tree.}
 \end{figure}
 
 \begin{proof}
@@ -258,8 +258,8 @@ V$ such that $f-\overline{f} \in (\mathcal V)$ and $\lead{\overline{f}}
 \begin{tenumerate}
 \item If our input polynomial
 $f$ is zero, just return zero. If not, ensure $\mathcal V$
-is linearly self-reduced, using the linear self-reduction
-Algorithm~\ref{algo:gauss}.
+is linearly self-reduced, using the linear self-reduction algorithm to put a matrix
+in row reduced echelon form.
 \item If there is an element $v$ in $\mathcal V$ 
 whose leading term divides the
 leading term of $f$, pick that with the largest leading term.\footnote{This

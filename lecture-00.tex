@@ -288,21 +288,21 @@ you of some basic facts about them.
 the symmetric group on $n$ letters. For each ordered 
 partition $\pi = (\pi_1,\ldots,\pi_k)$, let $\lambda$
 be the ordered partition of $n$ with $\lambda_i = \# \pi_i$
-for $i\in [k]$. Show that the permutations of
-$[n]$ that preserve $\pi$ determine a subgroup of $S_n$
+for $i\in \underline{k}$. Show that the permutations of
+$\underline{n}$ that preserve $\pi$ determine a subgroup of $S_n$
 isomorphic to $S_\lambda := S_{\lambda_1}\times
 \cdots \times S_{\lambda_k}$. 
 \end{question}
 
 
 \begin{question} Consider the subgroup of $S_n$ corresponding
-to the ordered partition of $[n]$ given by $([1,k],[k+1,n])$, along with the 
+to the ordered partition of $\underline{n}$ given by $([1,k],[k+1,n])$, along with the 
 inclusion $S_k\times S_{n-k} \hookrightarrow S_n$. Show that
 a set of representatives for the cosets of this inclusion
 in $S_n$ is given by the \emph{$(k,n-k)$-shuffles}, those
 permutations $\sigma\in S_n$ that preserve the linear order in
 $[1,k]$ and $[k+1,n]$. Conclude that there are exactly
-$\binom nk$ shuffles of type $(k,n-k)$ on $[n]$. Define
+$\binom nk$ shuffles of type $(k,n-k)$ on $\underline{n}$. Define
 shuffles associated to other partitions of $n$.
 \end{question}
 
@@ -404,7 +404,7 @@ a field.
 \begin{question}
 Suppose that $x$ is an object in a symmetric monoidal
 category $(\mathcal{C},\tau)$. For each $n\in\NN$ and 
-each $i\in [n-1]$ define $\tau_i : x^{\otimes n} 
+each $i\in \underline{n-1}$ define $\tau_i : x^{\otimes n} 
 \longrightarrow x^{\otimes n}$ by
 \[ \tau_i = 1^{i-1} \otimes \tau \otimes 1^{n-i-1}.\]
 Show that the assignment
