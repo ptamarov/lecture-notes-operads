@@ -108,13 +108,13 @@ Modular & Any graph & $\xi_{i,j}$, $\circ_{i,j}$  & Getzler--Kapranov & \cite{Ge
 Properads & Connected graphs & Any & B. Vallette & \cite{Vallette2004}\\
 Dioperads & Trees & ${}_i\circ_j$ & W. L. Gan & \cite{Gan2003}\\
 Half-PROPs & Trees & $\circ_j$ , ${}_i\circ$ & 
- Kontsevich\footnote{The reference explains that ``These results are based on the useful notion of a 1/2 PROP introduced by Kontsevich in an e-mail message to the first author.''} & \cite{Markl2007}\\ 
+ Kontsevich\footnotemark & \cite{Markl2007}\\ 
 Cyclic operads & Trees &  $\circ_{i,j}$ & Getzler--Kapranov & \cite{Kajiura2008}\\ 
 Symmetric operads & Rooted trees & $\circ_i$  & J. P. May & \cite{May1972}\\ 
 \bottomrule
 \end{tabular}
 \end{center}
-
+\footnotetext{The reference explains that ``These results are based on the useful notion of a 1/2 PROP introduced by Kontsevich in an e-mail message to the first author.''}
 \subsection{Koszul duality}
  
 Koszul duality was invented by Steward Priddy in
@@ -270,8 +270,45 @@ to this \textsf{Haskell} package.
 
 In Lectures~\ref{lecture:methods1} and~\ref{lecture:methods2}, we give
 a few methods to prove that an operad is Koszul.
-
-\hacer{Explain how to put it all together.}
+We begin by considering quadratic monomial operads and showing
+they are Koszul, and follow up with the numerical criterion
+of Ginzburg--Kapranov to test if an operad is Koszul; we
+provide two examples where the criterion detects
+that an operad is not Koszul and use the \textsf{Haskell Operad
+Calculator} to replicate the results of Dzhumadil'daev
+stating that the Novikov operad is not 
+Koszul~\cite{Dzhumadildaev2009}.
+Then, we consider the situation where one
+can explicitly compute the homology of the
+Koszul complex of an algebraic operad,
+as in the case of the associative operad.
+We also consider a recent computation
+of the homology of a Koszul complex 
+carried out by Dotsenko--Flynn-Connolly~\cite{Dotsenko2020Schur}
+through filtration methods; although it is
+not computing the Koszul homology of an operad,
+in can be interpreted as computing a
+relative version of it, which is very useful
+for applications~\cite{DotsenkoTamaroff2020}. 
+After this, we explain how to show, in the
+spirit 
+Hoffbeck's original article~\cite{Hoffbeck2009},
+that a shuffle operad with a quadratic
+Gr\"obner basis is Koszul; this result
+single handedly deals with almost all 
+quadratic algebraic operads we will introduce
+in the lectures, with only a few exceptions
+that the Ginzburg--Kapranov criterion can
+discard. In the way, we introduce filtration
+methods that give the more general result that
+a filtered quadratic operad whose associated
+graded operad is Koszul is itself Koszul.
+Finally, we survey the distributive law methods
+of Dotsenko~\cite{Dotsenko2007}, Markl~\cite{MarklDistributive}
+and Vallette~\cite{Vallette2004}, where one
+has available a ``Diamond Lemma'' criterion,
+which one can again effectively check using
+rewriting methods. 
 
 \newpage
 

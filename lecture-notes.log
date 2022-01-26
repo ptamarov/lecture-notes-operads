@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  18 JAN 2022 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  26 JAN 2022 13:36
 entering extended mode
 **./lecture-notes.tex
 (lecture-notes.tex
@@ -2014,7 +2014,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 Overfull \hbox (4.4349pt too wide) in paragraph at lines 75--83
 []\T1/ptm/m/n/12 (-20) The study of natural operations on the Hochschild comple
-x of an associative algebra [[][]16[][]]
+x of an associative algebra [[][]22[][]]
  []
 
 [7
@@ -2022,7 +2022,7 @@ x of an associative algebra [[][]16[][]]
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <7.40013> not available
-(Font)              size <7> substituted on input line 111.
+(Font)              size <7> substituted on input line 117.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2068,9 +2068,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [10]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 274.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2081,16 +2078,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 12.0pt on input line 332.
+(Font)              scaled to size 12.0pt on input line 369.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/mt-eus.
 cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 9.0pt on input line 332.
+(Font)              scaled to size 9.0pt on input line 369.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 7.0pt on input line 332.
+(Font)              scaled to size 7.0pt on input line 369.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2110,8 +2107,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [13]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-88.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
+25.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -2687,7 +2684,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[67])
+[67]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 622.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3152,7 +3152,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[109])
+[109]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3162,6 +3162,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [110]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[111]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[112]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[113])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[114]
 \openout2 = `appendix.aux'.
 
  (appendix.tex
@@ -3173,7 +3209,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[111
+[115
 
 
 
@@ -3186,7 +3222,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[112])
+[116])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3195,7 +3231,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[113] (lecture-notes.tdo)
+[117] (lecture-notes.tdo)
 \tf@tdo=\write8
 \openout8 = `lecture-notes.tdo'.
 
@@ -3208,29 +3244,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[114
+[118
 
 
 ]
-
-Package rkeyval Warning: Unknown key: \bib'how on input line 211.
-
-
-Package rkeyval Warning: Unknown key: \bib'how on input line 339.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[115]
 (/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/tex/latex/uc
 s/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-))
+)
+Underfull \hbox (badness 2050) in paragraph at lines 149--149
+[]\T1/ptm/m/n/10.00012 (+20) Vladimir Dotsenko and Pedro Tamaroff, \T1/ptm/m/it
+/10.00012 (+20) Endofunctors and poincarébirkhoffwitt theorems\T1/ptm/m/n/10.
+00012 (+20) ,
+ []
+
+
+Package rkeyval Warning: Unknown key: \bib'how on input line 275.
+
+
+Package rkeyval Warning: Unknown key: \bib'how on input line 403.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3239,7 +3272,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[116] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
+[119]
+Underfull \hbox (badness 1281) in paragraph at lines 419--419
+[]\T1/ptm/m/n/10.00012 (+20) L. Positselski, \T1/ptm/m/it/10.00012 (+20) Two ki
+nds of derived categories, Koszul duality, and comodule-contramodule
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[120] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
 (lecture-03.aux) (lecture-04.aux) (lecture-05.aux) (lecture-06.aux)
 (lecture-07.aux) (lecture-08.aux) (lecture-09.aux) (lecture-10.aux)
 (lecture-11.aux) (lecture-12.aux) (appendix.aux))
@@ -3258,49 +3306,46 @@ Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
 ### semi simple group (level 1) entered at line 490 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44870 strings out of 480634
- 873570 string characters out of 2896310
- 1417393 words of memory out of 3000000
- 60132 multiletter control sequences out of 15000+600000
- 595899 words of font info for 806 fonts, out of 8000000 for 9000
+ 44914 strings out of 480634
+ 874196 string characters out of 2896310
+ 1417431 words of memory out of 3000000
+ 60137 multiletter control sequences out of 15000+600000
+ 596546 words of font info for 813 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  108i,24n,106p,3239b,12833s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced bu
-t does not exist, replaced by a fixed one
-
-{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/cm-super/cm
--super-t1.enc}{/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/instal
-l/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Application Support/MiKT
-eX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/ptamarov/Li
-brary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></Users/ptamarov/Library/Application Su
-pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users/p
+{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/d
+vips/cm-super/cm-super-t1.enc}{/Users/ptamarov/Library/Application Support/MiKT
+eX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Applicat
+ion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></U
+sers/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/
+texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/ptamarov/Librar
+y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss
+12.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts
+/type1/public/amsfonts/cm/cmss8.pfb></Users/ptamarov/Library/Application Suppor
+t/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss9.pfb></Users/ptamar
+ov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/inst
+all/fonts/type1/public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Appli
+cation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10
+.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/te
+xmfs/install/fonts/type1/public/rsfs/rsfs10.pfb></Library/Application Support/M
+iKTeX/texmfs/install/fonts/type1/public/cm-super/sfss1200.pfb></Library/Applica
+tion Support/MiKTeX/texmfs/install/fonts/type1/public/cm-super/sftt1000.pfb></L
+ibrary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/cm-super/sf
+tt1200.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/f
+onts/type1/public/hoekwater/stmary10.pfb></Library/Application Support/MiKTeX/t
+exmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiK
+TeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Suppor
+t/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application 
+Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Applic
+ation Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/p
 tamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/am
-sfonts/cm/cmss8.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/
-install/fonts/type1/public/amsfonts/cm/cmss9.pfb></Users/ptamarov/Library/Appli
-cation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/
-public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Application Support/M
-iKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/pta
-marov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/texmfs/install/fon
-ts/type1/public/rsfs/rsfs10.pfb></Library/Application Support/MiKTeX/texmfs/ins
-tall/fonts/type1/public/cm-super/sfss1200.pfb></Library/Application Support/MiK
-TeX/texmfs/install/fonts/type1/public/cm-super/sftt1000.pfb></Library/Applicati
-on Support/MiKTeX/texmfs/install/fonts/type1/public/cm-super/sftt1200.pfb></Use
-rs/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/publi
-c/hoekwater/stmary10.pfb></Library/Application Support/MiKTeX/texmfs/install/fo
-nts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/insta
-ll/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/
-install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/t
-exmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/Mi
-KTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Library/
-Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrillic/
-wncyr10.pfb>
-Output written on lecture-notes.pdf (116 pages, 857844 bytes).
+sfonts/cyrillic/wncyr10.pfb>
+Output written on lecture-notes.pdf (120 pages, 883222 bytes).
 PDF statistics:
- 1879 PDF objects out of 2073 (max. 8388607)
- 746 named destinations out of 1000 (max. 500000)
+ 1941 PDF objects out of 2073 (max. 8388607)
+ 774 named destinations out of 1000 (max. 500000)
  197178 words of extra memory for PDF output out of 221844 (max. 10000000)
 

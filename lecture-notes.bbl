@@ -3,9 +3,9 @@
 \begin{biblist}
 
 \bib{Arone2007}{article}{
-      author={Arone, Gregory},
-      author={Lambrechts, Pascal},
-      author={Voli{\'{c}}, Ismar},
+      author={Arone, G.},
+      author={Lambrechts, P.},
+      author={Voli{\'{c}}, I.},
        title={Calculus of functors, operad formality, and rational homology of
   embedding spaces},
         date={2007},
@@ -17,8 +17,8 @@
 }
 
 \bib{Batanin2014}{article}{
-      author={Batanin, Michael},
-      author={Markl, Martin},
+      author={Batanin, M.},
+      author={Markl, M.},
        title={Crossed interval groups and operations on the hochschild
   cohomology},
         date={2014},
@@ -30,9 +30,9 @@
 }
 
 \bib{Bergeron1997}{book}{
-      author={Bergeron, Fran{\c{c}}ois},
-      author={Labelle, Gilbert},
-      author={Leroux, Pierre},
+      author={Bergeron, F.},
+      author={Labelle, G.},
+      author={Leroux, P.},
        title={Combinatorial species and tree-like structures},
    publisher={Cambridge University Press},
         date={1997},
@@ -60,17 +60,41 @@
          url={https://doi.org/10.1007/bfb0068547},
 }
 
+\bib{Bremner2020}{article}{
+      author={Bremner, M.},
+      author={Dotsenko, V.},
+       title={Distributive laws between the operads lie and com},
+        date={2020-08},
+     journal={International Journal of Algebra and Computation},
+      volume={30},
+      number={08},
+       pages={1565\ndash 1576},
+         url={https://doi.org/10.1142/s021819672050054x},
+}
+
 \bib{Bremner2016}{book}{
-      author={Bremner, Murray~R.},
-      author={Dotsenko, Vladimir},
+      author={Bremner, M.~R.},
+      author={Dotsenko, V.},
        title={Algebraic operads},
    publisher={Chapman and Hall/{CRC}},
         date={2016},
          url={https://doi.org/10.1201/b20061},
 }
 
+\bib{Dotsenko2007}{article}{
+      author={Dotsenko, V.},
+       title={An operadic approach to deformation quantization of compatible
+  poisson brackets, i},
+        date={2007},
+     journal={Journal of Generalized Lie Theory and Applications},
+      volume={1},
+      number={2},
+       pages={107\ndash 115},
+         url={https://doi.org/10.4303/jglta/s070203},
+}
+
 \bib{Dotsenko2020}{article}{
-      author={Dotsenko, Vladimir},
+      author={Dotsenko, V.},
        title={Word operads and admissible orderings},
         date={2020-01},
      journal={Applied Categorical Structures},
@@ -80,9 +104,29 @@
          url={https://doi.org/10.1007/s10485-020-09591-0},
 }
 
+\bib{Dotsenko2020Schur}{article}{
+      author={Dotsenko, V.},
+      author={Flynn-Connolly, O.},
+       title={The schur functor of universal enveloping pre-lie algebra},
+        date={2020},
+      eprint={2001.00780},
+}
+
+\bib{Dotsenko2014}{article}{
+      author={Dotsenko, V.},
+      author={Griffin, J.},
+       title={Cacti and filtered distributive laws},
+        date={2014-12},
+     journal={Algebraic {\&} Geometric Topology},
+      volume={14},
+      number={6},
+       pages={3185\ndash 3225},
+         url={https://doi.org/10.2140/agt.2014.14.3185},
+}
+
 \bib{Dotsenko2010}{article}{
-      author={Dotsenko, Vladimir},
-      author={Khoroshkin, Anton},
+      author={Dotsenko, V.},
+      author={Khoroshkin, A.},
        title={Gr\"{o}bner bases for operads},
         date={2010},
      journal={Duke Mathematical Journal},
@@ -91,10 +135,30 @@
          url={https://doi.org/10.1215/00127094-2010-026},
 }
 
+\bib{DotsenkoTamaroff2020}{article}{
+      author={Dotsenko, Vladimir},
+      author={Tamaroff, Pedro},
+       title={Endofunctors and poincaré–birkhoff–witt theorems},
+        date={2020Feb},
+        ISSN={1687-0247},
+     journal={International Mathematics Research Notices},
+      volume={2021},
+      number={16},
+       pages={12670–12690},
+         url={http://dx.doi.org/10.1093/imrn/rnz369},
+}
+
+\bib{Dzhumadildaev2009}{article}{
+      author={Dzhumadil'daev, A.~S.},
+       title={Novikov operad is not koszul},
+        date={2009},
+      eprint={0902.3771},
+}
+
 \bib{Felix2001}{book}{
-      author={F\'{e}lix, Yves},
-      author={Halperin, Stephen},
-      author={Thomas, Jean-Claude},
+      author={F\'{e}lix, Y.},
+      author={Halperin, S.},
+      author={Thomas, J.-C.},
        title={Rational homotopy theory},
       series={Graduate Texts in Mathematics},
    publisher={Springer-Verlag, New York},
@@ -106,7 +170,7 @@
 }
 
 \bib{Gan2003}{article}{
-      author={Gan, Wee~Liang},
+      author={Gan, W.~L.},
        title={{K}oszul duality for dioperads},
         date={2003},
      journal={Mathematical Research Letters},
@@ -129,8 +193,8 @@
 }
 
 \bib{Ginzburg1994}{article}{
-      author={Ginzburg, Victor},
-      author={Kapranov, Mikhail},
+      author={Ginzburg, V.},
+      author={Kapranov, M.},
        title={Koszul duality for operads},
         date={1994},
      journal={Duke Mathematical Journal},
@@ -140,8 +204,8 @@
 }
 
 \bib{Goodwillie1999}{article}{
-      author={Goodwillie, Thomas~G},
-      author={Weiss, Michael},
+      author={Goodwillie, T.~G.},
+      author={Weiss, M.},
        title={Embeddings from the point of view of immersion theory : Part
   {II}},
         date={1999-05},
@@ -165,7 +229,7 @@
 }
 
 \bib{Hinich2003}{article}{
-      author={Hinich, Vladimir},
+      author={Hinich, V.},
        title={Tamarkins proof of kontsevich formality theorem},
         date={2003-01},
      journal={Forum Mathematicum},
@@ -186,7 +250,7 @@
 }
 
 \bib{Hoffbeck2009}{article}{
-      author={Hoffbeck, Eric},
+      author={Hoffbeck, E.},
        title={A {P}oincar{\'{e}}--{B}irkhoff--{W}itt criterion for {K}oszul
   operads},
         date={2009},
@@ -198,30 +262,30 @@
 }
 
 \bib{holstein2021categorical}{misc}{
-      author={Holstein, Julian},
-      author={Lazarev, Andrey},
+      author={Holstein, J.},
+      author={Lazarev, A.},
        title={Categorical {K}oszul duality},
         date={2021},
 }
 
 \bib{MO187545}{misc}{
       author={(https://mathoverflow.net/users/2906/richard montgomery),
-  Richard~Montgomery},
-       title={Breaking up the free lie algebra into gl irreps},
+  R.~Montgomery},
+       title={Breaking up the free lie algebra into {GL} irreps},
          how={MathOverflow},
          url={https://mathoverflow.net/q/187545},
         note={URL:https://mathoverflow.net/q/187545 (version: 2014-11-19)},
 }
 
 \bib{IdrissiPeccot}{book}{
-      author={Idrissi, Najib},
+      author={Idrissi, N.},
        title={Real homotopy of configuration spaces},
         date={2021},
          url={https://idrissi.eu/post/peccot-notes},
 }
 
 \bib{Joyal1981}{article}{
-      author={Joyal, Andr{\'{e}}},
+      author={Joyal, A.},
        title={Une th{\'{e}}orie combinatoire des s{\'{e}}ries formelles},
         date={1981-10},
      journal={Advances in Mathematics},
@@ -232,8 +296,8 @@
 }
 
 \bib{Kajiura2008}{inproceedings}{
-      author={Kajiura, Hiroshige},
-      author={Stasheff, Jim},
+      author={Kajiura, H.},
+      author={Stasheff, J.},
        title={Homotopy algebra of open{\textendash}closed strings},
         date={2008-02},
    booktitle={Geometry and topology monographs},
@@ -242,7 +306,7 @@
 }
 
 \bib{KellerKoszul2003}{article}{
-      author={Keller, Bernhard},
+      author={Keller, B.},
        title={Koszul duality and coderived categories (after {K}.
   {L}ef\`evre)},
         date={2003},
@@ -262,7 +326,7 @@
 }
 
 \bib{Kontsevich2003}{article}{
-      author={Kontsevich, Maxim},
+      author={Kontsevich, M.},
        title={Deformation quantization of poisson manifolds},
         date={2003-12},
      journal={Letters in Mathematical Physics},
@@ -273,7 +337,7 @@
 }
 
 \bib{LodayLeib}{article}{
-      author={Loday, Jean-Louis},
+      author={Loday, J.-L.},
        title={Une version non commutative des alg\`ebres de {Lie} : les
   alg\`ebres de {Leibniz}},
     language={fr},
@@ -285,10 +349,10 @@
 }
 
 \bib{LodayDialg}{book}{
-      author={Loday, Jean-Louis},
-      author={Chapoton, Fr{\'{e}}d{\'{e}}ric},
-      author={Frabetti, Alessandra},
-      author={Goichot, Fran{\c{c}}ois},
+      author={Loday, J.-L.},
+      author={Chapoton, F.},
+      author={Frabetti, A.},
+      author={Goichot, F.},
        title={Dialgebras and related operads},
    publisher={Springer Berlin Heidelberg},
         date={2001},
@@ -296,8 +360,8 @@
 }
 
 \bib{Loday2012}{book}{
-      author={Loday, Jean-Louis},
-      author={Vallette, Bruno},
+      author={Loday, J.-L.},
+      author={Vallette, B.},
        title={Algebraic operads},
    publisher={Springer Berlin Heidelberg},
         date={2012},
@@ -318,7 +382,7 @@
 }
 
 \bib{Markl2007}{article}{
-      author={Markl, Martin},
+      author={Markl, M.},
       author={Voronov, Alexander~A.},
        title={Propped up graph cohomology},
         date={2007},
@@ -334,7 +398,7 @@
 }
 
 \bib{MO329}{misc}{
-      author={Nikokoshev, Ilya},
+      author={Nikokoshev, I.},
        title={What is {K}oszul duality?},
          how={MathOverflow},
         date={2009},
@@ -343,7 +407,7 @@
 }
 
 \bib{Positselski2011}{article}{
-      author={Positselski, Leonid},
+      author={Positselski, L.},
        title={Two kinds of derived categories, {K}oszul duality, and
   comodule-contramodule correspondence},
         date={2011},
@@ -355,7 +419,7 @@
 }
 
 \bib{Priddy1970}{article}{
-      author={Priddy, Stewart~B.},
+      author={Priddy, S.~B.},
        title={Koszul resolutions},
         date={1970},
      journal={Transactions of the American Mathematical Society},
@@ -375,22 +439,14 @@
 }
 
 \bib{Sinha2010}{article}{
-      author={Sinha, Dev},
+      author={Sinha, D.},
        title={Koszul duality in algebraic topology: an historical perspective},
         date={2010},
       eprint={https://arxiv.org/abs/1001.2032},
 }
 
-\bib{Stasheff1970}{book}{
-      author={Stasheff, James},
-       title={H-spaces from a homotopy point of view},
-   publisher={Springer Berlin Heidelberg},
-        date={1970},
-         url={https://doi.org/10.1007/bfb0065896},
-}
-
 \bib{Stasheff1963}{article}{
-      author={Stasheff, James~Dillon},
+      author={Stasheff, J.},
        title={Homotopy associativity of h-spaces. i},
         date={1963-08},
      journal={Transactions of the American Mathematical Society},
@@ -401,7 +457,7 @@
 }
 
 \bib{Stasheff1963a}{article}{
-      author={Stasheff, James~Dillon},
+      author={Stasheff, J.},
        title={Homotopy associativity of h-spaces. {II}},
         date={1963-08},
      journal={Transactions of the American Mathematical Society},
@@ -411,8 +467,16 @@
          url={https://doi.org/10.2307/1993609},
 }
 
+\bib{Stasheff1970}{book}{
+      author={Stasheff, J.},
+       title={H-spaces from a homotopy point of view},
+   publisher={Springer Berlin Heidelberg},
+        date={1970},
+         url={https://doi.org/10.1007/bfb0065896},
+}
+
 \bib{Sugawara55}{article}{
-      author={Sugawara, Masahiro},
+      author={Sugawara, M.},
        title={A condition that a space is group-like},
         date={1955},
      journal={Mathematical Journal of Okayama Univ.},
@@ -435,7 +499,7 @@
 }
 
 \bib{Tamarkin2003}{article}{
-      author={Tamarkin, Dmitry~E.},
+      author={Tamarkin, D.~E.},
        title={Formality of chain operad of little discs},
         date={2003-10},
      journal={Letters in Mathematical Physics},
@@ -446,7 +510,7 @@
 }
 
 \bib{Vallette2004}{article}{
-      author={Vallette, Bruno},
+      author={Vallette, B.},
        title={Koszul duality for {PROPs}},
         date={2004-06},
      journal={Comptes Rendus Mathematique},
@@ -457,7 +521,7 @@
 }
 
 \bib{Vallette2020}{article}{
-      author={Vallette, Bruno},
+      author={Vallette, B.},
        title={Homotopy theory of homotopy algebras},
         date={2020},
      journal={Annales de l{\textquotesingle}Institut Fourier},
@@ -468,7 +532,7 @@
 }
 
 \bib{Weiss1996}{article}{
-      author={Weiss, Michael},
+      author={Weiss, M.},
        title={Calculus of embeddings},
         date={1996},
      journal={Bulletin of the American Mathematical Society},
@@ -479,7 +543,7 @@
 }
 
 \bib{Weiss1999}{article}{
-      author={Weiss, Michael},
+      author={Weiss, M.},
        title={Embeddings from the point of view of immersion theory : Part i},
         date={1999-05},
      journal={Geometry {\&} Topology},

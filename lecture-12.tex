@@ -384,16 +384,339 @@ $V\otimes_\tau W$ where elements of $V$ and $W$ do not
 commute, but we have
 \[ 1\otimes w\cdot v\otimes 1 = \tau(v\otimes w).
 \]
-One can produce a completely analogous formalism for
-algebraic operads, as it was done by Markl in~\cite{MarklDistributive}. 
+One can produce a completely analogous formalism 
+for algebraic operads, as it was done by Markl 
+in~\cite{MarklDistributive}, later extended
+in~\cite{Vallette2004,Dotsenko2007},
+see also \cite{Dotsenko2014}. Let us begin by 
+looking at two examples that motivate
+the theory.
 
-\begin{theorem}
-Any operad obtained from a distributive law
-between Koszul operads is again Koszul.
+\begin{example}
+The operad $\mathsf{Poiss}$ governing
+Poisson algebras is obtained from the
+Lie and commutative operads by the Leibniz
+rule: if we write $x_1x_2$ for the commutative
+product and $[x_1,x_2]$ for the Lie bracket,
+then Leibniz rule says that the element
+\[
+[x_1,x_2x_3] \in \mathsf{Lie}\circ_\Sigma\mathsf{Com}
+\]
+is equal to the element
+\[
+[x_1,x_2]x_3 + [x_1,x_3]x_2\in
+\mathsf{Com}\circ_\Sigma\mathsf{Lie}.
+\]
+In fact, repeated uses of the Leibniz rule
+allow us to define a map
+\[\lambda : \mathsf{Lie}\circ_\Sigma\mathsf{Com}
+\longrightarrow \mathsf{Com}\circ_\Sigma\mathsf{Lie}
+\]
+and one can think of the Poisson operad as
+obtained by putting on $\mathsf{Com}\circ_\Sigma\mathsf{Lie}$ the unique operad
+structure (as in our example with associative
+algebras) that uses $\lambda$ to exchange 
+elements from $\mathsf{Lie}$ and $\mathsf{Com}$.
+\end{example}
+
+\begin{example}
+Let us now consider the associative operad
+$\mathsf{Ass}$, and write $x_1x_2$ for its associative
+operation. By Exercise~\ref{ex:LivLod}, we know
+that the operations
+\[ 
+[x_1,x_2] = \frac{1}{2} (x_1x_2-x_2x_1),\quad
+x_1\cdot x_2 = \frac{1}{2} (x_1x_2+x_2x_1)\]
+present $\mathsf{Ass}$ 
+through the Jacobi relation for $[x_1,x_2]$,
+the Leibniz rule between this bracket and the
+commutative product $x_1\cdot x_2$,
+and the following relation 
+\[
+(x_1\cdot x_2)\cdot x_3 - 
+x_1\cdot (x_2\cdot x_3) = [x_2,[x_1,x_3]]
+\]
+expressing the failure of the commutative
+product to be associative. In particular,
+the last relation tells us that we must
+\emph{modify} the associativity relation
+for the product in $\mathsf{Com}$ to 
+obtain a presentation for $\mathsf{Ass}$,
+which is still isomorphic to $\mathsf{Com}
+\circ_\Sigma \mathsf{Lie}$ as a symmetric
+sequence. Recently,
+using Gr\"obner bases and computational commutative algebra,
+Bremner and Dotsenko proved
+that this is the only 
+non-trivial way to deform the Poisson
+operad into the associative operad~\cite{Bremner2020}.
+\end{example}
+
+Let us now introduce the formal theory to 
+deal with examples like those above. We
+will follow the exposition of~\cite{Bremner2016}*{Section 6.3.5}, but see also~\cite{Loday2012}*{Section 8.6} and~\cite{Dotsenko2014}.
+
+\begin{definition}\label{def:distrule}
+Let $\PP = \FF(\XX,\RR)$ and $\QQ = \FF(\YY,\mathcal{S})$ be two quadratic operads. A
+distributing rewriting rule for the
+pair $(\PP,\QQ)$ is the datum
+of two maps 
+\[
+s : \RR \longrightarrow (\XX\circ_{(1)}\YY)
+				\oplus (\YY\circ_{(1)}\XX)
+				\oplus (\YY \circ_{(1)}\YY),
+				\quad
+d : \YY\circ_{(1)} \XX \longrightarrow
+ 	 (\XX\circ_{(1)} \YY)\oplus (\YY\circ_{(1)}
+ 	 \YY).
+\]
+\end{definition}
+
+If we consider the collection  of generators 
+$\XX\oplus \YY$, the graphs $\Gamma_s  = \{ r - s(r) : r\in\RR\}$ and $\Gamma_d = \{
+x - d(x) : x\in \YY\circ_{(1)} \XX\}$
+are quadratic relations in the free
+operad $\FF_{\XX\oplus \YY}$. The first
+is a deformed version of the original relations
+of $\RR$, which incorporates terms with
+at most one appearance of generators of $\PP$, while the second is a new set
+of ``distributive type'' relations, which
+rewrite elements in $\YY\circ_{(1)}\XX$
+into elements of $\XX\circ_{(1)}\YY$
+at the cost of adding some
+summands that are 
+elements of $\YY\circ_{(1)}\YY$,
+where no element of $\PP$ appears.
+
+Notice that using $d$
+after an application of $s$, we may instead
+assume that $s$ is actually a map
+of the form 
+\[
+s : \RR \longrightarrow (\XX\circ_{(1)}\YY)
+				\oplus (\YY \circ_{(1)}\YY),\]
+which we will do in what follows.
+\begin{definition}
+The quadratic operad 
+obtained from the pair $(\PP,\QQ)$
+through the filtered distributive rule
+$\lambda = (s,d)$ is the operad generated
+by $\XX\oplus \YY$ subject to the relations
+$\Gamma_s,\Gamma_d$ and $\mathcal S$,
+and we write it $\PP\vee_\lambda \QQ$.
+\end{definition}
+
+Notice that ``setting variables to zero''
+induces surjections of operads
+$\pi_1 : \PP\vee_\lambda \QQ\longrightarrow \PP$
+and $\pi_2: \PP\vee_\lambda \QQ\longrightarrow \QQ$.
+Since the relations of $\QQ$ are
+not modified in $\PP\vee_\lambda \QQ$, the
+second surjection always splits (through
+the usual inclusion) but,
+as our second example above shows,
+the first surjection may or may not
+split depending on the ground field
+(in that example, it does not split
+if it divides $6$). 
+We say a distributing rule is
+\emph{split} if the first
+surjection above splits. 
+In this case, the following holds.
+
+\begin{lemma}
+For every split distributing rule,
+there is a surjection of symmetric
+collections
+$\xi: \PP\circ_\Sigma \QQ 
+\longrightarrow \mathcal \PP\vee_\lambda \QQ
+$  induced by the composite
+$\FF_\XX\circ_\Sigma\FF_\YY\longrightarrow
+\FF_{\XX\oplus \YY} 
+\longrightarrow \mathcal \PP\vee_\lambda \QQ$.
+\end{lemma}
+
+\begin{proof}
+Let us first prove that the composite arrow 
+in the statement of the lemma is surjective. 
+To see this, it suffices to notice that
+the second arrow is surjective, by
+definition of $\PP\vee_\lambda \QQ$, and that
+the relations of $\PP\vee_\lambda \QQ$ guarantee
+that every tree monomial where an element
+of $\FF_\YY$ appears below one of 
+$\FF_\XX$ can be rewritten into one
+of $\FF_\XX\circ_\Sigma\FF_\YY$.
+This show that such map is surjective,
+as we claimed, and proves that every element of
+$\PP\vee_\lambda \QQ$ can at least be arranged to be
+a tree monomial with decorations in $\XX$
+with tree monomials with decorations in $\YY$
+grafted at its leaves.
+
+For a second step, let us consider the
+weight grading of $\FF_{\XX\oplus\YY}$
+where $\XX$ is put in weight one and
+$\YY$ in weight zero. This weight
+grading induces a filtration on this free
+operad and, in turn, a filtration on the
+quotient $\PP\vee_\lambda \QQ$. 
+Moreover, in $\mathrm{gr}(\PP\vee_\lambda \QQ)$
+the relations coming from $\Gamma_s$ turn
+into the relations $\RR$ of $\PP$, as
+$s$ strictly decreases the filtration 
+degree of a tree monomial: the relations
+$\RR$ lie in filtration degree two,
+but the image of $s$ contains only elements
+of filtration degrees zero or one. 
+Thus, together with the fact that the
+projection $\pi_1$ splits, we see
+that the map
+$\mathrm{gr}(\FF_\XX\circ_\Sigma\FF_\YY)
+\longrightarrow
+\mathrm{gr}(\PP\vee_\lambda \QQ)$
+gives rise to a surjective map of sequences
+\[
+\PP\circ_\Sigma\QQ
+\longrightarrow
+\PP\vee_\lambda \QQ,
+\]
+bearing in mind that taking associated
+graded operads does not modify the 
+underlying symmetric sequences.
+\end{proof}
+
+Notice that, since the relations
+of $\PP$ are deformed in $\mathcal E$,
+there is a priori no map of operads
+$\PP\longrightarrow \mathcal E$. Notice
+also that the surjection $\pi_1$ always
+splits if $s=0$, so that the relations of
+$\PP$ remain undeformed, or if the
+characteristic of the field is zero. 
+
+\begin{definition}
+We say that a split distributing rule
+$\lambda = (s,d)$ 
+for a pair $(\PP,\QQ)$  is a 
+filtered distributive law if $\xi$ is
+an isomorphism. 
+\end{definition}
+
+The following is the main result of this
+section.
+
+\begin{theorem}[Filtered distributive law
+criterion] Let $\PP$ and $\QQ$ be quadratic
+Koszul, and suppose that $\lambda = (s,d)$ is a split filtered distributing rule for the pair
+$(\PP,\QQ)$. 
+\begin{tenumerate}
+\item The distributing rule is a filtered
+distributive law if and only if $\xi^{(3)}$
+is injective.
+\item In this case, $\mathcal E$ is Koszul. 
+\end{tenumerate}
 \end{theorem}
 
-\hacer{Write section on distributive laws.}
+\begin{proof}
+Let us begin by proving (2) and, to do this, 
+let us consider the situation
+where $d$ and $s$ are zero. In this case,
+it is clear that $\mathcal E =\PP\vee_0 \QQ$ 
+is isomorphic
+as an operad to $\PP\circ_\Sigma \QQ$
+where the operad structure is given
+by the zero exchange map. Since we 
+need to apply the K\"unneth theorem 
+for $-\circ_\Sigma-$, which is a priori
+only available in zero characteristic,
+we may as well pass to the situation
+where we are working with reduced shuffle
+operads. In this case, no symmetric groups
+are involved, and so the K\"unneth theorem 
+for $-\circ_\Sha-$ works in full generality
+for any characteristic (as long as we are
+working over a field).
 
+In this case, the Koszul dual $\mathcal E^\f$ is isomorphic to 
+$\QQ^{\f,\antishriek}\circ_\Sha\PP^{\f,\antishriek}$.
+By considering the weight grading of $\QQ$,
+the Koszul complex of $\mathcal E^\f$ can
+then by filtered in such a way that
+$E^0 \cong (\QQ^{\f,\antishriek}\circ_\Sha K(\PP^\f) \circ_\Sha \QQ^\f, 1\circ d\circ 1)$
+and, since $\PP$ is Koszul, we see that 
+$E^1 \cong (K(\QQ^\f),d)$.
+Finally, since $\QQ^\f$ is also Koszul, 
+we arrive at
+a trivial $E^2$-page, proving that $\mathcal{E}^\f$
+and hence $\mathcal E$, is Koszul in this case. 
+
+In the general case, it is still true
+that $\mathcal{E}^\f$ is isomorphic to $\PP^\f\circ_\Sha\QQ^\f$,
+and so its bar construction has the same underlying
+symmetric sequence, but a different differential.
+Its elements consists of shuffle tree monomials
+whose vertices are decorated by elements of 
+$\PP^\f\circ_\Sha\QQ^\f$. We may first
+assume that $s=0$ and that $d$ has image in
+$\XX\circ_{(1)}\YY$ by considering
+the filtration that counts the number
+of occurrences of elements in $\QQ$,
+as we did before. Let us now explain how
+to reduce even further to the case where
+$d=0$, which will conclude the proof.
+
+We may think of the bar tree monomials as tree
+monomials decorated by $\PP$ and $\QQ$,
+so we can consider the map that assigns
+such a tree monomial to an element
+in ${\mathbb W}_\mathsf{QM}$, by
+first replacing all occurrences of $\PP$
+by $x$ and all of those by $\QQ$ by $y$,
+and then computing the corresponding
+path sequence that lives in${\mathbb W}_\mathsf{QM}$. This path sequence will consist of several
+monomials in $x$, $y$ and $q$, which we can
+compare using the ordered shuffle operad
+${\mathbb W}_\mathsf{QM}$. This induces
+a filtration on the bar complex, that is
+indexed by ${\mathbb W}_\mathsf{QM}$.
+
+Any tree in $\YY\circ_{(1)}\XX$ will be
+in filtration degree larger than any tree
+in $\XX\circ_{(1)}\YY$, since all the path 
+sequences
+$(xyq,xyq,y)$, $(xyq,y,xyq)$ and $(y,xyq,xyq)$
+are larger than the path sequences 
+$(xy,xy,y)$, $(xy,y,xy)$ and $(x,xy,xy)$:
+we have that $y > yx > xy > x$ in the order of 
+$\mathsf{QM}$. Thus, we see that passing
+to the associated graded complex, we obtain
+the bar complex of $\mathcal E\cong \PP^\f\circ_\Sha\QQ^\f$
+in the case that $\lambda = (0,0)$, which
+we have already addressed, as we wanted. 
+
+We sketch a proof of (1), and point
+the reader to Theorem 8.6.5 in~\cite{Loday2012}
+for details, noting as before that we
+may first assume $s=0$.
+Let us notice first that
+$\xi: \PP\circ_\Sigma\QQ\longrightarrow
+ \PP\vee_\lambda \QQ$ is an isomorphism in
+ weights 0, 1 and 2, and that if it is also
+ an isomorphism in weight 3, the underlying
+ sequences of the bar
+ constructions $\mathsf{B}(\PP\circ_\Sigma\QQ)$
+ and $\mathsf{B}(\PP\vee_\lambda \QQ)$ are isomorphic
+ in syzygy degrees at most 2. This allows us
+ to filter these bar complexes and, by a 
+ spectral sequence argument, deduce that
+ $\PP\vee_\lambda \QQ$ and $\PP\circ_\Sigma\QQ\cong
+  \PP\vee_0 \QQ$ have isomorphic Koszul dual
+ cooperads. Running the argument again, but
+ replacing $\B$ with $\Omega$ and 
+ working with the dual cooperads, we deduce
+ that  $\PP\vee_\lambda \QQ$ and $\PP\vee_0 \QQ$ are isomorphic via $\xi$.
+\end{proof}
 \newpage
 
 

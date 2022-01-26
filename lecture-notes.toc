@@ -1,7 +1,7 @@
 \babel@toc {british}{}\relax 
 \contentsline {section}{\numberline {0}Motivation and history}{7}{section.0}%
 \contentsline {subsection}{\numberline {0.1}Koszul duality}{8}{subsection.0.1}%
-\contentsline {subsection}{\numberline {0.2}Gr\"obner bases}{9}{subsection.0.2}%
+\contentsline {subsection}{\numberline {0.2}Gr\"obner bases}{10}{subsection.0.2}%
 \contentsline {subsection}{\numberline {0.3}Effective methods}{11}{subsection.0.3}%
 \contentsline {subsection}{\numberline {0.4}Exercises}{12}{subsection.0.4}%
 \contentsline {section}{\numberline {1}Symmetric modules and algebraic operads}{17}{section.1}%
@@ -57,15 +57,15 @@
 \contentsline {section}{\numberline {12}Methods to prove an operad is Koszul II}{105}{section.12}%
 \contentsline {subsection}{\numberline {12.1}Filtrations and rewriting}{105}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2}Distributive laws}{109}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Exercises}{110}{subsection.12.3}%
-\contentsline {section}{\numberline {A}Technical homological results}{111}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Comparison theorem}{111}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Big Koszul complexes are acylic}{111}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Fundamental theorem}{111}{subsection.A.3}%
-\contentsline {section}{\numberline {B}Further topics}{111}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Quillen homology of operads}{111}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Algebras over operads}{112}{subsection.B.2}%
-\contentsline {subsection}{\numberline {B.3}Homotopy algebras}{112}{subsection.B.3}%
-\contentsline {section}{\numberline {C}Classical theory}{113}{appendix.C}%
-\contentsline {subsection}{\numberline {C.1}Non-commutative Gr\"obner bases}{113}{subsection.C.1}%
+\contentsline {subsection}{\numberline {12.3}Exercises}{114}{subsection.12.3}%
+\contentsline {section}{\numberline {A}Technical homological results}{115}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Comparison theorem}{115}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Big Koszul complexes are acylic}{115}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Fundamental theorem}{115}{subsection.A.3}%
+\contentsline {section}{\numberline {B}Further topics}{115}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Quillen homology of operads}{115}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Algebras over operads}{116}{subsection.B.2}%
+\contentsline {subsection}{\numberline {B.3}Homotopy algebras}{116}{subsection.B.3}%
+\contentsline {section}{\numberline {C}Classical theory}{117}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Non-commutative Gr\"obner bases}{117}{subsection.C.1}%
 \contentsfinish 
