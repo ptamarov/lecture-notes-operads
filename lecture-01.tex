@@ -26,7 +26,7 @@ inputs (and one output), and at the same
 time keep track of symmetries when
 the inputs are permuted.
 
-The underlying objects to operads are known as
+The  objects underlying operads are known as
 \emph{symmetric sequences}: a symmetric sequence
 (also known as a $\Sigma$-module or combinatorial 
 species) is a sequence of vector spaces
@@ -46,7 +46,7 @@ each equivariant for the corresponding group action.
 This defines the category $\SMod$ of symmetric
 sequences, and whenever we think of symmetric sequences
 using this definition, we will say we are considering  
-a biased or skeletal approach to them.
+a \emph{biased} (or skeletal) approach to them.
 
 In parallel, it is convenient to consider the 
 category $\GSet$ of finite sets and bijections.
@@ -74,9 +74,8 @@ spaces $I\longmapsto \XX(I)$ assigning to each
 isomorphism $\tau : I\longrightarrow J$ an isomorphism
 $\XX(\tau): \XX(J)\longrightarrow \XX(I)$. When we
 think of $\Sigma$-modules as pre-sheaves, we will say we 
-are taking an unbiased approach, if we specify only
-its values on natural numbers, we will say we are taking the
-biased or skeletal approach; we will come back to this later.
+are taking an \emph{unbiased} approach; 
+we will come back to this later.
 
 With this at hand, 
 we can in turn define the \emph{Cauchy product}
@@ -158,7 +157,7 @@ operads.
 \textbf{Two useful maps.} For each $k\geqslant 1$
 and each tuple $\lambda = (n_1,\ldots,n_k)$ 
 with sum $n$ there is a map $\lambda : S_k
- \longrightarrow S_{n_1+\cdots+n_k} $
+ \longrightarrow S_n $
 that sends $\sigma\in S_k$ to the permutation
 $\lambda(\sigma)$ of $\underline{n}$ that permutes the blocks 
 $\pi_i = \{n_1+\cdots+n_{i-1}+1,\ldots
@@ -207,19 +206,19 @@ tuple of permutations $(\sigma_1,\ldots,\sigma_k) \in S_{n_1} \times
 \cdots \times S_{n_k}$, if $\sigma = \sigma_1\#\cdots\#\sigma_k$, we have that
 \[\gamma(f,g_1\sigma_1,\ldots,g_k\sigma_k) = 
 	\gamma(f; g_1,\ldots,g_k)\sigma.\]
-\item \emph{Unitality:} the identity $1\in\End_V(1)$
-satisfies $\gamma(1;g) = g$ and $\gamma(g;1,\ldots,1) = g$ for every $g\in\End_V$.
+\item \emph{Unitality:} the identity $1_V\in\End_V(1)$
+satisfies $\gamma(1_V;g) = g$ and $\gamma(g;1_V,\ldots,1_V) = g$ for every $g\in\End_V$.
 \end{tenumerate}
 
 \begin{definition} 
 A symmetric operad (in vector spaces) is a
 $\Sigma$-module $\PP$ along with a composition
-map $\gamma : \PP\circ \PP \longrightarrow \PP$
+map $\gamma : \PP\circ_\Sigma \PP \longrightarrow \PP$
 of signature
 \[\gamma : \PP(k)\otimes 
 	\PP(n_1) \otimes \cdots \otimes \PP(n_k)
 	 	\longrightarrow \PP(n_1+\cdots+n_k)\]
-along with a unit $1\in \PP(1)$, that satisfy
+and a unit $1\in \PP(1)$, that satisfy
 the axioms above. 
 \end{definition} 
 
@@ -237,9 +236,9 @@ maps be morphisms in that category.
 
 \textbf{Pseudo-operads.}
 One can define operads through \emph{partial 
-composition maps}, modeling the honest partial
+composition maps}, modelling the honest partial
 composition map
-\[ f\circ_i g = f(1,\ldots,1,g,1,\ldots,1)\] 
+\[ f\circ_i g = f(1_V,\ldots,1_V,g,1_V,\ldots,1_V)\] 
 in $\End_V$. These composition maps satisfy the
 following properties:
 
@@ -269,8 +268,8 @@ as a single element.
 where $\sigma''$ acts by only permuting the
 block $\{i,\ldots,i+\ari(g)-1\}$ according
 to $\sigma$.
-\item \emph{Unitality:} the identity $1\in\End_V(1)$
-satisfies $1 \circ_1 g = g$ and $g\circ_i 1 = g$ for every $g\in\End_V$ and $1\leqslant i\leqslant \ari(g)$.
+\item \emph{Unitality:} the identity $1_V\in\End_V(1)$
+satisfies $1_V\circ_1 g = g$ and $g\circ_i 1_V = g$ for every $g\in\End_V$ and $1\leqslant i\leqslant \ari(g)$.
 \end{tenumerate}
 
 \begin{definition}
@@ -302,7 +301,7 @@ and give the composition maps directly:
 \item \emph{Commutative operad.} The reduced symmetric topological (or set)
 operad with $\mathsf{Com}(n)$ a single point for each
 $n\in \NN$, and composition maps the unique
-map from a point to a point.
+map from a product points to a point.
 \item \emph{Associative operad.} 
 The reduced set operad with
 $\mathsf{As}(n) = S_n$
@@ -319,7 +318,7 @@ such that $t_1\cdots t_k\leqslant 2^{-k}$
 for $j\in \underline{n+2}$. The boundary of 
 $K_{n+2}$ consists of those points such
 that for some $j\in \underline{n+2}$ we have
-either $t_j$ or $t_1\cdots t_j = 2^{-j}$.
+either $t_j=1$ or $t_1\cdots t_j = 2^{-j}$.
 It is tedious (but otherwise doable)
 to show that for each pair $(r,s)$ of
 natural numbers and each $i\in \underline{r}$
@@ -551,7 +550,7 @@ along with maps $\mu: x\otimes x\to x$ and $\eta : 1
 $\eta$, that is $\mu(\eta\otimes 1)=\rho_x$
 and $\mu(1\otimes \eta) = \lambda_x$.
 Show that a $\Sigma$-operad is exactly the
-same as a monoid in $({}_\Sigma\mathsf{Mod},\circ_\Sigma)$.
+same as a monoid in $({}_\Sigma\mathsf{Mod},\circ_\Sigma,\kk)$.
 \end{question}
 
 \begin{question}

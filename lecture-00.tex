@@ -2,12 +2,10 @@
 
 \section{Motivation and history}\label{lecture:theintro}
  
-\textbf{Goals.} The goals of this lecture is to
+\textbf{Goals.} The goal of this lecture is to
 give a broad picture of the history and 
 pre-history of operads, and some current trends,
 and give a road-map for the course.  
- \emph{Note:} references will be
- added in the final version of the notes.
   
 Operads (topological operads, more precisely)
 originally appeared as tools in algebraic
@@ -28,13 +26,15 @@ phyisics. Here we list a few examples:
 \item Stasheff~\cite{Stasheff1970,Stasheff1963,Stasheff1963a} and Sugawara~\cite{Sugawara55}
 studied homotopy associative 
 $H$-spaces, Stasheff implicitly discovers a topological
-non-symmetric operad $K$ with $C_*(K) = \mathsf{As}_\infty$ and a
-recognition principle for $A_\infty$-spaces.
+non-symmetric operad $K$ and a
+recognition principle for infinite deloopings:
+a connected topological space is an infinite
+loop space if and only if it is acted upon
+by this topological operad $K$. 
 
 \item Boardmann--Vogt~\cite{Boardman1973,bams/1183530111} studied infinite loop spaces,
 built a PROP that provides a version of an $E_\infty$-operad, 
-and obtained a recognition principle for infinite
-loop spaces.
+and obtained a recognition principle for infinite loop spaces.
 
 \item Kontsevich~\cite{Kontsevich2003} used $L_\infty$-algebras and
 configuration spaces to prove his deformation
@@ -90,8 +90,8 @@ to more complicated situations, like that of
 properads, dioperads or modular operads,
 in the sense that relaxing these
 graphs to allow for more structure 
-lets us to produce other type of 
-algebraic structures. The following table
+produces other type of algebraic structures
+of interest. The following table
 gives the reader a ``taxonomy cheat sheet''
 for operads and their kin; we will, for better
 or worse, defer from diving into the curious
@@ -180,7 +180,8 @@ is to introduce the reader to these objects in general
 and to quadratic operads in particular, define what
 it means for such operads to be Koszul, and explore
 the consequences this property has on the operads
-and its representations. We do this in Lectures~\ref{lecture:quadraticops}, \ref{lecture:KD1}, \ref{lecture:barcobar} and \ref{lecture:KD2}.
+and its representations. We do this in Lectures~\ref{lecture:quadraticops}, \ref{lecture:KD1}, \ref{lecture:barcobar} and \ref{lecture:KD2}, and include further material
+in the Appendix.
 
 Although, as we
 mentioned, we will take a rather old fashioned point of 
@@ -192,11 +193,14 @@ new developments in the area from the last two (or
 maybe three) decades:
 the inhomogenous Koszul duality for (pr)operads due
 to Galvez-Carillo--Tonks--Vallette, which
-followed the original theory of Ginzburg--Kapranov~\cite{Ginzburg1994},
-the use of filtered distributive laws of Dotsenko~\cite{Bremner2016}*{Section 6.3.5}
-which followed the methods of Markl~\cite{MarklDistributive}, and the general
-theory stating Koszul operads give rise to good
-notions of algebras up to homotopy, due to Vallette~\cite{Vallette2020}.
+followed the original theory of 
+Ginzburg--Kapranov~\cite{Ginzburg1994},
+the use of filtered distributive laws 
+of Dotsenko~\cite{Bremner2016}*{Section 6.3.5}
+which followed the methods of Markl~\cite{MarklDistributive}, 
+and the general theory stating Koszul operads give rise to good
+notions of algebras up to homotopy, due to Vallette~\cite{Vallette2020},
+following Hinich~\cite{Hinich2001} and Lefèvre-Hasegawa~\cite{LH03}.
 Naturally, we will also focus on the classical developments,
 and on the effective methods of Hoffbeck~\cite{Hoffbeck2009} and 
 Dotsenko--Khoroshkin~\cite{Dotsenko2010}, which we mention again in
@@ -251,7 +255,7 @@ actual research questions, and references to further reading.}
 
 Lectures~\ref{lecture:shuffleops}-\ref{lecture:GB2} in these
 notes are aimed at studying the analogue of the usual
-theory of Gr\"obnber bases for commutative algebras as it was
+theory of Gr\"obnber bases (for commutative algebras) as it was
 developed for algebraic operads by Dotsenko and Khoroshkin, 
 following the breakthrough paper of Hoffbeck~\cite{Hoffbeck2009}
 giving a ``Poincar\'e--Birkhoff--Witt criterion'' for an operad
@@ -261,10 +265,10 @@ exposition new developments that happened after that book
 was written, such as examples where we compute
 Gr\"obner bases and count normal forms 
 with the \textsf{Haskell Operad Calculator}
-developed by Dotsenko and Heijltjes, along with new
+developed by Dotsenko and Heijltjes~\cite{Calculator}, along with new
 monomial orders coming from~\cite{Dotsenko2020},
 one of which we have implemented (along with F. Lebr\'on)
-to this \textsf{Haskell} package. 
+to this \textsf{Haskell} program. 
 
 \subsection{Effective methods}
 
@@ -299,7 +303,7 @@ single handedly deals with almost all
 quadratic algebraic operads we will introduce
 in the lectures, with only a few exceptions
 that the Ginzburg--Kapranov criterion can
-discard. In the way, we introduce filtration
+discard. Along the way, we introduce filtration
 methods that give the more general result that
 a filtered quadratic operad whose associated
 graded operad is Koszul is itself Koszul.

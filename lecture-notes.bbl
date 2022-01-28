@@ -39,6 +39,17 @@
          url={https://doi.org/10.1017/cbo9781107325913},
 }
 
+\bib{Bhaskara1988}{book}{
+      author={Bhaskara, K.~H.},
+      author={Viswanath, K.},
+       title={Poisson algebras and poisson manifolds},
+      series={Pitman Research Notes in Mathematics},
+   publisher={Longman Scientific \& Technical, Wiley},
+     address={New York},
+        date={1988},
+      volume={174},
+}
+
 \bib{bams/1183530111}{article}{
       author={Boardman, J.~M.},
       author={Vogt, R.~M.},
@@ -79,6 +90,20 @@
    publisher={Chapman and Hall/{CRC}},
         date={2016},
          url={https://doi.org/10.1201/b20061},
+}
+
+\bib{Chapoton2001}{article}{
+      author={Chapoton, F.},
+      author={Livernet, M.},
+       title={{Pre-Lie algebras and the rooted trees operad}},
+        date={200101},
+        ISSN={1073-7928},
+     journal={International Mathematics Research Notices},
+      volume={2001},
+      number={8},
+       pages={395\ndash 408},
+  eprint={https://academic.oup.com/imrn/article-pdf/2001/8/395/1862692/2001-8-395.pdf},
+         url={https://doi.org/10.1155/S1073792801000198},
 }
 
 \bib{Dotsenko2007}{article}{
@@ -124,6 +149,15 @@
          url={https://doi.org/10.2140/agt.2014.14.3185},
 }
 
+\bib{Calculator}{misc}{
+      author={Dotsenko, V.},
+      author={Heijltjes, W.},
+       title={Gröbner bases for operads},
+        date={2019},
+         url={http://irma.math.unistra.fr/~dotsenko/Operads.html},
+        note={Online; accessed 28-January-2022},
+}
+
 \bib{Dotsenko2010}{article}{
       author={Dotsenko, V.},
       author={Khoroshkin, A.},
@@ -135,9 +169,21 @@
          url={https://doi.org/10.1215/00127094-2010-026},
 }
 
+\bib{Dotsenko2020a}{article}{
+      author={Dotsenko, V.},
+      author={Markl, M.},
+      author={Remm, E.},
+       title={Non-koszulness of operads and positivity of poincaré series},
+        date={2020},
+     journal={Documenta Mathematica},
+      volume={25},
+       pages={309\ndash 328},
+         url={https://www.elibm.org/article/10012030},
+}
+
 \bib{DotsenkoTamaroff2020}{article}{
-      author={Dotsenko, Vladimir},
-      author={Tamaroff, Pedro},
+      author={Dotsenko, V.},
+      author={Tamaroff, P.},
        title={Endofunctors and poincaré–birkhoff–witt theorems},
         date={2020Feb},
         ISSN={1687-0247},
@@ -153,6 +199,31 @@
        title={Novikov operad is not koszul},
         date={2009},
       eprint={0902.3771},
+}
+
+\bib{Dzhumadildaev2011}{article}{
+      author={Dzhumadil'daev, A.~S.},
+       title={Codimension growth and non-koszulity of novikov operad},
+        date={2011Aug},
+        ISSN={1532-4125},
+     journal={Communications in Algebra},
+      volume={39},
+      number={8},
+       pages={2943–2952},
+         url={http://dx.doi.org/10.1080/00927870903386494},
+}
+
+\bib{Dzhumadildaev2002}{article}{
+      author={Dzhumadildaev, A.~S.},
+      author={Löfwall, C.},
+       title={{Trees, free right-symmetric algebras, free Novikov algebras and
+  identities}},
+        date={2002},
+     journal={Homology, Homotopy and Applications},
+      volume={4},
+      number={2},
+       pages={165 \ndash  190},
+         url={https://doi.org/},
 }
 
 \bib{Felix2001}{book}{
@@ -178,6 +249,18 @@
       number={1},
        pages={109\ndash 124},
          url={https://doi.org/10.4310/mrl.2003.v10.n1.a11},
+}
+
+\bib{Gerstenhaber1963}{article}{
+      author={Gerstenhaber, Murray},
+       title={The cohomology structure of an associative ring},
+        date={1963},
+        ISSN={0003486X},
+     journal={Annals of Mathematics},
+      volume={78},
+      number={2},
+       pages={267\ndash 288},
+         url={http://www.jstor.org/stable/1970343},
 }
 
 \bib{Getzler1998}{article}{
@@ -216,6 +299,19 @@
          url={https://doi.org/10.2140/gt.1999.3.103},
 }
 
+\bib{Hanlon1995}{article}{
+      author={Hanlon, P.},
+      author={Wachs, M.},
+       title={On lie k-algebras},
+        date={1995Jul},
+        ISSN={0001-8708},
+     journal={Advances in Mathematics},
+      volume={113},
+      number={2},
+       pages={206–236},
+         url={http://dx.doi.org/10.1006/aima.1995.1038},
+}
+
 \bib{Hinich1999}{article}{
       author={Hinich, V.},
        title={Homological algebra of homotopy algebras},
@@ -226,6 +322,18 @@
        pages={3291\ndash 3323},
       eprint={https://doi.org/10.1080/00927879708826055},
          url={https://doi.org/10.1080/00927879708826055},
+}
+
+\bib{Hinich2001}{article}{
+      author={Hinich, V.},
+       title={Dg coalgebras as formal stacks},
+        date={2001},
+        ISSN={0022-4049},
+     journal={Journal of Pure and Applied Algebra},
+      volume={162},
+      number={2},
+       pages={209\ndash 250},
+  url={https://www.sciencedirect.com/science/article/pii/S0022404900001213},
 }
 
 \bib{Hinich2003}{article}{
@@ -273,6 +381,7 @@
   R.~Montgomery},
        title={Breaking up the free lie algebra into {GL} irreps},
          how={MathOverflow},
+        date={2014},
          url={https://mathoverflow.net/q/187545},
         note={URL:https://mathoverflow.net/q/187545 (version: 2014-11-19)},
 }
@@ -336,6 +445,34 @@
          url={https://doi.org/10.1023/b:math.0000027508.00421.bf},
 }
 
+\bib{Koszul1985}{incollection}{
+      author={Koszul, J.-L.},
+       title={Crochet de {Schouten-Nijenhuis} et cohomologie},
+    language={fr},
+        date={1985},
+   booktitle={\'elie cartan et les math\'ematiques d'aujourd'hui - lyon, 25-29
+  juin 1984},
+      series={Ast\'erisque},
+   publisher={Soci\'et\'e math\'ematique de France},
+         url={http://www.numdam.org/item/AST_1985__S131__257_0/},
+      review={\MR{837203}},
+}
+
+\bib{LH03}{article}{
+      author={Lefèvre-Hasegawa, K.},
+       title={Sur les a-infini cat\'egories},
+        date={2003},
+      eprint={math/0310337},
+}
+
+\bib{Livernet1998}{article}{
+      author={Livernet, M.},
+      author={Loday, J.-L.},
+       title={The poisson operad as a limit of associative operads},
+        date={1998-03},
+       pages={Unpublished preprint},
+}
+
 \bib{LodayLeib}{article}{
       author={Loday, J.-L.},
        title={Une version non commutative des alg\`ebres de {Lie} : les
@@ -368,6 +505,28 @@
          url={https://doi.org/10.1007/978-3-642-30362-3},
 }
 
+\bib{Mackenzie1994}{article}{
+      author={Mackenzie, K. C.~H.},
+      author={Xu, P.},
+       title={Lie bialgebroids and poisson groupoids},
+        date={1994Feb},
+        ISSN={0012-7094},
+     journal={Duke Mathematical Journal},
+      volume={73},
+      number={2},
+         url={http://dx.doi.org/10.1215/S0012-7094-94-07318-3},
+}
+
+\bib{Manchon2011}{article}{
+      author={Manchon, Dominique},
+       title={A short survey on pre-lie algebras},
+        date={2011},
+     journal={Noncommutative Geometry and Physics: Renormalisation, Motives,
+  Index Theory},
+       pages={89–102},
+         url={http://dx.doi.org/10.4171/008-1/3},
+}
+
 \bib{MarklDistributive}{article}{
       author={Markl, M.},
        title={Distributive laws and {K}oszulness},
@@ -381,12 +540,34 @@
       review={\MR{1393517}},
 }
 
+\bib{Markl2006}{article}{
+      author={Markl, M.},
+      author={Remm, E.},
+       title={Algebras with one operation including poisson and other
+  lie-admissible algebras},
+        date={2006May},
+        ISSN={0021-8693},
+     journal={Journal of Algebra},
+      volume={299},
+      number={1},
+       pages={171–189},
+         url={http://dx.doi.org/10.1016/j.jalgebra.2005.09.018},
+}
+
 \bib{Markl2007}{article}{
       author={Markl, M.},
       author={Voronov, Alexander~A.},
        title={Propped up graph cohomology},
         date={2007},
       eprint={math/0307081},
+}
+
+\bib{Markl2011}{misc}{
+      author={Markl, Martin},
+      author={Remm, Elisabeth},
+       title={(non-)koszulness of operads for n-ary algebras, galgalim and
+  other curiosities},
+        date={2011},
 }
 
 \bib{May1972}{book}{
@@ -436,6 +617,18 @@
    publisher={Springer-Verlag, Berlin-New York},
         date={1967},
       review={\MR{0223432}},
+}
+
+\bib{Remm2010}{article}{
+      author={Remm, E},
+       title={On the non-koszulity of ternary partially associative operad},
+        date={2010},
+        ISSN={1736-6046},
+     journal={Proceedings of the Estonian Academy of Sciences},
+      volume={59},
+      number={4},
+       pages={355},
+         url={http://dx.doi.org/10.3176/proc.2010.4.15},
 }
 
 \bib{Sinha2010}{article}{
@@ -509,6 +702,19 @@
          url={https://doi.org/10.1023/b:math.0000017651.12703.a1},
 }
 
+\bib{Umirbaev2021}{article}{
+      author={Umirbaev, U.},
+      author={Zhelyabin, V.},
+       title={On the solvability of graded novikov algebras},
+        date={2021Jul},
+        ISSN={1793-6500},
+     journal={International Journal of Algebra and Computation},
+      volume={31},
+      number={07},
+       pages={1405–1418},
+         url={http://dx.doi.org/10.1142/S0218196721500491},
+}
+
 \bib{Vallette2004}{article}{
       author={Vallette, B.},
        title={Koszul duality for {PROPs}},
@@ -520,6 +726,30 @@
          url={https://doi.org/10.1016/j.crma.2004.04.004},
 }
 
+\bib{Vallette2007}{article}{
+      author={Vallette, B.},
+       title={Homology of generalized partition posets},
+        date={2007Feb},
+        ISSN={0022-4049},
+     journal={Journal of Pure and Applied Algebra},
+      volume={208},
+      number={2},
+       pages={699–725},
+         url={http://dx.doi.org/10.1016/j.jpaa.2006.03.012},
+}
+
+\bib{Vallette2008}{article}{
+      author={Vallette, B.},
+       title={Free monoid in monoidal abelian categories},
+        date={2008-03},
+        ISSN={1572-9095},
+     journal={Applied Categorical Structures},
+      volume={17},
+      number={1},
+       pages={43–61},
+         url={http://dx.doi.org/10.1007/s10485-008-9130-y},
+}
+
 \bib{Vallette2020}{article}{
       author={Vallette, B.},
        title={Homotopy theory of homotopy algebras},
@@ -529,6 +759,30 @@
       number={2},
        pages={683\ndash 738},
          url={https://doi.org/10.5802/aif.3322},
+}
+
+\bib{Vallette2020a}{article}{
+      author={Vallette, B.},
+      author={Manin, Yu.~I.},
+       title={Monoidal structures on the categories of quadratic data},
+        date={2020},
+     journal={Documenta Mathematica},
+      volume={25},
+       pages={1727\ndash 1786},
+         url={https://www.elibm.org/article/10012066},
+}
+
+\bib{Weinstein1998}{article}{
+      author={Weinstein, A.},
+       title={Poisson geometry},
+        date={1998},
+        ISSN={0926-2245},
+     journal={Differential Geometry and its Applications},
+      volume={9},
+      number={1},
+       pages={213\ndash 238},
+  url={https://www.sciencedirect.com/science/article/pii/S0926224598000229},
+        note={Symplectic Geometry},
 }
 
 \bib{Weiss1996}{article}{
@@ -544,7 +798,8 @@
 
 \bib{Weiss1999}{article}{
       author={Weiss, M.},
-       title={Embeddings from the point of view of immersion theory : Part i},
+       title={Embeddings from the point of view of immersion theory : Part
+  {I}},
         date={1999-05},
      journal={Geometry {\&} Topology},
       volume={3},

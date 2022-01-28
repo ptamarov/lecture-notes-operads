@@ -66,14 +66,17 @@
 \CompileMatrices
 \usepackage{tikz}
 \usepackage{xcolor}
-% Link colors and styles, change accordingly, these are the official colours of Trinity 
-\definecolor{trinityblue}{rgb}{0.05, 0.45,0.75}
-\definecolor{mpg-gruen}{rgb}{0.00, 0.428,0.404}
 
+
+% Colours
+\definecolor{trinityblue}{rgb}{0.05, 0.45,0.75}
 \definecolor{trinitygray}{rgb}{0.33, 0.34,0.35}
+\definecolor{mpg-gruen}{rgb}{0.00, 0.428,0.404}
+\definecolor{pagecolor}{rgb}{1, 1, 0.88}
+
 
 %% Tree macros %%
-
+%% Edge and vertex styles %%
 \tikzset{%
     inner/.style={%
     	circle,draw=black, fill=pagecolor, inner sep=1pt,minimum size=5pt
@@ -911,7 +914,6 @@ join=round] \draw (0,0) rectangle (1,1)
 \setlength\parindent{0 em}
 
 
-\definecolor{pagecolor}{rgb}{1, 1, 0.88}
 
 %{1.0, 0.98, 0.8}
 \raggedbottom 

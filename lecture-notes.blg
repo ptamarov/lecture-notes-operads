@@ -36,46 +36,44 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: bibliography.bib
-Warning--missing date in MO187545
-You've used 52 entries,
+You've used 74 entries,
             1497 wiz_defined-function locations,
-            826 strings with 11437 characters,
-and the built_in function-call counts, 39162 in all, are:
-= -- 1390
-> -- 3342
-< -- 33
-+ -- 413
-- -- 3161
-* -- 3741
-:= -- 7686
+            1007 strings with 15371 characters,
+and the built_in function-call counts, 57315 in all, are:
+= -- 2148
+> -- 4926
+< -- 49
++ -- 644
+- -- 4666
+* -- 5542
+:= -- 11391
 add.period$ -- 0
-call.type$ -- 52
-change.case$ -- 234
-chr.to.int$ -- 99
-cite$ -- 53
-duplicate$ -- 2713
-empty$ -- 1393
-format.name$ -- 154
-if$ -- 4196
+call.type$ -- 74
+change.case$ -- 336
+chr.to.int$ -- 147
+cite$ -- 74
+duplicate$ -- 3859
+empty$ -- 1977
+format.name$ -- 224
+if$ -- 6151
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 1315
-newline$ -- 548
-num.names$ -- 104
-pop$ -- 2545
+missing$ -- 1870
+newline$ -- 797
+num.names$ -- 148
+pop$ -- 3563
 preamble$ -- 1
-purify$ -- 181
+purify$ -- 260
 quote$ -- 0
-skip$ -- 695
+skip$ -- 1011
 stack$ -- 0
-substring$ -- 571
-swap$ -- 1924
-text.length$ -- 386
+substring$ -- 865
+swap$ -- 2769
+text.length$ -- 569
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 422
-warning$ -- 1
-while$ -- 542
+type$ -- 602
+warning$ -- 0
+while$ -- 792
 width$ -- 0
-write$ -- 1267
-(There was 1 warning)
+write$ -- 1860
