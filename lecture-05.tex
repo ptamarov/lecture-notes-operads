@@ -88,7 +88,10 @@ partitions of a finite order set that
 have length two. Although we will not study
 the resulting monoidal category here,
 we remark it gives rise to interesting
-monoids, usually known as shuffle algebras.
+monoids, usually known as shuffle algebras;
+see~\cite{Bremner2016}*{Chapter 4} and
+\cite{Mendez2010} for more on both
+shuffle and twisted associative algebras.
 
 \begin{definition}
 A shuffle operad is a monoid in the category of 
@@ -131,7 +134,7 @@ Then
 Moreover, for each finite set $I$,
 if $\{I\}$ and $I$ denote the corresponding
 partitions into one block and into singletons,
-we a fixed $1\in \PP(1)$ such that for
+we have a fixed unit $1\in \PP(1)$ such that for
 every $\nu\in\PP(I)$ we have
 \[ \gamma_{\{I\}}(1;\nu) = \nu , 
 \quad  \gamma_I(\nu ; 1,\ldots,1 ) = 
@@ -151,10 +154,10 @@ shuffling partitions $\pi$ of the form
  $i$. 
 \begin{definition}
 An ideal of a shuffle operad $\PP$ is a
-ns subcollection $\mathcal{I}$ such that
+subcollection $\mathcal{I}$ such that
 \[ \gamma_\pi(\nu_0;\nu_1,\ldots,\nu_r)\in 
 \mathcal{I}\] if at least one of $\nu_i$
-is in $\mathcal{I}$ for some $i\in [0,r]$.
+is in $\mathcal{I}$ for some $i\in \llbracket r\rrbracket$.
 \end{definition}
 
 As we will see later, ideals of shuffle operads
@@ -170,7 +173,7 @@ tree monomials are different.
 \subsection{Free shuffle operad}
 
 Let us now give an explicit description
-of the free shuffle operad on a ns
+of the free shuffle operad on a 
 collection. Since we have already defined
 the free symmetric and non-symmetric operad on
 a collection (of the appropriate kind), we
@@ -179,10 +182,10 @@ define it.
 
 \begin{definition}
 Let $\tau$ be a planar tree, which
-we draw on the plane with the counter-clockwise
+we draw on the plane with the clockwise
 orientation. Begin
 at the left side of root edge, and transverse the 
-``boundary'' of the tree in the counter-clockwise
+``boundary'' of the tree in the clockwise
 direction. This path will meet the vertices
 of $\tau$ in some order, and we call this
 total order the \emph{canonical planar order}

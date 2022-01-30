@@ -2,6 +2,15 @@
 \begin{bibdiv}
 \begin{biblist}
 
+\bib{Aguiar2010}{book}{
+      author={Aguiar, Marcelo},
+      author={Mahajan, Swapneel},
+       title={Monoidal functors, species and hopf algebras},
+   publisher={American Mathematical Society},
+        date={2010},
+         url={https://doi.org/10.1090/crmm/029},
+}
+
 \bib{Arone2007}{article}{
       author={Arone, G.},
       author={Lambrechts, P.},
@@ -90,6 +99,15 @@
    publisher={Chapman and Hall/{CRC}},
         date={2016},
          url={https://doi.org/10.1201/b20061},
+}
+
+\bib{Cartan1956}{book}{
+      author={Cartan, Henry},
+      author={Eilenberg, Samuel},
+       title={Homological algebra ({PMS}-19)},
+   publisher={Princeton University Press},
+        date={1956},
+         url={https://doi.org/10.1515/9781400883844},
 }
 
 \bib{Chapoton2001}{article}{
@@ -251,6 +269,15 @@
          url={https://doi.org/10.4310/mrl.2003.v10.n1.a11},
 }
 
+\bib{Gelfand2003}{book}{
+      author={Gelfand, Sergei~I.},
+      author={Manin, Yuri~I.},
+       title={Methods of homological algebra},
+   publisher={Springer Berlin Heidelberg},
+        date={2003},
+         url={https://doi.org/10.1007/978-3-662-12492-5},
+}
+
 \bib{Gerstenhaber1963}{article}{
       author={Gerstenhaber, Murray},
        title={The cohomology structure of an associative ring},
@@ -310,6 +337,15 @@
       number={2},
        pages={206–236},
          url={http://dx.doi.org/10.1006/aima.1995.1038},
+}
+
+\bib{Hilton1997}{book}{
+      author={Hilton, Peter~J.},
+      author={Stammbach, Urs},
+       title={A course in homological algebra},
+   publisher={Springer New York},
+        date={1997},
+         url={https://doi.org/10.1007/978-1-4419-8566-8},
 }
 
 \bib{Hinich1999}{article}{
@@ -412,6 +448,14 @@
    booktitle={Geometry and topology monographs},
    publisher={Mathematical Sciences Publishers},
          url={https://doi.org/10.2140/gtm.2008.13.229},
+}
+
+\bib{Kassel1995}{book}{
+      author={Kassel, Christian},
+       title={Quantum groups},
+   publisher={Springer New York},
+        date={1995},
+         url={https://doi.org/10.1007/978-1-4612-0783-2},
 }
 
 \bib{KellerKoszul2003}{article}{
@@ -576,6 +620,18 @@
    publisher={Springer Berlin Heidelberg},
         date={1972},
          url={https://doi.org/10.1007/bfb0067491},
+}
+
+\bib{Mendez2010}{article}{
+      author={M{\'{e}}ndez, Miguel~A.},
+       title={Koszul duality for monoids and the operad of enriched rooted
+  trees},
+        date={2010},
+     journal={Adv. Appl. Math.},
+      volume={44},
+      number={3},
+       pages={261\ndash 297},
+         url={https://doi.org/10.1016/j.aam.2009.05.003},
 }
 
 \bib{MO329}{misc}{
@@ -770,6 +826,14 @@
       volume={25},
        pages={1727\ndash 1786},
          url={https://www.elibm.org/article/10012066},
+}
+
+\bib{Weibel1994}{book}{
+      author={Weibel, Charles~A.},
+       title={An introduction to homological algebra},
+   publisher={Cambridge University Press},
+        date={1994},
+         url={https://doi.org/10.1017/cbo9781139644136},
 }
 
 \bib{Weinstein1998}{article}{

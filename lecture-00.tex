@@ -272,17 +272,36 @@ to this \textsf{Haskell} program.
 
 \subsection{Effective methods}
 
-In Lectures~\ref{lecture:methods1} and~\ref{lecture:methods2}, we give
-a few methods to prove that an operad is Koszul.
-We begin by considering quadratic monomial operads and showing
-they are Koszul, and follow up with the numerical criterion
-of Ginzburg--Kapranov to test if an operad is Koszul; we
+Checking whether an algebraic operad is
+Koszul is potentially a complicated task,
+and in Lectures~\ref{lecture:methods1} 
+and~\ref{lecture:methods2}, we give the reader
+a few methods to prove that an operad is Koszul,
+hoping to convince them that the use of shuffle
+operads and Gr\"obner basis theory is one of 
+the most effective and streamlined ways to 
+attack the problem. Naturally, not every
+Koszul shuffle operad admits a quadratic
+Gr\"obnber basis, so one should be judicious
+when using this method. We do not consider,
+for example, the partition poset criterion
+of Vallette~\cite{Vallette2007}, but encourage
+the reader to learn about it.
+
+We begin Lecture~\ref{lecture:methods1} 
+by considering quadratic monomial operads and 
+showing they are Koszul, and follow up with 
+the numerical criterion
+of Ginzburg--Kapranov~\cite{Ginzburg1994}
+to test if an operad is \emph{not} Koszul; we
 provide two examples where the criterion detects
-that an operad is not Koszul and use the \textsf{Haskell Operad
+that an operad is not Koszul and
+use the \textsf{Haskell Operad
 Calculator} to replicate the results of Dzhumadil'daev
 stating that the Novikov operad is not 
 Koszul~\cite{Dzhumadildaev2009}.
-Then, we consider the situation where one
+In Lecture~\ref{lecture:methods2}, 
+we consider the situation where one
 can explicitly compute the homology of the
 Koszul complex of an algebraic operad,
 as in the case of the associative operad.
@@ -295,8 +314,7 @@ in can be interpreted as computing a
 relative version of it, which is very useful
 for applications~\cite{DotsenkoTamaroff2020}. 
 After this, we explain how to show, in the
-spirit 
-Hoffbeck's original article~\cite{Hoffbeck2009},
+spirit Hoffbeck's original article~\cite{Hoffbeck2009},
 that a shuffle operad with a quadratic
 Gr\"obner basis is Koszul; this result
 single handedly deals with almost all 
@@ -405,7 +423,8 @@ associative algebras, Lie algebras, and others.
 
 
 \begin{question}
-If $(\mathcal{V},\otimes)$ is a monoidal category, we say a category $\mathcal{C}$ 
+If $(\mathcal{V},\otimes)$ is a monoidal category, 
+we say a category $\mathcal{C}$ 
 is $\mathcal V$-enriched if each hom-set 
 $\mathcal{C}(x,y)$ is an object of $\mathcal{V}$ and
 there is a composition law 
@@ -421,6 +440,8 @@ Expand on what this means. Find about Abelian
 categories, and ponder over the difference: an additive
 category is a category with structure, while an
 Abelian category is a category with additional properties.
+See~\cite{Kassel1995} for more on monoidal categories in
+general.
 \end{question}
 
 \begin{question}\label{ex:skeleton}

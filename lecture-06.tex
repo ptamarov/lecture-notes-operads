@@ -38,7 +38,7 @@ be a basis of our quotient object.
 
 An ordered monoid is a pair $(M,\prec)$ where $M$ is a monoid
 and $\prec$ is a total order on $M$ that satisfies the
-following three conditions:
+following two conditions:
 \begin{tenumerate}
 \item It is a well-order: every non-empty subset of $M$
 has a minimum. 
@@ -101,10 +101,10 @@ $X$ it itself well ordered: we can find the minimum
 by induction on $n$.
 \end{proof}
 
-We now recall Lecture~\ref{lecture:thebasics} the 
-definition
-of the \emph{word operad of a monoid $M$},
-which appeared recently in~\cite{Dotsenko2020}.
+We now recall from Lecture~\ref{lecture:thebasics} the 
+definition of the \emph{word operad of a monoid $M$},
+which appeared originally (and recently)
+in~\cite{Dotsenko2020}.
 
 
 \begin{definition}
@@ -253,7 +253,7 @@ details as an exercise; we proceed by induction on the
 total length of the path sequence of a tree monomial so that,
 for example, the path sequences appearing in Figure~\ref{fig:paths}
 have all length five. First, let us show that the path sequence
-determines the planar structure of our tree monomial uniquely:
+determines the planar structure of our tree monomial uniquely.
 
 If the length is zero, then the path sequence $\pi$
 is empty, and we are simply considering the trivial tree monomial.
@@ -455,5 +455,17 @@ Consider the ns collection $\XX$ with $\underline{\XX} = \XX(2)
 $\FF_\XX^\Sha(3)$ that have $x$ and $y$ (one at the top,
 the other at the bottom). Explore what leading terms
 you can obtain by choosing different induced orders
-on $\FF_\XX^\Sha$.
+on $\FF_\XX^\Sha$ on the following three tree
+polynomials:
+
+\begin{align*}
+\leftc{x}{y}{1}{2}{3} &\mathsymbol{1.5}{-}
+	\leftc{y}{x}{1}{3}{2} \mathsymbol{1.5}{-} \rightc{x}{y}{1}{2}{3}  \\
+\leftc{x}{y}{1}{3}{2} &\mathsymbol{1.5}{-}
+	\leftc{y}{x}{1}{2}{3} \mathsymbol{1.5}{+} \rightc{x}{y}{1}{2}{3}  \\
+	\rightc{y}{x}{1}{2}{3} &\mathsymbol{1.5}{-}
+	\leftc{y}{x}{1}{2}{3} \mathsymbol{1.5}{-}
+	\leftc{y}{x}{1}{3}{2} \mathsymbol{1.5}{.}
+\end{align*}
+
 \end{question}

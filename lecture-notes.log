@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  28 JAN 2022 14:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  30 JAN 2022 13:01
 entering extended mode
 **./lecture-notes.tex
 (lecture-notes.tex
@@ -2014,7 +2014,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 Overfull \hbox (4.4349pt too wide) in paragraph at lines 75--83
 []\T1/ptm/m/n/12 (-20) The study of natural operations on the Hochschild comple
-x of an associative algebra [[][]31[][]]
+x of an associative algebra [[][]35[][]]
  []
 
 [7
@@ -2091,16 +2091,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 12.0pt on input line 373.
+(Font)              scaled to size 12.0pt on input line 391.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microtype/mt-eus.
 cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 9.0pt on input line 373.
+(Font)              scaled to size 9.0pt on input line 391.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
-(Font)              scaled to size 7.0pt on input line 373.
+(Font)              scaled to size 7.0pt on input line 391.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2121,7 +2121,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
-29.
+50.
 
 (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -2143,11 +2143,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[16] [17
-
-
-
-]
+[16]
 \openout2 = `lecture-01.aux'.
 
  (lecture-01.tex
@@ -2162,10 +2158,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[18]
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 137.
+[17
 
+
+
+]
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
+nput line 142.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[18]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2176,7 +2185,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 Package hyperref Info: bookmark level for unknown variante defaults to 0 on inp
-ut line 225.
+ut line 230.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2222,7 +2231,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[24]
+[24])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2231,16 +2240,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[25])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[26] [27
+[25] [26
 
 
 
@@ -2256,7 +2256,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[28]
+[27]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2265,7 +2265,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[29]
+[28]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 154.
 
@@ -2277,7 +2277,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[30]
+[29]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2286,7 +2286,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[31])
+[30])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2295,7 +2295,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[32] [33
+[31] [32
 
 
 
@@ -2311,7 +2311,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[34]
+[33]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
 ine 122.
 
@@ -2323,7 +2323,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[35]
+[34]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2332,7 +2332,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[36]
+[35]
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
 (Font)              scaled to size 10.00012pt on input line 265.
 LaTeX Font Info:    Font shape `U/eus/m/n' will be
@@ -2348,7 +2348,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[37])
+[36])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2357,7 +2357,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[38] [39
+[37] [38
 
 
 
@@ -2373,7 +2373,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
+[39]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
 [40]
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 12.0pt on input line 133.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 9.0pt on input line 133.
+LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
+(Font)              scaled to size 7.0pt on input line 133.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
+input line 136.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2383,25 +2401,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [41]
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 9.0pt on input line 131.
-LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
-(Font)              scaled to size 7.0pt on input line 131.
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 134.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[42]
-Overfull \hbox (1.10588pt too wide) in paragraph at lines 239--245
+Overfull \hbox (1.10588pt too wide) in paragraph at lines 241--247
 []\T1/ptm/m/it/12 (-20) The commutative and Lie operads. \T1/ptm/m/n/12 (-20) W
 e have computed that if $\U/eus/m/n/12 X\OT1/ztmcm/m/n/12 (2)$ \T1/ptm/m/n/12 (
 -20) is the trivial representation
@@ -2415,7 +2415,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[43]
+[42]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2424,7 +2424,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[44])
+[43])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2433,7 +2433,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[45]
+[44]
 \openout2 = `lecture-05.aux'.
 
  (lecture-05.tex
@@ -2445,11 +2445,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[46
+[45
 
 
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[46]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2468,6 +2477,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [48]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 403.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2477,19 +2489,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [49]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 400.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[50]
-Overfull \hbox (3.66347pt too wide) in paragraph at lines 473--473
+Overfull \hbox (3.66347pt too wide) in paragraph at lines 476--476
 []\T1/ptm/m/n/12 (-20) Write down a presentation of the following as shuffle op
 erads: the commutative
  []
@@ -2503,7 +2503,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[51]
+[50]
 \openout2 = `lecture-06.aux'.
 
  (lecture-06.tex
@@ -2515,7 +2515,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[52
+[51
 
 
 
@@ -2536,10 +2536,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[53]
+[52]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 239.
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[53]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2566,7 +2575,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[56]
+[56])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2575,16 +2584,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[57])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[58] [59
+[57] [58
 
 
 
@@ -2592,6 +2592,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `lecture-07.aux'.
 
  (lecture-07.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[59]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2614,9 +2626,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [61]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.14003pt}.
@@ -2625,15 +2634,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [62]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[63]
 Overfull \hbox (0.87727pt too wide) in paragraph at lines 242--245
 \T1/ptm/m/n/12 (-20) coefficient of $\OML/ztmcm/m/it/12 f \OMS/ztmcm/m/n/12   [
 ]\U/msa/m/n/12 []\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 )$\T
@@ -2649,6 +2649,15 @@ LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
 (Font)              scaled to size 6.00012pt on input line 267.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 277.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[63]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2685,15 +2694,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [67]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[68]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 622.
 )
@@ -2705,7 +2705,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[69]
+[68]
 \openout2 = `lecture-08.aux'.
 
  (lecture-08.tex
@@ -2746,11 +2746,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[70
+[69
 
 
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[70]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2778,15 +2787,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [73]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[74]
 Overfull \hbox (0.50854pt too wide) in paragraph at lines 321--323
 [] $[] \OMS/ztmcm/m/n/12   []\OT1/ztmcm/m/n/12 ([]\OML/ztmcm/m/it/12 ; []\OT1/z
 tmcm/m/n/12 )$ 
@@ -2800,7 +2800,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[75]
+[74]
 Overfull \hbox (0.30962pt too wide) in paragraph at lines 358--358
 \T1/ptm/m/n/12 (-20) the Jacobi identity in the presentation of the operad $[][
 ]$ with respect to the \T1/cmtt/m/n/12 grapathpermlex
@@ -2814,7 +2814,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[76])
+[75])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[76]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2833,15 +2842,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [78]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[79]
 \openout2 = `lecture-09.aux'.
 
  (lecture-09.tex
@@ -2853,11 +2853,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[80
+[79
 
 
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[80]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2903,15 +2912,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [85]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[86]
 Overfull \hbox (6.17126pt too wide) in paragraph at lines 508--508
 []\T1/ptm/m/n/12 (-20) All the results in this section have corresponding dual 
 statements for conilpotent
@@ -2925,7 +2925,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[87])
+[86])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -2934,7 +2934,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[88] [89
+[87] [88
 
 
 
@@ -2950,7 +2950,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[90]
+[89]
 LaTeX Font Info:    Calculating math sizes for size <8.00006> on input line 113
 .
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.00006> not available
@@ -2972,6 +2972,15 @@ LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
 LaTeX Font Info:    Font shape `U/rsfso/m/n' will be
 (Font)              scaled to size 4.80008pt on input line 113.
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[90]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3008,15 +3017,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [94]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[95]
 Overfull \hbox (7.82368pt too wide) in paragraph at lines 443--456
 []\T1/ptm/m/n/12 (-20) The proof involves a computation, though the computation
  may get rather cumbersome,
@@ -3030,7 +3030,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[96]
+[95]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3039,7 +3039,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[97])
+[96])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3048,7 +3048,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[98] [99
+[97] [98
 
 
 
@@ -3056,6 +3056,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `lecture-11.aux'.
 
  (lecture-11.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[99]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3082,7 +3091,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[102]
+[102])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3091,7 +3100,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[103])
+[103]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3101,15 +3110,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [104]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[105]
 \openout2 = `lecture-12.aux'.
 
  (lecture-12.tex
@@ -3121,11 +3121,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[106
+[105
 
 
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[106]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3188,7 +3197,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[113]
+[113])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3197,16 +3206,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[114])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.14003pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.14003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
-
-[115]
+[114]
 \openout2 = `appendix.aux'.
 
  (appendix.tex
@@ -3218,7 +3218,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[116
+[115
 
 
 
@@ -3231,7 +3231,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[117])
+[116])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3240,7 +3240,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[118] (lecture-notes.tdo)
+[117] (lecture-notes.tdo)
 \tf@tdo=\write8
 \openout8 = `lecture-notes.tdo'.
 
@@ -3253,7 +3253,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[119
+[118
 
 
 ]
@@ -3262,15 +3262,7 @@ s/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 
-Package amsrefs Warning: Citation label for Hinich2001 is changing from `30' to
- `29' on input line 337.
-
-
-Package amsrefs Warning: Citation label for Hinich2003 is changing from `29' to
- `30' on input line 347.
-
-
-Package rkeyval Warning: Unknown key: \bib'how on input line 383.
+Package rkeyval Warning: Unknown key: \bib'how on input line 419.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3280,12 +3272,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[120]
+[119]
 
-Package rkeyval Warning: Unknown key: \bib'how on input line 584.
+Package rkeyval Warning: Unknown key: \bib'how on input line 640.
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 600--600
+Underfull \hbox (badness 1281) in paragraph at lines 656--656
 []\T1/ptm/m/n/10.00012 (+20) L. Positselski, \T1/ptm/m/it/10.00012 (+20) Two ki
 nds of derived categories, Koszul duality, and comodule-contramodule
  []
@@ -3298,7 +3290,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[121])
+[120])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3307,7 +3299,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[122] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
+[121] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
 (lecture-03.aux) (lecture-04.aux) (lecture-05.aux) (lecture-06.aux)
 (lecture-07.aux) (lecture-08.aux) (lecture-09.aux) (lecture-10.aux)
 (lecture-11.aux) (lecture-12.aux) (appendix.aux))
@@ -3326,11 +3318,11 @@ Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
 ### semi simple group (level 1) entered at line 493 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45009 strings out of 480634
- 875283 string characters out of 2896310
- 1417474 words of memory out of 3000000
- 60159 multiletter control sequences out of 15000+600000
- 597995 words of font info for 831 fonts, out of 8000000 for 9000
+ 45035 strings out of 480634
+ 875580 string characters out of 2896310
+ 1418701 words of memory out of 3000000
+ 60167 multiletter control sequences out of 15000+600000
+ 598287 words of font info for 834 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  108i,24n,106p,3239b,12839s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/d
@@ -3363,9 +3355,9 @@ Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Applic
 ation Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/p
 tamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/am
 sfonts/cyrillic/wncyr10.pfb>
-Output written on lecture-notes.pdf (122 pages, 901388 bytes).
+Output written on lecture-notes.pdf (121 pages, 910150 bytes).
 PDF statistics:
- 2032 PDF objects out of 2073 (max. 8388607)
- 820 named destinations out of 1000 (max. 500000)
+ 2058 PDF objects out of 2073 (max. 8388607)
+ 833 named destinations out of 1000 (max. 500000)
  197178 words of extra memory for PDF output out of 221844 (max. 10000000)
 
