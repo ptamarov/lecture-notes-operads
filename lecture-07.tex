@@ -191,7 +191,7 @@ it $\lead{f}$. We begin with a preparatory result.
 		
 \begin{proposition}\label{prop:repllead}
 Suppose that $T'$ is a divisor of $T$ and let $f\in \FF_\XX^\Sha(\ell')$.
-Then the leading term of the insertion $\repl{T'}{T}{f} = \square_{T'}^T(f)$
+Then the leading term of the insertion $\repl{T'}{T}{f} $
 is equal to $\repl{T'}{T}{\lead{f}}$.
 \end{proposition}
 
@@ -208,13 +208,13 @@ the statement of the proposition.
 \end{proof}
 
 Let $\mathcal{V}$ be a subset of the free shuffle operad on $\XX$. A
-tree monomial $T$ is reduced with respect to $\mathcal{V}$ if it is
+tree monomial $T$ is \emph{reduced with respect to $\mathcal{V}$} if it is
 not divisible by any of the leading terms of polynomials appearing in it.
-A polynomial is reduced with respect to $\mathcal V$ if it is a linear
+A polynomial is \emph{reduced with respect to $\mathcal V$} if it is a linear
 combination of tree monomials that are reduced. We say $\mathcal V$
-is self-reduced if each $v\in \mathcal V$ is reduced with respect to
+is \emph{self-reduced} if each $v\in \mathcal V$ is reduced with respect to
 $\mathcal V\smallsetminus v$, and that is is linearly self-reduced
-if no leading term of one element divides the leading term of 
+if no leading term of one element appears as the leading term of 
 another. 
 
 \begin{definition}[Reduction]\label{def:reduce}
@@ -272,7 +272,7 @@ division of $f'$ by $V$.
 \item If not, then $\lead{f}$ is $\mathcal V$-reduced, 
 so let $f'$ be the result of long division of $f-\lead{f}$ by $\mathcal V$, and return $\lead{f} + f'$.
 \end{tenumerate}
-The following is what this algorithm looks like in pseudo-code:
+Below we present the algorithm in pseudo-code.
 \begin{algorithm}
 \caption{Long division algorithm}\label{euclid}
 \textsc{Input:} A polynomial $f$ and a finite set $\mathcal V$
@@ -495,7 +495,7 @@ $f$ by $\mathcal G$, we see we obtain a non-trivial linear combination of reduce
 monomials belonging to $\mathcal I$, so that there is not a unique
 reduced representative for the zero coset.
 
-Finally, suppose that for some $f$, two different choices of order of reductions yield two different outputs. Then, then there exist a coset $f + I$ contains two different elements that are reduced with respect to $\GG$, hence reduced monomials are linearly dependent, a contradiction.
+Finally, suppose that for some $f$, two different choices of order of reductions yield two different outputs. Then, then there exist a coset $f + I$ which contains two different elements that are reduced with respect to $\GG$, hence reduced monomials are linearly dependent, a contradiction.
 \end{proof}
 
 \begin{theorem}
@@ -619,4 +619,4 @@ for commutative algebras?
 \end{question}
 \vfill
 
-\hacer{More exercises for Section 8} 
+ 
