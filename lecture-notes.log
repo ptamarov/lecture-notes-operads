@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  24 FEB 2022 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.11.17)  27 FEB 2022 12:02
 entering extended mode
 **./lecture-notes.tex
 (lecture-notes.tex
@@ -1952,7 +1952,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.5701> not available
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <6.5701> not available
 (Font)              size <7> substituted on input line 948.
 
-<logoMPG.png, id=282, 803.0pt x 436.63126pt>
+<logoMPG.png, id=286, 803.0pt x 436.63126pt>
 File: logoMPG.png Graphic file (type png)
 <use logoMPG.png>
 Package pdftex.def Info: logoMPG.png  used on input line 953.
@@ -3014,13 +3014,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
 [94]
-Overfull \hbox (7.82368pt too wide) in paragraph at lines 443--456
+Overfull \hbox (7.82368pt too wide) in paragraph at lines 443--458
 []\T1/ptm/m/n/12 (-20) The proof involves a computation, though the computation
  may get rather cumbersome,
  []
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 465.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3209,6 +3207,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `appendix.aux'.
 
  (appendix.tex
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 42.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3230,7 +3231,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[116])
+[116]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3239,7 +3240,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[117] (lecture-notes.tdo)
+[117])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.14003pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.14003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
+
+[118] (lecture-notes.tdo)
 \tf@tdo=\write8
 \openout8 = `lecture-notes.tdo'.
 
@@ -3252,7 +3262,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[118
+[119
 
 
 ]
@@ -3271,7 +3281,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[119]
+[120]
 
 Package rkeyval Warning: Unknown key: \bib'how on input line 640.
 
@@ -3289,7 +3299,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[120])
+[121])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.14003pt, for example:
@@ -3298,7 +3308,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.14003pt}.
 
-[121] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
+[122] (lecture-notes.aux (lecture-00.aux) (lecture-01.aux) (lecture-02.aux)
 (lecture-03.aux) (lecture-04.aux) (lecture-05.aux) (lecture-06.aux)
 (lecture-07.aux) (lecture-08.aux) (lecture-09.aux) (lecture-10.aux)
 (lecture-11.aux) (lecture-12.aux) (appendix.aux))
@@ -3310,62 +3320,53 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
-(rerunfilecheck)             Checksum: 513000A92C024A2E72BFE966C714C9DC;11744.
+(rerunfilecheck)             Checksum: 5556457DBC7D9B28D736C8CD6C21B976;11895.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 493 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45041 strings out of 480634
- 875698 string characters out of 2896310
- 1418701 words of memory out of 3000000
- 60171 multiletter control sequences out of 15000+600000
- 598287 words of font info for 834 fonts, out of 8000000 for 9000
+ 45040 strings out of 480634
+ 875555 string characters out of 2896310
+ 1419798 words of memory out of 3000000
+ 60162 multiletter control sequences out of 15000+600000
+ 598639 words of font info for 838 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  108i,24n,106p,3239b,12839s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.20} has been referenced bu
-t does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.12} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.19} has been referenced but does not
- exist, replaced by a fixed one
-
-{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/cm-super/cm
--super-t1.enc}{/Users/ptamarov/Library/Application Support/MiKTeX/texmfs/instal
-l/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Application Support/MiKT
-eX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/ptamarov/Li
-brary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></Users/ptamarov/Library/Application Su
-pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users/p
+{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/d
+vips/cm-super/cm-super-t1.enc}{/Users/ptamarov/Library/Application Support/MiKT
+eX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/ptamarov/Library/Applicat
+ion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></U
+sers/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/
+texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/ptamarov/Librar
+y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss
+12.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts
+/type1/public/amsfonts/cm/cmss8.pfb></Users/ptamarov/Library/Application Suppor
+t/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss9.pfb></Users/ptamar
+ov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/inst
+all/fonts/type1/public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Appli
+cation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10
+.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/te
+xmfs/install/fonts/type1/public/rsfs/rsfs10.pfb></Library/Application Support/M
+iKTeX/texmfs/install/fonts/type1/public/cm-super/sfss1200.pfb></Library/Applica
+tion Support/MiKTeX/texmfs/install/fonts/type1/public/cm-super/sftt1000.pfb></L
+ibrary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/cm-super/sf
+tt1200.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/f
+onts/type1/public/hoekwater/stmary10.pfb></Library/Application Support/MiKTeX/t
+exmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiK
+TeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Suppor
+t/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application 
+Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Applic
+ation Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/p
 tamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/am
-sfonts/cm/cmss8.pfb></Users/ptamarov/Library/Application Support/MiKTeX/texmfs/
-install/fonts/type1/public/amsfonts/cm/cmss9.pfb></Users/ptamarov/Library/Appli
-cation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</Users/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/
-public/amsfonts/euler/eusm10.pfb></Users/ptamarov/Library/Application Support/M
-iKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/pta
-marov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb></Library/Application Support/MiKTeX/texmfs/install/fon
-ts/type1/public/rsfs/rsfs10.pfb></Library/Application Support/MiKTeX/texmfs/ins
-tall/fonts/type1/public/cm-super/sfss1200.pfb></Library/Application Support/MiK
-TeX/texmfs/install/fonts/type1/public/cm-super/sftt1000.pfb></Library/Applicati
-on Support/MiKTeX/texmfs/install/fonts/type1/public/cm-super/sftt1200.pfb></Use
-rs/ptamarov/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/publi
-c/hoekwater/stmary10.pfb></Library/Application Support/MiKTeX/texmfs/install/fo
-nts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/insta
-ll/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/
-install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/t
-exmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/Mi
-KTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/ptamarov/Library/
-Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cyrillic/
-wncyr10.pfb>
-Output written on lecture-notes.pdf (121 pages, 910142 bytes).
+sfonts/cyrillic/wncyr10.pfb>
+Output written on lecture-notes.pdf (122 pages, 914046 bytes).
 PDF statistics:
- 2061 PDF objects out of 2073 (max. 8388607)
- 835 named destinations out of 1000 (max. 500000)
- 197178 words of extra memory for PDF output out of 221844 (max. 10000000)
+ 2070 PDF objects out of 2073 (max. 8388607)
+ 837 named destinations out of 1000 (max. 500000)
+ 197186 words of extra memory for PDF output out of 221844 (max. 10000000)
 

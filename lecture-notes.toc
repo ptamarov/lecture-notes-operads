@@ -57,15 +57,16 @@
 \contentsline {section}{\numberline {12}Methods to prove an operad is Koszul II}{105}{section.12}%
 \contentsline {subsection}{\numberline {12.1}Filtrations and rewriting}{105}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2}Distributive laws}{109}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Exercises}{114}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.3}Exercises}{113}{subsection.12.3}%
 \contentsline {section}{\numberline {A}Technical homological results}{115}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}Comparison theorem}{115}{subsection.A.1}%
 \contentsline {subsection}{\numberline {A.2}Big Koszul complexes are acylic}{115}{subsection.A.2}%
 \contentsline {subsection}{\numberline {A.3}Fundamental theorem}{115}{subsection.A.3}%
-\contentsline {section}{\numberline {B}Further topics}{115}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Quillen homology of operads}{115}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Algebras over operads}{116}{subsection.B.2}%
-\contentsline {subsection}{\numberline {B.3}Homotopy algebras}{116}{subsection.B.3}%
-\contentsline {section}{\numberline {C}Classical theory}{117}{appendix.C}%
-\contentsline {subsection}{\numberline {C.1}Non-commutative Gr\"obner bases}{117}{subsection.C.1}%
+\contentsline {section}{\numberline {B}Deformation theory}{115}{appendix.B}%
+\contentsline {section}{\numberline {C}Further topics}{115}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Quillen homology of operads}{115}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}Algebras over operads}{116}{subsection.C.2}%
+\contentsline {subsection}{\numberline {C.3}Homotopy algebras}{117}{subsection.C.3}%
+\contentsline {section}{\numberline {D}Classical theory}{118}{appendix.D}%
+\contentsline {subsection}{\numberline {D.1}Non-commutative Gr\"obner bases}{118}{subsection.D.1}%
 \contentsfinish 
