@@ -644,8 +644,23 @@ join=round] \draw (0,0) rectangle (1,1)
 \renewcommand{\theintrothm}{\Alph{introthm}}
  % Para teoremas en la introducción
 
-%%%%%%%% TODO NOTES %%%
+%%%%%%%% AUTHOR INFORMATION %%%
 
+\newcommand{\myauthor}[3]{
+\noindent
+\begin{minipage}[t]{.45\textwidth}
+\begin{flushright}
+\textsc{#1} \\
+{\footnotesize\texttt{#2}}
+\end{flushright} 
+\end{minipage}
+\qquad
+\begin{minipage}[t]{.45\textwidth}
+#3
+\end{minipage}
+}
+
+ 
 
 %% TODO NOTES! %%
 \usepackage{xargs}                      
@@ -878,8 +893,8 @@ join=round] \draw (0,0) rectangle (1,1)
 \newcommand{\Addresses}{{% additional braces for segregating \footnotesize
   \bigskip
   \footnotesize
-  \textsc{Office F310, Non-linear Algebra Group}, MPIMiS, Leipzig, Germany \par\nopagebreak
-  \textit{Addresses:} tamaroff@mis.mpg.de}
+  \textsc{Raum 1.325, Institut für Mathematik}, Humboldt Universität, Berlin, Germany \par\nopagebreak
+  \textit{Addresses:} tamarofp@berlin-hu.de}
 }
    
 \usepackage{titletoc}
@@ -921,7 +936,6 @@ join=round] \draw (0,0) rectangle (1,1)
 
 \title{\vspace{-5 em}\setstretch{0.85}{\textbf{Algebraic operads, Koszul duality and Gr\"obner bases: an introduction}}}
 \author{P. Tamaroff}
-\date{August 22 and 24}
 %\address{}
 %\email{ptamarov@gmail.com}
 \begin{document}
@@ -957,7 +971,7 @@ familiar with the theory.
 
 \vfill
 
- \texttt{Note! This is a draft. } \hfill	Leipzig, \today
+ \texttt{Note! This is a draft. } \hfill	Berlin, \today
 
 
 \afterpage{\blankpage}
@@ -971,8 +985,18 @@ Planck Institut f\"ur Mathematike in den Naturwissenschaften}.
 We acknowledge the excellent working
 conditions during the time the lecture series took place,
 which in particular allowed to produce these lecture notes. }
+\bigskip
+
+\begin{small}
+
+\myauthor{Pedro Tamaroff}{tamarofp@hu-berlin.de}{
+\textsc{Institut für Mathematik}, \\ 
+Johann von Neumann-Haus, \\
+Humboldt-Universität zu Berlin, \\
+Rudower Chaussee 25, \\
+12489 Berlin, Deutschland }
+\end{small} \afterpage{\blankpage}
 \vspace*{\fill} 
- \afterpage{\blankpage}
 
 \newpage
 
