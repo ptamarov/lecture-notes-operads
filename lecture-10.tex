@@ -168,7 +168,7 @@ the star product $-\star -$ becomes a pre-Lie algebra,
  on $\hom_\Sigma(\CC,\PP)$. As in any dg Lie algebra,
  the degree $-1$ elements satisfying a particular equation
  play an important role and, for historical reasons,
-  we give them a name here that 
+  we give them a name here 
  different from the usual ``Maurer--Cartan element'':
  
 \begin{definition}
@@ -191,8 +191,8 @@ coaugmented conilpotent cooperads $\CC$, which we call
 the cobar construction and write $\Omega(\CC)$. These
 two functors fit into a diagram
 \[
-\B{-} : \mathsf{Op} \adjoint
-   \mathsf{Coop}^c  : \Omega(-)
+ \Omega(-)  : \mathsf{Coop}^c   \adjoint
+  \mathsf{Op} :\B{-}
 \]
 from the category of augmented operads (which we may allow to be
 dg, see Exercise~\ref{ex:dgbar}) to the category of
@@ -202,7 +202,8 @@ duality between operads and conilpotent cooperads.
 
 \begin{theorem}\label{thm:adjunction}
 The bar and cobar functors form an adjoint pair
-$\B{-} : \mathsf{Op} \adjoint \mathsf{Coop}^c  : \Omega(-)$.
+$ \Omega(-)  : \mathsf{Coop}^c   \adjoint
+  \mathsf{Op} :\B{-}$.
 More precisely, 
 for every operad $\PP$ and every conilpotent cooperad
 $\CC$, the following are in natural bijection:
@@ -326,7 +327,7 @@ such that the following diagram commutes:
 \begin{tikzcd}[row sep = large, column sep = large]
 \MM\circ \PP \arrow[r,"\rho"]
 	\arrow[d,"f\circ 1",swap] & \MM \arrow[d,"f"]\\
-\MM'\circ \PP \arrow[r,"\rho",swap] & \MM'
+\MM'\circ \PP \arrow[r,"\rho'",swap] & \MM'
 \end{tikzcd}
 \]
 Finally, a free right $\PP$-module is any module that is isomorphic
@@ -415,7 +416,7 @@ $d_\tau^r : \CC\circ \PP \longrightarrow \CC\circ \PP$
 extending the map above. It is given by the following composition:
 \[
 \begin{tikzcd}[column sep = large]
-{} & (	\CC\circ_{(1)} \CC )\circ\PP \arrow[r,"(1\circ_{(1)}\alpha)\circ 1"] 
+{} & (	\CC\circ_{(1)} \CC )\circ\PP \arrow[r,"(1\circ_{(1)}\tau)\circ 1"] 
 	& (	\CC\circ_{(1)} \PP )\circ
 	\PP  \arrow[dr,"\cong"]\\ 
 \CC\circ \PP \arrow[ur,"\Delta_{(1)}\circ 1"]\arrow[dr,"d_\tau^r",swap] & {} & {} & \CC\circ (\PP;\PP\circ\PP)\arrow[dl,"1\circ(1;\gamma)"]\\ 
@@ -432,11 +433,11 @@ The derivation $\partial_\tau = d_\CC\circ 1  + 1\circ' d_\PP + d_\tau^r$
 of $\CC\circ \PP$
 is such that $\partial_\tau^2 = d_{\partial(\tau) + \tau\star\tau}^r$. In 
 particular, it squares to zero if and only if $\tau$ is a twisting
-morphisms. Similarly, the derivation  $\partial_\tau = d_\PP\circ 1  + 1\circ' 
+morphism. Similarly, the derivation  $\partial_\tau = d_\PP\circ 1  + 1\circ' 
 d_\CC + d_\tau^l$ of $\PP\circ \CC$ is such that 
 $\partial_\tau^2 = d_{\partial(\tau) + \tau\star\tau}^l$,
 so that it squares to zero if and only if $\tau$ is a twisting
-morphisms.
+morphism.
 \end{proposition}
 
 \begin{proof}

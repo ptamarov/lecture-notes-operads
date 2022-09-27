@@ -12,20 +12,21 @@ Operads and their kin are gadgets modeled after
 combinatorial graph-like objects. Operads themselves are modeled after
 rooted trees, so it is a good idea to have a concrete definition of 
 what a rooted tree is. We will also consider planar rooted trees,
-and trees with certain decorations, so it is a good idea to digest
+and trees with certain decorations, so it is a also good idea to digest
 the definitions carefully to later embellish them.
 
-A rooted tree $\tau$ is the datum of a finite set $V(\tau)$
+A \emph{rooted tree} $\tau$ is the datum of a finite set $V(\tau)$
 of vertices along with a partition $V(\tau) = 
 \mathrm{Int}(\tau)\sqcup L(\tau) \cup R(\tau)$,
-where the first block consists of the \emph{interior} vertices, the second 
+where the first block consists of the \emph{internal} vertices, the second 
 of the leaves, and the third $R(\tau)$ is
-a singleton, called the root of $\tau$. We also require there is 
+a singleton, called the root of $\tau$. This includes the datum of
 a function $p :V(\tau)\smallsetminus R(\tau) \longrightarrow V(\tau)$,
 called the \emph{parent function of $\tau$},
 describing the edges of $\tau$, 
 with the following properties: call a vertex $v\in V(\tau)$ a child 
 of $w\in V(\tau)$ if $v\in p^{-1}(w)$. Then:
+
 \begin{tenumerate}
 \item The root $r\in R(\tau)$ has exactly one child.
 \item The leaves of $\tau$ have no children.
@@ -33,27 +34,28 @@ of $w\in V(\tau)$ if $v\in p^{-1}(w)$. Then:
 $(v_0,v_1,\ldots,v_k)$ such that $p(v_{i-1}) = v_{i}$ for $i\in \underline{k}$
 with $v_0 = v$ and $v_k = r$.
 \end{tenumerate}
+
 We will call a non-leaf vertex that has no children a \emph{stump}
 (or an endpoint, or a cherry-top).
-A tree is reduced if has no stumps. We say it is 
+A tree is \emph{reduced} if has no stumps. We say it is 
 series-reduced if all of its non-root and
 non-leaf vertices have at least two children. We will also call
 the root the (unique) \emph{output vertex} of $\tau$, and the leaves
 the \emph{input vertices} of $\tau$. 
 
-A planar rooted tree is a rooted tree $\tau$
-along with a linear order in each of the fibres
+A \emph{planar rooted tree} is a rooted tree $\tau$
+along with a linear order on each of the fibres
 of the parent function $p$ of $\tau$. In short,
 the children of each vertex are linearly ordered,
 so we are effectively considering a drawing of
 $\tau$ in the plane, where the clockwise
 orientation gives us the order at each
-vertex. 
+vertex (See Definition~\ref{def:canonicalplanarorder}). 
 
 Two rooted trees $\tau$ and $\tau'$ are isomorphic
 if there exists a bijection $f : V(\tau) \longrightarrow 
-V(\tau')$ that preserves the root, the input vertices and the
-interior vertices, so that $p'\circ f = p$ where we
+V(\tau')$ that preserves their roots $r$ and $r'$, respectively, the input vertices and the
+interior vertices, so that $p'\circ f = p$. We
 also write $f$ for the induced bijection $f : V(\tau)\smallsetminus r \longrightarrow 
 V(\tau')\smallsetminus r'$. Two planar rooted trees
 are isomorphic if in addition $f$ respects the linear order
@@ -71,15 +73,16 @@ ordered by their natural order, these two planar rooted trees
 are no longer isomorphic. 
 
 \begin{definition}
-For a finite set $I$, an $I$-labeled tree $T$
+For a finite set $I$, an $I$-labeled tree $T$ (or just
+$I$-tree)
 is a pair $(\tau,f)$ where $\tau$ is a 
 reduced rooted tree, along with
 a bijection $f : I \longrightarrow L(\tau)$.
-Two $I$-labeled trees $T$ an $T'$ are isomorphic
+Two $I$-trees $T$ and $T'$ are isomorphic
 if there exists a pair $(g,\sigma)$ where
 $g$ is an isomorphism between $\tau$ and $\tau'$
 and $\sigma$ is an automorphism of $I$ such that
-$g\mid_{L(\tau)}\circ f = \sigma\circ f'$. 
+$g\mid_{L(\tau)}\circ f = f'\circ\sigma$. 
 \end{definition}
 
 Suppose that $(\tau,f)$ is an $I$-tree and that
@@ -87,25 +90,25 @@ $(\tau',f')$ is a $J$-tree, and that $i\in I$. We define
 $K=I\cup_i J = I\sqcup J \smallsetminus i$ and the
 $K$-tree $\tau\circ_i \tau'$ as follows:
 \begin{tenumerate}
-\item Its leaves are $L(\tau\circ_i \tau') = L(\tau)\sqcup L(\tau')\smallsetminus f^{-1}(i)$.
+\item Its leaves are $L(\tau\circ_i \tau') = L(\tau)\sqcup L(\tau')\smallsetminus f(i)$.
 \item Its internal vertices are $V(\tau)\sqcup V(\tau')$, with
 root $r$. 
 \item The parent function $q$ is defined by declaring that:
 	\begin{titemize} 
 	\item $q$ coincides with $p$ on $V(\tau)$, 
-	\item $q(w) = p(f^{-1}(i))$ if
-$w$ is the unique children of the root of $\tau'$, 
+	\item $q(w) = p(f(i))$ if
+$w$ is the unique child of the root of $\tau'$, 
 	\item  $q$
 coincides with $p'$ on $V(\tau')\smallsetminus \{r',w\}$.
 \end{titemize}
-\item The leaf labeling is the unique bijection $L(\tau\circ_i \tau') \longrightarrow I\circ_i J$ extending $f$ and $f'$.
+\item The leaf labeling is the unique bijection $L(\tau\circ_i \tau') \longrightarrow I\cup_i J$ extending $f$ and $f'$.
 \end{tenumerate} 
 
 \subsection{Tree monomials}
 Let us now consider an 
 (unbiased) reduced symmetric sequence $\XX$ which
-we will think of as an \emph{alphabet}. A tree monomial in the
-alphabet $\XX$ 
+we will think of as an \emph{alphabet}. A \emph{tree monomial in the
+alphabet $\XX$} (or briefly, an $\XX$-tree)
 is a pair $(\tau,x)$ where $\tau$ is a reduced rooted
 tree and $x : \mathrm{Int}(\tau) \longrightarrow \XX$ is a map
 with the property that $x(v) \in \XX(p^{-1}(v))$. Observe that
@@ -113,8 +116,8 @@ reduced sequences and reduced trees correspond to each other, in the
 sense that with this definition we can only decorate a stump
 of $\tau$ with an element of $\XX(\varnothing)$. 
 
-An $I$-labeled
-$\XX$-tree $T$ is a triple $(\tau,x,f)$ where $(\tau,f)$ is $I$-labeled
+An \emph{$I$-labeled
+$\XX$-tree $T$} is a triple $(\tau,x,f)$ where $(\tau,f)$ is $I$-labeled
 and $(\tau,x)$ is an $\XX$-tree. We will say that $(\tau,x,f)$
 is a (symmetric) tree monomial if $\XX$ is symmetric. If it
 is just a collection, we will say that $(\tau,x,f)$ is a
@@ -166,7 +169,7 @@ of symmetric tree monomials:
 \end{example}
 
 
-Let us now define for each $n\geqslant 1$ the
+Let us now define for each finite set $I$ the
 space $\FF_\XX(I)$ as the span of all tree monomials
 $T = (\tau,f,x)$ on $\XX$ with leaves labeled by $I$,
 modulo the subspace generated by all elements of the form
@@ -174,7 +177,7 @@ modulo the subspace generated by all elements of the form
 where $\sigma$ ranges through $\Aut(p^{-1}(v))$ as
 $v$ ranges through the vertices of $\tau$. In case
 all children of $v$ are leaves, this is saying that
-the tree where $x_v$ is replace by $\sigma(x_v)$
+the tree where $x_v$ is replaced by $\sigma(x_v)$
 is equal to the tree where the leaves of $T$ that are
 children of $v$ are relabeled according to $\sigma$.
 We also require that tree decorations behave like
@@ -194,7 +197,7 @@ of collections. In general, it admits a left
 adjoint, which is the free operad functor.
 
 \begin{definition}
-The \emph{free symmetric operad} on $\XX$ is the
+The \emph{free symmetric operad} on a collection $\XX$ is the
 symmetric sequence $\FF_\XX$ along with the composition
 law obtained by grafting of trees. More precisely,
 suppose that $T\in \FF_\XX(I)$ and that $T'\in\FF_\XX(J)$,
@@ -222,7 +225,7 @@ the monad of rooted trees,
 which gives us the definition of an operad alluded to 
 in Lecture~\ref{lecture:theintro}. The
 advantage of this `monadic approach' is its 
-flexibility, which allow us to define other
+flexibility, which allows us to define other
 operad like structures, like the ones 
 mentioned in the Lecture~\ref{lecture:theintro}.
 In this direction, a curious reader 
@@ -231,9 +234,9 @@ equivalent definition; see also Exercise~\ref{ex:colim}.
 
 \begin{definition}
 The free operad generated by a symmetric
-collection $X$ is defined inductively by
+collection $\XX$ is defined inductively by
 letting  $\FF_{0,X}=\kk$ be spanned
-by the `twig' (tree with no vertices and one edge)
+by the `twig' (tree with no vertices internal vertices and one edge)
 in arity zero and by
 \[ \FF_{n+1,\XX} = \kk\oplus (\XX\circ  \FF_{n,\XX} ) \]
 for $n\geqslant 0$. There are inclusions
@@ -242,7 +245,7 @@ for $n\geqslant 0$. There are inclusions
   $i_0 : \kk \longrightarrow \kk\oplus\XX$
  the inclusion in the first coordinate and
  $i_{n+1} = 1\oplus (1\circ i_n)$ for $n\geqslant 0$.
-These are all split innjections, and
+These are all split injections, and
 we define $\FF_\XX = \varinjlim_n \FF_{n,\XX}$.
 \end{definition}
 

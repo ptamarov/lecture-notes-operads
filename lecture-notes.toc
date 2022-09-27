@@ -11,8 +11,8 @@
 \contentsline {section}{\numberline {2}Free operads and presentations}{27}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Trees}{27}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Tree monomials}{28}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The free operad}{29}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Exercises}{30}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.3}The free operad}{30}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Exercises}{31}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Quadratic operads}{33}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Weight gradings and presentations}{33}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Quadratic operads}{34}{subsection.3.2}%

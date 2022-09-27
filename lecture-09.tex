@@ -5,14 +5,14 @@ of what it means for an operad to be Koszul.
 
 \subsection{The bar construction}
 
-We have defines a functor on quadratic data $(\XX,\RR) \longmapsto 
+We have defined a functor on quadratic data $(\XX,\RR) \longmapsto 
 (\XX^\vee,\RR^\perp)$ that gives us the Koszul dual
 functor $\PP \longmapsto \PP^!$ on quadratic operads.
 Let us explain how one can ``promote'' this construction
-to a functor define on all operads, and how our more
+to a functor defined on all operads, and how our more
 down-to-earth construction can be recovered from
 this. Let us begin with a useful notion, which is
-to an operad what an coassociative coalgebra is to 
+to an operad what a coassociative coalgebra is to 
 an associative algebra.
 
 \begin{definition}
@@ -21,7 +21,7 @@ $\CC$ endowed with maps of collections
 $\Delta : \CC \longrightarrow \CC\circ_\Sigma\CC$
 and $\varepsilon: \CC\longrightarrow \kk$
 so that $\Delta$ is coassociative and counital
-for $\varepsilon$. A cooperad $\CC$ is augmented
+for $\varepsilon$. A cooperad $\CC$ is coaugmented
 if there exists $\eta: \kk\longrightarrow \CC$
 such that $\varepsilon\eta = 1_\kk$. In this case,
 we write $\overline\CC$ for the cokernel of $\eta$.
@@ -40,10 +40,10 @@ equivariant decomposition maps of signature
 \Delta : \CC(n) \longrightarrow
 \bigoplus_{n_1+\cdots+n_k = n} \CC(k)\otimes \CC(n_1)\otimes\cdots \CC(n_k)
 \]
-that are coassociative. One can check (Exercise~\ref{ex:takeduals})
+that are coassociative and counital. One can check (Exercise~\ref{ex:takeduals})
 that if $\CC$ is a cooperad then its arity-wise dual $\CC^*$ 
 is an operad, and that if $\PP$ is an arity-wise finite dimensional
-reduced operad then its arit-wise dual $\PP^*$ is a cooperad. 
+reduced operad then its arity-wise dual $\PP^*$ is a cooperad. 
 
 \begin{definition}
 The reduced and half-reduced decomposition maps of a cooperad $\CC$ are the
@@ -129,22 +129,22 @@ Let $\XX$ be a symmetric collection. The free operad $\FF_\XX$
 on $\XX$ satisfies the following universal property: for every
 map of symmetric sequences $f: \XX\longrightarrow \PP$ where $\PP$
 is an operad, there exists a unique derivation $F: \FF_\XX
-\longrightarrow \PP$ which coincides with $f$ on $\FF_X^{(1)}=\XX$.
+\longrightarrow \PP$ which coincides with $f$ on $\FF_\XX^{(1)}=\XX$.
 
 Dually, the free conilpotent cooperad $\FF_\XX^c$ satisfies the following
 universal property: for every
-map of symmetric sequences $f: \CC\longrightarrow \XX$ where $\XX$
-is an conilpotent cooperad, there exists a unique coderivation $F: \CC
+map of symmetric sequences $f: \CC\longrightarrow \XX$ where $\CC$
+is a conilpotent cooperad, there exists a unique coderivation $F: \CC
 \longrightarrow \FF_\XX^c$ which coincides with $f$ after
-projecting onto $\FF_X^{c,(1)}=\XX$.
+projecting onto $\FF_\XX^{c,(1)}=\XX$.
 \end{lemma}
 
 We use it to define one of the most important functors we will 
 consider in this section, the \emph{bar construction}. To do this,
 let us begin with an augmented operad $\PP$, and let us form
-the free conilpotent cooperad $\FF_{s\overline{\PP}}^c$ on the
+the cofree conilpotent cooperad $\FF_{s\overline{\PP}}^c$ on the
 na\"ive suspension $s\overline{\PP}$ of its augmentation ideal.
-This is for the moment a homologically graded cooperad, which we will
+This is for the moment a homologically graded conilpotent cooperad, which we will
 make into a dg conilpotent cooperad as follows: the composition
 map of $\PP$ provides us with a map of symmetric collections
 \[
@@ -312,7 +312,7 @@ grading.
   \node (W) at (-4,10) {\scriptsize{weight}};
  \end{tikzpicture}	
 \]
-\caption{The bar construction of a weight graded operad $\PP$. Horizontal arrows
+\caption{The bar construction of an augmented weight graded operad $\PP$. Horizontal arrows
 are differentials, leftmost arrows are inclusions. Note
 that the diagonals where $s+w$ is constant return the
 usual homological degree $d$. }
@@ -322,18 +322,18 @@ usual homological degree $d$. }
 commutative operad, in which case $\XX = s\overline{\PP}$ is a symmetric
 sequence such that $\XX(0) = \XX(1) = 0$ and for which $\XX(n)$ is
 one dimensional for each $n\geqslant 1$ and concentrated in
-degree zero and weight $n-1$. It follows that $\B{\Com}$ has basis consisting
+degree one and weight $n-1$. It follows that $\B{\Com}$ has basis consisting
 of shuffle trees where the internal vertices have
 all possible arities greater or equal to $2$, and in this case the
 degree of a bar tree monomial is equal to the number of 
-its internal vertices. Let us write $S_m$ for the element in
+its internal vertices. Let us write $\Gamma_m$ for the element in
 $\B{\Com}$ of degree $1$ and weight $m-1$ corresponding to the 
 $m$-fold product in $\Com$.
 
 If we write $T_i(A,B)$ for the shuffle tree in
 Figure~\ref{fig:twolevel}, where $A = \{ i,j_1,\ldots,j_m\}$
 and $B = \{1,\ldots,i-1,k_1,\ldots,k_n\}$, we see that
-$\partial T_i(A,B) = (-1)^{i-1} S_m$ where $m\geqslant 3$,
+$\partial T_i(A,B) = (-1)^{i-1} \Gamma_m$ where $m\geqslant 3$,
 so all of these elements are zero in homology. For example, if
 we look at $\B{\Com}(3)$, we notice this complex has total 
 dimension four, with the usual three shuffle tree monomials
@@ -345,7 +345,7 @@ dimension four, with the usual three shuffle tree monomials
 		 	\quad T_2(1,23)
 			\]
 with three leaves in degree two (and weight two) and
-one single tree monomial (the corolla $S_3$) in degree one.
+one single tree monomial (the corolla $\Gamma_3$) in degree one.
 Moreover, the computation above shows that generators for
 the homology are
 \[ 
@@ -380,7 +380,7 @@ $\XX$ (in weight one) subject to some quadratic relations $\RR$ in
 $\FF_\XX^{(2)}$. Then, we see that elements of $\B{\PP}^0$ 
 (that is, those that have degree equal to weight) must
 be precisely those of in $\FF^c_{s\XX}$. Note the difference!
-While all of $\B{\PP}$ is given by a free cooperad on $\PP$,
+While all of $\B{\PP}$ is given by a cofree cooperad on $\PP$,
 the syzygy degree zero part only retains the elements 
 that generate $\PP$. 
 
@@ -500,8 +500,8 @@ concentrated in syzygy degree zero.
 \subsection{Exercises}	
 
 \begin{question}
-All the results in this section have corresponding
-dual statements for conilpotent cooperads. State and
+All the results in this section have a corresponding
+dual statement for conilpotent cooperads. State and
 prove them. In particular, define for each weight graded
 cooperad $\CC$ its cobar construction $\Omega(\CC)$,
 and describe the syzygy grading and the differential.
@@ -524,7 +524,7 @@ map of cooperads $\CC \longrightarrow \FF_\XX^c$.
 \begin{question}\label{ex:takeduals}
 Show that if $\CC$ is a cooperad then its arity-wise dual $\CC^*$ 
 is an operad, and that if $\PP$ is an arity-wise finite dimensional
-reduced operad then its arit-wise dual $\PP^*$ is a cooperad. 
+reduced operad then its arity-wise dual $\PP^*$ is a cooperad. 
 Make sure to explain why the second set of hypotheses are needed.
 \end{question}
 
@@ -543,24 +543,24 @@ cocycles giving a basis of it.
 
 \begin{question}\label{ex:zerosquare}
 Show that the differential $\partial$ of the bar construction of
-an operad $\PP$ squares to zero if and only if the composition
+an augmented operad $\PP$ squares to zero if and only if the composition
 map of $\PP$ is associative. 
 \end{question}
 
-\begin{question}\label{ex:dgbar} Suppose that $\PP$ is a dg
+\begin{question}\label{ex:dgbar} Suppose that $\PP$ is an augmented dg
 operad, and let us write $\partial_1$ for the differential of its
 bar construction (considered as a non-dg operad). Recall
-that $s\PP$ gets the differential $-s d_\PP s^{-1}: 
+that $s\overline{\PP}$ gets the differential $-s d_\PP s^{-1}: 
 s\overline{\PP}\longrightarrow s\overline{\PP}$.
 
 \begin{tenumerate}
 \item Show that in this case the differential
-of $s\PP$ induces a differential $\partial_2$ on $\FF_{s\PP}$. 
+of $s\overline{\PP}$ induces a differential $\partial_2$ on $\FF_{s\PP}$. 
 \item Show that $\partial_1\partial_2 + \partial_2\partial_1=0$
 is equivalent to $d_\PP$ being a derivation for $\gamma_\PP$.
 \item
 Conclude that $\partial = \partial_1 + \partial_2$ is a differential
-on $\FF_{s\PP}$. 
+on $\FF_{s\overline{\PP}}$. 
 \end{tenumerate}
 We call the resulting cooperad the bar construction of
 $\PP$ and write it $\B{\PP}$.

@@ -1,2 +1,9 @@
 
 filtration-argument-fixc.tex
+*.log
+*.pdf
+*.gz
+*.log
+*.aux
+*.gz
+*.pdf

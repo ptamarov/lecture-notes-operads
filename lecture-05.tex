@@ -23,7 +23,7 @@ cardinality).
 
 \begin{definition}
 An ordered partition $\pi$ of length $n$
-of a finite totally order set
+of a finite totally order 
 set is called \emph{shuffling} if
 $\min \pi_i < \min \pi_{i+1}$ for
 each $i\in \underline{n-1}$. Equivalently, 
@@ -84,7 +84,7 @@ ns composition product. \qed
 
 Note that we can also define a shuffle
 Cauchy product, by looking at shuffling
-partitions of a finite order set that
+partitions of a finite ordered set that
 have length two. Although we will not study
 the resulting monoidal category here,
 we remark it gives rise to interesting
@@ -94,7 +94,7 @@ see~\cite{Bremner2016}*{Chapter 4} and
 shuffle and twisted associative algebras.
 
 \begin{definition}
-A shuffle operad is a monoid in the category of 
+A \emph{shuffle operad} is a monoid in the category of 
 ns collections with the shuffle composition 
 product. 
 \end{definition}
@@ -180,11 +180,11 @@ a collection (of the appropriate kind), we
 already have almost all the language necessary to 
 define it.
 
-\begin{definition}
+\begin{definition}\label{def:canonicalplanarorder}
 Let $\tau$ be a planar tree, which
 we draw on the plane with the clockwise
 orientation. Begin
-at the left side of root edge, and transverse the 
+at the left side of root edge, and traverse the 
 ``boundary'' of the tree in the clockwise
 direction. This path will meet the vertices
 of $\tau$ in some order, and we call this
@@ -199,7 +199,7 @@ left-to-right planar order).
 
 Now let $\XX$ be a ns collection and let
 $T$ be a planar tree monomial with variables
-in $\XX$, and let us pick a bijective labelling
+in $\XX$, and let us pick a bijective labeling
 $\mathsf{n} : L(\tau) 
 \longrightarrow \underline{n}$ of the leaves of
 $\tau$. This induces a
@@ -215,7 +215,7 @@ is shuffling if the induced order on the
 children of each of its vertices coincides with
 the canonical planar order. A pair
 $(T,\mathsf{n})$ where $\mathsf{n}$
-is a shuffling leaf labelling is called
+is a shuffling leaf labeling is called
 a shuffle tree monomial.
 \end{definition}
 
@@ -314,7 +314,7 @@ This is Exercise~\ref{ex:shufflecomp}. The
 idea is to note that the local increasing
 condition is not broken, and this is clear
 on each $T_i$ since we simply relabelled their
-leafs with an isomorphic totally order
+leafs with an isomorphic totally ordered
 set, 
 while it is not broken on
 $T_0$ since we grafted the $T_i$s using
@@ -460,7 +460,7 @@ Give an example of a shuffle operad that
 is not obtained from a symmetric operad
 through the forgetful functor. \emph{Suggestion:}
 ideals coming from symmetric operads must be
-stable under the (now non-existent group action).
+stable under the (now non-existent) group action.
 Can you find a shuffle ideal that is ``not very
 symmetric''?
 \end{question}

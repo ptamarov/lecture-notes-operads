@@ -14,13 +14,13 @@ the datum of a $\mathbb Z$-indexed sequence of vector
 spaces $n\in\mathbb Z\longmapsto V_n\in\mathsf{Vect}$.
 We call the spaces appearing in this sequence the \emph{graded (or
 homogeneous) components of $V$}, and say that an element in 
-on of these summands is \emph{homogeneous}. If
+one of these summands is \emph{homogeneous}. If
 $v\in V_n$, we say that $v$ is \emph{homogeneous of
 degree $n$} and write $|v|=n$. 
 
 A map $f : V\longrightarrow W$ of graded vector spaces
 is \emph{homogeneous of degree $n$} if $f(V_j)\subseteq W_{j+n}$ for
-all $j\geqslant 1$. We write $\hom(V,W)$ for the
+all $j\in \mathbb Z$. We write $\hom(V,W)$ for the
 space of all homogeneous maps, which is itself a graded
 vector space with $\hom(V,W)_n$ the space of all
 graded maps of degree $n$ for each $n\in\mathbb Z$. 
@@ -32,10 +32,10 @@ $(V,d)$ where $V$ is a graded vector space and
 $d : V\longrightarrow V$ is a homogeneous map of degree 
 $-1$ such that $d^2=0$. We usually will call $(V,d)$
 a \emph{chain complex}. The collection of homogeneous
-maps $V\longrightarrow W$ is again a chain
+maps $\varphi:V\longrightarrow W$ is again a chain
 complex, with differential
 \[ d\varphi 
-	= d_V\varphi - (-1)^{|\varphi|} \varphi d_W. \]
+	= d_W\varphi - (-1)^{|\varphi|} \varphi d_V. \]
 A homogeneous map of degree zero such that $d(\varphi)=0$
 is called a \emph{chain map}.
 It is
@@ -58,8 +58,8 @@ on homogeneous elements, and extending it linearly on all of
 $V\otimes W$. This makes $\mathsf{Vect}_\mathbb{Z}$ into a
 symmetric monoidal category with unit the graded vector
 space with $V_0 = \kk$ and $V_n = 0$ for $n\neq 0$.
-The tensor product of maps $f: V\longrightarrow V'$
-and $g : W\longrightarrow W'$ acts
+The tensor product of maps $f: V\longrightarrow W$
+and $g : V'\longrightarrow W'$ acts
 in such a way that $f\otimes g : V\otimes V'
 \longrightarrow W\otimes W'$ is the map
 \[ (f\otimes g)(v\otimes w)  = (-1)^{|g||v|} f(v)\otimes g(w).\]
@@ -88,9 +88,9 @@ of the resulting operad are maps of dg vector spaces.
 
 Of particular importance to us will be the \emph{suspension}
 operation on dg vector spaces. Let us write $s$ for the
-unique dg vector space with $s_1 = \mathbb C$ and zero
+unique dg vector space with $s_1 = \kk$ and zero
 elsewhere, and similarly let us write $s^{-1}$ for the
-unique dg vector space with $s^{-1} = \mathbb{C}$
+unique dg vector space with $s^{-1} = \kk$
 and zero elsewhere. The \emph{suspension} of the dg vector
 space $V$ is the tensor product $s\otimes V$, which
 we write more simply $sV$, and whose basis elements we
@@ -113,7 +113,8 @@ to the map
 \[ \Phi(\varphi,\psi)(v,w) = (-1)^\varepsilon \varphi(v)\otimes\psi(w)\]
 where $\varepsilon = \sum_{i=1}^n (|w_1| +\cdots + |w_{i-1}|+|\psi|)|v_i|$
 is an isomorphism of operads provided $V$ and $W$
-are locally finite.
+are locally finite, that is, finite
+dimensional in each degree.
  \end{lemma}
  
  \begin{proof}
@@ -123,7 +124,7 @@ are locally finite.
 In particular, we see that $\End_{sV}$ is canonically isomorphic
 with $\End_s\otimes \End_V$, and hence that algebra structures on $sV$
 are related to algebra structures on $V$ through the operad $\End_s$.
-Let us give it a name. 
+We proceed to name it and study it in the following section.
 
 \subsection{The Koszul dual}
 
