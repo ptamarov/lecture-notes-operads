@@ -2,84 +2,64 @@
 
 \section{Motivation and history}\label{lecture:theintro}
  
-\textbf{Goals.} The goal of this lecture is to
-give a broad picture of the history and 
-pre-history of operads, and some current trends,
-and give a road-map for the course.  
+\textbf{Goals.} The goal of this lecture is to give a broad picture of the 
+history and pre-history of operads, and some current trends, and give a road-map
+for the course.  
   
-Operads (topological operads, more precisely)
-originally appeared as tools in algebraic
-topology and homotopy theory, 
-specifically in the study of iterated loop 
-spaces (May, 1972 and Boardman and Vogt before).
-They also appeared as \emph{comp algebras} in Gerstenhaber's 
-work on Hochschild cohomology and topologically as 
-Stasheff's `associahedra' for his homotopy
-characterization of loop spaces (both in 1963).
-The theory of operads, in particular topological
-and algebraic, saw itself very much influenced by
-homological algebra, category theory, algebraic
-geometry, rational homotopy theory and mathematical
-phyisics. Here we list a few examples:
+Operads (topological operads, more precisely) originally appeared as tools in 
+algebraic topology and homotopy theory, specifically in the study of iterated loop 
+spaces (May, 1972 and Boardman and Vogt before). They also appeared as \emph{comp 
+algebras} in Gerstenhaber's work on Hochschild cohomology and topologically as 
+Stasheff's `associahedra' for his homotopy characterization of loop spaces (both 
+in 1963). The theory of operads, in particular topological and algebraic, saw 
+itself very much influenced by homological algebra, category theory, algebraic
+geometry, rational homotopy theory and mathematical phyisics. Here we list a few 
+examples:
 
 \begin{tenumerate}
-\item Stasheff~\cite{Stasheff1970,Stasheff1963,Stasheff1963a} and Sugawara~\cite{Sugawara55}
-studied homotopy associative 
-$H$-spaces, Stasheff implicitly discovers a topological
-non-symmetric operad $K$ and a
-recognition principle for infinite deloopings:
-a connected topological space is an infinite
-loop space if and only if it is acted upon
-by this topological operad $K$. 
+\item Stasheff~\cite{Stasheff1970,Stasheff1963,Stasheff1963a} and 
+Sugawara~\cite{Sugawara55} studied homotopy associative $H$-spaces, Stasheff 
+implicitly discovers a topological non-symmetric operad $K$ and a recognition 
+principle for infinite deloopings: a connected topological space is an infinite
+loop space if and only if it is acted upon by this topological operad $K$. 
 
-\item Boardmann--Vogt~\cite{Boardman1973,bams/1183530111} studied infinite loop spaces,
-built a PROP that provides a version of an $E_\infty$-operad, 
-and obtained a recognition principle for infinite loop spaces.
+\item Boardmann--Vogt~\cite{Boardman1973,bams/1183530111} studied infinite loop 
+spaces, built a PROP that provides a version of an $E_\infty$-operad,and obtained
+a recognition principle for infinite loop spaces.
 
-\item Kontsevich~\cite{Kontsevich2003} used $L_\infty$-algebras and
-configuration spaces to prove his deformation
-quantization theorem that every Poisson manifold
+\item Kontsevich~\cite{Kontsevich2003} used $L_\infty$-algebras and configuration 
+spaces to prove his deformation quantization theorem that every Poisson manifold
 admits a deformation quantization.
 
-\item The above is
-implied by Kontsevich's the formality theorem: the
-Lie algebra of polyvector fields is 
-$L_\infty$-quasi-isomorphic to the Hochschild
-complex, and $f_1 = \mathsf{HKR}$. 
+\item The above is implied by Kontsevich's the formality theorem: the Lie algebra 
+of polyvector fields is $L_\infty$-quasi-isomorphic to the Hochschild complex, and 
+$f_1 = \mathsf{HKR}$. 
 
 \item Tamarkin~\cite{Tamarkin2003,Hinich2003} approached this result through 
-the formality of the little disks operad $D_2$.
-Proves that the Hochschild complex of a polynomial
-algebra is \emph{intrinsically formal} as a 
+the formality of the little disks operad $D_2$. Proves that the Hochschild 
+complex of a polynomial algebra is \emph{intrinsically formal} as a 
 Gerstenhaber algebra.
 
-\item Manifold calculus describes the
-homotopy type of embedding spaces as certain 
-derived operadic module maps and to
-produces their explicit deloopings
-using little disk operads, due to 
-many authors~\cite{Arone2007,Goodwillie1999,
-Weiss1996,Weiss1999}. We point the reader
-to~\cite{IdrissiPeccot} for a comprehensive
+\item Manifold calculus describes the homotopy type of embedding spaces as certain 
+derived operadic module maps and to produces their explicit deloopings using 
+little disk operads, due to many authors~\cite{Arone2007, Goodwillie1999, Weiss1996, 
+Weiss1999}. We point the reader to~\cite{IdrissiPeccot} for a comprehensive
 list of references.
 
-\item Koszul duality~\cite{Ginzburg1994}
-for algebraic 
-operads and cousins allows to develop a robust 
-homotopy theory of homotopy 
-algebras~\cite{Vallette2020,Hinich1999}, cohomology
-theory, deformation theory, Quillen homology, etc. Rational homotopy theory~\cite{Quillen1967,Felix2001,Sullivan1977}
-motivated and heralded the development of the homotopy theory of and Koszul duality
+\item Koszul duality~\cite{Ginzburg1994} for algebraic operads and cousins allows
+to develop a robust homotopy theory of homotopy algebras~\cite{Vallette2020,
+Hinich1999}, cohomology theory, deformation theory, Quillen homology, etc. 
+Rational homotopy theory~\cite{Quillen1967,Felix2001,Sullivan1977} motivated 
+and heralded the development of the homotopy theory of and Koszul duality
 theory for algebraic operads.
 
-\item The study
-of natural operations on the Hochschild complex
-of an associative algebra~\cite{Hochschild1945} lead to a manifold of 
-results beginning with the proof that there is
-an action of the little disks operad $D_2$ on
-it (Deligne's conjecture), and the ultimate version by Batanin--Markl~\cite{Batanin2014},
-who proved that the operad of natural operations
-on it has the homotopy type of $C_*(D_2)$.  
+\item The study of natural operations on the Hochschild complex of an associative
+algebra~\cite{Hochschild1945} lead to a manifold of results beginning with the 
+proof that there is an action of the little disks operad $D_2$ on it (Deligne's
+conjecture), and the ultimate version by Batanin--Markl~\cite{Batanin2014},
+who proved that the operad of natural operations on it has the homotopy type 
+of $C_*(D_2)$.  
+
 \end{tenumerate}
 
 Operads are modelled by trees: planar or
@@ -101,20 +81,23 @@ out what ``wheeled structures'' are, and how
 they fit in the table below).
 
 \begin{center}
-\begin{tabular}{@{}llccr@{}} \toprule
-Type & Graph & Compositions & Due to & Ref.\\ \midrule
-PROPs & Any graph & Any  & Adams--MacLane \\
-Modular & Any graph & $\xi_{i,j}$, $\circ_{i,j}$  & Getzler--Kapranov & \cite{Getzler1998}\\ 
-Properads & Connected graphs & Any & B. Vallette & \cite{Vallette2004}\\
-Dioperads & Trees & ${}_i\circ_j$ & W. L. Gan & \cite{Gan2003}\\
-Half-PROPs & Trees & $\circ_j$ , ${}_i\circ$ & 
- Kontsevich\footnotemark & \cite{Markl2007}\\ 
-Cyclic operads & Trees &  $\circ_{i,j}$ & Getzler--Kapranov & \cite{Kajiura2008}\\ 
-Symmetric operads & Rooted trees & $\circ_i$  & J. P. May & \cite{May1972}\\ 
+\begin{tabular}{@{}llccr@{}} 
+
+\toprule
+Type 				& Graph 			& Compositions					& Due to 			& Ref.						\\
+\midrule
+PROPs 				& Any graph 		& Any  							& Adams--MacLane 	& \\
+Modular 			& Any graph 		& $\xi_{i,j}$, $\circ_{i,j}$	& Getzler--Kapranov & \cite{Getzler1998}		\\ 
+Properads 			& Connected graphs	& Any 							& B. Vallette 		& \cite{Vallette2004}		\\
+Dioperads 			& Trees 			& ${}_i\circ_j$ 				& W. L. Gan 		& \cite{Gan2003}			\\
+Half-PROPs 			& Trees 			& $\circ_j$ , ${}_i\circ$ 		& Kontsevich\footnotemark 	& \cite{Markl2007}	\\ 
+Cyclic operads 		& Trees 			& $\circ_{i,j}$ 				& Getzler--Kapranov & \cite{Kajiura2008}		\\ 
+Symmetric operads 	& Rooted trees 		& $\circ_i$  					& J. P. May			& \cite{May1972}			\\ 
 \bottomrule
-\end{tabular}
-\end{center}
+	\end{tabular}
+		\end{center}
 \footnotetext{The reference explains that ``These results are based on the useful notion of a 1/2 PROP introduced by Kontsevich in an e-mail message to the first author.''}
+
 \subsection{Koszul duality}
  
 Koszul duality was invented by Steward Priddy in
@@ -180,8 +163,10 @@ is to introduce the reader to these objects in general
 and to quadratic operads in particular, define what
 it means for such operads to be Koszul, and explore
 the consequences this property has on the operads
-and its representations. We do this in Lectures~\ref{lecture:quadraticops}, \ref{lecture:KD1}, \ref{lecture:barcobar} and \ref{lecture:KD2}, and include further material
-in the Appendix.
+and its representations. We do this in 
+Lectures~\ref{lecture:quadraticops}, \ref{lecture:KD1}, 
+\ref{lecture:barcobar} and \ref{lecture:KD2}, and include 
+further material in the Appendix.
 
 Although, as we
 mentioned, we will take a rather old fashioned point of 
@@ -244,13 +229,20 @@ one has to make the key observation that this tool-kit works,
 \emph{mutatis-mutandis}, for many different algebraic structures
 exhibiting some kind of associativity, and not only for
 those which Gr\"obner and Buchberger were originally concerned with:
-\[\claim{
-Both testing hypotheses and proving theorems about polynomial expressions of all those types often involves highly complex symbolic computations which can never be completed in a reasonable time unless one approaches them in an extremely structured way. [...] Our goal in this book is to present the solution 
-to the problem of determining normal forms in a way that all the individual building blocks 
-of that solution are clearly identified; this makes desired 
-generalizations of the theory straightforward. We give complete proofs of key 
-facts, many detailed examples, a large array of exercises, mostly coming from 
-actual research questions, and references to further reading.}
+\[
+\claim{
+Both testing hypotheses and proving theorems about polynomial 
+expressions of all those types often involves highly complex 
+symbolic computations which can never be completed in a reasonable
+time unless one approaches them in an extremely structured way. [...] 
+Our goal in this book is to present the solution 
+to the problem of determining normal forms in a way that all the 
+individual building blocks of that solution are clearly identified; 
+this makes desired generalizations of the theory straightforward. 
+We give complete proofs of key facts, many detailed examples, 
+a large array of exercises, mostly coming from actual research
+questions, and references to further reading.
+}
 \]
 
 Lectures~\ref{lecture:shuffleops}-\ref{lecture:GB2} in these
@@ -451,7 +443,8 @@ objects in it are isomorphic. We say that $\mathcal{D}$ is
 the skeleton of a category $\mathcal{C}$ if:
 \begin{tenumerate}
 \item It is a full subcategory of $\mathcal{C}$: for each
-pair of objects $x,y\in\mathcal{D}$, we have that $\mathcal{D}(x,y) = \mathcal{C}(x,y)$.
+pair of objects $x,y\in\mathcal{D}$, we have that 
+$\mathcal{D}(x,y) = \mathcal{C}(x,y)$.
 \item The inclusion of $\mathcal{D}$ in $\mathcal{C}$ is
 essentially surjective: every object of $\mathcal{C}$ is
 isomorphic to an object of $\mathcal{D}$.
@@ -483,7 +476,8 @@ $(i,i+1)\in S_n\longmapsto \tau_i
 
 \begin{question} A product and permutation category (abbreviated `PROP')
 is a monoidal category $\mathcal{C}$ whose set of objects is $\mathbb N = 
-\{0,1,2,\ldots\}$ and its tensor product is addition (in particular, it is strict and symmetric). Unravel the definitions:
+\{0,1,2,\ldots\}$ and its tensor product is addition (in particular, 
+it is strict and symmetric). Unravel the definitions:
 \begin{tenumerate}
 \item Use that $n = 1+\cdots + 1$ to show that $\mathcal{C}(m,n)$ is a right $S_n$-module.
 \item Similarly, show that $\mathcal{C}(m,n)$ is also a left $S_m$-module.
@@ -496,21 +490,20 @@ is a monoidal category $\mathcal{C}$ whose set of objects is $\mathbb N =
  	\mathcal{C}(m,k). \]
 \end{tenumerate}
 Consider the definition of a PROP enriched over a symmetric strict 
-monoidal category, like $\mathsf{Vect}$, the category of vector spaces (these are called $\kk$-linear
-PROPs). Define the category of PROPs. 
+monoidal category, like $\mathsf{Vect}$, the category of vector spaces 
+(these are called $\kk$-linear PROPs). Define the category of PROPs. 
 \end{question}
 
-\emph{Note.} For 
-each $n\in\mathrm{Ob}(\mathcal C)$ the
+\emph{Note.} For each $n\in\mathrm{Ob}(\mathcal C)$ the
 object $\mathcal{C}(n,n)$ is a monoid under composition
- that receives a map $S_n\longrightarrow \mathcal{C}(n,n)$.
- Under the interpretation above, the image of $\sigma$
-  is equal to both the left and the right action of $S_n$ 
-  on the identity map $n\to n$. In particular, the twist
-  $\tau$ of $\mathcal{C}$ is equal to $(12)\mathrm{id}_2$,
-  and may (or may not) be trivial.
+that receives a map $S_n\longrightarrow \mathcal{C}(n,n)$.
+Under the interpretation above, the image of $\sigma$
+is equal to both the left and the right action of $S_n$ 
+on the identity map $n\to n$. In particular, the twist
+$\tau$ of $\mathcal{C}$ is equal to $(12)\mathrm{id}_2$,
+and may (or may not) be trivial.
   
-  \medskip
+\medskip
   
 \textbf{C. Graded spaces and complexes.} When studying
 algebraic structures like operads, it will be necessary
@@ -522,10 +515,11 @@ look at them in more detail during the course.
 
 \begin{question} A $\mathbb Z$-graded vector space (usually 
 just called a graded vector space) is a $\mathbb Z$-indexed 
-sequence of vector spaces $n\in\mathbb Z\longmapsto V_n\in\mathsf{Vect}$. 
-If $v\in V_n$ we say that $v$ is homogeneous of
-degree $n$. Find out about the category of
-graded vector spaces, specifically:
+sequence of vector spaces $n \in \mathbb Z \longmapsto V_n \in
+\mathsf{Vect}$. If $v\in V_n$ we say that $v$ is homogeneous of
+degree $n$. Find out about the category of graded vector spaces, 
+specifically:
+
 \begin{titemize}
 \item What are its (degree zero) morphisms?
 \item What are its (degree homogeneous) morphisms?
@@ -553,17 +547,16 @@ rule'?
 \begin{question} A differential graded (dg) vector space,
 usually called a complex, is a pair $(V,d)$ where $V$ is 
 a graded vector space $V$ and $d: V \to V$ is a homogeneous
-map of degree $-1$ such that $d^2=0$. Repeat the previous
+map of degree $-1$ such that $d^2 = 0$. Repeat the previous
 exercise replacing $\mathsf{gVect}$ with $\mathsf{Ch}$,
 the category of complexes of vector spaces.
 \end{question}
 
 \begin{question} If $(V,d)$ is a complex, then $Z(V) = \ker d$ 
 is called its space of cycles, and $B(V) = \operatorname{im} d$ 
-is called
-its space of boundaries. The quotient $Z(V)/B(V)$ is called
+is called its space of boundaries. The quotient $Z(V) / B(V)$ is called
 the homology of $V$, and is written $H(V)$. Show that a map 
-of complexes $f:V\to W$ induces a map $Z(V) \to Z(W)$ and 
+of complexes $f : V \to W$ induces a map $Z(V) \to Z(W)$ and 
 in turn a map $H(f) : H(V) \to H(W)$. 
 \end{question}
  

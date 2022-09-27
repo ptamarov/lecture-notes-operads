@@ -1,6 +1,13 @@
 \documentclass[fleqn, a4paper, twoside]{article} 
 
-%% for print
+
+%%%%%%% UNKNOWN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\newcommand{\0}{\langle 0\rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% Measures for printing. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[
 	top = 1.15 in, 
 	bottom = 1.25 in,
@@ -10,7 +17,9 @@
 % font sizes
 \usepackage{scrextend}
 \changefontsizes{12pt}
-% for online reading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% Measures for online reading. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage[
 %	top = 1.15 cm, 
 %	bottom = 2.25 cm,
@@ -20,507 +29,89 @@
 % font sizes
 %\usepackage{scrextend}
 %\changefontsizes{14pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{section}{-1}
+%%%%%%%%% Other printing measures. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength\parskip{3 pt}
+\setlength\parindent{0 em}
+\raggedbottom % Bottom is not strict.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[all]{nowidow}
-\usepackage{changepage}
-
+%%%%%%%%%% Font selection and packages. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8x]{inputenc}
-
-\usepackage{amscd,amssymb,amsmath}
-\usepackage{amsrefs}
-
-%nimbus roman
 \usepackage{mathptmx}
 \usepackage[T1]{fontenc}
-\usepackage{microtype}
-
-
-\usepackage{booktabs}
-\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
-\newcommand{\adjoint}{\;\substack{\longrightarrow \\[-0.6ex] \longleftarrow}\;}
-\newcommand{\lead}[1]{\operatorname{LT}(#1)}
-\newcommand{\leadm}[1]{\operatorname{LM}(#1)}
-\newcommand{\repl}[3]{\square_{#1}^{#2}(#3)}
-\newcommand{\leadc}[1]{\operatorname{LC}(#1)}
-\usepackage[utf8x]{inputenc}
 \usepackage{amsfonts,amssymb,amsmath,amsrefs}
-\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[all]{nowidow}
+\usepackage{changepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Other packages. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[british]{babel}
+\usepackage{amscd, amssymb, amsmath, amsrefs} % AMS Packages
+\usepackage{makeidx}	% Make index
+\usepackage{multicol}	% Several columns of text
+\usepackage{booktabs}	% Publishing-quality tables
+\usepackage{cancel}		% Draw diagonal lines (“cancelling” a term) 
+\usepackage{sidecap}	% Side captions
+\usepackage{exsheets}	% Package for exercises
+\SetupExSheets{headings = runin}
+\usepackage{wrapfig}	% Wrapping text around figures
+\usepackage{stmaryrd}	% Double brackets
+\usepackage{setspace}	% Line spacing
+\spacing{1.15}
+\usepackage{stackrel}
+\usepackage{etoolbox}
+\usepackage[bb=ams, cal=euler, scr=rsfso , frak=euler]{mathalpha}
 \usepackage{caption}
-\usepackage{mathdots}
-\usepackage{mathtools} 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
+\usepackage{mathdots, mathtools} 
 \usepackage{subfigure}
-\usepackage{makeidx}
-\usepackage{multicol}
 \usepackage{array}
-\usepackage{cancel}
 \usepackage{polynom}
-\usepackage[pdf,all]{xy}
+\usepackage[pdf,all]{xy} 
 \xyoption{line}
 \CompileMatrices
-\usepackage{tikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% TikZ SETUP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pgf,tikz}
+\usepackage{tikz-cd}
+\pgfdeclarelayer{bg}    % Declaro background layer.
+\pgfsetlayers{bg, main}  % Order layers.
+\usetikzlibrary{calc}
+\usetikzlibrary{matrix, arrows}
+\usetikzlibrary{trees}
+\input{treemacros.tex} % TIKZ MACROS TO DRAW TREES 
+\tikzcdset{arrow style=tikz, diagrams={>=stealth}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% Colours throughout document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{xcolor}
-
-
-% Colours
 \definecolor{trinityblue}{rgb}{0.05, 0.45,0.75}
 \definecolor{trinitygray}{rgb}{0.33, 0.34,0.35}
 \definecolor{mpg-gruen}{rgb}{0.00, 0.428,0.404}
 \definecolor{pagecolor}{rgb}{1, 1, 0.88}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%% Tree macros %%
-%% Edge and vertex styles %%
-\tikzset{%
-    inner/.style={%
-    	circle,draw=black, fill=pagecolor, inner sep=1pt,minimum size=5pt
-    	},
-    leaf/.style={%
-    circle, draw=pagecolor, fill=pagecolor, inner sep=3 pt,minimum size=5 pt
-    },
-}
-
-\newcommand{\fork}[7]{
-\begin{tikzpicture}[scale = .75]
-	\begin{pgfonlayer}{main}
-		\node [style=inner] (0) at (0, 0) {$#3$};
-		\node [style=inner] (2) at (-1, 1) {$#1$};
-		\node [style=inner] (9) at (1, 1) {$#2$};
-		\node [style=leaf] (10) at (0, -1.25) {};
-		\node [style=leaf] (11) at (-1.5, 2) {$#4$};
-		\node [style=leaf] (12) at (-0.5, 2) {$#5$};
-		\node [style=leaf] (13) at (0.5, 2) {$#6$};
-		\node [style=leaf] (14) at (1.5, 2) {$#7$};
-	\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (2.center) to (0.center);
-		\draw (0.center) to (9.center);
-		\draw (0.center) to (10.center);
-		\draw (2.center) to (11.center);
-		\draw (12.center) to (2.center);
-		\draw (13.center) to (9.center);
-		\draw (9.center) to (14.center);
-	\end{pgfonlayer}
-\end{tikzpicture}}
-
-\newcommand{\smallfork}[7]{
-\begin{tikzpicture}[scale = .50]
-	\begin{pgfonlayer}{main}
-		\node [style=inner] (0) at (0, 0) {$#3$};
-		\node [style=inner] (2) at (-1, 1) {$#1$};
-		\node [style=inner] (9) at (1, 1) {$#2$};
-		\node [style=leaf] (10) at (0, -1.25) {};
-		\node [style=leaf,anchor = south east] (11) at (-1.5, 2) {$#4$};
-		\node [style=leaf,anchor = south] (12) at (-0.5, 2) {$#5$};
-		\node [style=leaf, anchor = south] (13) at (0.5, 2) {$#6$};
-		\node [style=leaf, anchor = south west] (14) at (1.5, 2) {$#7$};
-	\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (2.center) to (0.center);
-		\draw (0.center) to (9.center);
-		\draw (0.center) to (10.center);
-		\draw (2.center) to (11.center);
-		\draw (12.center) to (2.center);
-		\draw (13.center) to (9.center);
-		\draw (9.center) to (14.center);
-	\end{pgfonlayer}
-\end{tikzpicture}}
-
-
-\newcommand{\leftc}[5]{
-	\begin{tikzpicture}[scale = .75]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (-1, 1) {$#1$};
-		\node[style = inner] (1) at (0, 0) {$#2$};
-		\node[style = leaf] (2) at (1, 1) {$#5$};
-		\node[style = leaf] (3) at (0, 2) {$#4$};
-		\node[style = leaf] (4) at (-2, 2) {$#3$};
-		\node (5) at (0, -1) {};
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (5.center) to (1);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-
-\newcommand{\smallb}[3]{
-	\begin{tikzpicture}[scale = .50]
-\begin{pgfonlayer}{main}
-		\node[style = leaf] (0) at (-1, 1) {$#2$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = leaf] (2) at (1, 1) {$#3$};
-		\node (5) at (0, -1) {};
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (5.center) to (1);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-\newcommand{\hplus}{\mathsymbol{.5}{+}}
-\newcommand{\hotimes}{\mathsymbol{.5}{\otimes}}
-
-\newcommand{\Tw}{\mathsf{Tw}}
-\newcommand{\stick}[1]{
-	\begin{tikzpicture}[scale = .50]
-\begin{pgfonlayer}{main}
-		\node[style = leaf] (0) at (0, 2) {$#1$};
-		\node[style = leaf] (1) at (0, 0) {};
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\smallleftc}[5]{
-	\begin{tikzpicture}[scale = .50]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (-1, 1) {$#1$};
-		\node[style = inner] (1) at (0, 0) {$#2$};
-		\node[style = leaf] (2) at (1, 1) {$#5$};
-		\node[style = leaf] (3) at (0, 2) {$#4$};
-		\node[style = leaf] (4) at (-2, 2) {$#3$};
-		\node (5) at (0, -1) {};
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (5.center) to (1);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\inlineleftc}[5]{
-	\begin{tikzpicture}[scale = .50, baseline= -10 mm]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (-1, 1) {$#1$};
-		\node[style = inner] (1) at (0, 0) {$#2$};
-		\node[style = leaf] (2) at (1, 1) {$#5$};
-		\node[style = leaf] (3) at (0, 2) {$#4$};
-		\node[style = leaf] (4) at (-2, 2) {$#3$};
-		\node (5) at (0, -1) {};
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (5.center) to (1);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\Leftc}[7]{
-	\begin{tikzpicture}[scale = .75]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (-1, 1) {$#2$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = leaf] (2) at (1, 1) {$#7$};
-		\node[style = leaf] (3) at (0, 2) {$#6$};
-		\node[style = inner] (4) at (-2, 2) {$#3$};
-		\node[style = leaf] (5) at (-3, 3) {$#4$};
-		\node[style = leaf] (6) at (-1, 3) {$#5$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (7.center) to (1);
-		\draw (4.center) to (6);
-		\draw (4.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\smallLeftc}[7]{
-	\begin{tikzpicture}[scale = .50]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (-1, 1) {$#2$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = leaf] (2) at (1, 1) {$#7$};
-		\node[style = leaf] (3) at (0, 2) {$#6$};
-		\node[style = inner] (4) at (-2, 2) {$#3$};
-		\node[style = leaf] (5) at (-3, 3) {$#4$};
-		\node[style = leaf] (6) at (-1, 3) {$#5$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (7.center) to (1);
-		\draw (4.center) to (6);
-		\draw (4.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\Rightc}[7]{
-	\begin{tikzpicture}[scale = .75]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (1, 1) {$#2$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = leaf] (2) at (-1, 1) {$#4$};
-		\node[style = leaf] (3) at (0, 2) {$#5$};
-		\node[style = inner] (4) at (2, 2) {$#3$};
-		\node[style = leaf] (5) at (3, 3) {$#7$};
-		\node[style = leaf] (6) at (1, 3) {$#6$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (7.center) to (1);
-		\draw (4.center) to (6);
-		\draw (4.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-
-\newcommand{\smallRightc}[7]{
-	\begin{tikzpicture}[scale = .50]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (1, 1) {$#2$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = leaf] (2) at (-1, 1) {$#4$};
-		\node[style = leaf] (3) at (0, 2) {$#5$};
-		\node[style = inner] (4) at (2, 2) {$#3$};
-		\node[style = leaf] (5) at (3, 3) {$#7$};
-		\node[style = leaf] (6) at (1, 3) {$#6$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (7.center) to (1);
-		\draw (4.center) to (6);
-		\draw (4.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\Leftr}[7]{
-	\begin{tikzpicture}[scale = .75]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (-1, 1) {$#2$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = leaf] (2) at (1, 1) {$#7$};
-		\node[style = inner] (3) at (0, 2) {$#3$};
-		\node[style = leaf] (4) at (-2, 2) {$#6$};
-		\node[style = leaf] (5) at (-1, 3) {$#4$};
-		\node[style = leaf] (6) at (1, 3) {$#5$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (7.center) to (1);
-		\draw (3.center) to (6);
-		\draw (3.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-
-\newcommand{\smallLeftr}[7]{
-	\begin{tikzpicture}[scale = .50]
-\begin{pgfonlayer}{main}
-		\node[style = inner] (0) at (-1, 1) {$#2$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = leaf] (2) at (1, 1) {$#7$};
-		\node[style = inner] (3) at (0, 2) {$#3$};
-		\node[style = leaf] (4) at (-2, 2) {$#6$};
-		\node[style = leaf] (5) at (-1, 3) {$#4$};
-		\node[style = leaf] (6) at (1, 3) {$#5$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (0);
-		\draw (4.center) to (0);
-		\draw (7.center) to (1);
-		\draw (3.center) to (6);
-		\draw (3.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-\newcommand{\Rightl}[7]{
-	\begin{tikzpicture}[scale = .75]
-\begin{pgfonlayer}{main}
-		\node[style = leaf] (0) at (-1, 1) {$#4$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = inner] (2) at (1, 1) {$#2$};
-		\node[style = inner] (3) at (0, 2) {$#3$};
-		\node[style = leaf] (4) at (2, 2) {$#7$};
-		\node[style = leaf] (5) at (-1, 3) {$#5$};
-		\node[style = leaf] (6) at (1, 3) {$#6$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (2);
-		\draw (4.center) to (2);
-		\draw (7.center) to (1);
-		\draw (3.center) to (6);
-		\draw (3.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\smallRightl}[7]{
-	\begin{tikzpicture}[scale = .50]
-\begin{pgfonlayer}{main}
-		\node[style = leaf] (0) at (-1, 1) {$#4$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = inner] (2) at (1, 1) {$#2$};
-		\node[style = inner] (3) at (0, 2) {$#3$};
-		\node[style = leaf] (4) at (2, 2) {$#7$};
-		\node[style = leaf] (5) at (-1, 3) {$#5$};
-		\node[style = leaf] (6) at (1, 3) {$#6$};
-		\node (7) at (0, -1) {}; %theRoot
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (2);
-		\draw (4.center) to (2);
-		\draw (7.center) to (1);
-		\draw (3.center) to (6);
-		\draw (3.center) to (5);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\rightc}[5]{
-\begin{tikzpicture}[scale = .75]
-\begin{pgfonlayer}{main}
-		\node[style = leaf] (0) at (-1, 1) {$#3$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = inner] (2) at (1, 1) {$#2$};
-		\node[style = leaf] (3) at (0, 2) {$#4$};
-		\node[style = leaf] (4) at (2, 2) {$#5$};
-		\node (5) at (0, -1) {};
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (2);
-		\draw (4.center) to (2);
-		\draw (5.center) to (1);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-
-\newcommand{\smallrightc}[5]{
-\begin{tikzpicture}[scale = .5]
-\begin{pgfonlayer}{main}
-		\node[style = leaf] (0) at (-1, 1) {$#3$};
-		\node[style = inner] (1) at (0, 0) {$#1$};
-		\node[style = inner] (2) at (1, 1) {$#2$};
-		\node[style = leaf] (3) at (0, 2) {$#4$};
-		\node[style = leaf] (4) at (2, 2) {$#5$};
-		\node (5) at (0, -1) {};
-		\end{pgfonlayer}
-	\begin{pgfonlayer}{bg}
-		\draw (1) to (0);
-		\draw (2.center) to (1);
-		\draw (3.center) to (2);
-		\draw (4.center) to (2);
-		\draw (5.center) to (1);
-		\end{pgfonlayer}	
-\end{tikzpicture}
-}
-\newcommand{\mathsymbol}[2]{
-	\begin{tikzpicture}
-        \node at(0,0){};
-        \node at(0,#1){$#2$};
-    \end{tikzpicture}
-}
-%% Side captions %%
-\usepackage{sidecap}
-
-%% Exercises %%
-\usepackage{exsheets} %Para guias de ej.
-\SetupExSheets{headings = runin}
-
-\usepackage{wrapfig} %%https://es.sharelatex.com/learn/latex/Wrapping_text_around_figures
-
-\usepackage{lipsum}
-%% SMALL HYPHEN %%
-\mathchardef\hy="2D % Define a "math hyphen"
-
- %% TAMAÑO C\eLDAS %%     
-\usepackage{pgf,tikz}
-
-\pgfdeclarelayer{bg}    % declare background layer
-\pgfsetlayers{bg,main}  % set the order of the layers (main is the standard layer)
-
-
-\usepackage{tikz-cd}
-\usetikzlibrary{calc}
-\usetikzlibrary{matrix,arrows}
-\usepackage{stackrel}
-\usepackage[shortlabels]{enumitem} %Para listas estilo Weibel
-\usepackage{stmaryrd} %Para double brackets
-\usepackage{setspace} %Para espaciado de renglones
-\spacing{1.15}
-%\onehalfspacing %Mejor lectura
-\usepackage{etoolbox}
-\usetikzlibrary{trees}
-\newcommand{\antishriek}{\text{\raisebox{\depth}{\textexclamdown}}}
-\newcommand{\eantishriek}{\emph{\text{\raisebox{\depth}{\textexclamdown}}}}
-
-
-\patchcmd{\section}{\normalfont}{\normalfont\large}{}{}
-
-\usepackage[bb=ams, cal=euler, scr=rsfso , frak=euler]{mathalpha}
-
-%%%Sha
-  \DeclareFontFamily{U}{wncy}{}
-    \DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
-    \DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
-    \DeclareMathSymbol{\ShaL}{\mathord}{mcy}{"58} 
-    
-    \usepackage{scalerel}[2016/12/29]
-
+%%%%%%%%% Getting LaTeX to use letter Sha %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\ShaL}{\mathord}{mcy}{"58} 
+\usepackage{scalerel}[2016/12/29]
 \newcommand{\Sha}{{\scaleobj{0.75}{\ShaL}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
- 
+%%%%%%%%%%%%%%% Fancy headers set-up %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{fancyhdr}
+
 \pagestyle{fancy}
 \fancyhead[RE]{\small\it Algebraic operads}
 \fancyhead[LO]{\small\it Winter Lecture Series 2021/2022}
 \fancyhead[RO,LE]{\small\textbf\thepage}
 \renewcommand{\headrulewidth}{0 pt}
 \cfoot{}
-\newcommand{\0}{\langle 0\rangle}
 
 \fancypagestyle{references}
 {\fancyhead[RE]{\small\it References}
@@ -528,38 +119,15 @@
 \fancyhead[RO,LE]{\small\bf\thepage}
 \fancyfoot[L,R,C]{}
 \renewcommand{\headrulewidth}{0 pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- %%%%%%%%%%%%TikZ Styles%%%%%%%%%%%
 
-%%%%%%%%%%%%%%
 
-\newcommand{\XX}{\mathcal{X}}
-\renewcommand{\AA}{\mathcal{A}}
-\newcommand{\YY}{\mathcal{Y}}
-\newcommand{\End}{\operatorname{End}}
-\newcommand{\RR}{\mathcal{R}}
-\newcommand{\II}{\mathcal{I}}
-\newcommand{\QQ}{\mathcal{Q}}
-\newcommand{\FF}{\mathcal{F}}
-\newcommand{\GG}{\mathcal G}
-\newcommand{\B}[1]{\mathsf{B}(#1)}
-\newcommand{\syz}[1]{\mathsf{s}(#1)}
 
-\newcommand{\f}{\mathsf{f}}
-\newcommand{\ari}{\operatorname{ar}}
-\newcommand{\cone}{\operatorname{cone}}
-\newcommand{\hem}{\hspace{0.5 em}} 
-%\input{treesp.tex} For trees, maybe add again later
 
- \newcommand{\stt}{\mathbin{\text{\tikz 
-[x=1ex,y=1ex,line width=.1ex,line 
-join=round] \draw (0,0) rectangle (1,1) 
-(1,1) -- (0,0)  (1,0) -- (0,1);}}}
-
-%%%%%% ENUMERATE STUFF %%%%%%
-\usepackage{enumitem}
+%%%%%%%%%%%%%%%%%% ENUMERATE STUFF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[shortlabels]{enumitem} 
 \setenumerate{label= (\arabic*)}
-
 
 \newenvironment{tenumerate}{
  \begin{enumerate}
@@ -572,27 +140,26 @@ join=round] \draw (0,0) rectangle (1,1)
   \setlength{\itemsep}{0pt}
   \setlength{\parskip}{0pt}
 }{\end{itemize}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \definecolor{newcol}{rgb}{0,0,0}
 \definecolor{deepblue}{rgb}{0.0, 0.28, 0.67}
 %{0.5, 0.0, 0.13}
 \DeclareTextFontCommand{\new}{\color{black}\em}
-%\DeclareTextFontCommand{\new}{\color{black}\em}
 
-\usepackage[pdftex, colorlinks,bookmarks 
-= true,bookmarksnumbered = true]{hyperref}
-
-% url colors
-\hypersetup{colorlinks,
-	linkcolor={mpg-gruen},
-		citecolor={mpg-gruen},
+%%%%%%%%%%%%%%%% Hyperlinks set up %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex, 
+			colorlinks, 
+			bookmarks = true, 
+			bookmarksnumbered = true]{hyperref}
+\hypersetup{colorlinks, 
+			linkcolor={mpg-gruen}, 
+			citecolor={mpg-gruen}, 
 			urlcolor={mpg-gruen}} 
-			
-\usepackage{sectsty}
-\chapterfont{\color{newcol}}  % sets colour of chapters
-\sectionfont{\color{newcol}}  % sets colour of sections
-\subsectionfont{\color{newcol}}  % sets colour of sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%% Brackets are equations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % let \[ and \] be the same as \begin{equation} and \end{equation}
 \makeatletter
 \AtBeginDocument{%
@@ -606,7 +173,9 @@ join=round] \draw (0,0) rectangle (1,1)
 \makeatother 
 % but only print equation numbers if needed
 \mathtoolsset{showonlyrefs,showmanualtags}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%% Theorem styles set-up %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsthm}
 \usepackage{thmtools}
 \newtheoremstyle{mytheorem}
@@ -644,8 +213,57 @@ join=round] \draw (0,0) rectangle (1,1)
 \renewcommand{\theintrothm}{\Alph{introthm}}
  % Para teoremas en la introducción
 
-%%%%%%%% AUTHOR INFORMATION %%%
 
+\newtheoremstyle{mydefinition}
+{\topsep}   % ABOVESPACE
+{\topsep}   % BELOWSPACE
+{}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\bfseries\color{newcol}} % HEADFONT
+{\color{newcol}}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\theoremstyle{mydefinition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{obs}[theorem]{Observation}
+\newtheorem{rmk}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{variante}[theorem]{Variant}
+
+\newtheoremstyle{mydefinition2}
+{\topsep}   % ABOVESPACE
+{\topsep}   % BELOWSPACE
+{}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\bfseries\color{newcol}} % HEADFONT
+{\color{newcol}{.}}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\theoremstyle{mydefinition2}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{obs*}{Observation}
+\newtheorem*{example*}{Example}
+
+% For specifying a named theorem
+\theoremstyle{plain} % just in case the style had changed
+\newcommand{\thistheoremname}{}
+\newtheorem{genericthm}[theorem]{\thistheoremname}
+\newenvironment{namedthm}[1]
+{\renewcommand{\thistheoremname}{#1}%
+ \begin{genericthm}}
+{\end{genericthm}}
+
+\theoremstyle{mytheorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{question*}{Question}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% AUTHOR INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\myauthor}[3]{
 \noindent
 \begin{minipage}[t]{.45\textwidth}
@@ -659,181 +277,56 @@ join=round] \draw (0,0) rectangle (1,1)
 #3
 \end{minipage}
 }
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-
-%% TODO NOTES! %%
+%%%%%%%%%%%%%%%%%%%%%% TODO NOTES SET-UP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{xargs}                      
-% Use more than one optional parameter in a new commands
-%\usepackage[pdftex,dvipsnames]{xcolor}  
-% Coloured text etc.
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
-
-\newcommand{\hacer}[1]{\todo[inline,linecolor= mpg-gruen,backgroundcolor=mpg-gruen!25!white,bordercolor=mpg-gruen]{#1}}
-\newcommandx{\unsure}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25!white,bordercolor=blue,#1]{#2}}
-\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-
-
+\newcommand{\hacer}[1]{
+	\todo[
+		inline,
+		linecolor= mpg-gruen,
+		backgroundcolor=mpg-gruen!25!white,
+		bordercolor=mpg-gruen]
+		{#1}
+		}
+\newcommandx{\unsure}[2][1=]{
+	\todo[
+		linecolor=blue,
+		backgroundcolor=blue!25!white,
+		bordercolor=blue,#1
+	]
+	{#2}
+	}
+\newcommandx{\change}[2][1=]{
+	\todo[
+		linecolor=blue,
+		backgroundcolor=blue!25,
+		bordercolor=blue,
+		#1]
+		{#2}
+		}
 \definecolor{col1}{rgb}{0.8, 0.8, 1.0}
 \definecolor{col2}{rgb}{0.9, 0.9, 0.98}
 \definecolor{col3}{rgb}{0.71, 0.49, 0.86}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%% Write pseudo-code
+%%%%%%%%%%%%%%%%%%%%%% To write pseudo-code %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
-
 \makeatletter
 \def\BState{\State\hskip-\ALG@thistlm}
 \makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%% MATH MACROS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{mathmacros.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\ind}{\operatorname{Ind}_\PP}
-
-\newcommand{\cof}{\rightarrowtail}
-\newcommand{\foc}{\leftarrowtail}
-\newcommand{\weq}{\overset{\sim}{\longrightarrow}}
-\newcommand{\tcf}{\overset{\sim}{\cof}}
-
-\newtheoremstyle{mydefinition}
-  {\topsep}   % ABOVESPACE
-  {\topsep}   % BELOWSPACE
-  {}  % BODYFONT
-  {0pt}       % INDENT (empty value is the same as 0pt)
-  {\bfseries\color{newcol}} % HEADFONT
-  {\color{newcol}}         % HEADPUNCT
-  {5pt plus 1pt minus 1pt} % HEADSPACE
-  {}          % CUSTOM-HEAD-SPEC
-  
-\theoremstyle{mydefinition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{obs}[theorem]{Observation}
-\newtheorem{rmk}[theorem]{Remark}
-\newtheorem{problem}[theorem]{Problem}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{note}[theorem]{Note}
-\newtheorem{variante}[theorem]{Variant}
-
-
-\newtheoremstyle{mydefinition2}
-  {\topsep}   % ABOVESPACE
-  {\topsep}   % BELOWSPACE
-  {}  % BODYFONT
-  {0pt}       % INDENT (empty value is the same as 0pt)
-  {\bfseries\color{newcol}} % HEADFONT
-  {\color{newcol}{.}}         % HEADPUNCT
-  {5pt plus 1pt minus 1pt} % HEADSPACE
-  {}          % CUSTOM-HEAD-SPEC
-  
-\theoremstyle{mydefinition2}
-\newtheorem*{definition*}{Definition}
-\newtheorem*{remark*}{Remark}
-\newtheorem*{obs*}{Observation}
-\newtheorem*{example*}{Example}
-
-% named theorem %
-
-% for specifying a name
-\theoremstyle{plain} % just in case the style had changed
-\newcommand{\thistheoremname}{}
-\newtheorem{genericthm}[theorem]{\thistheoremname}
-\newenvironment{namedthm}[1]
-  {\renewcommand{\thistheoremname}{#1}%
-   \begin{genericthm}}
-  {\end{genericthm}}
-
-\newcommand{\imor}{\interleave\kern-.45em\longrightarrow}
-%\renewcommand{\qedsymbol}{$\blacktriangleleft$}
-\newcommand\place{\mathord-}
-\newcommand{\ps}{\mathbin\parallel}
-\newcommand{\GSet}{\mathsf{Fin}^\times}
-\newcommand{\FSet}{\mathsf{Fin}}
-\newcommand{\Fun}{\mathsf{Fun}}
-\newcommand{\Set}{\mathsf{Set}}
-\newcommand{\DCSH}{\mathsf{DCSH}}
-\newcommand{\kMod}{{}_\kk\mathsf{Mod}}
-\newcommand{\kmod}{{}_\kk\mathsf{mod}}
-\newcommand{\kCh}{{}_\kk\mathsf{Ch}}
-\newcommand{\Sp}{\mathsf{Sp}}
-\newcommand{\kSp}{{}_\kk\mathsf{Sp}}
-\newcommand{\GVec}{\mathsf{Vec}_q^\times}
-\newcommand{\Opr}{\mathsf{Opr}}
-\newcommand{\NS}{\mathsf{NS}}
-\DeclarePairedDelimiter\abs{\lvert}{\rvert}
-\newcommand{\vv}{\vert}
-\newcommand{\Der}{\operatorname{Der}}
-\newcommand{\HH}{\mathrm{HH}}
-\newcommand{\As}{\mathsf{As}}
-\newcommand{\Com}{\mathsf{Com}}
-\newcommand{\Lie}{\mathsf{Lie}}
-
-\newcommand{\aut}{\operatorname{aut}}
-\definecolor{sqsqsq}{rgb}{0.13,0.13,0.13}
-\definecolor{aqaqaq}{rgb}{0.63,0.63,0.63}
-
-\newcommand{\SC}{SC}
-\newcommand\id{\mathrm{id}}
-\newcommand\category[1]{\mathsf{#1}}
-\newcommand{\Mod}{\mathsf{Mod}}
-\newcommand{\Gmod}{\mathsf{GMod}}
-\newcommand{\nsMod}{{}_{\mathrm{ns}}\mathsf{Mod}}
-
-\newcommand{\SMod}{{}_\Sigma\mathsf{Mod}}
-\newcommand{\dgSMod}{{}_\Sigma\mathsf{dgMod}}
-\newcommand{\gSMod}{{}_\Sigma\mathsf{gMod}}
-\newcommand{\coker}{\operatorname{coker}}
-\newcommand{\Ho}{\operatorname{Ho}}
-\newcommand\spe[1]{\mathcal{#1}}
-\renewcommand{\tt}{\otimes}
-\newcommand{\E}{\mathcal{E}}
-\newcommand{\CC}{\mathcal{C}}
-\newcommand{\DC}{\mathsf{DC}}
-\newcommand{\DA}{\mathsf{DA}}
-\newcommand{\dd}{\partial}
-\newcommand{\OO}{\mathcal O}
-\newcommand{\?}{\,?\,}
-\newcommand{\n}{[n]}
-\newcommand\cls[1]{\llbracket#1\rrbracket}
-\newcommand{\NN}{\mathbb N}
-\renewcommand{\k}{[k]}
-\newcommand{\bt}{\bullet}
-\newcommand{\kk}{\Bbbk}
-\newcommand{\Aut}{\operatorname{Aut}}
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\Tor}{\operatorname{Tor}}
-\newcommand{\PAlg}{\mathsf{Alg}_{\geqslant 0}}
-\newcommand{\Cog}{\mathsf{Cog}}
-\newcommand{\Alg}{\mathsf{Alg}}
-\newcommand{\Cxs}{\mathsf{Ch}_\kk}
-\newcommand\inter[1]{\llbracket#1\rrbracket}
-\newcommand{\Cell}{\operatorname{Cell}}
-\newcommand{\Sing}{\operatorname{Sing}}
-\newcommand{\Sull}{A_{\mathrm{PL}}}
-
-\newcommand\lab{\mathsf{lab}}
-\newcommand{\Q}{{\mathbb{Q}}}
-\newcommand{\Z}{{\mathbb{Z}}}
-\newcommand{\hoq}{\!\sslash\!\!}
-\newcommand{\PP}{{\mathcal{P}}}
-\newcommand{\MM}{\mathcal M}
-
-\definecolor{newterm-color}{RGB}{0, 0, 0}
-\newcommand\newterm[1]{%
-  \textcolor{newterm-color}{\itshape #1}%
-}
-
-\theoremstyle{mytheorem}
-\newtheorem*{theorem*}{Theorem}
-\newtheorem*{question*}{Question}
-
-% named theorem %
-
-% for specifying a name
-\theoremstyle{plain} % just in case the style had changed
-% front matter stlye 
+%%%%%%%%%%%%%%%%%% Front matter style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewenvironment{abstract}{%
 \small\begin{center}
 \begin{minipage}{.9\textwidth}
-%\textbf{\textcolor{newcol}{Abstract.}}
 }
 {\par\noindent\end{minipage}\end{center}\vspace{3 em}}
 %
@@ -856,48 +349,30 @@ join=round] \draw (0,0) rectangle (1,1)
 }
 \makeatother
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\DeclareMathOperator\sgn{sgn}
-\DeclareMathOperator\fsch{\mathfrak{sch}}
-
-%\definecolor{newterm-color}{RGB}{0, 51, 153}
-%\newcommand\newterm[1]{%
-%\textcolor{newterm-color}{\bfseries\itshape #1}%
-%}
-
-% textual claims in equations
+%%%%%%%%%%%%%%%%% Textual claims in equations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\claim[2][.8]{%
   \begin{minipage}{#1\displaywidth}%
   \itshape
   #2
   \end{minipage}%
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%% Add blank pages after %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{afterpage}
-
 \newcommand\blankpage{%
     \null
     \thispagestyle{empty}%
     %\addtocounter{page}{-1}%
     \newpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\usepackage{float}
-
-\tikzcdset{arrow style=tikz, diagrams={>=stealth}}
-
-%%Addresses
-
-\newcommand{\Addresses}{{% additional braces for segregating \footnotesize
-  \bigskip
-  \footnotesize
-  \textsc{Raum 1.325, Institut für Mathematik}, Humboldt Universität, Berlin, Germany \par\nopagebreak
-  \textit{Addresses:} tamarofp@berlin-hu.de}
-}
-   
+%%%%%%%%%%%%%%% Set-up the Table of Contents. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titletoc}
+\setcounter{section}{-1}
+\patchcmd{\section}{\normalfont}{\normalfont\large}{}{}
 
 \titlecontents{chapter}
 [0.2em] %
@@ -924,41 +399,37 @@ join=round] \draw (0,0) rectangle (1,1)
 [ --- \ ]% <separator>
 []% <end>
 \setcounter{tocdepth}{2}% Display up to \subsection in ToC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setlength\parskip{3 pt}
-\setlength\parindent{0 em}
+%%%%%%%%%%%%%%% Title and author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{
+	\vspace{-5 em}
+	\setstretch{0.85}
+		{
+		\textbf
+			{Algebraic operads, 
+			Koszul duality and Gr\"obner bases: 
+			an introduction}
+		}
+	}
+\author{P. Tamaroff}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-%{1.0, 0.98, 0.8}
-\raggedbottom 
 \makeindex
 
-\title{\vspace{-5 em}\setstretch{0.85}{\textbf{Algebraic operads, Koszul duality and Gr\"obner bases: an introduction}}}
-\author{P. Tamaroff}
-%\address{}
-%\email{ptamarov@gmail.com}
 \begin{document}
 \pagecolor{pagecolor}
 \maketitle
-
-
-%\tableofcontents
-%\section{Introduction}\label{sec:intro}
-%\addcontentsline{toc}{section}{\nameref{sec:intro}}
 \thispagestyle{empty}
 
 \begin{abstract}
-This lecture series aim to offer a gentle introduction
-to the theory of algebraic operads, starting with the
-elements of the theory, and progressing slowly towards
-more advanced themes, including (inhomogeneous)
-Koszul duality theory, Gr\"obner bases and higher
-structures. The course will consist of approximately
-twelve lectures, along with extra talks by
-willing participants, with the goal of introducing extra
-material to the course, and making them more
-familiar with the theory.
+This lecture series aim to offer a gentle introduction to the theory of algebraic 
+operads, starting with the elements of the theory, and progressing slowly towards
+more advanced themes, including (inhomogeneous) Koszul duality theory, Gr\"obner 
+bases and higher structures. The course will consist of approximately twelve 
+lectures, along with extra talks by willing participants, with the goal of 
+introducing extra material to the course, and making them more familiar with the 
+theory.
 \end{abstract}
 
 \vspace{2 cm}
@@ -968,122 +439,98 @@ familiar with the theory.
 \end{center}
 
 \vfill
-
 \vfill
 
- \texttt{Note! This is a draft. } \hfill	Berlin, \today
+\texttt{Note! This is a draft. } \hfill	Berlin, \today
 
 
 \afterpage{\blankpage}
-
 \newpage
 
+%%%%%%%%%%%%%%%%%%%%% AUTHOR COMMENT AND INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace*{\fill} 
-\emph{These notes were written during the Winter Lecture
-Series for the academic term 2021-2022 at the \emph{Max
-Planck Institut f\"ur Mathematike in den Naturwissenschaften}.
-We acknowledge the excellent working
-conditions during the time the lecture series took place,
-which in particular allowed to produce these lecture notes. }
+
+\emph{These notes were written during the Winter Lecture Series for the academic 
+term 2021-2022 at the \emph{Max Planck Institut f\"ur Mathematike in den 
+Naturwissenschaften}. We acknowledge the excellent working conditions during the 
+time the lecture series took place, which in particular allowed to produce these 
+lecture notes.}
+
 \bigskip
 
 \begin{small}
-
-\myauthor{Pedro Tamaroff}{tamarofp@hu-berlin.de}{
-\textsc{Institut für Mathematik}, \\ 
-Johann von Neumann-Haus, \\
-Humboldt-Universität zu Berlin, \\
-Rudower Chaussee 25, \\
-12489 Berlin, Deutschland }
+	\myauthor{Pedro Tamaroff}{tamarofp@hu-berlin.de}
+	{
+		\textsc{Institut für Mathematik},	\\ 
+		Johann von Neumann-Haus, 			\\
+		Humboldt-Universität zu Berlin, 	\\
+		Rudower Chaussee 25, 				\\
+		12489 Berlin, Deutschland
+									}
 \end{small} \afterpage{\blankpage}
 \vspace*{\fill} 
-
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%% TOC PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thispagestyle{empty}
-
 \tableofcontents
-
-
-
 \afterpage{\blankpage}
-
-\pagebreak
-
-\thispagestyle{empty}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{lecture-00} 
-
 %\afterpage{\blankpage}
 \newpage
 
 \include{lecture-01}
-
 \afterpage{\blankpage}
 \newpage
 
 \include{lecture-02}
-
 \afterpage{\blankpage}
 \newpage
 
 \include{lecture-03}
-
 \afterpage{\blankpage}
 \newpage
 
 \include{lecture-04}
-
-%\afterpage{\blankpage}
 \newpage
 
 \include{lecture-05}
-
 \newpage
 
 \include{lecture-06}
-
 \afterpage{\blankpage}
 \newpage
  
 \include{lecture-07}
-
-%\afterpage{\blankpage}
 \newpage
 
 \include{lecture-08}
-
-%\afterpage{\blankpage}
 \newpage
 
 \include{lecture-09}
-
 \afterpage{\blankpage}
 \newpage
 
 \include{lecture-10}
-
 \afterpage{\blankpage}
 \newpage
 
 \include{lecture-11}
-
-%\afterpage{\blankpage} NO
 \newpage
 
 \include{lecture-12}
-
-%\afterpage{\blankpage} NO
 \newpage 
 
 \appendix
 
 \include{appendix}
-%\afterpage{\blankpage}
 \newpage
 
 \listoftodos
-
 
 \bibliographystyle{alpha}
 \bibliography{bibliography}
