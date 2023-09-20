@@ -7,3 +7,13 @@ filtration-argument-fixc.tex
 *.aux
 *.gz
 *.pdf
+*.bbl
+*.blg
+*.idx
+*.out
+*.tdo
+*.toc
+*.fls
+*.ilg
+*.ind
+*.xyc
