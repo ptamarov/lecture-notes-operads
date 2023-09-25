@@ -81,7 +81,7 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{matrix, arrows}
 \usetikzlibrary{trees}
-\input{treemacros.tex} % TIKZ MACROS TO DRAW TREES 
+\input{macros/treemacros.tex} % TIKZ MACROS TO DRAW TREES 
 \tikzcdset{arrow style=tikz, diagrams={>=stealth}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -119,8 +119,7 @@
 \fancyfoot[L,R,C]{}
 \renewcommand{\headrulewidth}{0 pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+ \setlength{\headheight}{13.15pt}
 
 
 
@@ -319,7 +318,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%% MATH MACROS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{mathmacros.tex}
+\input{macros/mathmacros.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%% Front matter style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -526,12 +525,12 @@ lecture notes.}
 
 \appendix
 
-\include{appendix}
+\include{lectures/appendix}
 \newpage
 
 \listoftodos
 
 \bibliographystyle{alpha}
-\bibliography{bibliography}
+\bibliography{biblio/bibliography}
 
 \end{document}

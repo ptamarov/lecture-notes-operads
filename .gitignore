@@ -17,3 +17,6 @@ filtration-argument-fixc.tex
 *.ilg
 *.ind
 *.xyc
+*.fdb_latexmk
+*.txt
+remains.tex
